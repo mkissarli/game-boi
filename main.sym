@@ -83,12 +83,12 @@
 00:0000 s__HEADERd
 00:0000 s__HEADERe
 00:0200 s__CODE
-00:025B s__HOME
-00:0403 s__BASE
-00:051A s__LIT
-00:051A s__GSINIT
-00:060A s__GSINITTAIL
-00:060B s__GSFINAL
+00:030D s__HOME
+00:04B5 s__BASE
+00:063D s__LIT
+00:063D s__GSINIT
+00:072D s__GSINITTAIL
+00:072E s__GSFINAL
 00:C000 .OAM
 00:C0A0 s__DATA
 00:C0D0 s__BSS
@@ -96,7 +96,8 @@
 00:E000 .STACK
 00:FF80 .refresh_OAM
 ; Area: _CODE
-00:0200 _main
+00:0200 _next_sprite
+00:021C _main
 ; Area: _HEADER0
 ; Area: _HEADER1
 ; Area: _HEADER2
@@ -118,61 +119,69 @@
 00:01D0 _exit
 ; Area: _HEADER12
 ; Area: _HOME
-00:025B .set_mode
-00:026B .remove_VBL
-00:0271 .remove_LCD
-00:0277 .remove_TIM
-00:027D .remove_SIO
-00:0283 .remove_JOY
-00:0289 .add_VBL
-00:028F .add_LCD
-00:0295 .add_TIM
-00:029B .add_SIO
-00:02A1 .add_JOY
-00:02A7 .remove_int
-00:02C6 .add_int
-00:02E2 .wait_vbl_done
-00:02E2 _wait_vbl_done
-00:02F9 _display_off
-00:02F9 .display_off
-00:031A .serial_IO
-00:0349 _mode
-00:0352 _get_mode
-00:0357 _enable_interrupts
-00:0359 _disable_interrupts
-00:035B _reset
-00:035B .reset
-00:0361 _set_interrupts
-00:036C _remove_VBL
-00:0377 _remove_LCD
-00:0382 _remove_TIM
-00:038D _remove_SIO
-00:0398 _remove_JOY
-00:03A3 _add_VBL
-00:03AE _add_LCD
-00:03B9 _add_TIM
-00:03C4 _add_SIO
-00:03CF _add_JOY
-00:03DA _clock
-00:03E3 __printTStates
-00:03E4 banked_call
-00:03FB banked_ret
+00:030D .set_mode
+00:031D .remove_VBL
+00:0323 .remove_LCD
+00:0329 .remove_TIM
+00:032F .remove_SIO
+00:0335 .remove_JOY
+00:033B .add_VBL
+00:0341 .add_LCD
+00:0347 .add_TIM
+00:034D .add_SIO
+00:0353 .add_JOY
+00:0359 .remove_int
+00:0378 .add_int
+00:0394 .wait_vbl_done
+00:0394 _wait_vbl_done
+00:03AB _display_off
+00:03AB .display_off
+00:03CC .serial_IO
+00:03FB _mode
+00:0404 _get_mode
+00:0409 _enable_interrupts
+00:040B _disable_interrupts
+00:040D _reset
+00:040D .reset
+00:0413 _set_interrupts
+00:041E _remove_VBL
+00:0429 _remove_LCD
+00:0434 _remove_TIM
+00:043F _remove_SIO
+00:044A _remove_JOY
+00:0455 _add_VBL
+00:0460 _add_LCD
+00:046B _add_TIM
+00:0476 _add_SIO
+00:0481 _add_JOY
+00:048C _clock
+00:0495 __printTStates
+00:0496 banked_call
+00:04AD banked_ret
 ; Area: _BASE
-00:0403 .mv_sprite
-00:0412 _move_sprite
-00:041F _set_win_data
-00:041F _set_bkg_data
-00:0427 _set_sprite_data
-00:049D .set_sprite_tile
-00:04AA _set_sprite_tile
-00:04B5 .delay
-00:04EF _delay
-00:04F8 .copy_vram
-00:0507 _get_data
-00:0507 _set_data
+00:04B5 .mv_sprite
+00:04C4 _move_sprite
+00:04D1 _set_win_data
+00:04D1 _set_bkg_data
+00:04D9 _set_sprite_data
+00:054F .scroll_sprite
+00:0560 _scroll_sprite
+00:056D .padup
+00:056D _waitpadup
+00:057D .jpad
+00:05AA .wait_pad
+00:05B1 _joypad
+00:05B6 _waitpad
+00:05C0 .set_sprite_tile
+00:05CD _set_sprite_tile
+00:05D8 .delay
+00:0612 _delay
+00:061B .copy_vram
+00:062A _get_data
+00:062A _set_data
 ; Area: _LIT
 ; Area: _GSINIT
-00:051A gsinit
+00:063D gsinit
 ; Area: _GSINITTAIL
 ; Area: _GSFINAL
 ; Area: _DATA
