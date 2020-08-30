@@ -1,0 +1,309 @@
+; no$gmb format .sym file
+; Generated automagically by ASxxxx linker V01.75 (SDK 3.0.0)
+; Area: .  .ABS.
+00:0000 s__HEADERf
+00:0000 s__CABS
+00:0000 s__HEADER0
+00:0000 s__DABS
+00:0000 s__HEADER1
+00:0000 s__HEADER2
+00:0000 s__HEADER3
+00:0000 s__SFR1a
+00:0000 s__HEADER4
+00:0000 s__SFR2a
+00:0000 s__SFR1b
+00:0000 s__HEADER5
+00:0000 s__SFR2b
+00:0000 s__SFR1c
+00:0000 s__HEADER6
+00:0000 s__SFR2c
+00:0000 s__SFR1d
+00:0000 s__HEADER7
+00:0000 s__SFR2d
+00:0000 s__SFR1e
+00:0000 s__HEADER8
+00:0000 s__SFR2e
+00:0000 s__SFR1f
+00:0000 s__HEADER9
+00:0000 s__SFR2f
+00:0000 s__HRAM
+00:0000 s__HEADER
+00:0000 s__SFR10
+00:0000 s__SFRa
+00:0000 s__SFR20
+00:0000 s__SFR11
+00:0000 s__SFRb
+00:0000 s__SFR30
+00:0000 s__SFR21
+00:0000 s__SFR12
+00:0000 s__SFRc
+00:0000 s__SFR31
+00:0000 s__SFR22
+00:0000 s__SFR13
+00:0000 s__SFRd
+00:0000 s__SFR32
+00:0000 s__SFR23
+00:0000 s__SFR14
+00:0000 s__SFRe
+00:0000 s__SFR33
+00:0000 s__SFR24
+00:0000 s__SFR15
+00:0000 s__SFRf
+00:0000 .init
+00:0000 s__SFR34
+00:0000 s__SFR25
+00:0000 s__SFR16
+00:0000 s__SFR35
+00:0000 s__SFR26
+00:0000 s__SFR17
+00:0000 s__SFR36
+00:0000 s__SFR27
+00:0000 s__SFR18
+00:0000 s__SFR28
+00:0000 s__SFR19
+00:0000 s__SFR29
+00:0000 s__SFR0
+00:0000 s__SFR1
+00:0000 s__SFR2
+00:0000 s__SFR3
+00:0000 s__SFR4
+00:0000 s__SFR5
+00:0000 s__SFR6
+00:0000 s__SFR7
+00:0000 s__SFR8
+00:0000 s__SFR9
+00:0000 s__HEADER10
+00:0000 s__HEADERa
+00:0000 s__SFR
+00:0000 s__HEADER11
+00:0000 s__HEADERb
+00:0000 s__HRAM13
+00:0000 s__HEADER12
+00:0000 s__HEADERc
+00:0000 s__HEADERd
+00:0000 s__HEADERe
+00:0200 s__CODE
+00:025B s__HOME
+00:0403 s__BASE
+00:051A s__LIT
+00:051A s__GSINIT
+00:060A s__GSINITTAIL
+00:060B s__GSFINAL
+00:C000 .OAM
+00:C0A0 s__DATA
+00:C0D0 s__BSS
+00:C128 s__HEAP
+00:E000 .STACK
+00:FF80 .refresh_OAM
+; Area: _CODE
+00:0200 _main
+; Area: _HEADER0
+; Area: _HEADER1
+; Area: _HEADER2
+; Area: _HEADER3
+; Area: _HEADER4
+; Area: _HEADER5
+; Area: _HEADER6
+; Area: _HEADER7
+; Area: _HEADER8
+; Area: _HEADER9
+; Area: _HEADERa
+; Area: _HEADERb
+; Area: _HEADERc
+; Area: _HEADERd
+; Area: _HEADERe
+; Area: _HEADERf
+; Area: _HEADER10
+; Area: _HEADER11
+00:01D0 _exit
+; Area: _HEADER12
+; Area: _HOME
+00:025B .set_mode
+00:026B .remove_VBL
+00:0271 .remove_LCD
+00:0277 .remove_TIM
+00:027D .remove_SIO
+00:0283 .remove_JOY
+00:0289 .add_VBL
+00:028F .add_LCD
+00:0295 .add_TIM
+00:029B .add_SIO
+00:02A1 .add_JOY
+00:02A7 .remove_int
+00:02C6 .add_int
+00:02E2 .wait_vbl_done
+00:02E2 _wait_vbl_done
+00:02F9 _display_off
+00:02F9 .display_off
+00:031A .serial_IO
+00:0349 _mode
+00:0352 _get_mode
+00:0357 _enable_interrupts
+00:0359 _disable_interrupts
+00:035B _reset
+00:035B .reset
+00:0361 _set_interrupts
+00:036C _remove_VBL
+00:0377 _remove_LCD
+00:0382 _remove_TIM
+00:038D _remove_SIO
+00:0398 _remove_JOY
+00:03A3 _add_VBL
+00:03AE _add_LCD
+00:03B9 _add_TIM
+00:03C4 _add_SIO
+00:03CF _add_JOY
+00:03DA _clock
+00:03E3 __printTStates
+00:03E4 banked_call
+00:03FB banked_ret
+; Area: _BASE
+00:0403 .mv_sprite
+00:0412 _move_sprite
+00:041F _set_win_data
+00:041F _set_bkg_data
+00:0427 _set_sprite_data
+00:049D .set_sprite_tile
+00:04AA _set_sprite_tile
+00:04B5 .delay
+00:04EF _delay
+00:04F8 .copy_vram
+00:0507 _get_data
+00:0507 _set_data
+; Area: _LIT
+; Area: _GSINIT
+00:051A gsinit
+; Area: _GSINITTAIL
+; Area: _GSFINAL
+; Area: _DATA
+00:C0A0 _MainChar
+; Area: _BSS
+00:C0D0 __cpu
+00:C0D1 .mode
+00:C0D2 __io_out
+00:C0D3 __io_in
+00:C0D4 __io_status
+00:C0D5 .vbl_done
+00:C0D6 _sys_time
+00:C0D6 .sys_time
+00:C0D8 .int_0x40
+00:C0E8 .int_0x48
+00:C0F8 .int_0x50
+00:C108 .int_0x58
+00:C118 .int_0x60
+; Area: _HEAP
+00:C128 _malloc_heap_start
+; Area: _HRAM13
+00:FF90 __current_bank
+; Area: _SFR0
+00:FF00 _P1_REG
+; Area: _SFR1
+00:FF01 _SB_REG
+; Area: _SFR2
+00:FF02 _SC_REG
+; Area: _SFR3
+00:FF04 _DIV_REG
+; Area: _SFR4
+00:FF05 _TIMA_REG
+; Area: _SFR5
+00:FF06 _TMA_REG
+; Area: _SFR6
+00:FF07 _TAC_REG
+; Area: _SFR7
+00:FF0F _IF_REG
+; Area: _SFR8
+00:FF10 _NR10_REG
+; Area: _SFR9
+00:FF11 _NR11_REG
+; Area: _SFRa
+00:FF12 _NR12_REG
+; Area: _SFRb
+00:FF13 _NR13_REG
+; Area: _SFRc
+00:FF14 _NR14_REG
+; Area: _SFRd
+00:FF16 _NR21_REG
+; Area: _SFRe
+00:FF17 _NR22_REG
+; Area: _SFRf
+00:FF18 _NR23_REG
+; Area: _SFR10
+00:FF19 _NR24_REG
+; Area: _SFR11
+00:FF1A _NR30_REG
+; Area: _SFR12
+00:FF1B _NR31_REG
+; Area: _SFR13
+00:FF1C _NR32_REG
+; Area: _SFR14
+00:FF1D _NR33_REG
+; Area: _SFR15
+00:FF1E _NR34_REG
+; Area: _SFR16
+00:FF20 _NR41_REG
+; Area: _SFR17
+00:FF21 _NR42_REG
+; Area: _SFR18
+00:FF22 _NR43_REG
+; Area: _SFR19
+00:FF23 _NR44_REG
+; Area: _SFR1a
+00:FF24 _NR50_REG
+; Area: _SFR1b
+00:FF25 _NR51_REG
+; Area: _SFR1c
+00:FF26 _NR52_REG
+; Area: _SFR1d
+00:FF40 _LCDC_REG
+; Area: _SFR1e
+00:FF41 _STAT_REG
+; Area: _SFR1f
+00:FF42 _SCY_REG
+; Area: _SFR20
+00:FF43 _SCX_REG
+; Area: _SFR21
+00:FF44 _LY_REG
+; Area: _SFR22
+00:FF45 _LYC_REG
+; Area: _SFR23
+00:FF46 _DMA_REG
+; Area: _SFR24
+00:FF47 _BGP_REG
+; Area: _SFR25
+00:FF48 _OBP0_REG
+; Area: _SFR26
+00:FF49 _OBP1_REG
+; Area: _SFR27
+00:FF4A _WY_REG
+; Area: _SFR28
+00:FF4B _WX_REG
+; Area: _SFR29
+00:FF4D _KEY1_REG
+; Area: _SFR2a
+00:FF4F _VBK_REG
+; Area: _SFR2b
+00:FF51 _HDMA1_REG
+; Area: _SFR2c
+00:FF52 _HDMA2_REG
+; Area: _SFR2d
+00:FF53 _HDMA3_REG
+; Area: _SFR2e
+00:FF54 _HDMA4_REG
+; Area: _SFR2f
+00:FF55 _HDMA5_REG
+; Area: _SFR30
+00:FF56 _RP_REG
+; Area: _SFR31
+00:FF68 _BCPS_REG
+; Area: _SFR32
+00:FF69 _BCPD_REG
+; Area: _SFR33
+00:FF6A _OCPS_REG
+; Area: _SFR34
+00:FF6B _OCPD_REG
+; Area: _SFR35
+00:FF70 _SVBK_REG
+; Area: _SFR36
+00:FFFF _IE_REG
+; Area: .  .ABS.
+00:0000 .__.ABS.
