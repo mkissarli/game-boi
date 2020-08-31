@@ -1,0 +1,427 @@
+                              1 ;--------------------------------------------------------
+                              2 ; File Created by SDCC : free open source ANSI-C Compiler
+                              3 ; Version 4.0.0 #11528 (MINGW32)
+                              4 ;--------------------------------------------------------
+                              5 	.module C__Users_Thief3_AppData_Local_Temp_lcc7841
+                              6 	.optsdcc -mgbz80
+                              7 	
+                              8 ;--------------------------------------------------------
+                              9 ; Public variables in this module
+                             10 ;--------------------------------------------------------
+                             11 	.globl _main
+                             12 	.globl _gravity
+                             13 	.globl _scroll_sprite
+                             14 	.globl _move_sprite
+                             15 	.globl _set_sprite_tile
+                             16 	.globl _set_sprite_data
+                             17 	.globl _joypad
+                             18 	.globl _delay
+                             19 	.globl _total_sprites
+                             20 	.globl _MainChar
+                             21 ;--------------------------------------------------------
+                             22 ; special function registers
+                             23 ;--------------------------------------------------------
+                             24 ;--------------------------------------------------------
+                             25 ; ram data
+                             26 ;--------------------------------------------------------
+                             27 	.area _DATA
+   0000                      28 _MainChar::
+   0000                      29 	.ds 48
+   0030                      30 _total_sprites::
+   0030                      31 	.ds 1
+                             32 ;--------------------------------------------------------
+                             33 ; absolute external ram data
+                             34 ;--------------------------------------------------------
+                             35 	.area _DABS (ABS)
+                             36 ;--------------------------------------------------------
+                             37 ; global & static initialisations
+                             38 ;--------------------------------------------------------
+                             39 	.area _HOME
+                             40 	.area _GSINIT
+                             41 	.area _GSFINAL
+                             42 	.area _GSINIT
+                             43 ;./src/../sprites/char.c:26: unsigned char MainChar[] =
+   0000 21r00r00             44 	ld	hl, #_MainChar
+   0003 36 00                45 	ld	(hl), #0x00
+   0005 21r01r00             46 	ld	hl, #(_MainChar + 0x0001)
+   0008 36 00                47 	ld	(hl), #0x00
+   000A 21r02r00             48 	ld	hl, #(_MainChar + 0x0002)
+   000D 36 7E                49 	ld	(hl), #0x7e
+   000F 21r03r00             50 	ld	hl, #(_MainChar + 0x0003)
+   0012 36 7E                51 	ld	(hl), #0x7e
+   0014 21r04r00             52 	ld	hl, #(_MainChar + 0x0004)
+   0017 36 42                53 	ld	(hl), #0x42
+   0019 21r05r00             54 	ld	hl, #(_MainChar + 0x0005)
+   001C 36 76                55 	ld	(hl), #0x76
+   001E 21r06r00             56 	ld	hl, #(_MainChar + 0x0006)
+   0021 36 42                57 	ld	(hl), #0x42
+   0023 21r07r00             58 	ld	hl, #(_MainChar + 0x0007)
+   0026 36 76                59 	ld	(hl), #0x76
+   0028 21r08r00             60 	ld	hl, #(_MainChar + 0x0008)
+   002B 36 4A                61 	ld	(hl), #0x4a
+   002D 21r09r00             62 	ld	hl, #(_MainChar + 0x0009)
+   0030 36 4A                63 	ld	(hl), #0x4a
+   0032 21r0Ar00             64 	ld	hl, #(_MainChar + 0x000a)
+   0035 36 7E                65 	ld	(hl), #0x7e
+   0037 21r0Br00             66 	ld	hl, #(_MainChar + 0x000b)
+   003A 36 7E                67 	ld	(hl), #0x7e
+   003C 21r0Cr00             68 	ld	hl, #(_MainChar + 0x000c)
+   003F 36 36                69 	ld	(hl), #0x36
+   0041 21r0Dr00             70 	ld	hl, #(_MainChar + 0x000d)
+   0044 36 36                71 	ld	(hl), #0x36
+   0046 21r0Er00             72 	ld	hl, #(_MainChar + 0x000e)
+   0049 36 36                73 	ld	(hl), #0x36
+   004B 21r0Fr00             74 	ld	hl, #(_MainChar + 0x000f)
+   004E 36 36                75 	ld	(hl), #0x36
+   0050 21r10r00             76 	ld	hl, #(_MainChar + 0x0010)
+   0053 36 00                77 	ld	(hl), #0x00
+   0055 21r11r00             78 	ld	hl, #(_MainChar + 0x0011)
+   0058 36 00                79 	ld	(hl), #0x00
+   005A 21r12r00             80 	ld	hl, #(_MainChar + 0x0012)
+   005D 36 7E                81 	ld	(hl), #0x7e
+   005F 21r13r00             82 	ld	hl, #(_MainChar + 0x0013)
+   0062 36 7E                83 	ld	(hl), #0x7e
+   0064 21r14r00             84 	ld	hl, #(_MainChar + 0x0014)
+   0067 36 42                85 	ld	(hl), #0x42
+   0069 21r15r00             86 	ld	hl, #(_MainChar + 0x0015)
+   006C 36 76                87 	ld	(hl), #0x76
+   006E 21r16r00             88 	ld	hl, #(_MainChar + 0x0016)
+   0071 36 42                89 	ld	(hl), #0x42
+   0073 21r17r00             90 	ld	hl, #(_MainChar + 0x0017)
+   0076 36 76                91 	ld	(hl), #0x76
+   0078 21r18r00             92 	ld	hl, #(_MainChar + 0x0018)
+   007B 36 4A                93 	ld	(hl), #0x4a
+   007D 21r19r00             94 	ld	hl, #(_MainChar + 0x0019)
+   0080 36 4A                95 	ld	(hl), #0x4a
+   0082 21r1Ar00             96 	ld	hl, #(_MainChar + 0x001a)
+   0085 36 7E                97 	ld	(hl), #0x7e
+   0087 21r1Br00             98 	ld	hl, #(_MainChar + 0x001b)
+   008A 36 7E                99 	ld	(hl), #0x7e
+   008C 21r1Cr00            100 	ld	hl, #(_MainChar + 0x001c)
+   008F 36 36               101 	ld	(hl), #0x36
+   0091 21r1Dr00            102 	ld	hl, #(_MainChar + 0x001d)
+   0094 36 36               103 	ld	(hl), #0x36
+   0096 21r1Er00            104 	ld	hl, #(_MainChar + 0x001e)
+   0099 36 30               105 	ld	(hl), #0x30
+   009B 21r1Fr00            106 	ld	hl, #(_MainChar + 0x001f)
+   009E 36 30               107 	ld	(hl), #0x30
+   00A0 21r20r00            108 	ld	hl, #(_MainChar + 0x0020)
+   00A3 36 00               109 	ld	(hl), #0x00
+   00A5 21r21r00            110 	ld	hl, #(_MainChar + 0x0021)
+   00A8 36 00               111 	ld	(hl), #0x00
+   00AA 21r22r00            112 	ld	hl, #(_MainChar + 0x0022)
+   00AD 36 7E               113 	ld	(hl), #0x7e
+   00AF 21r23r00            114 	ld	hl, #(_MainChar + 0x0023)
+   00B2 36 7E               115 	ld	(hl), #0x7e
+   00B4 21r24r00            116 	ld	hl, #(_MainChar + 0x0024)
+   00B7 36 42               117 	ld	(hl), #0x42
+   00B9 21r25r00            118 	ld	hl, #(_MainChar + 0x0025)
+   00BC 36 76               119 	ld	(hl), #0x76
+   00BE 21r26r00            120 	ld	hl, #(_MainChar + 0x0026)
+   00C1 36 42               121 	ld	(hl), #0x42
+   00C3 21r27r00            122 	ld	hl, #(_MainChar + 0x0027)
+   00C6 36 76               123 	ld	(hl), #0x76
+   00C8 21r28r00            124 	ld	hl, #(_MainChar + 0x0028)
+   00CB 36 4A               125 	ld	(hl), #0x4a
+   00CD 21r29r00            126 	ld	hl, #(_MainChar + 0x0029)
+   00D0 36 4A               127 	ld	(hl), #0x4a
+   00D2 21r2Ar00            128 	ld	hl, #(_MainChar + 0x002a)
+   00D5 36 7E               129 	ld	(hl), #0x7e
+   00D7 21r2Br00            130 	ld	hl, #(_MainChar + 0x002b)
+   00DA 36 7E               131 	ld	(hl), #0x7e
+   00DC 21r2Cr00            132 	ld	hl, #(_MainChar + 0x002c)
+   00DF 36 36               133 	ld	(hl), #0x36
+   00E1 21r2Dr00            134 	ld	hl, #(_MainChar + 0x002d)
+   00E4 36 36               135 	ld	(hl), #0x36
+   00E6 21r2Er00            136 	ld	hl, #(_MainChar + 0x002e)
+   00E9 36 06               137 	ld	(hl), #0x06
+   00EB 21r2Fr00            138 	ld	hl, #(_MainChar + 0x002f)
+   00EE 36 06               139 	ld	(hl), #0x06
+                            140 ;./src/main.c:11: UINT8 total_sprites = 0;
+   00F0 21r30r00            141 	ld	hl, #_total_sprites
+   00F3 36 00               142 	ld	(hl), #0x00
+                            143 ;--------------------------------------------------------
+                            144 ; Home
+                            145 ;--------------------------------------------------------
+                            146 	.area _HOME
+                            147 	.area _HOME
+                            148 ;--------------------------------------------------------
+                            149 ; code
+                            150 ;--------------------------------------------------------
+                            151 	.area _CODE
+                            152 ;./src/main.c:7: void gravity(){
+                            153 ;	---------------------------------
+                            154 ; Function gravity
+                            155 ; ---------------------------------
+   0000                     156 _gravity::
+                            157 ;./src/main.c:9: }
+   0000 C9                  158 	ret
+                            159 ;./src/main.c:38: void main()
+                            160 ;	---------------------------------
+                            161 ; Function main
+                            162 ; ---------------------------------
+   0001                     163 _main::
+   0001 E8 F3               164 	add	sp, #-13
+                            165 ;./src/main.c:40: MSprite main_char = {88, 78, 0, 3, 0};
+   0003 F8 00               166 	ldhl	sp,	#0
+   0005 4D                  167 	ld	c, l
+   0006 44                  168 	ld	b, h
+   0007 3E 58               169 	ld	a, #0x58
+   0009 02                  170 	ld	(bc), a
+   000A F8 00               171 	ldhl	sp,	#0
+   000C 7D                  172 	ld	a, l
+   000D 54                  173 	ld	d, h
+   000E F8 05               174 	ldhl	sp,	#5
+   0010 22                  175 	ld	(hl+), a
+   0011 72                  176 	ld	(hl), d
+   0012 2B                  177 	dec	hl
+   0013 5E                  178 	ld	e, (hl)
+   0014 23                  179 	inc	hl
+   0015 56                  180 	ld	d, (hl)
+   0016 21 01 00            181 	ld	hl, #0x0001
+   0019 19                  182 	add	hl, de
+   001A 7D                  183 	ld	a, l
+   001B 54                  184 	ld	d, h
+   001C F8 07               185 	ldhl	sp,	#7
+   001E 22                  186 	ld	(hl+), a
+   001F 72                  187 	ld	(hl), d
+   0020 2B                  188 	dec	hl
+   0021 2A                  189 	ld	a, (hl+)
+   0022 66                  190 	ld	h, (hl)
+   0023 6F                  191 	ld	l, a
+   0024 36 4E               192 	ld	(hl), #0x4e
+   0026 F8 05               193 	ldhl	sp,#(6 - 1)
+   0028 5E                  194 	ld	e, (hl)
+   0029 23                  195 	inc	hl
+   002A 56                  196 	ld	d, (hl)
+   002B 21 02 00            197 	ld	hl, #0x0002
+   002E 19                  198 	add	hl, de
+   002F 7D                  199 	ld	a, l
+   0030 54                  200 	ld	d, h
+   0031 F8 09               201 	ldhl	sp,	#9
+   0033 22                  202 	ld	(hl+), a
+   0034 72                  203 	ld	(hl), d
+   0035 2B                  204 	dec	hl
+   0036 2A                  205 	ld	a, (hl+)
+   0037 66                  206 	ld	h, (hl)
+   0038 6F                  207 	ld	l, a
+   0039 36 00               208 	ld	(hl), #0x00
+   003B F8 05               209 	ldhl	sp,#(6 - 1)
+   003D 4E                  210 	ld	c, (hl)
+   003E 23                  211 	inc	hl
+   003F 46                  212 	ld	b, (hl)
+   0040 03                  213 	inc	bc
+   0041 03                  214 	inc	bc
+   0042 03                  215 	inc	bc
+   0043 3E 03               216 	ld	a, #0x03
+   0045 02                  217 	ld	(bc), a
+   0046 2B                  218 	dec	hl
+   0047 5E                  219 	ld	e, (hl)
+   0048 23                  220 	inc	hl
+   0049 56                  221 	ld	d, (hl)
+   004A 21 04 00            222 	ld	hl, #0x0004
+   004D 19                  223 	add	hl, de
+   004E 7D                  224 	ld	a, l
+   004F 54                  225 	ld	d, h
+   0050 F8 0B               226 	ldhl	sp,	#11
+   0052 22                  227 	ld	(hl+), a
+   0053 72                  228 	ld	(hl), d
+   0054 2B                  229 	dec	hl
+   0055 2A                  230 	ld	a, (hl+)
+   0056 66                  231 	ld	h, (hl)
+   0057 6F                  232 	ld	l, a
+   0058 36 00               233 	ld	(hl), #0x00
+                            234 ;./src/main.c:43: set_sprite_data(main_char.sprite_number, main_char.max_animations, MainChar);
+   005A 0A                  235 	ld	a, (bc)
+   005B 47                  236 	ld	b, a
+   005C F8 0B               237 	ldhl	sp,#(12 - 1)
+   005E 5E                  238 	ld	e, (hl)
+   005F 23                  239 	inc	hl
+   0060 56                  240 	ld	d, (hl)
+   0061 1A                  241 	ld	a,(de)
+   0062 4F                  242 	ld	c, a
+   0063 21r00r00            243 	ld	hl, #_MainChar
+   0066 E5                  244 	push	hl
+   0067 C5                  245 	push	bc
+   0068 33                  246 	inc	sp
+   0069 79                  247 	ld	a, c
+   006A F5                  248 	push	af
+   006B 33                  249 	inc	sp
+   006C CDr00r00            250 	call	_set_sprite_data
+   006F E8 04               251 	add	sp, #4
+                            252 ;./src/main.c:44: set_sprite_tile(main_char.sprite_number, main_char.animation_index);
+   0071 F8 09               253 	ldhl	sp,#(10 - 1)
+   0073 5E                  254 	ld	e, (hl)
+   0074 23                  255 	inc	hl
+   0075 56                  256 	ld	d, (hl)
+   0076 1A                  257 	ld	a,(de)
+   0077 47                  258 	ld	b, a
+   0078 23                  259 	inc	hl
+   0079 5E                  260 	ld	e, (hl)
+   007A 23                  261 	inc	hl
+   007B 56                  262 	ld	d, (hl)
+   007C 1A                  263 	ld	a,(de)
+   007D C5                  264 	push	bc
+   007E 33                  265 	inc	sp
+   007F F5                  266 	push	af
+   0080 33                  267 	inc	sp
+   0081 CDr00r00            268 	call	_set_sprite_tile
+   0084 E8 02               269 	add	sp, #2
+                            270 ;./src/main.c:45: move_sprite(main_char.sprite_number, main_char.x, main_char.y);
+   0086 F8 07               271 	ldhl	sp,#(8 - 1)
+   0088 5E                  272 	ld	e, (hl)
+   0089 23                  273 	inc	hl
+   008A 56                  274 	ld	d, (hl)
+   008B 1A                  275 	ld	a,(de)
+   008C 47                  276 	ld	b, a
+   008D 2B                  277 	dec	hl
+   008E 2B                  278 	dec	hl
+   008F 2B                  279 	dec	hl
+   0090 5E                  280 	ld	e, (hl)
+   0091 23                  281 	inc	hl
+   0092 56                  282 	ld	d, (hl)
+   0093 1A                  283 	ld	a,(de)
+   0094 F8 0B               284 	ldhl	sp,#(12 - 1)
+   0096 5E                  285 	ld	e, (hl)
+   0097 23                  286 	inc	hl
+   0098 56                  287 	ld	d, (hl)
+   0099 F5                  288 	push	af
+   009A 1A                  289 	ld	a,(de)
+   009B 4F                  290 	ld	c, a
+   009C F1                  291 	pop	af
+   009D C5                  292 	push	bc
+   009E 33                  293 	inc	sp
+   009F F5                  294 	push	af
+   00A0 33                  295 	inc	sp
+   00A1 79                  296 	ld	a, c
+   00A2 F5                  297 	push	af
+   00A3 33                  298 	inc	sp
+   00A4 CDr00r00            299 	call	_move_sprite
+   00A7 E8 03               300 	add	sp, #3
+                            301 ;./src/main.c:46: SHOW_SPRITES;
+   00A9 F0r00               302 	ldh	a, (_LCDC_REG+0)
+   00AB F6 02               303 	or	a, #0x02
+   00AD E0r00               304 	ldh	(_LCDC_REG+0),a
+                            305 ;./src/main.c:49: while(1){
+   00AF                     306 00107$:
+                            307 ;./src/main.c:50: switch(joypad()){
+   00AF CDr00r00            308 	call	_joypad
+   00B2 7B                  309 	ld	a, e
+   00B3 FE 01               310 	cp	a, #0x01
+   00B5 28 31               311 	jr	Z,00102$
+   00B7 FE 02               312 	cp	a, #0x02
+   00B9 28 0C               313 	jr	Z,00101$
+   00BB FE 04               314 	cp	a, #0x04
+   00BD CAr09r01            315 	jp	Z,00103$
+   00C0 D6 08               316 	sub	a, #0x08
+   00C2 CAr2Ar01            317 	jp	Z,00104$
+   00C5 18 E8               318 	jr	00107$
+                            319 ;./src/main.c:51: case J_LEFT:
+   00C7                     320 00101$:
+                            321 ;./src/main.c:52: scroll_sprite(main_char.sprite_number, -10, 0);
+   00C7 F8 0B               322 	ldhl	sp,#(12 - 1)
+   00C9 5E                  323 	ld	e, (hl)
+   00CA 23                  324 	inc	hl
+   00CB 56                  325 	ld	d, (hl)
+   00CC 1A                  326 	ld	a,(de)
+   00CD 47                  327 	ld	b, a
+   00CE AF                  328 	xor	a, a
+   00CF F5                  329 	push	af
+   00D0 33                  330 	inc	sp
+   00D1 3E F6               331 	ld	a, #0xf6
+   00D3 F5                  332 	push	af
+   00D4 33                  333 	inc	sp
+   00D5 C5                  334 	push	bc
+   00D6 33                  335 	inc	sp
+   00D7 CDr00r00            336 	call	_scroll_sprite
+   00DA E8 03               337 	add	sp, #3
+                            338 ;./src/main.c:55: delay(100);
+   00DC 21 64 00            339 	ld	hl, #0x0064
+   00DF E5                  340 	push	hl
+   00E0 CDr00r00            341 	call	_delay
+   00E3 E8 02               342 	add	sp, #2
+                            343 ;./src/main.c:56: break;
+   00E5 C3rAFr00            344 	jp	00107$
+                            345 ;./src/main.c:57: case J_RIGHT:
+   00E8                     346 00102$:
+                            347 ;./src/main.c:58: scroll_sprite(main_char.sprite_number, 10, 0);
+   00E8 F8 0B               348 	ldhl	sp,#(12 - 1)
+   00EA 5E                  349 	ld	e, (hl)
+   00EB 23                  350 	inc	hl
+   00EC 56                  351 	ld	d, (hl)
+   00ED 1A                  352 	ld	a,(de)
+   00EE 47                  353 	ld	b, a
+   00EF AF                  354 	xor	a, a
+   00F0 F5                  355 	push	af
+   00F1 33                  356 	inc	sp
+   00F2 3E 0A               357 	ld	a, #0x0a
+   00F4 F5                  358 	push	af
+   00F5 33                  359 	inc	sp
+   00F6 C5                  360 	push	bc
+   00F7 33                  361 	inc	sp
+   00F8 CDr00r00            362 	call	_scroll_sprite
+   00FB E8 03               363 	add	sp, #3
+                            364 ;./src/main.c:61: delay(100);
+   00FD 21 64 00            365 	ld	hl, #0x0064
+   0100 E5                  366 	push	hl
+   0101 CDr00r00            367 	call	_delay
+   0104 E8 02               368 	add	sp, #2
+                            369 ;./src/main.c:62: break;
+   0106 C3rAFr00            370 	jp	00107$
+                            371 ;./src/main.c:63: case J_UP:
+   0109                     372 00103$:
+                            373 ;./src/main.c:64: scroll_sprite(main_char.sprite_number, 0, -10);
+   0109 F8 0B               374 	ldhl	sp,#(12 - 1)
+   010B 5E                  375 	ld	e, (hl)
+   010C 23                  376 	inc	hl
+   010D 56                  377 	ld	d, (hl)
+   010E 1A                  378 	ld	a,(de)
+   010F 47                  379 	ld	b, a
+   0110 3E F6               380 	ld	a, #0xf6
+   0112 F5                  381 	push	af
+   0113 33                  382 	inc	sp
+   0114 AF                  383 	xor	a, a
+   0115 F5                  384 	push	af
+   0116 33                  385 	inc	sp
+   0117 C5                  386 	push	bc
+   0118 33                  387 	inc	sp
+   0119 CDr00r00            388 	call	_scroll_sprite
+   011C E8 03               389 	add	sp, #3
+                            390 ;./src/main.c:67: delay(100);
+   011E 21 64 00            391 	ld	hl, #0x0064
+   0121 E5                  392 	push	hl
+   0122 CDr00r00            393 	call	_delay
+   0125 E8 02               394 	add	sp, #2
+                            395 ;./src/main.c:68: break;
+   0127 C3rAFr00            396 	jp	00107$
+                            397 ;./src/main.c:69: case J_DOWN:
+   012A                     398 00104$:
+                            399 ;./src/main.c:70: scroll_sprite(main_char.sprite_number, 0, 10);
+   012A F8 0B               400 	ldhl	sp,#(12 - 1)
+   012C 5E                  401 	ld	e, (hl)
+   012D 23                  402 	inc	hl
+   012E 56                  403 	ld	d, (hl)
+   012F 1A                  404 	ld	a,(de)
+   0130 47                  405 	ld	b, a
+   0131 3E 0A               406 	ld	a, #0x0a
+   0133 F5                  407 	push	af
+   0134 33                  408 	inc	sp
+   0135 AF                  409 	xor	a, a
+   0136 F5                  410 	push	af
+   0137 33                  411 	inc	sp
+   0138 C5                  412 	push	bc
+   0139 33                  413 	inc	sp
+   013A CDr00r00            414 	call	_scroll_sprite
+   013D E8 03               415 	add	sp, #3
+                            416 ;./src/main.c:73: delay(100);
+   013F 21 64 00            417 	ld	hl, #0x0064
+   0142 E5                  418 	push	hl
+   0143 CDr00r00            419 	call	_delay
+   0146 E8 02               420 	add	sp, #2
+                            421 ;./src/main.c:75: }
+   0148 C3rAFr00            422 	jp	00107$
+                            423 ;./src/main.c:77: }
+   014B E8 0D               424 	add	sp, #13
+   014D C9                  425 	ret
+                            426 	.area _CODE
+                            427 	.area _CABS (ABS)
