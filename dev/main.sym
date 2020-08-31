@@ -4,25 +4,26 @@ Hexadecimal [16-Bits]
 Symbol Table
 
     .__.$$$.=  2710 L   |     .__.ABS.=  0000 G   |     .__.CPU.=  0000 L
-    .__.H$L.=  0000 L   |   1 _GRAVITY   0033 R   |     _LCDC_RE   **** GX
-  1 _MainCha   0000 GR  |   0 _check_c   011F GR  |   0 _create_   0120 GR
-  0 _create_   0064 GR  |   0 _gravity   006A GR  |     _joypad    **** GX
-  1 _joypad_   0031 R   |   1 _joypad_   0030 R   |   0 _joypad_   0000 R
-  0 _joypad_   0028 R   |   0 _main      0216 GR  |   0 _move_pl   00AF GR
-    _move_sp   **** GX  |   0 _next_an   006B GR  |   0 _player_   0121 GR
-    _scroll_   **** GX  |     _set_spr   **** GX  |     _set_spr   **** GX
-  1 _total_s   0032 GR  |     _wait_vb   **** GX
+    .__.H$L.=  0000 L   |   1 _GRAVITY   0083 R   |     _LCDC_RE   **** GX
+  1 _MainCha   0000 GR  |   0 _check_c   011E GR  |   0 _create_   011F GR
+  0 _create_   0064 GR  |   0 _draw      006A GR  |   0 _gravity   00DD GR
+  1 _gravity   0084 GR  |     _joypad    **** GX  |   1 _joypad_   0031 R
+  1 _joypad_   0030 R   |   0 _joypad_   0000 R   |   0 _joypad_   0028 R
+  0 _main      0203 GR  |   0 _move_pl   00E7 GR  |     _move_sp   **** GX
+  0 _next_an   0099 GR  |   0 _player_   0120 GR  |     _set_spr   **** GX
+    _set_spr   **** GX  |   1 _sprites   0033 GR  |   1 _total_s   0032 GR
+    _wait_vb   **** GX
 
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy Z80-like CPU), page 2.
 Hexadecimal [16-Bits]
 
 Area Table
 
-   0 _CODE      size  315   flags    0
-   1 _DATA      size   34   flags    0
+   0 _CODE      size  32E   flags    0
+   1 _DATA      size   85   flags    0
    2 _DABS      size    0   flags    8
    3 _HOME      size    0   flags    0
-   4 _GSINIT    size   FA   flags    0
+   4 _GSINIT    size   FF   flags    0
    5 _GSFINAL   size    0   flags    0
    6 _CABS      size    0   flags    8
 
