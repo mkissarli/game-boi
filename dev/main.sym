@@ -4,26 +4,28 @@ Hexadecimal [16-Bits]
 Symbol Table
 
     .__.$$$.=  2710 L   |     .__.ABS.=  0000 G   |     .__.CPU.=  0000 L
-    .__.H$L.=  0000 L   |   1 _GRAVITY   0084 R   |     _LCDC_RE   **** GX
-  1 _MainCha   0000 GR  |   0 _create_   0068 GR  |   0 _draw      007E GR
-  0 _gravity   00F1 GR  |   1 _gravity   0085 GR  |   1 _input_t   0032 R
-    _joypad    **** GX  |   1 _joypad_   0031 R   |   1 _joypad_   0030 R
-  0 _joypad_   0000 R   |   0 _joypad_   0028 R   |   0 _jump      0275 GR
-  0 _main      02D1 GR  |     _move_sp   **** GX  |   0 _next_an   00AD GR
-  0 _perform   006E GR  |   0 _player_   0192 GR  |     _set_spr   **** GX
-    _set_spr   **** GX  |   1 _sprites   0034 GR  |   1 _total_s   0033 GR
-  0 _update_   0154 GR  |     _wait_vb   **** GX
+    .__.H$L.=  0000 L   |   1 _GRAVITY   022C R   |     _LCDC_RE   **** GX
+  1 _MainCha   0000 GR  |   1 _TestMap   0073 GR  |     __divsin   **** GX
+    __modsin   **** GX  |   1 _backgro   0033 GR  |   0 _collisi   02C9 GR
+  0 _create_   0068 GR  |   0 _draw      007E GR  |   0 _gravity   00F1 GR
+  1 _gravity   022D GR  |   1 _input_t   0032 R   |     _joypad    **** GX
+  1 _joypad_   0031 R   |   1 _joypad_   0030 R   |   0 _joypad_   0000 R
+  0 _joypad_   0028 R   |   0 _jump      0275 GR  |   0 _main      03D9 GR
+    _move_sp   **** GX  |   0 _next_an   00AD GR  |   0 _perform   006E GR
+  0 _player_   0192 GR  |     _set_bkg   **** GX  |     _set_bkg   **** GX
+    _set_spr   **** GX  |     _set_spr   **** GX  |   1 _sprites   01DC GR
+  1 _total_s   01DB GR  |   0 _update_   0154 GR  |     _wait_vb   **** GX
 
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy Z80-like CPU), page 2.
 Hexadecimal [16-Bits]
 
 Area Table
 
-   0 _CODE      size  4F0   flags    0
-   1 _DATA      size   86   flags    0
+   0 _CODE      size  604   flags    0
+   1 _DATA      size  22E   flags    0
    2 _DABS      size    0   flags    8
    3 _HOME      size    0   flags    0
-   4 _GSINIT    size  105   flags    0
+   4 _GSINIT    size  94D   flags    0
    5 _GSFINAL   size    0   flags    0
    6 _CABS      size    0   flags    8
 

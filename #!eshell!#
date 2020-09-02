@@ -1420,4 +1420,94 @@ d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
 d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
 
 d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:155: warning 112: function 'set_bkg' implicit declaration
+./src/main.c:155: error 101: too many parameters 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:152: syntax error: token -> 'map' ; column 57
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:157: syntax error: token -> '=' ; column 31
+./src/main.c:165: syntax error: token -> '}' ; column 1
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:212: error 78: incompatible types
+from type 'struct MPlayer near* auto'
+  to type 'struct MSprite generic* auto'
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:159: syntax error: token -> '{' ; column 52
+./src/main.c:166: syntax error: token -> '}' ; column 1
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
 d:/Programming/C++/GameBoyJam/MHDemake $ 

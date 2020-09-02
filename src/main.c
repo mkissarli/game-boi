@@ -3,6 +3,8 @@
 #include <stdbool.h> 
 #include "../sprites/char.c"
 #include "../src/input.c"
+#include "../sprites/backgroundtiles.c"
+#include "../sprites/test_map.c"
 
 INT8 total_sprites = -1;
 UINT8 create_sprite_num(){
@@ -140,15 +142,35 @@ void jump(MPlayer* player){
         player->jumped = false;
     }
     
-    if(!(joypad_prev_state & J_UP) && JOYPAD_DOWN_PAD_U && !(player->jumped)){
+    //if(!(joypad_prev_state & J_UP) && JOYPAD_DOWN_PAD_U && !(player->jumped)){
+    if(JOYPAD_DOWN_PAD_U && !(player->jumped)){
         player->sprite.speed.y = -5;
         player->jumped = true;
     }
 }
 
+void collision_check(MSprite* sprite, unsigned char map[]){
+    UINT16 tile_num = 20 * 18;
+    sprite->col.has_collided = false;
+    for(int i = 0; i < tile_num; ++i){
+        if(map[i] == 0x00){ continue; }
+        else if (i % 20 == sprite->position.x / 8 &&
+                 //sprite->position.x <= i ||
+                 i/20 == sprite->position.y / 8) {
+                 //sprite->position.y <= ((i/20) * 8)){
+            sprite->col.has_collided = true;
+            break;
+        }
+    }
+    
+}
+
 void main()
 {
-    UPDATE_JOYPAD_STATE;
+    set_bkg_data(0, 3, backgroundtiles);
+    set_bkg_tiles(0,0,20,18, TestMap);
+
+    SHOW_BKG;
     
     MPlayer player = {{{88, 78}, 0, 3, 0, {0, 0}, {false}}, false, 6, 0, false, 60, 0};
     sprites[0] = &(player.sprite);
@@ -159,6 +181,8 @@ void main()
     UINT8 movement = 0;
 
     while(1){
+        UPDATE_JOYPAD_STATE;
+        
         //Update loop
         player_movement(&player);
         jump(&player);
@@ -179,12 +203,14 @@ void main()
         }
 
         // Collision Check?
-        if(player.sprite.position.y < 144){
-            player.sprite.col.has_collided = false;
-        }
-        else {
-            player.sprite.col.has_collided = true;
-        }
+        //if(player.sprite.position.y < 144){
+        //    player.sprite.col.has_collided = false;
+        // }
+        //else {
+        //    player.sprite.col.has_collided = true;
+        //}
+
+        collision_check(sprites[0], TestMap);
         wait_vbl_done();
     }
 }

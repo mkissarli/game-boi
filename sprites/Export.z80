@@ -24,7 +24,7 @@
 
 ; Start of tile array.
 TileLabel::
-DB $00,$00,$7E,$7E,$42,$76,$42,$76
-DB $4A,$4A,$7E,$7E,$36,$36,$36,$36
+DB $FF,$FF,$81,$81,$FF,$FF,$FF,$FF
+DB $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF
 
 ; End of EXPORT.Z80
