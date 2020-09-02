@@ -11,20 +11,25 @@ UINT8 create_sprite_num(){
     return total_sprites;
 }
 
-typedef struct MSprite
+typedef struct MVector
 {
     UINT8 x;
     UINT8 y;
-    UINT8 animation_index;
-    UINT8 max_animations;
-    UINT8 sprite_number;
-    UINT8 speed;
+} MVector;
+
+typedef struct MSprite
+{
+    MVector position;
+    UINT8   animation_index;
+    UINT8   max_animations;
+    UINT8   sprite_number;
+    MVector speed;
 } MSprite;
 
-MSprite* sprites[40];
+MSprite* sprites[40] = {0};
 
 void draw(MSprite* sprite){
-    move_sprite(sprite->sprite_number, sprite->x, sprite->y);
+    move_sprite(sprite->sprite_number, sprite->position.x, sprite->position.y);
 }
 
 typedef struct MPlayer
@@ -33,6 +38,9 @@ typedef struct MPlayer
     bool    moved;
     UINT8   movement_delay;
     UINT16  movement_time;
+    bool    jumped;
+    UINT8   jump_delay;
+    UINT16  jump_time;
 } MPlayer;
 
 void next_animation(MSprite* sprite){
@@ -43,23 +51,22 @@ void next_animation(MSprite* sprite){
     set_sprite_tile(sprite->sprite_number, sprite->animation_index);
 }
 
-static UINT8 GRAVITY = 9;
+static UINT8 GRAVITY = 2;
 UINT8 gravity_time = 0;
 void gravity(MSprite* sprite){
     //Collision Check
-    sprite->y += 1;
+    sprite->speed.y += GRAVITY;
+
+    if(sprite->position.y + sprite->speed.y >= 130){
+        sprite->speed.y = 0;
+        sprite->position.y = 130;
+    }
 }
 
-void move_player(MPlayer* player, UINT8 move, bool is_x){
-    player->moved = true;
-    if(is_x == true){
-        player->sprite.x += move;       
-    }
-    else {
-        player->sprite.y += move;
-    }
-    next_animation(&(player->sprite));
-    //draw(&(player->sprite));
+
+void update_position(MSprite* sprite){
+    sprite->position.x += sprite->speed.x;
+    sprite->position.y += sprite->speed.y;
 }
 
 
@@ -73,53 +80,65 @@ void create_level(){
 
 void player_movement(MPlayer* player)
 {
-    if(!(player->moved)){
-        if(JOYPAD_DOWN_PAD_L){
-            move_player(player, -player->sprite.speed, true);
-        }
-        else if(JOYPAD_DOWN_PAD_R){
-            move_player(player, player->sprite.speed, true);
-        }
-        if(JOYPAD_DOWN_PAD_U){
-            move_player(player, -player->sprite.speed, false);
-        }
-        else if(JOYPAD_DOWN_PAD_D){
-            move_player(player, player->sprite.speed, false);
-        }
+    MVector movement_speed = {10, 10};
+    // if(!(player->moved)){
+    if(JOYPAD_DOWN_PAD_L){
+        player->sprite.speed.x = -movement_speed.x;
+        next_animation(&(player->sprite));
     }
-    if(player->movement_time > player->movement_delay){
-        player->movement_time = 0;
-        player->moved = false;
+    else if(JOYPAD_DOWN_PAD_R){
+        player->sprite.speed.x = movement_speed.x;
+        next_animation(&(player->sprite));
     }
+    else if(JOYPAD_UP_PAD_L && JOYPAD_UP_PAD_R){
+        player->sprite.speed.x = 0;
+            //player->moved = true;
+    }
+        
+    if(JOYPAD_DOWN_PAD_D){
+        player->sprite.speed.y = movement_speed.y;
+    }
+    else if(JOYPAD_RELEASED_PAD_D){
+        player->sprite.speed.y -= movement_speed.y;
+    }
+}
 
-    ++(player->movement_time);   
+void jump(MPlayer* player){
+    if(JOYPAD_DOWN_PAD_U){
+        player->jumped = true;
+        player->sprite.speed.y = -10;
+    }
 }
 
 void main()
 {
     UPDATE_JOYPAD_STATE;
     
-    MPlayer player = {{88, 78, 0, 3, 0, 5}, false, 6, 0};
+    MPlayer player = {{{88, 78}, 0, 3, 0, {0, 0}}, false, 6, 0, false, 6, 0};
     sprites[0] = &(player.sprite);
     set_sprite_data(player.sprite.sprite_number, player.sprite.max_animations, MainChar);
     set_sprite_tile(player.sprite.sprite_number, player.sprite.animation_index);
-    move_sprite(player.sprite.sprite_number, player.sprite.x, player.sprite.y);
+    move_sprite(player.sprite.sprite_number, player.sprite.position.x, player.sprite.position.y);
     SHOW_SPRITES;
     UINT8 movement = 0;
 
     while(1){
         //Update loop
         player_movement(&player);
-        /*++gravity_time;
+        jump(&player);
+        ++gravity_time;
         for(UINT8 i = 0; i < 40; ++i){
-            if(gravity_time > 6) { gravity(sprites[i]); }
+            if(sprites[i] == 0){break;}
+            if(gravity_time > 60) { gravity(sprites[i]); }
+            update_position(sprites[i]);
         }
-        gravity_time = 0;
-        */
+        if(gravity_time > 60) { gravity_time = 0; }
+        
         //Draw loop
         for(UINT8 i = 0; i < 40; ++i){
+            if(sprites[i] == 0){break;}
             draw(sprites[i]);
-        //    move_sprite(0, sprites[i]->x, sprites[i]->y);
+            //move_sprite(0, sprites[i]->x, sprites[i]->y);
         }
         
         //draw(sprites[0]);

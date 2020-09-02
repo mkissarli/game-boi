@@ -21,7 +21,7 @@ while (0)
 #define JOYPAD_WAITTIME(buttons, timeout) (   joypad_waittime     (buttons, timeout))
 
 /* Macros for checking if a button was pressed.       */
-#define JOYPAD_PRESSED_START   JOYPAD_PRESSED(J_START )
+#define JOYPAD_PRESSED_START   JOYPAD_PRESSED (J_START )
 #define JOYPAD_PRESSED_SELECT  JOYPAD_PRESSED (J_SELECT)
 #define JOYPAD_PRESSED_A       JOYPAD_PRESSED (J_A     )
 #define JOYPAD_PRESSED_B       JOYPAD_PRESSED (J_B     )
