@@ -1,6 +1,8 @@
 #include <gb/gb.h>
 #include <stdio.h>
-#include <stdbool.h> 
+#include <stdbool.h>
+
+#include <stdlib.h>     /* realloc, free, exit, NULL */
 #include "../sprites/char.c"
 #include "../src/input.c"
 #include "../sprites/backgroundtiles.c"
@@ -149,6 +151,61 @@ void jump(MPlayer* player){
     }
 }
 
+typedef struct MTile
+{
+    unsigned char value;
+    MVector position;
+} MTile;
+
+MTile* turn_map_to_MMap(unsigned char map[]){
+    MTile* more_map = NULL;
+    MTile* omap = NULL;
+    UINT16 count = 0;
+    UINT8 map_width = 20;
+    UINT8 map_height = 18;
+    UINT16 tile_num = map_width * map_height;
+    for(int i = 0; i < tile_num; ++i){
+        if(map[i] == 0x00){ continue; }
+        count += 1;
+        MTile t_val = { map[i], {i%20, i/20}};
+        //more_map
+        omap = (MTile*) realloc(omap, count*sizeof(MTile));
+        //omap = more_map;
+        omap[count - 1] = t_val;//{map[i], { i % 20, i / 20 }};
+    }
+
+    return omap;
+}
+
+/*
+void turn_map_to_MTile_arr(unsigned char map[], MTile* omap){
+    UINT16 count = 0;
+    UINT8 map_width = 20;
+    UINT8 map_height = 18;
+    UINT16 tile_num = map_width * map_height;
+    
+    for(int j = 0; j < tile_num; ++j){
+        if(map[j] != 0x00) {
+            count += 1;
+        }
+    }
+
+    //MTile[] map = new MTile[count];
+    MTile* dmap = NULL;
+    dmap = malloc(count);
+    
+    for(int i = 0; i < tile_num; ++i){
+        if(map[i] == 0x00){
+            continue;
+        }
+
+        dmap[i] = {map[i], i % 20, i / 20};
+    }
+
+    omap = dmap;
+}*/
+
+
 void collision_check(MSprite* sprite, unsigned char map[]){
     UINT16 tile_num = 20 * 18;
     sprite->col.has_collided = false;
@@ -179,6 +236,8 @@ void main()
     move_sprite(player.sprite.sprite_number, player.sprite.position.x, player.sprite.position.y);
     SHOW_SPRITES;
     UINT8 movement = 0;
+
+    MTile[] map = turn_map_to_MMap(TestMap);
 
     while(1){
         UPDATE_JOYPAD_STATE;

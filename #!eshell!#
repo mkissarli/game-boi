@@ -1510,4 +1510,394 @@ d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
 d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
 
 d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:157: error 141: two or more data types in declaration for 'type_specifier declaration_specifiers - skipped'
+./src/main.c:157: error 54: Function cannot return aggregate. Func body ignored
+./src/main.c:158: syntax error: token -> '=' ; column 21
+./src/main.c:159: error 1: Syntax error, declaration ignored at 'MTile'
+./src/main.c:164: syntax error: token -> 'for' ; column 7
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:157: error 1: Syntax error, declaration ignored at 'MTile'
+./src/main.c:157: syntax error: token -> '*' ; column 6
+./src/main.c:159: error 1: Syntax error, declaration ignored at 'MTile'
+./src/main.c:164: syntax error: token -> 'for' ; column 7
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:157: error 1: Syntax error, declaration ignored at 'MTile'
+./src/main.c:157: syntax error: token -> 'turn_map_to_MMap' ; column 24
+./src/main.c:159: error 1: Syntax error, declaration ignored at 'MTile'
+./src/main.c:164: syntax error: token -> 'for' ; column 7
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:157: syntax error: token -> '[' ; column 6
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:169: warning 112: function 'realloc' implicit declaration
+./src/main.c:169: error 101: too many parameters 
+./src/main.c:169: error 47: indirections to different types assignment   
+from type 'void'
+  to type 'struct MTile generic* auto'
+./src/main.c:208: syntax error: token -> '[' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:170: warning 112: function 'realloc' implicit declaration
+./src/main.c:170: error 101: too many parameters 
+./src/main.c:170: error 47: indirections to different types assignment   
+from type 'void'
+  to type 'struct MTile generic* auto'
+./src/main.c:209: syntax error: token -> '[' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:170: warning 112: function 'realloc' implicit declaration
+./src/main.c:170: error 101: too many parameters 
+./src/main.c:170: error 47: indirections to different types assignment   
+from type 'void'
+  to type 'struct MTile generic* auto'
+./src/main.c:209: syntax error: token -> '[' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:169: warning 112: function 'realloc' implicit declaration
+./src/main.c:169: error 101: too many parameters 
+./src/main.c:169: error 47: indirections to different types assignment   
+from type 'void'
+  to type 'struct MTile generic* auto'
+./src/main.c:208: syntax error: token -> '[' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:170: syntax error: token -> 'MTile' ; column 20
+./src/main.c:172: error 20: Undefined identifier 't'
+./src/main.c:172: error 47: indirections to different types assignment   
+from type 'int fixed'
+  to type 'struct MTile fixed'
+./src/main.c:172: error 20: Undefined identifier 't'
+./src/main.c:172: warning 85: in function turn_map_to_MMap unreferenced function argument : 'map'
+./src/main.c:175: syntax error: token -> 'return' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:170: warning 112: function 'realloc' implicit declaration
+./src/main.c:170: error 101: too many parameters 
+./src/main.c:170: error 36: illegal cast (cast cannot be aggregate)
+./src/main.c:209: syntax error: token -> '[' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:170: warning 112: function 'realloc' implicit declaration
+./src/main.c:170: error 101: too many parameters 
+./src/main.c:170: error 47: indirections to different types assignment   
+from type 'void'
+  to type 'struct MTile generic* auto'
+./src/main.c:209: syntax error: token -> '[' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:170: warning 112: function 'realloc' implicit declaration
+./src/main.c:170: error 101: too many parameters 
+./src/main.c:209: syntax error: token -> '[' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:170: syntax error: token -> 'MTile' ; column 58
+./src/main.c:172: error 20: Undefined identifier 't'
+./src/main.c:172: error 47: indirections to different types assignment   
+from type 'int fixed'
+  to type 'struct MTile fixed'
+./src/main.c:172: error 20: Undefined identifier 't'
+./src/main.c:172: warning 85: in function turn_map_to_MMap unreferenced function argument : 'map'
+./src/main.c:175: syntax error: token -> 'return' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:170: syntax error: token -> 'MTile' ; column 59
+./src/main.c:172: error 20: Undefined identifier 't'
+./src/main.c:172: error 47: indirections to different types assignment   
+from type 'int fixed'
+  to type 'struct MTile fixed'
+./src/main.c:172: error 20: Undefined identifier 't'
+./src/main.c:172: warning 85: in function turn_map_to_MMap unreferenced function argument : 'map'
+./src/main.c:175: syntax error: token -> 'return' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:170: syntax error: token -> 'MTile' ; column 58
+./src/main.c:172: error 20: Undefined identifier 't_val'
+./src/main.c:172: error 47: indirections to different types assignment   
+from type 'int fixed'
+  to type 'struct MTile fixed'
+./src/main.c:172: error 20: Undefined identifier 't_val'
+./src/main.c:172: warning 85: in function turn_map_to_MMap unreferenced function argument : 'map'
+./src/main.c:175: syntax error: token -> 'return' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:171: syntax error: token -> 'MTile' ; column 58
+./src/main.c:173: error 20: Undefined identifier 't_val'
+./src/main.c:173: error 47: indirections to different types assignment   
+from type 'int fixed'
+  to type 'struct MTile fixed'
+./src/main.c:173: error 20: Undefined identifier 't_val'
+./src/main.c:173: warning 85: in function turn_map_to_MMap unreferenced function argument : 'map'
+./src/main.c:176: syntax error: token -> 'return' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:172: syntax error: token -> 'MTile' ; column 58
+./src/main.c:174: error 20: Undefined identifier 't_val'
+./src/main.c:174: error 47: indirections to different types assignment   
+from type 'int fixed'
+  to type 'struct MTile fixed'
+./src/main.c:174: error 20: Undefined identifier 't_val'
+./src/main.c:174: warning 85: in function turn_map_to_MMap unreferenced function argument : 'map'
+./src/main.c:177: syntax error: token -> 'return' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:171: syntax error: token -> 'MTile' ; column 58
+./src/main.c:173: error 20: Undefined identifier 't_val'
+./src/main.c:173: error 47: indirections to different types assignment   
+from type 'int fixed'
+  to type 'struct MTile fixed'
+./src/main.c:173: error 20: Undefined identifier 't_val'
+./src/main.c:173: warning 85: in function turn_map_to_MMap unreferenced function argument : 'map'
+./src/main.c:176: syntax error: token -> 'return' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:171: syntax error: token -> 'MTile' ; column 58
+./src/main.c:173: syntax error: token -> '{' ; column 27
+./src/main.c:173: warning 85: in function turn_map_to_MMap unreferenced function argument : 'map'
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:171: syntax error: token -> 'MTile' ; column 58
+./src/main.c:173: syntax error: token -> '{' ; column 27
+./src/main.c:173: warning 85: in function turn_map_to_MMap unreferenced function argument : 'map'
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:173: syntax error: token -> '{' ; column 27
+-:0: warning 85: in function turn_map_to_MMap unreferenced function argument : 'map'
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:173: syntax error: token -> '{' ; column 27
+-:0: warning 85: in function turn_map_to_MMap unreferenced function argument : 'map'
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:173: syntax error: token -> '{' ; column 27
+-:0: warning 85: in function turn_map_to_MMap unreferenced function argument : 'map'
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:173: syntax error: token -> '{' ; column 27
+-:0: warning 85: in function turn_map_to_MMap unreferenced function argument : 'map'
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:173: syntax error: token -> 'MTile' ; column 31
+-:0: warning 85: in function turn_map_to_MMap unreferenced function argument : 'map'
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:171: warning 112: function 'realloc' implicit declaration
+./src/main.c:171: error 101: too many parameters 
+./src/main.c:171: error 47: indirections to different types assignment   
+from type 'void'
+  to type 'struct MTile generic* auto'
+./src/main.c:210: syntax error: token -> '[' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:171: warning 112: function 'realloc' implicit declaration
+./src/main.c:171: error 101: too many parameters 
+./src/main.c:171: error 47: indirections to different types assignment   
+from type 'void'
+  to type 'struct MTile generic* auto'
+./src/main.c:210: syntax error: token -> '[' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:180: syntax error: token -> '[' ; column 6
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:172: warning 112: function 'realloc' implicit declaration
+./src/main.c:172: error 101: too many parameters 
+./src/main.c:172: error 47: indirections to different types assignment   
+from type 'void'
+  to type 'struct MTile generic* auto'
+./src/main.c:237: syntax error: token -> '[' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:172: warning 112: function 'realloc' implicit declaration
+./src/main.c:172: error 101: too many parameters 
+./src/main.c:172: error 47: indirections to different types assignment   
+from type 'void'
+  to type 'struct MTile generic* auto'
+./src/main.c:237: syntax error: token -> '[' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:4:20: fatal error: malloc.h: No such file or directory
+compilation terminated.
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:173: warning 112: function 'realloc' implicit declaration
+./src/main.c:173: error 101: too many parameters 
+./src/main.c:173: error 47: indirections to different types assignment   
+from type 'void'
+  to type 'struct MTile generic* auto'
+./src/main.c:238: syntax error: token -> '[' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:203: syntax error: token -> '{' ; column 18
+./src/main.c:196: warning 112: function 'malloc' implicit declaration
+./src/main.c:196: error 101: too many parameters 
+./src/main.c:196: error 47: indirections to different types assignment   
+from type 'void'
+  to type 'struct MTile generic* auto'
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:203: syntax error: token -> '{' ; column 18
+./src/main.c:196: warning 112: function 'malloc' implicit declaration
+./src/main.c:196: error 101: too many parameters 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:198: error 0: Duplicate symbol 'i', symbol IGNORED
+./src/main.c:188: error 177: previously defined here
+./src/main.c:203: syntax error: token -> '{' ; column 18
+./src/main.c:196: warning 112: function 'malloc' implicit declaration
+./src/main.c:196: error 101: too many parameters 
+./src/main.c:198: error 20: Undefined identifier 'i'
+./src/main.c:198: error 20: Undefined identifier 'i'
+-:0: warning 85: in function turn_map_to_MTile_arr unreferenced function argument : 'omap'
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:203: syntax error: token -> '{' ; column 18
+./src/main.c:196: warning 112: function 'malloc' implicit declaration
+./src/main.c:196: error 101: too many parameters 
+-:0: warning 85: in function turn_map_to_MTile_arr unreferenced function argument : 'omap'
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:203: syntax error: token -> '{' ; column 19
+./src/main.c:196: warning 112: function 'malloc' implicit declaration
+./src/main.c:196: error 101: too many parameters 
+-:0: warning 85: in function turn_map_to_MTile_arr unreferenced function argument : 'omap'
+./src/main.c:206: error 1: Syntax error, declaration ignored at 'omap'
+./src/main.c:206: syntax error: token -> '=' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:203: syntax error: token -> '{' ; column 19
+./src/main.c:196: warning 112: function 'malloc' implicit declaration
+./src/main.c:196: error 101: too many parameters 
+-:0: warning 85: in function turn_map_to_MTile_arr unreferenced function argument : 'omap'
+./src/main.c:206: error 1: Syntax error, declaration ignored at 'omap'
+./src/main.c:206: syntax error: token -> '=' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:172: warning 112: function 'realloc' implicit declaration
+./src/main.c:172: error 101: too many parameters 
+./src/main.c:172: error 47: indirections to different types assignment   
+from type 'void'
+  to type 'struct MTile generic* auto'
+./src/main.c:240: syntax error: token -> '[' ; column 10
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
 d:/Programming/C++/GameBoyJam/MHDemake $ 
