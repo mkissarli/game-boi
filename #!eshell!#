@@ -1274,4 +1274,150 @@ d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -kmake.bat -k
 d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
 
 d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -kmake.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -kmake.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -kmake.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -kmake.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -kmake.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -kmake.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -kmake.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -kmake.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -kmake.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:176: error 44: operands are not comparable
+./src/main.c:177: error 26: '_collision' not a structure/union member
+./src/main.c:177: error 25: Structure/Union expected left of '.->'
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:176: error 44: operands are not comparable
+./src/main.c:177: error 26: '_has_col' not a structure/union member
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:176: error 44: operands are not comparable
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:176: error 44: operands are not comparable
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c make.bat -kmake.bat -k
+d:ProgrammingC++GameBoyJamMHDemake: command not found
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:59: syntax error: token -> 'byte' ; column 8
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+./src/main.c:59: syntax error: token -> 'UINT4' ; column 9
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
+d:/Programming/C++/GameBoyJam/MHDemake $ make.bat -k
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -c -o ./dev/main.o ./src/main.c 
+
+d:\Programming\C++\GameBoyJam\MHDemake>..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -o ./bin/main.gb ./dev/main.o 
 d:/Programming/C++/GameBoyJam/MHDemake $ 

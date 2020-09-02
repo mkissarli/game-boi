@@ -4,8 +4,6 @@
 #include "../sprites/char.c"
 #include "../src/input.c"
 
-
-
 INT8 total_sprites = -1;
 UINT8 create_sprite_num(){
     ++total_sprites;
@@ -31,6 +29,11 @@ typedef struct MVel
     INT8 y;
 } MVel;
 
+typedef struct MCollision
+{
+    bool has_collided;
+} MCollision;
+
 typedef struct MSprite
 {
     MVector position;
@@ -38,6 +41,7 @@ typedef struct MSprite
     UINT8   max_animations;
     UINT8   sprite_number;
     MVel    speed;
+    MCollision col;
 } MSprite;
 
 MSprite* sprites[40] = {0};
@@ -99,7 +103,7 @@ void update_position(MSprite* sprite){
 
 void player_movement(MPlayer* player)
 {
-    MVector movement_speed = {2, 2};
+    MVector movement_speed = {4, 4};
     UPDATE_JOYPAD_STATE;
     // if(!(player->moved)){
     if(JOYPAD_DOWN_PAD_L){
@@ -110,12 +114,20 @@ void player_movement(MPlayer* player)
         player->sprite.speed.x = movement_speed.x;
         next_animation(&(player->sprite));
     }
-    else if(JOYPAD_UP_PAD_L && JOYPAD_UP_PAD_R && !(player->jumped)){
+    // This could be made more parabolic
+    else if(JOYPAD_UP_PAD_L && JOYPAD_UP_PAD_R){
         player->sprite.speed.x = 0;
+        /*if(player->sprite.speed.x < 0){
+            player->sprite.speed.x += 1;
+        }
+        else if(player->sprite.speed.x > 0){
+            player->sprite.speed.x -= 1;
+        }
+        */
     }
     
     if(JOYPAD_DOWN_PAD_D){
-        //player->sprite.speed.y = movement_speed.y;
+        player->sprite.speed.y = movement_speed.y;
     }
     else if(JOYPAD_RELEASED_PAD_D){
         player->sprite.speed.y -= movement_speed.y;
@@ -123,15 +135,14 @@ void player_movement(MPlayer* player)
 }
 
 void jump(MPlayer* player){
-    //UPDATE_JOYPAD_STATE;
-    if(!(joypad_prev_state & J_UP) && JOYPAD_DOWN_PAD_U && (player->jumped == false)){
-        //player->sprite.position.y = 80;
+    //collision check
+    if(player->sprite.col.has_collided == true){
+        player->jumped = false;
+    }
+    
+    if(!(joypad_prev_state & J_UP) && JOYPAD_DOWN_PAD_U && !(player->jumped)){
         player->sprite.speed.y = -5;
         player->jumped = true;
-    }
-    //collision check
-    if(player->sprite.position.y >= 144){
-        player->jumped = false;
     }
 }
 
@@ -139,7 +150,7 @@ void main()
 {
     UPDATE_JOYPAD_STATE;
     
-    MPlayer player = {{{88, 78}, 0, 3, 0, {0, 0}}, false, 6, 0, false, 60, 0};
+    MPlayer player = {{{88, 78}, 0, 3, 0, {0, 0}, {false}}, false, 6, 0, false, 60, 0};
     sprites[0] = &(player.sprite);
     set_sprite_data(player.sprite.sprite_number, player.sprite.max_animations, MainChar);
     set_sprite_tile(player.sprite.sprite_number, player.sprite.animation_index);
@@ -166,8 +177,14 @@ void main()
             if(sprites[i] == 0){break;}
             draw(sprites[i]);
         }
-        //draw(sprites[0]);
+
+        // Collision Check?
+        if(player.sprite.position.y < 144){
+            player.sprite.col.has_collided = false;
+        }
+        else {
+            player.sprite.col.has_collided = true;
+        }
         wait_vbl_done();
-        //performantdelay(5);
     }
 }
