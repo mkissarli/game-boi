@@ -1,7 +1,6 @@
 #include <gb/gb.h>
 #include <stdio.h>
 #include <stdbool.h>
-//#include <string.h>
 #include "../sprites/char.c"
 #include "../src/input.c"
 #include "../sprites/backgroundtiles.c"
@@ -28,7 +27,7 @@ typedef struct MTile
 typedef struct MCollision
 {
     bool has_collided;
-    UINT8 direction; //0 left, 1 right, 2 down, 3 up,
+    MVel direction; // Numpad 5 == no collision
 } MCollision;
 
 typedef struct MSprite
@@ -138,6 +137,38 @@ void collision_check(MSprite* sprite, unsigned char map[], UINT16 count){
     }
 }
 
+UINT8 get_world_to_map(MVector* pos){
+    return pos->x/8 + pos->y/8 * 20;
+}
+
+void collision_check_2(MSprite* sprite, unsigned char map[]){
+    UINT8 pos = get_world_to_map(&(sprite->position));
+
+    sprite->col.has_collided = false;
+    sprite->col.direction.x = 0;
+    sprite->col.direction.y = 0;
+    // Left
+    if(map[pos - 1]){
+        sprite->col.direction.x = -1;
+        sprite->col.has_collided = true;
+    }
+    // Right
+    if(map[pos + 1]){
+        sprite->col.direction.x = 1;
+        sprite->col.has_collided = true;
+    }
+    // Up
+    if(pos - 20 >= 0 && map[pos - 20]){
+        sprite->col.direction.y = -1;
+        sprite->col.has_collided = true;
+    }
+    // Down
+    if(pos + 20 <= 20*18 && map[pos + 20]){
+        sprite->col.direction.y = 1;
+        sprite->col.has_collided = true;
+    }
+}
+
 void main()
 {
     set_bkg_data(0, 3, backgroundtiles);
@@ -145,38 +176,21 @@ void main()
 
     SHOW_BKG;
     
-    MPlayer player = {{{70, 30}, 0, 3, 0, {0, 0}, {false, 4}}, false};
+    MPlayer player = {{{70, 30}, 0, 3, 0, {0, 0}, {false, {0, 0}}}, false};
 
     set_sprite_data(player.sprite.sprite_number, player.sprite.max_animations, MainChar);
     set_sprite_tile(player.sprite.sprite_number, player.sprite.animation_index);
     move_sprite(player.sprite.sprite_number, player.sprite.position.x, player.sprite.position.y);
     SHOW_SPRITES;
 
+    /*
     UINT16 count = 0;
     UINT16 x_count = 0;
     UINT16 y_count = 0;
     UINT8 map_width = 20;
     UINT8 map_height = 18;
     UINT16 tile_num = map_width * map_height;
- 
-    /*MTile map[20*18] = {{{0}}};
-    
-    for(int i = 0; i < tile_num; ++i){
-        
-        ++x_count;
-        if(x_count == map_width){
-            x_count = 0;
-            ++y_count;
-        }
-        //if(TestMap[i] == 0x00){
-        //        continue;
-        //}
-        ++count;
-            
-        MTile t = {TestMap[i], {x_count * 8 + 8, y_count * 8 + 16}};
-        map[count] = t;
-        }*/
-    
+    */
 
     while(1){
         UPDATE_JOYPAD_STATE;
@@ -190,11 +204,13 @@ void main()
             ++gravity_time;
         }
 
-        if(!player.sprite.col.has_collided){update_position(&(player.sprite));}
+        if(!player.sprite.col.has_collided){
+            update_position(&(player.sprite));
+        }
 
         draw(&(player.sprite));
 
-        collision_check(&(player.sprite), TestMap, 20*18);
+        collision_check_2(&(player.sprite), TestMap);
         wait_vbl_done();
     }
 }
