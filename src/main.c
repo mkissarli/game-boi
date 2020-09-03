@@ -72,6 +72,18 @@ void gravity(MSprite* sprite){
 
 
 void update_position(MSprite* sprite){
+    if(sprite->col.direction.x == -1 && sprite->speed.x < 0){
+        sprite->speed.x = 0;
+    }
+    if(sprite->col.direction.x == 1 && sprite->speed.x > 0){
+        sprite->speed.x = 0;
+    }
+    if(sprite->col.direction.y == -1 && sprite->speed.y < 0){
+        sprite->speed.y = 0;
+    }
+    if(sprite->col.direction.y == 1 && sprite->speed.y > 0){
+        sprite->speed.y = 0;
+    }
     sprite->position.x += sprite->speed.x;
     sprite->position.y += sprite->speed.y;
         
@@ -148,22 +160,22 @@ void collision_check_2(MSprite* sprite, unsigned char map[]){
     sprite->col.direction.x = 0;
     sprite->col.direction.y = 0;
     // Left
-    if(map[pos - 1]){
+    if(pos - 1 % 20 == 0 || map[pos - 1] != 0x00){
         sprite->col.direction.x = -1;
         sprite->col.has_collided = true;
     }
     // Right
-    if(map[pos + 1]){
+    if(pos + 1 % 20 == 19 || map[pos + 1] != 0x00){
         sprite->col.direction.x = 1;
         sprite->col.has_collided = true;
     }
     // Up
-    if(pos - 20 >= 0 && map[pos - 20]){
+    if(pos - 20 < 0 || map[pos - 20] != 0x00){
         sprite->col.direction.y = -1;
         sprite->col.has_collided = true;
     }
     // Down
-    if(pos + 20 <= 20*18 && map[pos + 20]){
+    if(pos + 20 > 20*18 || map[pos + 20] != 0x00){
         sprite->col.direction.y = 1;
         sprite->col.has_collided = true;
     }
@@ -204,9 +216,9 @@ void main()
             ++gravity_time;
         }
 
-        if(!player.sprite.col.has_collided){
+        //if(!player.sprite.col.has_collided){
             update_position(&(player.sprite));
-        }
+            //}
 
         draw(&(player.sprite));
 
