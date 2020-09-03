@@ -1,25 +1,11 @@
 #include <gb/gb.h>
 #include <stdio.h>
 #include <stdbool.h>
-
-#include <stdlib.h>     /* realloc, free, exit, NULL */
+//#include <string.h>
 #include "../sprites/char.c"
 #include "../src/input.c"
 #include "../sprites/backgroundtiles.c"
 #include "../sprites/test_map.c"
-
-INT8 total_sprites = -1;
-UINT8 create_sprite_num(){
-    ++total_sprites;
-    return total_sprites;
-}
-
-void performantdelay(UINT8 numloops){
-    UINT8 i;
-    for(i = 0; i < numloops; i++){
-        wait_vbl_done();
-    }     
-}
 
 typedef struct MVector
 {
@@ -33,9 +19,16 @@ typedef struct MVel
     INT8 y;
 } MVel;
 
+typedef struct MTile
+{
+    unsigned char value;
+    MVector position;
+} MTile;
+
 typedef struct MCollision
 {
     bool has_collided;
+    UINT8 direction; //0 left, 1 right, 2 down, 3 up,
 } MCollision;
 
 typedef struct MSprite
@@ -48,8 +41,6 @@ typedef struct MSprite
     MCollision col;
 } MSprite;
 
-MSprite* sprites[40] = {0};
-
 void draw(MSprite* sprite){
     move_sprite(sprite->sprite_number, sprite->position.x, sprite->position.y);
 }
@@ -57,12 +48,7 @@ void draw(MSprite* sprite){
 typedef struct MPlayer
 {
     MSprite sprite;
-    bool    moved;
-    UINT8   movement_delay;
-    UINT16  movement_time;
     bool    jumped;
-    UINT8   jump_delay;
-    UINT16  jump_time;
 } MPlayer;
 
 void next_animation(MSprite* sprite){
@@ -79,9 +65,9 @@ void gravity(MSprite* sprite){
     //Collision Check
     sprite->speed.y += GRAVITY;
 
-    if(sprite->position.y + sprite->speed.y > 144){
+    if(sprite->col.has_collided){
         sprite->speed.y = 0;
-        sprite->position.y = 144;
+        //sprite->position.y = 144;
     }
 }
 
@@ -89,27 +75,13 @@ void gravity(MSprite* sprite){
 void update_position(MSprite* sprite){
     sprite->position.x += sprite->speed.x;
     sprite->position.y += sprite->speed.y;
-
-/*    if(sprite->position.x > 160){
-      sprite->position.x = 160;
-      }
-      else{
-      sprite->position.x = 0;
-      }
-
-      if(sprite->position.y > 144){
-      sprite->position.y = 144;
-      }
-      else{
-      sprite->position.y = 0;
-      }*/
+        
 }
 
 void player_movement(MPlayer* player)
 {
     MVector movement_speed = {4, 4};
     UPDATE_JOYPAD_STATE;
-    // if(!(player->moved)){
     if(JOYPAD_DOWN_PAD_L){
         player->sprite.speed.x = -movement_speed.x;
         next_animation(&(player->sprite));
@@ -143,83 +115,27 @@ void jump(MPlayer* player){
     if(player->sprite.col.has_collided == true){
         player->jumped = false;
     }
-    
-    //if(!(joypad_prev_state & J_UP) && JOYPAD_DOWN_PAD_U && !(player->jumped)){
     if(JOYPAD_DOWN_PAD_U && !(player->jumped)){
         player->sprite.speed.y = -5;
         player->jumped = true;
     }
 }
 
-typedef struct MTile
-{
-    unsigned char value;
-    MVector position;
-} MTile;
 
-MTile* turn_map_to_MMap(unsigned char map[]){
-    MTile* more_map = NULL;
-    MTile* omap = NULL;
-    UINT16 count = 0;
-    UINT8 map_width = 20;
-    UINT8 map_height = 18;
-    UINT16 tile_num = map_width * map_height;
-    for(int i = 0; i < tile_num; ++i){
-        if(map[i] == 0x00){ continue; }
-        count += 1;
-        MTile t_val = { map[i], {i%20, i/20}};
-        //more_map
-        omap = (MTile*) realloc(omap, count*sizeof(MTile));
-        //omap = more_map;
-        omap[count - 1] = t_val;//{map[i], { i % 20, i / 20 }};
-    }
-
-    return omap;
-}
-
-/*
-void turn_map_to_MTile_arr(unsigned char map[], MTile* omap){
-    UINT16 count = 0;
-    UINT8 map_width = 20;
-    UINT8 map_height = 18;
-    UINT16 tile_num = map_width * map_height;
-    
-    for(int j = 0; j < tile_num; ++j){
-        if(map[j] != 0x00) {
-            count += 1;
-        }
-    }
-
-    //MTile[] map = new MTile[count];
-    MTile* dmap = NULL;
-    dmap = malloc(count);
-    
-    for(int i = 0; i < tile_num; ++i){
-        if(map[i] == 0x00){
-            continue;
-        }
-
-        dmap[i] = {map[i], i % 20, i / 20};
-    }
-
-    omap = dmap;
-}*/
-
-
-void collision_check(MSprite* sprite, unsigned char map[]){
+void collision_check(MSprite* sprite, unsigned char map[], UINT16 count){
     UINT16 tile_num = 20 * 18;
     sprite->col.has_collided = false;
-    for(int i = 0; i < tile_num; ++i){
-        if(map[i] == 0x00){ continue; }
-        else if (i % 20 == sprite->position.x / 8 &&
-                 //sprite->position.x <= i ||
-                 i/20 == sprite->position.y / 8) {
-                 //sprite->position.y <= ((i/20) * 8)){
+    //sprite->col.direction = 4;
+    for(int i = 0; i < count; ++i){
+        if(i % 20 * 8 + 8      <= sprite->position.x + sprite->speed.x + 8 &&
+           i % 20 * 8 + 8  + 8 >= sprite->position.x + sprite->speed.x     &&
+           i / 20 * 8 + 16     <= sprite->position.y + sprite->speed.y + 8 &&
+           i / 20 * 8 + 16 + 8 >= sprite->position.y + sprite->speed.y     &&
+           map[i] != 0x00){
             sprite->col.has_collided = true;
             break;
         }
     }
-    
 }
 
 void main()
@@ -229,15 +145,38 @@ void main()
 
     SHOW_BKG;
     
-    MPlayer player = {{{88, 78}, 0, 3, 0, {0, 0}, {false}}, false, 6, 0, false, 60, 0};
-    sprites[0] = &(player.sprite);
+    MPlayer player = {{{70, 30}, 0, 3, 0, {0, 0}, {false, 4}}, false};
+
     set_sprite_data(player.sprite.sprite_number, player.sprite.max_animations, MainChar);
     set_sprite_tile(player.sprite.sprite_number, player.sprite.animation_index);
     move_sprite(player.sprite.sprite_number, player.sprite.position.x, player.sprite.position.y);
     SHOW_SPRITES;
-    UINT8 movement = 0;
 
-    MTile[] map = turn_map_to_MMap(TestMap);
+    UINT16 count = 0;
+    UINT16 x_count = 0;
+    UINT16 y_count = 0;
+    UINT8 map_width = 20;
+    UINT8 map_height = 18;
+    UINT16 tile_num = map_width * map_height;
+ 
+    /*MTile map[20*18] = {{{0}}};
+    
+    for(int i = 0; i < tile_num; ++i){
+        
+        ++x_count;
+        if(x_count == map_width){
+            x_count = 0;
+            ++y_count;
+        }
+        //if(TestMap[i] == 0x00){
+        //        continue;
+        //}
+        ++count;
+            
+        MTile t = {TestMap[i], {x_count * 8 + 8, y_count * 8 + 16}};
+        map[count] = t;
+        }*/
+    
 
     while(1){
         UPDATE_JOYPAD_STATE;
@@ -246,30 +185,16 @@ void main()
         player_movement(&player);
         jump(&player);
         ++gravity_time;
-        for(UINT8 i = 0; i < 40; ++i){
-            if(sprites[i] == 0){break;}
-            if(gravity_time > 6) { gravity(sprites[i]); }
-            update_position(sprites[i]);
-        }
         if(gravity_time > 6){
-            gravity_time = 0;
-        }
-        
-        //Draw loop
-        for(UINT8 i = 0; i < 40; ++i){
-            if(sprites[i] == 0){break;}
-            draw(sprites[i]);
+            //gravity(&(player.sprite));
+            ++gravity_time;
         }
 
-        // Collision Check?
-        //if(player.sprite.position.y < 144){
-        //    player.sprite.col.has_collided = false;
-        // }
-        //else {
-        //    player.sprite.col.has_collided = true;
-        //}
+        if(!player.sprite.col.has_collided){update_position(&(player.sprite));}
 
-        collision_check(sprites[0], TestMap);
+        draw(&(player.sprite));
+
+        collision_check(&(player.sprite), TestMap, 20*18);
         wait_vbl_done();
     }
 }
