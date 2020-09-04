@@ -6,9 +6,10 @@
 #include <stdbool.h>
 #include "../sprites/char.c"
 #include "../src/input.c"
-#include "../sprites/backgroundtiles.c"
-#include "../sprites/test_map.c"
 #include "../src/debug.c"
+
+#include "../sprites/background.c"
+#include "../maps/map1.c"
 
 void performantdelay(UINT8 numloops){
     UINT8 i;
@@ -154,6 +155,10 @@ UINT16 get_world_to_map(MVector* pos){
     return (pos->x - 8 )/8 + ((pos->y - 16) /8 )* 20;
 }
 
+#define START_TILE 0x02
+#define FLAG_TILE  0x01
+#define EMPTY_TILE 0x00
+
 void collision_check_2(MSprite* sprite, unsigned char map[]){
     UINT16 pos = get_world_to_map(&(sprite->position));
     
@@ -161,32 +166,65 @@ void collision_check_2(MSprite* sprite, unsigned char map[]){
     sprite->col.direction.x = 0;
     sprite->col.direction.y = 0;
     // Left
-    if(pos - 1 % 20 == 0 || map[pos - 1] != 0x00){
+    if(pos - 1 % 20 == 0 ||
+       (map[pos - 1] != EMPTY_TILE &&
+        map[pos - 1] != FLAG_TILE  &&
+        map[pos - 1] != START_TILE)){
         sprite->col.direction.x = -1;
         sprite->col.has_collided = true;
     }
     // Right
-    if(pos + 1 % 20 == 19 || map[pos + 1] != 0x00){
+    if(pos + 1 % 20 == 19 ||
+       (map[pos + 1] != EMPTY_TILE &&
+        map[pos + 1] != FLAG_TILE  &&
+        map[pos + 1] != START_TILE)){
         sprite->col.direction.x = 1;
         sprite->col.has_collided = true;
     }
     // Up
-    if(pos - 20 < 0 || map[pos - 20] != 0x00){
+    if(pos - 20 < 0 ||
+       (map[pos - 20] != EMPTY_TILE &&
+        map[pos - 20] != FLAG_TILE  &&
+        map[pos - 20] != START_TILE)){
         sprite->col.direction.y = -1;
         sprite->col.has_collided = true;
     }
     // Down
-    if(pos + 20 > 20 * 18 || map[pos + 20] != 0x00){
+    if(pos + 20 > 20 * 18 || 
+       (map[pos + 20] != EMPTY_TILE &&
+        map[pos + 20] != FLAG_TILE  &&
+        map[pos + 20] != START_TILE)){
         sprite->col.direction.y = 1;
         sprite->col.has_collided = true;
     }
 }
 
+void set_map(unsigned char map[], MPlayer* player){
+    set_bkg_tiles(0,0,20,18,map);
+    // Start from bottom as more likely the start is near the bottom
+    for(UINT16 i = 20 * 18 - 1; i >= 0; --i){
+        if(map[i] == START_TILE){
+            player->sprite.position.x = i % 20 + 8;
+            player->sprite.position.y = i / 20 + 16;
+            break;
+        }
+    }
+
+    update_position(&(player->sprite));
+}
+
+BYTE win_condition(unsigned char map[], MPlayer* player){
+    if(map[get_world_to_map(&(player->sprite.position))] == FLAG_TILE){
+        DEBUG_LOG_MESSAGE("You did a win!!");
+        return 1;
+    }
+    return 0;
+}
+
 void main()
 {
-    set_bkg_data(0, 3, backgroundtiles);
-    set_bkg_tiles(0,0,20,18, TestMap);
-
+    set_bkg_data(0, 5, BackgroundTiles);
+    
     SHOW_BKG;
     
     MPlayer player = {{{70, 24}, 0, 3, 0, {0, 0}, {false, {0, 0}}}, false};
@@ -196,6 +234,8 @@ void main()
     move_sprite(player.sprite.sprite_number, player.sprite.position.x, player.sprite.position.y);
     SHOW_SPRITES;
 
+    set_map(Map1, &player);
+    
     while(1){
         UPDATE_JOYPAD_STATE;
         //Update loop
@@ -205,7 +245,7 @@ void main()
         jump(&player);
 
         // Collisions
-        collision_check_2(&(player.sprite), TestMap);
+        collision_check_2(&(player.sprite), Map1);
         
         // Gravity
         //++gravity_time;
@@ -218,6 +258,9 @@ void main()
         update_position(&(player.sprite));
         draw(&(player.sprite));
 
+
+        win_condition(Map1, &player);
+        
         // V-Sync
         wait_vbl_done();
         //performantdelay(5);
