@@ -2,7 +2,7 @@
                               2 ; File Created by SDCC : free open source ANSI-C Compiler
                               3 ; Version 4.0.0 #11528 (MINGW32)
                               4 ;--------------------------------------------------------
-                              5 	.module C__Users_Thief3_AppData_Local_Temp_lcc94601
+                              5 	.module C__Users_Thief3_AppData_Local_Temp_lcc87241
                               6 	.optsdcc -mgbz80
                               7 	
                               8 ;--------------------------------------------------------
@@ -2198,8 +2198,8 @@
    04F2 56                 2195 	ld	d, (hl)
    04F3 1A                 2196 	ld	a,(de)
    04F4 D6 02              2197 	sub	a, #0x02
-   04F6 C2r35r05           2198 	jp	NZ,00106$
-                           2199 ;./src/main.c:207: player->sprite.position.x = i % 20 + 8;
+   04F6 C2r3Br05           2198 	jp	NZ,00106$
+                           2199 ;./src/main.c:207: player->sprite.position.x = i % 20 * 8 + 8;
    04F9 F8 08              2200 	ldhl	sp,	#8
    04FB 2A                 2201 	ld	a, (hl+)
    04FC 5E                 2202 	ld	e, (hl)
@@ -2214,411 +2214,417 @@
    050A E8 04              2211 	add	sp, #4
    050C C1                 2212 	pop	bc
    050D 7B                 2213 	ld	a, e
-   050E C6 08              2214 	add	a, #0x08
-   0510 E1                 2215 	pop	hl
-   0511 E5                 2216 	push	hl
-   0512 77                 2217 	ld	(hl), a
-                           2218 ;./src/main.c:208: player->sprite.position.y = i / 20 + 16;
-   0513 D1                 2219 	pop	de
-   0514 D5                 2220 	push	de
-   0515 21 01 00           2221 	ld	hl, #0x0001
-   0518 19                 2222 	add	hl, de
-   0519 7D                 2223 	ld	a, l
-   051A 54                 2224 	ld	d, h
-   051B F8 02              2225 	ldhl	sp,	#2
-   051D 22                 2226 	ld	(hl+), a
-   051E 72                 2227 	ld	(hl), d
-   051F 21 14 00           2228 	ld	hl, #0x0014
-   0522 E5                 2229 	push	hl
-   0523 C5                 2230 	push	bc
-   0524 CDr00r00           2231 	call	__divuint
-   0527 E8 04              2232 	add	sp, #4
-   0529 7B                 2233 	ld	a, e
-   052A C6 10              2234 	add	a, #0x10
-   052C 4F                 2235 	ld	c, a
-   052D F8 02              2236 	ldhl	sp,	#2
-   052F 2A                 2237 	ld	a, (hl+)
-   0530 66                 2238 	ld	h, (hl)
-   0531 6F                 2239 	ld	l, a
-   0532 71                 2240 	ld	(hl), c
-                           2241 ;./src/main.c:209: break;
-   0533 18 04              2242 	jr	00103$
-   0535                    2243 00106$:
-                           2244 ;./src/main.c:205: for(UINT16 i = 20 * 18 - 1; i >= 0; --i){
-   0535 0B                 2245 	dec	bc
-   0536 C3rE3r04           2246 	jp	00104$
-   0539                    2247 00103$:
-                           2248 ;./src/main.c:213: update_position(&(player->sprite));
-   0539 E1                 2249 	pop	hl
-   053A E5                 2250 	push	hl
-   053B E5                 2251 	push	hl
-   053C CDr0Fr01           2252 	call	_update_position
-   053F E8 02              2253 	add	sp, #2
-                           2254 ;./src/main.c:214: }
-   0541 E8 04              2255 	add	sp, #4
-   0543 C9                 2256 	ret
-                           2257 ;./src/main.c:216: BYTE win_condition(unsigned char map[], MPlayer* player){
-                           2258 ;	---------------------------------
-                           2259 ; Function win_condition
-                           2260 ; ---------------------------------
-   0544                    2261 _win_condition::
-                           2262 ;./src/main.c:217: if(map[get_world_to_map(&(player->sprite.position))] == FLAG_TILE){
-   0544 F8 04              2263 	ldhl	sp,#(5 - 1)
-   0546 4E                 2264 	ld	c, (hl)
-   0547 23                 2265 	inc	hl
-   0548 46                 2266 	ld	b, (hl)
-   0549 C5                 2267 	push	bc
-   054A CDr27r03           2268 	call	_get_world_to_map
-   054D E8 02              2269 	add	sp, #2
-   054F 4B                 2270 	ld	c, e
-   0550 42                 2271 	ld	b, d
-   0551 F8 02              2272 	ldhl	sp,	#2
-   0553 2A                 2273 	ld	a, (hl+)
-   0554 66                 2274 	ld	h, (hl)
-   0555 6F                 2275 	ld	l, a
-   0556 09                 2276 	add	hl, bc
-   0557 4D                 2277 	ld	c, l
-   0558 44                 2278 	ld	b, h
-   0559 0A                 2279 	ld	a, (bc)
-   055A 3D                 2280 	dec	a
-   055B 20 1B              2281 	jr	NZ,00102$
-                           2282 ;./src/main.c:218: DEBUG_LOG_MESSAGE("You did a win!!");
-   055D 21r7Br05           2283 	ld	hl, #___str_1
-   0560 E5                 2284 	push	hl
-   0561 21r35r00           2285 	ld	hl, #_debug_buffer
-   0564 E5                 2286 	push	hl
-   0565 CDr00r00           2287 	call	_sprintf
-   0568 E8 04              2288 	add	sp, #4
-   056A 52                 2289 	ld d, d 
-   056B 18 08              2290 	jr 21800$ 
-   056D 64 64              2291 	.dw 0x6464 
-   056F 01 00              2292 	.dw 0x0001 
-   0571r35r00              2293 	.dw #_debug_buffer 
-   0573 00 00              2294 	.dw 0 
-   0575                    2295 	 21800$:
-                           2296 ;./src/main.c:219: return 1;
-   0575 1E 01              2297 	ld	e, #0x01
-   0577 C9                 2298 	ret
-   0578                    2299 00102$:
-                           2300 ;./src/main.c:221: return 0;
-   0578 1E 00              2301 	ld	e, #0x00
-                           2302 ;./src/main.c:222: }
-   057A C9                 2303 	ret
-   057B                    2304 ___str_1:
-   057B 59 6F 75 20 64 69  2305 	.ascii "You did a win!!"
+   050E 87                 2214 	add	a, a
+   050F 87                 2215 	add	a, a
+   0510 87                 2216 	add	a, a
+   0511 C6 08              2217 	add	a, #0x08
+   0513 E1                 2218 	pop	hl
+   0514 E5                 2219 	push	hl
+   0515 77                 2220 	ld	(hl), a
+                           2221 ;./src/main.c:208: player->sprite.position.y = i / 20 * 8 + 16;
+   0516 D1                 2222 	pop	de
+   0517 D5                 2223 	push	de
+   0518 21 01 00           2224 	ld	hl, #0x0001
+   051B 19                 2225 	add	hl, de
+   051C 7D                 2226 	ld	a, l
+   051D 54                 2227 	ld	d, h
+   051E F8 02              2228 	ldhl	sp,	#2
+   0520 22                 2229 	ld	(hl+), a
+   0521 72                 2230 	ld	(hl), d
+   0522 21 14 00           2231 	ld	hl, #0x0014
+   0525 E5                 2232 	push	hl
+   0526 C5                 2233 	push	bc
+   0527 CDr00r00           2234 	call	__divuint
+   052A E8 04              2235 	add	sp, #4
+   052C 7B                 2236 	ld	a, e
+   052D 87                 2237 	add	a, a
+   052E 87                 2238 	add	a, a
+   052F 87                 2239 	add	a, a
+   0530 C6 10              2240 	add	a, #0x10
+   0532 4F                 2241 	ld	c, a
+   0533 F8 02              2242 	ldhl	sp,	#2
+   0535 2A                 2243 	ld	a, (hl+)
+   0536 66                 2244 	ld	h, (hl)
+   0537 6F                 2245 	ld	l, a
+   0538 71                 2246 	ld	(hl), c
+                           2247 ;./src/main.c:209: break;
+   0539 18 04              2248 	jr	00103$
+   053B                    2249 00106$:
+                           2250 ;./src/main.c:205: for(UINT16 i = 20 * 18 - 1; i >= 0; --i){
+   053B 0B                 2251 	dec	bc
+   053C C3rE3r04           2252 	jp	00104$
+   053F                    2253 00103$:
+                           2254 ;./src/main.c:213: update_position(&(player->sprite));
+   053F E1                 2255 	pop	hl
+   0540 E5                 2256 	push	hl
+   0541 E5                 2257 	push	hl
+   0542 CDr0Fr01           2258 	call	_update_position
+   0545 E8 02              2259 	add	sp, #2
+                           2260 ;./src/main.c:214: }
+   0547 E8 04              2261 	add	sp, #4
+   0549 C9                 2262 	ret
+                           2263 ;./src/main.c:216: BYTE win_condition(unsigned char map[], MPlayer* player){
+                           2264 ;	---------------------------------
+                           2265 ; Function win_condition
+                           2266 ; ---------------------------------
+   054A                    2267 _win_condition::
+                           2268 ;./src/main.c:217: if(map[get_world_to_map(&(player->sprite.position))] == FLAG_TILE){
+   054A F8 04              2269 	ldhl	sp,#(5 - 1)
+   054C 4E                 2270 	ld	c, (hl)
+   054D 23                 2271 	inc	hl
+   054E 46                 2272 	ld	b, (hl)
+   054F C5                 2273 	push	bc
+   0550 CDr27r03           2274 	call	_get_world_to_map
+   0553 E8 02              2275 	add	sp, #2
+   0555 4B                 2276 	ld	c, e
+   0556 42                 2277 	ld	b, d
+   0557 F8 02              2278 	ldhl	sp,	#2
+   0559 2A                 2279 	ld	a, (hl+)
+   055A 66                 2280 	ld	h, (hl)
+   055B 6F                 2281 	ld	l, a
+   055C 09                 2282 	add	hl, bc
+   055D 4D                 2283 	ld	c, l
+   055E 44                 2284 	ld	b, h
+   055F 0A                 2285 	ld	a, (bc)
+   0560 3D                 2286 	dec	a
+   0561 20 1B              2287 	jr	NZ,00102$
+                           2288 ;./src/main.c:218: DEBUG_LOG_MESSAGE("You did a win!!");
+   0563 21r81r05           2289 	ld	hl, #___str_1
+   0566 E5                 2290 	push	hl
+   0567 21r35r00           2291 	ld	hl, #_debug_buffer
+   056A E5                 2292 	push	hl
+   056B CDr00r00           2293 	call	_sprintf
+   056E E8 04              2294 	add	sp, #4
+   0570 52                 2295 	ld d, d 
+   0571 18 08              2296 	jr 21800$ 
+   0573 64 64              2297 	.dw 0x6464 
+   0575 01 00              2298 	.dw 0x0001 
+   0577r35r00              2299 	.dw #_debug_buffer 
+   0579 00 00              2300 	.dw 0 
+   057B                    2301 	 21800$:
+                           2302 ;./src/main.c:219: return 1;
+   057B 1E 01              2303 	ld	e, #0x01
+   057D C9                 2304 	ret
+   057E                    2305 00102$:
+                           2306 ;./src/main.c:221: return 0;
+   057E 1E 00              2307 	ld	e, #0x00
+                           2308 ;./src/main.c:222: }
+   0580 C9                 2309 	ret
+   0581                    2310 ___str_1:
+   0581 59 6F 75 20 64 69  2311 	.ascii "You did a win!!"
         64 20 61 20 77 69
         6E 21 21
-   058A 00                 2306 	.db 0x00
-                           2307 ;./src/main.c:224: void main()
-                           2308 ;	---------------------------------
-                           2309 ; Function main
-                           2310 ; ---------------------------------
-   058B                    2311 _main::
-   058B E8 F1              2312 	add	sp, #-15
-                           2313 ;./src/main.c:226: set_bkg_data(0, 5, BackgroundTiles);
-   058D 21r35r02           2314 	ld	hl, #_BackgroundTiles
-   0590 E5                 2315 	push	hl
-   0591 3E 05              2316 	ld	a, #0x05
-   0593 F5                 2317 	push	af
-   0594 33                 2318 	inc	sp
-   0595 AF                 2319 	xor	a, a
-   0596 F5                 2320 	push	af
-   0597 33                 2321 	inc	sp
-   0598 CDr00r00           2322 	call	_set_bkg_data
-   059B E8 04              2323 	add	sp, #4
-                           2324 ;./src/main.c:228: SHOW_BKG;
-   059D F0r00              2325 	ldh	a, (_LCDC_REG+0)
-   059F F6 01              2326 	or	a, #0x01
-   05A1 E0r00              2327 	ldh	(_LCDC_REG+0),a
-                           2328 ;./src/main.c:230: MPlayer player = {{{70, 24}, 0, 3, 0, {0, 0}, {false, {0, 0}}}, false};
-   05A3 F8 00              2329 	ldhl	sp,	#0
-   05A5 7D                 2330 	ld	a, l
-   05A6 54                 2331 	ld	d, h
-   05A7 F8 0D              2332 	ldhl	sp,	#13
-   05A9 22                 2333 	ld	(hl+), a
-   05AA 72                 2334 	ld	(hl), d
-   05AB 2B                 2335 	dec	hl
-   05AC 2A                 2336 	ld	a, (hl+)
-   05AD 66                 2337 	ld	h, (hl)
-   05AE 6F                 2338 	ld	l, a
-   05AF 36 46              2339 	ld	(hl), #0x46
-   05B1 F8 0D              2340 	ldhl	sp,#(14 - 1)
-   05B3 4E                 2341 	ld	c, (hl)
-   05B4 23                 2342 	inc	hl
-   05B5 46                 2343 	ld	b, (hl)
-   05B6 03                 2344 	inc	bc
-   05B7 3E 18              2345 	ld	a, #0x18
-   05B9 02                 2346 	ld	(bc), a
-   05BA 2B                 2347 	dec	hl
-   05BB 4E                 2348 	ld	c, (hl)
-   05BC 23                 2349 	inc	hl
-   05BD 46                 2350 	ld	b, (hl)
-   05BE 03                 2351 	inc	bc
-   05BF 03                 2352 	inc	bc
-   05C0 AF                 2353 	xor	a, a
-   05C1 02                 2354 	ld	(bc), a
-   05C2 2B                 2355 	dec	hl
-   05C3 4E                 2356 	ld	c, (hl)
-   05C4 23                 2357 	inc	hl
-   05C5 46                 2358 	ld	b, (hl)
-   05C6 03                 2359 	inc	bc
-   05C7 03                 2360 	inc	bc
-   05C8 03                 2361 	inc	bc
-   05C9 3E 03              2362 	ld	a, #0x03
-   05CB 02                 2363 	ld	(bc), a
-   05CC 2B                 2364 	dec	hl
-   05CD 5E                 2365 	ld	e, (hl)
-   05CE 23                 2366 	inc	hl
-   05CF 56                 2367 	ld	d, (hl)
-   05D0 21 04 00           2368 	ld	hl, #0x0004
-   05D3 19                 2369 	add	hl, de
-   05D4 4D                 2370 	ld	c, l
-   05D5 44                 2371 	ld	b, h
-   05D6 AF                 2372 	xor	a, a
-   05D7 02                 2373 	ld	(bc), a
-   05D8 F8 0D              2374 	ldhl	sp,#(14 - 1)
-   05DA 5E                 2375 	ld	e, (hl)
-   05DB 23                 2376 	inc	hl
-   05DC 56                 2377 	ld	d, (hl)
-   05DD 21 05 00           2378 	ld	hl, #0x0005
-   05E0 19                 2379 	add	hl, de
-   05E1 4D                 2380 	ld	c, l
-   05E2 44                 2381 	ld	b, h
-   05E3 AF                 2382 	xor	a, a
-   05E4 02                 2383 	ld	(bc), a
-   05E5 F8 0D              2384 	ldhl	sp,#(14 - 1)
-   05E7 5E                 2385 	ld	e, (hl)
-   05E8 23                 2386 	inc	hl
-   05E9 56                 2387 	ld	d, (hl)
-   05EA 21 06 00           2388 	ld	hl, #0x0006
-   05ED 19                 2389 	add	hl, de
-   05EE 4D                 2390 	ld	c, l
-   05EF 44                 2391 	ld	b, h
-   05F0 AF                 2392 	xor	a, a
-   05F1 02                 2393 	ld	(bc), a
-   05F2 F8 0D              2394 	ldhl	sp,#(14 - 1)
-   05F4 5E                 2395 	ld	e, (hl)
-   05F5 23                 2396 	inc	hl
-   05F6 56                 2397 	ld	d, (hl)
-   05F7 21 07 00           2398 	ld	hl, #0x0007
-   05FA 19                 2399 	add	hl, de
-   05FB 4D                 2400 	ld	c, l
-   05FC 44                 2401 	ld	b, h
-   05FD AF                 2402 	xor	a, a
-   05FE 02                 2403 	ld	(bc), a
-   05FF F8 0D              2404 	ldhl	sp,#(14 - 1)
-   0601 5E                 2405 	ld	e, (hl)
-   0602 23                 2406 	inc	hl
-   0603 56                 2407 	ld	d, (hl)
-   0604 21 08 00           2408 	ld	hl, #0x0008
-   0607 19                 2409 	add	hl, de
-   0608 4D                 2410 	ld	c, l
-   0609 44                 2411 	ld	b, h
-   060A AF                 2412 	xor	a, a
-   060B 02                 2413 	ld	(bc), a
-   060C F8 0D              2414 	ldhl	sp,#(14 - 1)
-   060E 5E                 2415 	ld	e, (hl)
-   060F 23                 2416 	inc	hl
-   0610 56                 2417 	ld	d, (hl)
-   0611 21 09 00           2418 	ld	hl, #0x0009
-   0614 19                 2419 	add	hl, de
-   0615 4D                 2420 	ld	c, l
-   0616 44                 2421 	ld	b, h
-   0617 AF                 2422 	xor	a, a
-   0618 02                 2423 	ld	(bc), a
-   0619 F8 00              2424 	ldhl	sp,	#0
-   061B 7D                 2425 	ld	a, l
-   061C 54                 2426 	ld	d, h
-   061D F8 0B              2427 	ldhl	sp,	#11
-   061F 22                 2428 	ld	(hl+), a
-   0620 72                 2429 	ld	(hl), d
-   0621 2B                 2430 	dec	hl
-   0622 5E                 2431 	ld	e, (hl)
-   0623 23                 2432 	inc	hl
-   0624 56                 2433 	ld	d, (hl)
-   0625 21 0A 00           2434 	ld	hl, #0x000a
-   0628 19                 2435 	add	hl, de
-   0629 4D                 2436 	ld	c, l
-   062A 44                 2437 	ld	b, h
-   062B AF                 2438 	xor	a, a
-   062C 02                 2439 	ld	(bc), a
-                           2440 ;./src/main.c:232: set_sprite_data(player.sprite.sprite_number, player.sprite.max_animations, MainChar);
-   062D F8 0B              2441 	ldhl	sp,#(12 - 1)
-   062F 4E                 2442 	ld	c, (hl)
-   0630 23                 2443 	inc	hl
-   0631 46                 2444 	ld	b, (hl)
-   0632 03                 2445 	inc	bc
-   0633 03                 2446 	inc	bc
-   0634 03                 2447 	inc	bc
-   0635 0A                 2448 	ld	a, (bc)
-   0636 47                 2449 	ld	b, a
-   0637 2B                 2450 	dec	hl
-   0638 5E                 2451 	ld	e, (hl)
-   0639 23                 2452 	inc	hl
-   063A 56                 2453 	ld	d, (hl)
-   063B 21 04 00           2454 	ld	hl, #0x0004
-   063E 19                 2455 	add	hl, de
-   063F 7D                 2456 	ld	a, l
-   0640 54                 2457 	ld	d, h
-   0641 F8 0D              2458 	ldhl	sp,	#13
-   0643 22                 2459 	ld	(hl+), a
-   0644 72                 2460 	ld	(hl), d
-   0645 2B                 2461 	dec	hl
-   0646 5E                 2462 	ld	e, (hl)
-   0647 23                 2463 	inc	hl
-   0648 56                 2464 	ld	d, (hl)
-   0649 1A                 2465 	ld	a,(de)
-   064A 4F                 2466 	ld	c, a
-   064B 21r00r00           2467 	ld	hl, #_MainChar
-   064E E5                 2468 	push	hl
-   064F C5                 2469 	push	bc
-   0650 33                 2470 	inc	sp
-   0651 79                 2471 	ld	a, c
-   0652 F5                 2472 	push	af
-   0653 33                 2473 	inc	sp
-   0654 CDr00r00           2474 	call	_set_sprite_data
-   0657 E8 04              2475 	add	sp, #4
-                           2476 ;./src/main.c:233: set_sprite_tile(player.sprite.sprite_number, player.sprite.animation_index);
-   0659 F8 0B              2477 	ldhl	sp,#(12 - 1)
-   065B 4E                 2478 	ld	c, (hl)
-   065C 23                 2479 	inc	hl
-   065D 46                 2480 	ld	b, (hl)
-   065E 03                 2481 	inc	bc
-   065F 03                 2482 	inc	bc
-   0660 0A                 2483 	ld	a, (bc)
-   0661 47                 2484 	ld	b, a
+   0590 00                 2312 	.db 0x00
+                           2313 ;./src/main.c:224: void main()
+                           2314 ;	---------------------------------
+                           2315 ; Function main
+                           2316 ; ---------------------------------
+   0591                    2317 _main::
+   0591 E8 F1              2318 	add	sp, #-15
+                           2319 ;./src/main.c:226: set_bkg_data(0, 5, BackgroundTiles);
+   0593 21r35r02           2320 	ld	hl, #_BackgroundTiles
+   0596 E5                 2321 	push	hl
+   0597 3E 05              2322 	ld	a, #0x05
+   0599 F5                 2323 	push	af
+   059A 33                 2324 	inc	sp
+   059B AF                 2325 	xor	a, a
+   059C F5                 2326 	push	af
+   059D 33                 2327 	inc	sp
+   059E CDr00r00           2328 	call	_set_bkg_data
+   05A1 E8 04              2329 	add	sp, #4
+                           2330 ;./src/main.c:228: SHOW_BKG;
+   05A3 F0r00              2331 	ldh	a, (_LCDC_REG+0)
+   05A5 F6 01              2332 	or	a, #0x01
+   05A7 E0r00              2333 	ldh	(_LCDC_REG+0),a
+                           2334 ;./src/main.c:230: MPlayer player = {{{70, 24}, 0, 3, 0, {0, 0}, {false, {0, 0}}}, false};
+   05A9 F8 00              2335 	ldhl	sp,	#0
+   05AB 7D                 2336 	ld	a, l
+   05AC 54                 2337 	ld	d, h
+   05AD F8 0D              2338 	ldhl	sp,	#13
+   05AF 22                 2339 	ld	(hl+), a
+   05B0 72                 2340 	ld	(hl), d
+   05B1 2B                 2341 	dec	hl
+   05B2 2A                 2342 	ld	a, (hl+)
+   05B3 66                 2343 	ld	h, (hl)
+   05B4 6F                 2344 	ld	l, a
+   05B5 36 46              2345 	ld	(hl), #0x46
+   05B7 F8 0D              2346 	ldhl	sp,#(14 - 1)
+   05B9 4E                 2347 	ld	c, (hl)
+   05BA 23                 2348 	inc	hl
+   05BB 46                 2349 	ld	b, (hl)
+   05BC 03                 2350 	inc	bc
+   05BD 3E 18              2351 	ld	a, #0x18
+   05BF 02                 2352 	ld	(bc), a
+   05C0 2B                 2353 	dec	hl
+   05C1 4E                 2354 	ld	c, (hl)
+   05C2 23                 2355 	inc	hl
+   05C3 46                 2356 	ld	b, (hl)
+   05C4 03                 2357 	inc	bc
+   05C5 03                 2358 	inc	bc
+   05C6 AF                 2359 	xor	a, a
+   05C7 02                 2360 	ld	(bc), a
+   05C8 2B                 2361 	dec	hl
+   05C9 4E                 2362 	ld	c, (hl)
+   05CA 23                 2363 	inc	hl
+   05CB 46                 2364 	ld	b, (hl)
+   05CC 03                 2365 	inc	bc
+   05CD 03                 2366 	inc	bc
+   05CE 03                 2367 	inc	bc
+   05CF 3E 03              2368 	ld	a, #0x03
+   05D1 02                 2369 	ld	(bc), a
+   05D2 2B                 2370 	dec	hl
+   05D3 5E                 2371 	ld	e, (hl)
+   05D4 23                 2372 	inc	hl
+   05D5 56                 2373 	ld	d, (hl)
+   05D6 21 04 00           2374 	ld	hl, #0x0004
+   05D9 19                 2375 	add	hl, de
+   05DA 4D                 2376 	ld	c, l
+   05DB 44                 2377 	ld	b, h
+   05DC AF                 2378 	xor	a, a
+   05DD 02                 2379 	ld	(bc), a
+   05DE F8 0D              2380 	ldhl	sp,#(14 - 1)
+   05E0 5E                 2381 	ld	e, (hl)
+   05E1 23                 2382 	inc	hl
+   05E2 56                 2383 	ld	d, (hl)
+   05E3 21 05 00           2384 	ld	hl, #0x0005
+   05E6 19                 2385 	add	hl, de
+   05E7 4D                 2386 	ld	c, l
+   05E8 44                 2387 	ld	b, h
+   05E9 AF                 2388 	xor	a, a
+   05EA 02                 2389 	ld	(bc), a
+   05EB F8 0D              2390 	ldhl	sp,#(14 - 1)
+   05ED 5E                 2391 	ld	e, (hl)
+   05EE 23                 2392 	inc	hl
+   05EF 56                 2393 	ld	d, (hl)
+   05F0 21 06 00           2394 	ld	hl, #0x0006
+   05F3 19                 2395 	add	hl, de
+   05F4 4D                 2396 	ld	c, l
+   05F5 44                 2397 	ld	b, h
+   05F6 AF                 2398 	xor	a, a
+   05F7 02                 2399 	ld	(bc), a
+   05F8 F8 0D              2400 	ldhl	sp,#(14 - 1)
+   05FA 5E                 2401 	ld	e, (hl)
+   05FB 23                 2402 	inc	hl
+   05FC 56                 2403 	ld	d, (hl)
+   05FD 21 07 00           2404 	ld	hl, #0x0007
+   0600 19                 2405 	add	hl, de
+   0601 4D                 2406 	ld	c, l
+   0602 44                 2407 	ld	b, h
+   0603 AF                 2408 	xor	a, a
+   0604 02                 2409 	ld	(bc), a
+   0605 F8 0D              2410 	ldhl	sp,#(14 - 1)
+   0607 5E                 2411 	ld	e, (hl)
+   0608 23                 2412 	inc	hl
+   0609 56                 2413 	ld	d, (hl)
+   060A 21 08 00           2414 	ld	hl, #0x0008
+   060D 19                 2415 	add	hl, de
+   060E 4D                 2416 	ld	c, l
+   060F 44                 2417 	ld	b, h
+   0610 AF                 2418 	xor	a, a
+   0611 02                 2419 	ld	(bc), a
+   0612 F8 0D              2420 	ldhl	sp,#(14 - 1)
+   0614 5E                 2421 	ld	e, (hl)
+   0615 23                 2422 	inc	hl
+   0616 56                 2423 	ld	d, (hl)
+   0617 21 09 00           2424 	ld	hl, #0x0009
+   061A 19                 2425 	add	hl, de
+   061B 4D                 2426 	ld	c, l
+   061C 44                 2427 	ld	b, h
+   061D AF                 2428 	xor	a, a
+   061E 02                 2429 	ld	(bc), a
+   061F F8 00              2430 	ldhl	sp,	#0
+   0621 7D                 2431 	ld	a, l
+   0622 54                 2432 	ld	d, h
+   0623 F8 0B              2433 	ldhl	sp,	#11
+   0625 22                 2434 	ld	(hl+), a
+   0626 72                 2435 	ld	(hl), d
+   0627 2B                 2436 	dec	hl
+   0628 5E                 2437 	ld	e, (hl)
+   0629 23                 2438 	inc	hl
+   062A 56                 2439 	ld	d, (hl)
+   062B 21 0A 00           2440 	ld	hl, #0x000a
+   062E 19                 2441 	add	hl, de
+   062F 4D                 2442 	ld	c, l
+   0630 44                 2443 	ld	b, h
+   0631 AF                 2444 	xor	a, a
+   0632 02                 2445 	ld	(bc), a
+                           2446 ;./src/main.c:232: set_sprite_data(player.sprite.sprite_number, player.sprite.max_animations, MainChar);
+   0633 F8 0B              2447 	ldhl	sp,#(12 - 1)
+   0635 4E                 2448 	ld	c, (hl)
+   0636 23                 2449 	inc	hl
+   0637 46                 2450 	ld	b, (hl)
+   0638 03                 2451 	inc	bc
+   0639 03                 2452 	inc	bc
+   063A 03                 2453 	inc	bc
+   063B 0A                 2454 	ld	a, (bc)
+   063C 47                 2455 	ld	b, a
+   063D 2B                 2456 	dec	hl
+   063E 5E                 2457 	ld	e, (hl)
+   063F 23                 2458 	inc	hl
+   0640 56                 2459 	ld	d, (hl)
+   0641 21 04 00           2460 	ld	hl, #0x0004
+   0644 19                 2461 	add	hl, de
+   0645 7D                 2462 	ld	a, l
+   0646 54                 2463 	ld	d, h
+   0647 F8 0D              2464 	ldhl	sp,	#13
+   0649 22                 2465 	ld	(hl+), a
+   064A 72                 2466 	ld	(hl), d
+   064B 2B                 2467 	dec	hl
+   064C 5E                 2468 	ld	e, (hl)
+   064D 23                 2469 	inc	hl
+   064E 56                 2470 	ld	d, (hl)
+   064F 1A                 2471 	ld	a,(de)
+   0650 4F                 2472 	ld	c, a
+   0651 21r00r00           2473 	ld	hl, #_MainChar
+   0654 E5                 2474 	push	hl
+   0655 C5                 2475 	push	bc
+   0656 33                 2476 	inc	sp
+   0657 79                 2477 	ld	a, c
+   0658 F5                 2478 	push	af
+   0659 33                 2479 	inc	sp
+   065A CDr00r00           2480 	call	_set_sprite_data
+   065D E8 04              2481 	add	sp, #4
+                           2482 ;./src/main.c:233: set_sprite_tile(player.sprite.sprite_number, player.sprite.animation_index);
+   065F F8 0B              2483 	ldhl	sp,#(12 - 1)
+   0661 4E                 2484 	ld	c, (hl)
    0662 23                 2485 	inc	hl
-   0663 5E                 2486 	ld	e, (hl)
-   0664 23                 2487 	inc	hl
-   0665 56                 2488 	ld	d, (hl)
-   0666 1A                 2489 	ld	a,(de)
-   0667 C5                 2490 	push	bc
-   0668 33                 2491 	inc	sp
-   0669 F5                 2492 	push	af
-   066A 33                 2493 	inc	sp
-   066B CDr00r00           2494 	call	_set_sprite_tile
-   066E E8 02              2495 	add	sp, #2
-                           2496 ;./src/main.c:234: move_sprite(player.sprite.sprite_number, player.sprite.position.x, player.sprite.position.y);
-   0670 F8 0B              2497 	ldhl	sp,#(12 - 1)
-   0672 4E                 2498 	ld	c, (hl)
-   0673 23                 2499 	inc	hl
-   0674 46                 2500 	ld	b, (hl)
-   0675 03                 2501 	inc	bc
-   0676 0A                 2502 	ld	a, (bc)
-   0677 47                 2503 	ld	b, a
-   0678 2B                 2504 	dec	hl
-   0679 5E                 2505 	ld	e, (hl)
-   067A 23                 2506 	inc	hl
-   067B 56                 2507 	ld	d, (hl)
-   067C 1A                 2508 	ld	a,(de)
-   067D 23                 2509 	inc	hl
-   067E 5E                 2510 	ld	e, (hl)
-   067F 23                 2511 	inc	hl
-   0680 56                 2512 	ld	d, (hl)
-   0681 F5                 2513 	push	af
+   0663 46                 2486 	ld	b, (hl)
+   0664 03                 2487 	inc	bc
+   0665 03                 2488 	inc	bc
+   0666 0A                 2489 	ld	a, (bc)
+   0667 47                 2490 	ld	b, a
+   0668 23                 2491 	inc	hl
+   0669 5E                 2492 	ld	e, (hl)
+   066A 23                 2493 	inc	hl
+   066B 56                 2494 	ld	d, (hl)
+   066C 1A                 2495 	ld	a,(de)
+   066D C5                 2496 	push	bc
+   066E 33                 2497 	inc	sp
+   066F F5                 2498 	push	af
+   0670 33                 2499 	inc	sp
+   0671 CDr00r00           2500 	call	_set_sprite_tile
+   0674 E8 02              2501 	add	sp, #2
+                           2502 ;./src/main.c:234: move_sprite(player.sprite.sprite_number, player.sprite.position.x, player.sprite.position.y);
+   0676 F8 0B              2503 	ldhl	sp,#(12 - 1)
+   0678 4E                 2504 	ld	c, (hl)
+   0679 23                 2505 	inc	hl
+   067A 46                 2506 	ld	b, (hl)
+   067B 03                 2507 	inc	bc
+   067C 0A                 2508 	ld	a, (bc)
+   067D 47                 2509 	ld	b, a
+   067E 2B                 2510 	dec	hl
+   067F 5E                 2511 	ld	e, (hl)
+   0680 23                 2512 	inc	hl
+   0681 56                 2513 	ld	d, (hl)
    0682 1A                 2514 	ld	a,(de)
-   0683 4F                 2515 	ld	c, a
-   0684 F1                 2516 	pop	af
-   0685 C5                 2517 	push	bc
-   0686 33                 2518 	inc	sp
+   0683 23                 2515 	inc	hl
+   0684 5E                 2516 	ld	e, (hl)
+   0685 23                 2517 	inc	hl
+   0686 56                 2518 	ld	d, (hl)
    0687 F5                 2519 	push	af
-   0688 33                 2520 	inc	sp
-   0689 79                 2521 	ld	a, c
-   068A F5                 2522 	push	af
-   068B 33                 2523 	inc	sp
-   068C CDr00r00           2524 	call	_move_sprite
-   068F E8 03              2525 	add	sp, #3
-                           2526 ;./src/main.c:235: SHOW_SPRITES;
-   0691 F0r00              2527 	ldh	a, (_LCDC_REG+0)
-   0693 F6 02              2528 	or	a, #0x02
-   0695 E0r00              2529 	ldh	(_LCDC_REG+0),a
-                           2530 ;./src/main.c:237: set_map(Map1, &player);
-   0697 F8 0B              2531 	ldhl	sp,#(12 - 1)
-   0699 4E                 2532 	ld	c, (hl)
-   069A 23                 2533 	inc	hl
-   069B 46                 2534 	ld	b, (hl)
-   069C C5                 2535 	push	bc
-   069D 21r95r02           2536 	ld	hl, #_Map1
-   06A0 E5                 2537 	push	hl
-   06A1 CDrC5r04           2538 	call	_set_map
-   06A4 E8 04              2539 	add	sp, #4
-                           2540 ;./src/main.c:239: while(1){
-   06A6                    2541 00105$:
-                           2542 ;./src/main.c:240: UPDATE_JOYPAD_STATE;
+   0688 1A                 2520 	ld	a,(de)
+   0689 4F                 2521 	ld	c, a
+   068A F1                 2522 	pop	af
+   068B C5                 2523 	push	bc
+   068C 33                 2524 	inc	sp
+   068D F5                 2525 	push	af
+   068E 33                 2526 	inc	sp
+   068F 79                 2527 	ld	a, c
+   0690 F5                 2528 	push	af
+   0691 33                 2529 	inc	sp
+   0692 CDr00r00           2530 	call	_move_sprite
+   0695 E8 03              2531 	add	sp, #3
+                           2532 ;./src/main.c:235: SHOW_SPRITES;
+   0697 F0r00              2533 	ldh	a, (_LCDC_REG+0)
+   0699 F6 02              2534 	or	a, #0x02
+   069B E0r00              2535 	ldh	(_LCDC_REG+0),a
+                           2536 ;./src/main.c:237: set_map(Map1, &player);
+   069D F8 0B              2537 	ldhl	sp,#(12 - 1)
+   069F 4E                 2538 	ld	c, (hl)
+   06A0 23                 2539 	inc	hl
+   06A1 46                 2540 	ld	b, (hl)
+   06A2 C5                 2541 	push	bc
+   06A3 21r95r02           2542 	ld	hl, #_Map1
    06A6 E5                 2543 	push	hl
-   06A7 21r31r00           2544 	ld	hl, #_joypad_curr_state
-   06AA 7E                 2545 	ld	a, (hl)
-   06AB 21r30r00           2546 	ld	hl, #_joypad_prev_state
-   06AE 77                 2547 	ld	(hl), a
-   06AF E1                 2548 	pop	hl
-   06B0 CDr00r00           2549 	call	_joypad
-   06B3 21r31r00           2550 	ld	hl, #_joypad_curr_state
-   06B6 73                 2551 	ld	(hl), e
-                           2552 ;./src/main.c:244: player_movement(&player);
-   06B7 F8 0B              2553 	ldhl	sp,#(12 - 1)
-   06B9 4E                 2554 	ld	c, (hl)
-   06BA 23                 2555 	inc	hl
-   06BB 46                 2556 	ld	b, (hl)
-   06BC C5                 2557 	push	bc
-   06BD CDrA0r01           2558 	call	_player_movement
-   06C0 E8 02              2559 	add	sp, #2
-                           2560 ;./src/main.c:245: jump(&player);
-   06C2 F8 0B              2561 	ldhl	sp,#(12 - 1)
-   06C4 4E                 2562 	ld	c, (hl)
-   06C5 23                 2563 	inc	hl
-   06C6 46                 2564 	ld	b, (hl)
-   06C7 C5                 2565 	push	bc
-   06C8 CDr9Dr02           2566 	call	_jump
-   06CB E8 02              2567 	add	sp, #2
-                           2568 ;./src/main.c:248: collision_check_2(&(player.sprite), Map1);
-   06CD 11r95r02           2569 	ld	de, #_Map1
-   06D0 F8 0B              2570 	ldhl	sp,#(12 - 1)
-   06D2 4E                 2571 	ld	c, (hl)
-   06D3 23                 2572 	inc	hl
-   06D4 46                 2573 	ld	b, (hl)
-   06D5 D5                 2574 	push	de
-   06D6 C5                 2575 	push	bc
-   06D7 CDrD0r03           2576 	call	_collision_check_2
-   06DA E8 04              2577 	add	sp, #4
-                           2578 ;./src/main.c:253: gravity(&(player.sprite));
-   06DC F8 0B              2579 	ldhl	sp,#(12 - 1)
-   06DE 4E                 2580 	ld	c, (hl)
-   06DF 23                 2581 	inc	hl
-   06E0 46                 2582 	ld	b, (hl)
-   06E1 C5                 2583 	push	bc
-   06E2 CDrEBr00           2584 	call	_gravity
-   06E5 E8 02              2585 	add	sp, #2
-                           2586 ;./src/main.c:258: update_position(&(player.sprite));
-   06E7 F8 0B              2587 	ldhl	sp,#(12 - 1)
-   06E9 4E                 2588 	ld	c, (hl)
-   06EA 23                 2589 	inc	hl
-   06EB 46                 2590 	ld	b, (hl)
-   06EC C5                 2591 	push	bc
-   06ED CDr0Fr01           2592 	call	_update_position
-   06F0 E8 02              2593 	add	sp, #2
-                           2594 ;./src/main.c:259: draw(&(player.sprite));
-   06F2 F8 0B              2595 	ldhl	sp,#(12 - 1)
-   06F4 4E                 2596 	ld	c, (hl)
-   06F5 23                 2597 	inc	hl
-   06F6 46                 2598 	ld	b, (hl)
-   06F7 C5                 2599 	push	bc
-   06F8 CDr78r00           2600 	call	_draw
-   06FB E8 02              2601 	add	sp, #2
-                           2602 ;./src/main.c:262: win_condition(Map1, &player);
-   06FD F8 0B              2603 	ldhl	sp,#(12 - 1)
-   06FF 4E                 2604 	ld	c, (hl)
-   0700 23                 2605 	inc	hl
-   0701 46                 2606 	ld	b, (hl)
-   0702 C5                 2607 	push	bc
-   0703 21r95r02           2608 	ld	hl, #_Map1
-   0706 E5                 2609 	push	hl
-   0707 CDr44r05           2610 	call	_win_condition
-   070A E8 04              2611 	add	sp, #4
-                           2612 ;./src/main.c:265: wait_vbl_done();
-   070C CDr00r00           2613 	call	_wait_vbl_done
-   070F C3rA6r06           2614 	jp	00105$
-                           2615 ;./src/main.c:268: }
-   0712 E8 0F              2616 	add	sp, #15
-   0714 C9                 2617 	ret
-                           2618 	.area _CODE
-                           2619 	.area _CABS (ABS)
+   06A7 CDrC5r04           2544 	call	_set_map
+   06AA E8 04              2545 	add	sp, #4
+                           2546 ;./src/main.c:239: while(1){
+   06AC                    2547 00105$:
+                           2548 ;./src/main.c:240: UPDATE_JOYPAD_STATE;
+   06AC E5                 2549 	push	hl
+   06AD 21r31r00           2550 	ld	hl, #_joypad_curr_state
+   06B0 7E                 2551 	ld	a, (hl)
+   06B1 21r30r00           2552 	ld	hl, #_joypad_prev_state
+   06B4 77                 2553 	ld	(hl), a
+   06B5 E1                 2554 	pop	hl
+   06B6 CDr00r00           2555 	call	_joypad
+   06B9 21r31r00           2556 	ld	hl, #_joypad_curr_state
+   06BC 73                 2557 	ld	(hl), e
+                           2558 ;./src/main.c:244: player_movement(&player);
+   06BD F8 0B              2559 	ldhl	sp,#(12 - 1)
+   06BF 4E                 2560 	ld	c, (hl)
+   06C0 23                 2561 	inc	hl
+   06C1 46                 2562 	ld	b, (hl)
+   06C2 C5                 2563 	push	bc
+   06C3 CDrA0r01           2564 	call	_player_movement
+   06C6 E8 02              2565 	add	sp, #2
+                           2566 ;./src/main.c:245: jump(&player);
+   06C8 F8 0B              2567 	ldhl	sp,#(12 - 1)
+   06CA 4E                 2568 	ld	c, (hl)
+   06CB 23                 2569 	inc	hl
+   06CC 46                 2570 	ld	b, (hl)
+   06CD C5                 2571 	push	bc
+   06CE CDr9Dr02           2572 	call	_jump
+   06D1 E8 02              2573 	add	sp, #2
+                           2574 ;./src/main.c:248: collision_check_2(&(player.sprite), Map1);
+   06D3 11r95r02           2575 	ld	de, #_Map1
+   06D6 F8 0B              2576 	ldhl	sp,#(12 - 1)
+   06D8 4E                 2577 	ld	c, (hl)
+   06D9 23                 2578 	inc	hl
+   06DA 46                 2579 	ld	b, (hl)
+   06DB D5                 2580 	push	de
+   06DC C5                 2581 	push	bc
+   06DD CDrD0r03           2582 	call	_collision_check_2
+   06E0 E8 04              2583 	add	sp, #4
+                           2584 ;./src/main.c:253: gravity(&(player.sprite));
+   06E2 F8 0B              2585 	ldhl	sp,#(12 - 1)
+   06E4 4E                 2586 	ld	c, (hl)
+   06E5 23                 2587 	inc	hl
+   06E6 46                 2588 	ld	b, (hl)
+   06E7 C5                 2589 	push	bc
+   06E8 CDrEBr00           2590 	call	_gravity
+   06EB E8 02              2591 	add	sp, #2
+                           2592 ;./src/main.c:258: update_position(&(player.sprite));
+   06ED F8 0B              2593 	ldhl	sp,#(12 - 1)
+   06EF 4E                 2594 	ld	c, (hl)
+   06F0 23                 2595 	inc	hl
+   06F1 46                 2596 	ld	b, (hl)
+   06F2 C5                 2597 	push	bc
+   06F3 CDr0Fr01           2598 	call	_update_position
+   06F6 E8 02              2599 	add	sp, #2
+                           2600 ;./src/main.c:259: draw(&(player.sprite));
+   06F8 F8 0B              2601 	ldhl	sp,#(12 - 1)
+   06FA 4E                 2602 	ld	c, (hl)
+   06FB 23                 2603 	inc	hl
+   06FC 46                 2604 	ld	b, (hl)
+   06FD C5                 2605 	push	bc
+   06FE CDr78r00           2606 	call	_draw
+   0701 E8 02              2607 	add	sp, #2
+                           2608 ;./src/main.c:262: win_condition(Map1, &player);
+   0703 F8 0B              2609 	ldhl	sp,#(12 - 1)
+   0705 4E                 2610 	ld	c, (hl)
+   0706 23                 2611 	inc	hl
+   0707 46                 2612 	ld	b, (hl)
+   0708 C5                 2613 	push	bc
+   0709 21r95r02           2614 	ld	hl, #_Map1
+   070C E5                 2615 	push	hl
+   070D CDr4Ar05           2616 	call	_win_condition
+   0710 E8 04              2617 	add	sp, #4
+                           2618 ;./src/main.c:265: wait_vbl_done();
+   0712 CDr00r00           2619 	call	_wait_vbl_done
+   0715 C3rACr06           2620 	jp	00105$
+                           2621 ;./src/main.c:268: }
+   0718 E8 0F              2622 	add	sp, #15
+   071A C9                 2623 	ret
+                           2624 	.area _CODE
+                           2625 	.area _CABS (ABS)

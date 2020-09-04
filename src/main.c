@@ -204,8 +204,8 @@ void set_map(unsigned char map[], MPlayer* player){
     // Start from bottom as more likely the start is near the bottom
     for(UINT16 i = 20 * 18 - 1; i >= 0; --i){
         if(map[i] == START_TILE){
-            player->sprite.position.x = i % 20 + 8;
-            player->sprite.position.y = i / 20 + 16;
+            player->sprite.position.x = i % 20 * 8 + 8;
+            player->sprite.position.y = i / 20 * 8 + 16;
             break;
         }
     }
