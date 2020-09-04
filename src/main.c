@@ -1,3 +1,6 @@
+
+#define DEBUG_MODE 1
+
 #include <gb/gb.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -5,6 +8,7 @@
 #include "../src/input.c"
 #include "../sprites/backgroundtiles.c"
 #include "../sprites/test_map.c"
+#include "../src/debug.c"
 
 typedef struct MVector
 {
@@ -64,7 +68,7 @@ void gravity(MSprite* sprite){
     //Collision Check
     sprite->speed.y += GRAVITY;
 
-    if(sprite->col.has_collided){
+    if(sprite->col.has_collided && sprite->col.direction.y == 1){
         sprite->speed.y = 0;
         //sprite->position.y = 144;
     }
@@ -75,13 +79,13 @@ void update_position(MSprite* sprite){
     if(sprite->col.direction.x == -1 && sprite->speed.x < 0){
         sprite->speed.x = 0;
     }
-    if(sprite->col.direction.x == 1 && sprite->speed.x > 0){
+    else if(sprite->col.direction.x ==  1 && sprite->speed.x > 0){
         sprite->speed.x = 0;
     }
     if(sprite->col.direction.y == -1 && sprite->speed.y < 0){
         sprite->speed.y = 0;
     }
-    if(sprite->col.direction.y == 1 && sprite->speed.y > 0){
+    else if(sprite->col.direction.y ==  1 && sprite->speed.y > 0){
         sprite->speed.y = 0;
     }
     sprite->position.x += sprite->speed.x;
@@ -116,13 +120,12 @@ void player_movement(MPlayer* player)
     if(JOYPAD_DOWN_PAD_D){
         player->sprite.speed.y = movement_speed.y;
     }
-    else if(JOYPAD_RELEASED_PAD_D){
-        player->sprite.speed.y -= movement_speed.y;
+    else if(JOYPAD_UP_PAD_D){
+        player->sprite.speed.y =0; //-= movement_speed.y;
     }
 }
 
 void jump(MPlayer* player){
-    //collision check
     if(player->sprite.col.has_collided == true){
         player->jumped = false;
     }
@@ -132,30 +135,13 @@ void jump(MPlayer* player){
     }
 }
 
-
-void collision_check(MSprite* sprite, unsigned char map[], UINT16 count){
-    UINT16 tile_num = 20 * 18;
-    sprite->col.has_collided = false;
-    //sprite->col.direction = 4;
-    for(int i = 0; i < count; ++i){
-        if(i % 20 * 8 + 8      <= sprite->position.x + sprite->speed.x + 8 &&
-           i % 20 * 8 + 8  + 8 >= sprite->position.x + sprite->speed.x     &&
-           i / 20 * 8 + 16     <= sprite->position.y + sprite->speed.y + 8 &&
-           i / 20 * 8 + 16 + 8 >= sprite->position.y + sprite->speed.y     &&
-           map[i] != 0x00){
-            sprite->col.has_collided = true;
-            break;
-        }
-    }
-}
-
-UINT8 get_world_to_map(MVector* pos){
-    return pos->x/8 + pos->y/8 * 20;
+UINT16 get_world_to_map(MVector* pos){
+    return (pos->x - 8 )/8 + ((pos->y - 16) /8 )* 20;
 }
 
 void collision_check_2(MSprite* sprite, unsigned char map[]){
-    UINT8 pos = get_world_to_map(&(sprite->position));
-
+    UINT16 pos = get_world_to_map(&(sprite->position));
+    
     sprite->col.has_collided = false;
     sprite->col.direction.x = 0;
     sprite->col.direction.y = 0;
@@ -175,7 +161,7 @@ void collision_check_2(MSprite* sprite, unsigned char map[]){
         sprite->col.has_collided = true;
     }
     // Down
-    if(pos + 20 > 20*18 || map[pos + 20] != 0x00){
+    if(pos + 20 > 20 * 18 || map[pos + 20] != 0x00){
         sprite->col.direction.y = 1;
         sprite->col.has_collided = true;
     }
@@ -188,41 +174,30 @@ void main()
 
     SHOW_BKG;
     
-    MPlayer player = {{{70, 30}, 0, 3, 0, {0, 0}, {false, {0, 0}}}, false};
+    MPlayer player = {{{160, 24}, 0, 3, 0, {0, 0}, {false, {0, 0}}}, false};
 
     set_sprite_data(player.sprite.sprite_number, player.sprite.max_animations, MainChar);
     set_sprite_tile(player.sprite.sprite_number, player.sprite.animation_index);
     move_sprite(player.sprite.sprite_number, player.sprite.position.x, player.sprite.position.y);
     SHOW_SPRITES;
 
-    /*
-    UINT16 count = 0;
-    UINT16 x_count = 0;
-    UINT16 y_count = 0;
-    UINT8 map_width = 20;
-    UINT8 map_height = 18;
-    UINT16 tile_num = map_width * map_height;
-    */
-
     while(1){
         UPDATE_JOYPAD_STATE;
         
         //Update loop
+        collision_check_2(&(player.sprite), TestMap);
         player_movement(&player);
         jump(&player);
         ++gravity_time;
         if(gravity_time > 6){
-            //gravity(&(player.sprite));
+            gravity(&(player.sprite));
             ++gravity_time;
         }
 
-        //if(!player.sprite.col.has_collided){
-            update_position(&(player.sprite));
-            //}
-
+        update_position(&(player.sprite));
+        
         draw(&(player.sprite));
 
-        collision_check_2(&(player.sprite), TestMap);
         wait_vbl_done();
     }
 }

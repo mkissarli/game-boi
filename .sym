@@ -1,6 +1,7 @@
 ; no$gmb format .sym file
 ; Generated automagically by ASxxxx linker V01.75 (SDK 3.0.0)
 ; Area: .  .ABS.
+00:0000 s__EMU_HEADER
 00:0000 s__HEADERf
 00:0000 s__CABS
 00:0000 s__HEADER0
@@ -67,6 +68,7 @@
 00:0000 s__SFR2
 00:0000 s__SFR3
 00:0000 s__SFR4
+00:0000 s__EMU_HEADER0
 00:0000 s__SFR5
 00:0000 s__SFR6
 00:0000 s__SFR7
@@ -83,49 +85,28 @@
 00:0000 s__HEADERd
 00:0000 s__HEADERe
 00:0200 s__CODE
-00:0AE5 s__HOME
-00:0C8D s__BASE
-00:0E32 s__LIT
-00:0E32 s__GSINIT
-00:1774 s__GSINITTAIL
-00:1775 s__GSFINAL
+00:081B s__HOME
+00:0A0B s__BASE
+00:0BB0 s__LIT
+00:0BB0 s__GSINIT
+00:14FA s__GSINITTAIL
+00:14FB s__GSFINAL
 00:C000 .OAM
 00:C0A0 s__DATA
-00:C27D s__BSS
-00:C2D5 s__HEAP
+00:C47F s__BSS
+00:C4D7 s__HEAP
 00:E000 .STACK
 00:FF80 .refresh_OAM
 ; Area: _CODE
 00:0268 _draw
 00:0297 _next_animation
 00:02DB _gravity
-00:0306 _update_position
-00:03E7 _player_movement
-00:04CA _jump
-00:051E _collision_check
-00:06CE _get_world_to_map
-00:0738 _collision_check_2
-00:0828 _main
-00:09AA __divsuchar
-00:09B9 __modsuchar
-00:09C5 __divuschar
-00:09D7 __moduschar
-00:09E7 __divschar
-00:09F5 __modschar
-00:0A01 __divsint
-00:0A14 __modsint
-00:0A25 __divuchar
-00:0A33 __moduchar
-00:0A3F __divuint
-00:0A52 __moduint
-00:0A63 .mod8
-00:0A63 .div8
-00:0A6B .mod16
-00:0A6B .div16
-00:0AA1 .modu8
-00:0AA1 .divu8
-00:0AA4 .modu16
-00:0AA4 .divu16
+00:0318 _update_position
+00:03EB _player_movement
+00:04B9 _jump
+00:050D _get_world_to_map
+00:05B6 _collision_check_2
+00:068B _main
 ; Area: _HEADER0
 ; Area: _HEADER1
 ; Area: _HEADER2
@@ -147,95 +128,97 @@
 00:01D0 _exit
 ; Area: _HEADER12
 ; Area: _HOME
-00:0AE5 .set_mode
-00:0AF5 .remove_VBL
-00:0AFB .remove_LCD
-00:0B01 .remove_TIM
-00:0B07 .remove_SIO
-00:0B0D .remove_JOY
-00:0B13 .add_VBL
-00:0B19 .add_LCD
-00:0B1F .add_TIM
-00:0B25 .add_SIO
-00:0B2B .add_JOY
-00:0B31 .remove_int
-00:0B50 .add_int
-00:0B6C .wait_vbl_done
-00:0B6C _wait_vbl_done
-00:0B83 _display_off
-00:0B83 .display_off
-00:0BA4 .serial_IO
-00:0BD3 _mode
-00:0BDC _get_mode
-00:0BE1 _enable_interrupts
-00:0BE3 _disable_interrupts
-00:0BE5 _reset
-00:0BE5 .reset
-00:0BEB _set_interrupts
-00:0BF6 _remove_VBL
-00:0C01 _remove_LCD
-00:0C0C _remove_TIM
-00:0C17 _remove_SIO
-00:0C22 _remove_JOY
-00:0C2D _add_VBL
-00:0C38 _add_LCD
-00:0C43 _add_TIM
-00:0C4E _add_SIO
-00:0C59 _add_JOY
-00:0C64 _clock
-00:0C6D __printTStates
-00:0C6E banked_call
-00:0C85 banked_ret
+00:081B .set_mode
+00:082B .remove_VBL
+00:0831 .remove_LCD
+00:0837 .remove_TIM
+00:083D .remove_SIO
+00:0843 .remove_JOY
+00:0849 .add_VBL
+00:084F .add_LCD
+00:0855 .add_TIM
+00:085B .add_SIO
+00:0861 .add_JOY
+00:0867 .remove_int
+00:0886 .add_int
+00:08A2 .wait_vbl_done
+00:08A2 _wait_vbl_done
+00:08B9 _display_off
+00:08B9 .display_off
+00:08DA .serial_IO
+00:0909 _mode
+00:0912 _get_mode
+00:0917 _enable_interrupts
+00:0919 _disable_interrupts
+00:091B _reset
+00:091B .reset
+00:0921 _set_interrupts
+00:092C _remove_VBL
+00:0937 _remove_LCD
+00:0942 _remove_TIM
+00:094D _remove_SIO
+00:0958 _remove_JOY
+00:0963 _add_VBL
+00:096E _add_LCD
+00:0979 _add_TIM
+00:0984 _add_SIO
+00:098F _add_JOY
+00:099A _clock
+00:09A3 __printTStates
+00:09A4 banked_call
+00:09BB banked_ret
+00:09C3 _BGB_profiler_message
 ; Area: _BASE
-00:0C8D .mv_sprite
-00:0C9C _move_sprite
-00:0CA9 _set_win_data
-00:0CA9 _set_bkg_data
-00:0CB1 _set_sprite_data
-00:0D27 .padup
-00:0D27 _waitpadup
-00:0D37 .jpad
-00:0D64 .wait_pad
-00:0D6B _joypad
-00:0D70 _waitpad
-00:0D7A .set_sprite_tile
-00:0D87 _set_sprite_tile
-00:0D92 .copy_vram
-00:0DA1 _get_data
-00:0DA1 _set_data
-00:0DB4 _set_bkg_tiles
-00:0DC8 .set_xy_wtt
-00:0DD9 .set_xy_btt
-00:0DE8 .set_xy_tt
-00:0E19 _set_tiles
+00:0A0B .mv_sprite
+00:0A1A _move_sprite
+00:0A27 _set_win_data
+00:0A27 _set_bkg_data
+00:0A2F _set_sprite_data
+00:0AA5 .padup
+00:0AA5 _waitpadup
+00:0AB5 .jpad
+00:0AE2 .wait_pad
+00:0AE9 _joypad
+00:0AEE _waitpad
+00:0AF8 .set_sprite_tile
+00:0B05 _set_sprite_tile
+00:0B10 .copy_vram
+00:0B1F _get_data
+00:0B1F _set_data
+00:0B32 _set_bkg_tiles
+00:0B46 .set_xy_wtt
+00:0B57 .set_xy_btt
+00:0B66 .set_xy_tt
+00:0B97 _set_tiles
 ; Area: _LIT
 ; Area: _GSINIT
-00:0E32 gsinit
+00:0BB0 gsinit
 ; Area: _GSINITTAIL
 ; Area: _GSFINAL
 ; Area: _DATA
 00:C0A0 _MainChar
 00:C0D3 _backgroundtiles
 00:C113 _TestMap
-00:C27C _gravity_time
+00:C47E _gravity_time
 ; Area: _BSS
-00:C27D __cpu
-00:C27E .mode
-00:C27F __io_out
-00:C280 __io_in
-00:C281 __io_status
-00:C282 .vbl_done
-00:C283 _sys_time
-00:C283 .sys_time
-00:C285 .int_0x40
-00:C295 .int_0x48
-00:C2A5 .int_0x50
-00:C2B5 .int_0x58
-00:C2C5 .int_0x60
+00:C47F __cpu
+00:C480 .mode
+00:C481 __io_out
+00:C482 __io_in
+00:C483 __io_status
+00:C484 .vbl_done
+00:C485 _sys_time
+00:C485 .sys_time
+00:C487 .int_0x40
+00:C497 .int_0x48
+00:C4A7 .int_0x50
+00:C4B7 .int_0x58
+00:C4C7 .int_0x60
 ; Area: _HEAP
-00:C2D5 _malloc_heap_start
+00:C4D7 _malloc_heap_start
 ; Area: _HRAM13
 00:FF90 __current_bank
+; Area: _EMU_HEADER0
 ; Area: _SFR0
 00:FF00 _P1_REG
 ; Area: _SFR1
