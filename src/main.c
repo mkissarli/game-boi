@@ -62,16 +62,21 @@ void next_animation(MSprite* sprite){
     set_sprite_tile(sprite->sprite_number, sprite->animation_index);
 }
 
-static UINT8 GRAVITY = 2;
+static UINT8 GRAVITY = 1;
 UINT8 gravity_time = 0;
 void gravity(MSprite* sprite){
     //Collision Check
-    sprite->speed.y += GRAVITY;
-
-    if(sprite->col.has_collided && sprite->col.direction.y == 1){
-        sprite->speed.y = 0;
-        //sprite->position.y = 144;
+    if(sprite->col.direction.y != 1){
+        sprite->speed.y += GRAVITY;
     }
+    //else if(sprite->col.direction.y == 1){
+    //    sprite->speed.y = 0;
+    //}
+
+    //if(sprite->col.has_collided && sprite->col.direction.y == 1){
+    //    sprite->speed.y = 0;
+        //sprite->position.y = 144;
+    //}
 }
 
 
@@ -122,10 +127,12 @@ void jump(MPlayer* player){
     //if(player->sprite.col.has_collided == true){
     //    player->jumped = false;
     //}
+    
     DEBUG_LOG_MESSAGE("Collision: %d %d", player->sprite.col.direction.x, player->sprite.col.direction.y);
     if(JOYPAD_DOWN_PAD_U &&
-       (player->sprite.col.direction.x != 0 ||
-        player->sprite.col.direction.y != 0)){//!(player->jumped)){
+       // Need directional first
+       //(player->sprite.col.direction.x != 0 ||
+       (player->sprite.col.direction.y != 0)){//!(player->jumped)){
         DEBUG_LOG_MESSAGE("Collision has occured. Jump started.");
         player->sprite.speed.y = -10;
 //        player->jumped = true;
@@ -180,7 +187,6 @@ void main()
 
     while(1){
         UPDATE_JOYPAD_STATE;
-        
         //Update loop
 
         // Player
@@ -191,11 +197,11 @@ void main()
         collision_check_2(&(player.sprite), TestMap);
         
         // Gravity
-        ++gravity_time;
-        if(gravity_time > 15){
-            gravity(&(player.sprite));
-            ++gravity_time;
-        }
+        //++gravity_time;
+        //if(gravity_time > 3){
+        gravity(&(player.sprite));
+        //++gravity_time;
+        //}
         
         // Draw
         update_position(&(player.sprite));
