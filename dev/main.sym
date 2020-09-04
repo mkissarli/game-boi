@@ -6,14 +6,15 @@ Symbol Table
     .__.$$$.=  2710 L   |     .__.ABS.=  0000 G   |     .__.CPU.=  0000 L
     .__.H$L.=  0000 L   |     _BGB_pro   **** GX  |   1 _GRAVITY   03DD R
     _LCDC_RE   **** GX  |   1 _MainCha   0000 GR  |   1 _TestMap   0073 GR
-  1 ___BGB_P   01DB R   |   1 _backgro   0033 GR  |   0 _collisi   03B6 GR
-  1 _debug_b   01DD R   |   0 _draw      0068 GR  |   0 _get_wor   030D GR
-  0 _gravity   00DB GR  |   1 _gravity   03DE GR  |   1 _input_t   0032 R
-    _joypad    **** GX  |   1 _joypad_   0031 R   |   1 _joypad_   0030 R
-  0 _joypad_   0000 R   |   0 _joypad_   0028 R   |   0 _jump      02B9 GR
-  0 _main      048B GR  |     _move_sp   **** GX  |   0 _next_an   0097 GR
-  0 _player_   01EB GR  |     _set_bkg   **** GX  |     _set_bkg   **** GX
-    _set_spr   **** GX  |     _set_spr   **** GX  |   0 _update_   0118 GR
+  1 ___BGB_P   01DB R   |   0 ___str_0   02FF R   |   0 ___str_1   0310 R
+  1 _backgro   0033 GR  |   0 _collisi   03DE GR  |   1 _debug_b   01DD R
+  0 _draw      0068 GR  |   0 _get_wor   0335 GR  |   0 _gravity   00DB GR
+  1 _gravity   03DE GR  |   1 _input_t   0032 R   |     _joypad    **** GX
+  1 _joypad_   0031 R   |   1 _joypad_   0030 R   |   0 _joypad_   0000 R
+  0 _joypad_   0028 R   |   0 _jump      0277 GR  |   0 _main      04B3 GR
+    _move_sp   **** GX  |   0 _next_an   0097 GR  |   0 _player_   01A9 GR
+    _set_bkg   **** GX  |     _set_bkg   **** GX  |     _set_spr   **** GX
+    _set_spr   **** GX  |     _sprintf   **** GX  |   0 _update_   0118 GR
     _wait_vb   **** GX
 
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy Z80-like CPU), page 2.
@@ -21,7 +22,7 @@ Hexadecimal [16-Bits]
 
 Area Table
 
-   0 _CODE      size  61B   flags    0
+   0 _CODE      size  643   flags    0
    1 _DATA      size  3DF   flags    0
    2 _DABS      size    0   flags    8
    3 _HOME      size    0   flags    0

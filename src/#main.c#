@@ -192,7 +192,7 @@ void main()
         
         // Gravity
         ++gravity_time;
-        if(gravity_time > 15){
+        if(gravity_time > ){
             gravity(&(player.sprite));
             ++gravity_time;
         }
