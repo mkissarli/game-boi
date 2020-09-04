@@ -10,6 +10,13 @@
 #include "../sprites/test_map.c"
 #include "../src/debug.c"
 
+void performantdelay(UINT8 numloops){
+    UINT8 i;
+    for(i = 0; i < numloops; i++){
+        wait_vbl_done();
+    }     
+}
+
 typedef struct MVector
 {
     UINT8 x;
@@ -69,14 +76,6 @@ void gravity(MSprite* sprite){
     if(sprite->col.direction.y != 1){
         sprite->speed.y += GRAVITY;
     }
-    //else if(sprite->col.direction.y == 1){
-    //    sprite->speed.y = 0;
-    //}
-
-    //if(sprite->col.has_collided && sprite->col.direction.y == 1){
-    //    sprite->speed.y = 0;
-        //sprite->position.y = 144;
-    //}
 }
 
 
@@ -96,23 +95,29 @@ void player_movement(MPlayer* player)
     MVector movement_speed = {4, 4};
     UPDATE_JOYPAD_STATE;
     if(JOYPAD_DOWN_PAD_L){
+        //if(player->sprite.speed.x != -movement_speed.x){
+        //    player->sprite.speed.x -= 1;
+        //}
         player->sprite.speed.x = -movement_speed.x;
         next_animation(&(player->sprite));
     }
     else if(JOYPAD_DOWN_PAD_R){
+        //if(player->sprite.speed.x != movement_speed.x){
+            //player->sprite.speed.x += 1;
+            //}
         player->sprite.speed.x = movement_speed.x;
         next_animation(&(player->sprite));
     }
     // This could be made more parabolic
     else if(JOYPAD_UP_PAD_L && JOYPAD_UP_PAD_R){
-        player->sprite.speed.x = 0;
-        /*if(player->sprite.speed.x < 0){
+        //player->sprite.speed.x = 0;
+        if(player->sprite.speed.x < 0){
             player->sprite.speed.x += 1;
         }
         else if(player->sprite.speed.x > 0){
             player->sprite.speed.x -= 1;
         }
-        */
+        
     }
     
     if(JOYPAD_DOWN_PAD_D){
@@ -128,14 +133,20 @@ void jump(MPlayer* player){
     //    player->jumped = false;
     //}
     
-    DEBUG_LOG_MESSAGE("Collision: %d %d", player->sprite.col.direction.x, player->sprite.col.direction.y);
-    if(JOYPAD_DOWN_PAD_U &&
-       // Need directional first
-       //(player->sprite.col.direction.x != 0 ||
-       (player->sprite.col.direction.y != 0)){//!(player->jumped)){
-        DEBUG_LOG_MESSAGE("Collision has occured. Jump started.");
-        player->sprite.speed.y = -10;
-//        player->jumped = true;
+    //DEBUG_LOG_MESSAGE("Collision: %d %d", player->sprite.col.direction.x, player->sprite.col.direction.y);
+    if(JOYPAD_DOWN_A){
+        if((player->sprite.col.direction.y == 1 ||
+            player->sprite.col.direction.x != 0)){
+            player->sprite.speed.y = -15;
+        }
+    
+        if(player->sprite.col.direction.x == -1){
+            DEBUG_LOG_MESSAGE("Left Side Collision!");
+            player->sprite.speed.x = 5;
+        }
+        else if (player->sprite.col.direction.x == 1){
+            player->sprite.speed.x = -5;
+        }
     }
 }
 
@@ -209,5 +220,6 @@ void main()
 
         // V-Sync
         wait_vbl_done();
+        //performantdelay(5);
     }
 }
