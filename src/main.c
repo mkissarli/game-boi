@@ -45,6 +45,7 @@ void main()
         jump(&player);
 
         // Collisions
+        death_check(&player);
         collision_check(&(player.sprite));
         
         // Gravity
