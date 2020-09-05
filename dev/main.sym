@@ -6,25 +6,25 @@ Symbol Table
     .__.$$$.=  2710 L   |     .__.ABS.=  0000 G   |     .__.CPU.=  0000 L
     .__.H$L.=  0000 L   |     _BGB_pro   **** GX  |   1 _Backgro   0235 GR
   1 _GRAVITY   0836 R   |     _LCDC_RE   **** GX  |   1 _MainCha   0000 GR
-  1 ___BGB_P   0033 R   |   0 ___str_0   02DE R   |   0 ___str_1   0497 R
-  0 ___str_2   04A7 R   |     __divuin   **** GX  |     __moduin   **** GX
-  0 _collisi   04DD GR  |   1 _current   0295 R   |   1 _debug_b   0035 R
-    _delay     **** GX  |   0 _draw      0068 GR  |   0 _get_wor   02F3 GR
-  0 _gravity   04B9 GR  |   1 _gravity   0837 GR  |   1 _input_t   0032 R
+  1 ___BGB_P   0033 R   |   0 ___str_0   0303 R   |   0 ___str_1   04BC R
+  0 ___str_2   04CC R   |     __divuin   **** GX  |     __moduin   **** GX
+  0 _collisi   0502 GR  |   1 _current   0295 R   |   1 _debug_b   0035 R
+    _delay     **** GX  |   0 _draw      0068 GR  |   0 _get_wor   0318 GR
+  0 _gravity   04DE GR  |   1 _gravity   0837 GR  |   1 _input_t   0032 R
     _joypad    **** GX  |   1 _joypad_   0031 R   |   1 _joypad_   0030 R
-  0 _joypad_   0000 R   |   0 _joypad_   0028 R   |   0 _jump      0269 GR
-  0 _main      066E GR  |   1 _maps      0296 R   |     _move_sp   **** GX
-  0 _next_an   0128 GR  |   0 _perform   065E GR  |   0 _player_   016C GR
-    _set_bkg   **** GX  |     _set_bkg   **** GX  |   0 _set_map   0351 GR
+  0 _joypad_   0000 R   |   0 _joypad_   0028 R   |   0 _jump      0284 GR
+  0 _main      0693 GR  |   1 _maps      0296 R   |     _move_sp   **** GX
+  0 _next_an   0143 GR  |   0 _perform   0683 GR  |   0 _player_   0187 GR
+    _set_bkg   **** GX  |     _set_bkg   **** GX  |   0 _set_map   0376 GR
     _set_spr   **** GX  |     _set_spr   **** GX  |     _sprintf   **** GX
-  0 _update_   0097 GR  |     _wait_vb   **** GX  |   0 _win_con   0409 GR
+  0 _update_   0097 GR  |     _wait_vb   **** GX  |   0 _win_con   042E GR
 
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy Z80-like CPU), page 2.
 Hexadecimal [16-Bits]
 
 Area Table
 
-   0 _CODE      size  7EC   flags    0
+   0 _CODE      size  816   flags    0
    1 _DATA      size  838   flags    0
    2 _DABS      size    0   flags    8
    3 _HOME      size    0   flags    0

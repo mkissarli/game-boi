@@ -20,12 +20,20 @@ void draw(MSprite* sprite){
 
 
 void update_position(MSprite* sprite){
+    // Not colliding left and moving left and not colliding right and moving right
     if(!(sprite->col.direction.x == -1 && sprite->speed.x < 0) &&
        !(sprite->col.direction.x ==  1 && sprite->speed.x > 0)){
         sprite->position.x += sprite->speed.x;
     }
+    else{
+        sprite->speed.x = 0;
+    }
+    // Not colliding up and going up and not colliding down and moving down.
     if(!(sprite->col.direction.y == -1 && sprite->speed.y < 0) &&
        !(sprite->col.direction.y ==  1 && sprite->speed.y > 0)){
         sprite->position.y += sprite->speed.y;
+    }
+    else {
+        sprite->speed.y = 0;
     }
 }

@@ -62,7 +62,7 @@ void main()
         win_condition(&player);
         
         // V-Sync
-        wait_vbl_done();
-        //performantdelay(5);
+        //wait_vbl_done();
+        performantdelay(5);
     }
 }

@@ -2,7 +2,7 @@
                               2 ; File Created by SDCC : free open source ANSI-C Compiler
                               3 ; Version 4.0.0 #11528 (MINGW32)
                               4 ;--------------------------------------------------------
-                              5 	.module C__Users_Thief3_AppData_Local_Temp_lcc128721
+                              5 	.module C__Users_Thief3_AppData_Local_Temp_lcc26521
                               6 	.optsdcc -mgbz80
                               7 	
                               8 ;--------------------------------------------------------
@@ -3252,9 +3252,9 @@
    1EF6 36 04              3252 	ld	(hl), #0x04
    1EF8 21r35r08           3253 	ld	hl, #(_maps + 0x059f)
    1EFB 36 04              3254 	ld	(hl), #0x04
-                           3255 ;./src/./physics.c:1: static UINT8 GRAVITY = 1;
+                           3255 ;./src/./physics.c:1: static UINT8 GRAVITY = 2;
    1EFD 21r36r08           3256 	ld	hl, #_GRAVITY
-   1F00 36 01              3257 	ld	(hl), #0x01
+   1F00 36 02              3257 	ld	(hl), #0x02
                            3258 ;./src/./physics.c:2: UINT8 gravity_time = 0;
    1F02 21r37r08           3259 	ld	hl, #_gravity_time
    1F05 36 00              3260 	ld	(hl), #0x00
@@ -3402,9 +3402,9 @@
                            3402 ; Function update_position
                            3403 ; ---------------------------------
    0097                    3404 _update_position::
-   0097 E8 FD              3405 	add	sp, #-3
-                           3406 ;./src/./sprites.c:23: if(!(sprite->col.direction.x == -1 && sprite->speed.x < 0) &&
-   0099 F8 05              3407 	ldhl	sp,	#5
+   0097 E8 FC              3405 	add	sp, #-4
+                           3406 ;./src/./sprites.c:24: if(!(sprite->col.direction.x == -1 && sprite->speed.x < 0) &&
+   0099 F8 06              3407 	ldhl	sp,	#6
    009B 2A                 3408 	ld	a, (hl+)
    009C 5E                 3409 	ld	e, (hl)
    009D F8 00              3410 	ldhl	sp,	#0
@@ -3421,1526 +3421,1562 @@
    00AB D5                 3421 	push	de
    00AC 21 05 00           3422 	ld	hl, #0x0005
    00AF 19                 3423 	add	hl, de
-   00B0 45                 3424 	ld	b,l
-   00B1 7C                 3425 	ld	a,h
-   00B2 46                 3426 	ld	b, (hl)
-   00B3 79                 3427 	ld	a, c
-   00B4 3C                 3428 	inc	a
-   00B5 20 04              3429 	jr	NZ,00105$
-   00B7 CB 78              3430 	bit	7, b
-   00B9 20 24              3431 	jr	NZ,00102$
-   00BB                    3432 00105$:
-                           3433 ;./src/./sprites.c:24: !(sprite->col.direction.x ==  1 && sprite->speed.x > 0)){
-   00BB 0D                 3434 	dec	c
-   00BC 20 19              3435 	jr	NZ,00101$
-   00BE 78                 3436 	ld	a, b
-   00BF 5F                 3437 	ld	e, a
-   00C0 3E 00              3438 	ld	a, #0x00
-   00C2 57                 3439 	ld	d, a
-   00C3 AF                 3440 	xor	a, a
-   00C4 90                 3441 	sub	a, b
-   00C5 CB 7B              3442 	bit	7, e
-   00C7 28 07              3443 	jr	Z,00137$
-   00C9 CB 7A              3444 	bit	7, d
-   00CB 20 08              3445 	jr	NZ,00138$
-   00CD BF                 3446 	cp	a, a
-   00CE 18 05              3447 	jr	00138$
-   00D0                    3448 00137$:
-   00D0 CB 7A              3449 	bit	7, d
-   00D2 28 01              3450 	jr	Z,00138$
-   00D4 37                 3451 	scf
-   00D5                    3452 00138$:
-   00D5 38 08              3453 	jr	C,00102$
-   00D7                    3454 00101$:
-                           3455 ;./src/./sprites.c:25: sprite->position.x += sprite->speed.x;
-   00D7 D1                 3456 	pop	de
-   00D8 D5                 3457 	push	de
-   00D9 1A                 3458 	ld	a,(de)
-   00DA 80                 3459 	add	a, b
-   00DB 4F                 3460 	ld	c, a
-   00DC E1                 3461 	pop	hl
-   00DD E5                 3462 	push	hl
-   00DE 71                 3463 	ld	(hl), c
-   00DF                    3464 00102$:
-                           3465 ;./src/./sprites.c:27: if(!(sprite->col.direction.y == -1 && sprite->speed.y < 0) &&
-   00DF D1                 3466 	pop	de
-   00E0 D5                 3467 	push	de
-   00E1 21 09 00           3468 	ld	hl, #0x0009
-   00E4 19                 3469 	add	hl, de
-   00E5 4D                 3470 	ld	c,l
-   00E6 7C                 3471 	ld	a,h
-   00E7 4E                 3472 	ld	c, (hl)
-   00E8 D1                 3473 	pop	de
-   00E9 D5                 3474 	push	de
-   00EA 21 06 00           3475 	ld	hl, #0x0006
-   00ED 19                 3476 	add	hl, de
-   00EE 45                 3477 	ld	b,l
-   00EF 7C                 3478 	ld	a,h
-   00F0 7E                 3479 	ld	a, (hl)
-   00F1 F8 02              3480 	ldhl	sp,	#2
-   00F3 77                 3481 	ld	(hl), a
-   00F4 79                 3482 	ld	a, c
-   00F5 3C                 3483 	inc	a
-   00F6 20 07              3484 	jr	NZ,00110$
-   00F8 F8 02              3485 	ldhl	sp,	#2
-   00FA 7E                 3486 	ld	a, (hl)
-   00FB CB 7F              3487 	bit	7, a
-   00FD 20 26              3488 	jr	NZ,00111$
-   00FF                    3489 00110$:
-                           3490 ;./src/./sprites.c:28: !(sprite->col.direction.y ==  1 && sprite->speed.y > 0)){
-   00FF 0D                 3491 	dec	c
-   0100 20 1B              3492 	jr	NZ,00106$
-   0102 F8 02              3493 	ldhl	sp,	#2
-   0104 7E                 3494 	ld	a, (hl)
-   0105 5F                 3495 	ld	e, a
-   0106 3E 00              3496 	ld	a, #0x00
-   0108 57                 3497 	ld	d, a
-   0109 AF                 3498 	xor	a, a
-   010A 96                 3499 	sub	a, (hl)
-   010B CB 7B              3500 	bit	7, e
-   010D 28 07              3501 	jr	Z,00143$
-   010F CB 7A              3502 	bit	7, d
-   0111 20 08              3503 	jr	NZ,00144$
-   0113 BF                 3504 	cp	a, a
-   0114 18 05              3505 	jr	00144$
-   0116                    3506 00143$:
-   0116 CB 7A              3507 	bit	7, d
-   0118 28 01              3508 	jr	Z,00144$
-   011A 37                 3509 	scf
-   011B                    3510 00144$:
-   011B 38 08              3511 	jr	C,00111$
-   011D                    3512 00106$:
-                           3513 ;./src/./sprites.c:29: sprite->position.y += sprite->speed.y;
-   011D C1                 3514 	pop	bc
-   011E C5                 3515 	push	bc
-   011F 03                 3516 	inc	bc
-   0120 0A                 3517 	ld	a, (bc)
-   0121 F8 02              3518 	ldhl	sp,	#2
-   0123 86                 3519 	add	a, (hl)
-   0124 02                 3520 	ld	(bc), a
-   0125                    3521 00111$:
-                           3522 ;./src/./sprites.c:31: }
-   0125 E8 03              3523 	add	sp, #3
-   0127 C9                 3524 	ret
-                           3525 ;./src/./player.c:7: void next_animation(MSprite* sprite){
-                           3526 ;	---------------------------------
-                           3527 ; Function next_animation
-                           3528 ; ---------------------------------
-   0128                    3529 _next_animation::
-   0128 E8 FB              3530 	add	sp, #-5
-                           3531 ;./src/./player.c:8: ++(sprite->animation_index);
-   012A F8 07              3532 	ldhl	sp,	#7
-   012C 2A                 3533 	ld	a, (hl+)
-   012D 5E                 3534 	ld	e, (hl)
-   012E F8 00              3535 	ldhl	sp,	#0
-   0130 22                 3536 	ld	(hl+), a
-   0131 73                 3537 	ld	(hl), e
-   0132 C1                 3538 	pop	bc
-   0133 C5                 3539 	push	bc
-   0134 03                 3540 	inc	bc
-   0135 03                 3541 	inc	bc
-   0136 0A                 3542 	ld	a, (bc)
-   0137 3C                 3543 	inc	a
-   0138 23                 3544 	inc	hl
-   0139 77                 3545 	ld	(hl),a
-   013A 02                 3546 	ld	(bc), a
-                           3547 ;./src/./player.c:9: if(sprite->animation_index == sprite->max_animations){
-   013B D1                 3548 	pop	de
-   013C D5                 3549 	push	de
-   013D 21 03 00           3550 	ld	hl, #0x0003
-   0140 19                 3551 	add	hl, de
-   0141 7D                 3552 	ld	a, l
-   0142 54                 3553 	ld	d, h
-   0143 F8 03              3554 	ldhl	sp,	#3
-   0145 22                 3555 	ld	(hl+), a
-   0146 72                 3556 	ld	(hl), d
-   0147 2B                 3557 	dec	hl
-   0148 5E                 3558 	ld	e, (hl)
-   0149 23                 3559 	inc	hl
-   014A 56                 3560 	ld	d, (hl)
-   014B 1A                 3561 	ld	a,(de)
-   014C 32                 3562 	ld	(hl-), a
-   014D 2B                 3563 	dec	hl
-   014E 2A                 3564 	ld	a, (hl+)
-   014F 23                 3565 	inc	hl
-   0150 96                 3566 	sub	a, (hl)
-   0151 20 02              3567 	jr	NZ,00102$
-                           3568 ;./src/./player.c:10: sprite->animation_index = 0;
-   0153 AF                 3569 	xor	a, a
-   0154 02                 3570 	ld	(bc), a
-   0155                    3571 00102$:
-                           3572 ;./src/./player.c:12: set_sprite_tile(sprite->sprite_number, sprite->animation_index);
-   0155 0A                 3573 	ld	a, (bc)
-   0156 47                 3574 	ld	b, a
-   0157 D1                 3575 	pop	de
-   0158 D5                 3576 	push	de
-   0159 21 04 00           3577 	ld	hl, #0x0004
-   015C 19                 3578 	add	hl, de
-   015D 4D                 3579 	ld	c,l
-   015E 7C                 3580 	ld	a,h
-   015F 7E                 3581 	ld	a, (hl)
-   0160 C5                 3582 	push	bc
-   0161 33                 3583 	inc	sp
-   0162 F5                 3584 	push	af
-   0163 33                 3585 	inc	sp
-   0164 CDr00r00           3586 	call	_set_sprite_tile
-   0167 E8 02              3587 	add	sp, #2
-                           3588 ;./src/./player.c:13: }
-   0169 E8 05              3589 	add	sp, #5
-   016B C9                 3590 	ret
-                           3591 ;./src/./player.c:15: void player_movement(MPlayer* player)
-                           3592 ;	---------------------------------
-                           3593 ; Function player_movement
-                           3594 ; ---------------------------------
-   016C                    3595 _player_movement::
-   016C E8 F7              3596 	add	sp, #-9
-                           3597 ;./src/./player.c:17: MVector movement_speed = {4, 4};
-   016E F8 00              3598 	ldhl	sp,	#0
-   0170 4D                 3599 	ld	c, l
-   0171 44                 3600 	ld	b, h
-   0172 3E 04              3601 	ld	a, #0x04
-   0174 02                 3602 	ld	(bc), a
-   0175 F8 00              3603 	ldhl	sp,	#0
-   0177 4D                 3604 	ld	c, l
-   0178 44                 3605 	ld	b, h
-   0179 21 01 00           3606 	ld	hl, #0x0001
-   017C 09                 3607 	add	hl, bc
-   017D 7D                 3608 	ld	a, l
-   017E 54                 3609 	ld	d, h
-   017F F8 02              3610 	ldhl	sp,	#2
-   0181 22                 3611 	ld	(hl+), a
-   0182 72                 3612 	ld	(hl), d
-   0183 2B                 3613 	dec	hl
-   0184 2A                 3614 	ld	a, (hl+)
-   0185 66                 3615 	ld	h, (hl)
-   0186 6F                 3616 	ld	l, a
-   0187 36 04              3617 	ld	(hl), #0x04
-                           3618 ;./src/./player.c:18: UPDATE_JOYPAD_STATE;
-   0189 E5                 3619 	push	hl
-   018A 21r31r00           3620 	ld	hl, #_joypad_curr_state
-   018D 7E                 3621 	ld	a, (hl)
-   018E 21r30r00           3622 	ld	hl, #_joypad_prev_state
-   0191 77                 3623 	ld	(hl), a
-   0192 E1                 3624 	pop	hl
-   0193 C5                 3625 	push	bc
-   0194 CDr00r00           3626 	call	_joypad
-   0197 C1                 3627 	pop	bc
-   0198 21r31r00           3628 	ld	hl, #_joypad_curr_state
-   019B 73                 3629 	ld	(hl), e
-                           3630 ;./src/./player.c:19: if(JOYPAD_DOWN_PAD_L){
-   019C C5                 3631 	push	bc
-   019D CDr00r00           3632 	call	_joypad
-   01A0 F8 06              3633 	ldhl	sp,	#6
-   01A2 73                 3634 	ld	(hl), e
-   01A3 C1                 3635 	pop	bc
-                           3636 ;./src/./player.c:23: player->sprite.speed.x = -movement_speed.x;
-   01A4 F8 0B              3637 	ldhl	sp,	#11
-   01A6 2A                 3638 	ld	a, (hl+)
-   01A7 5E                 3639 	ld	e, (hl)
-   01A8 F8 05              3640 	ldhl	sp,	#5
-   01AA 22                 3641 	ld	(hl+), a
-   01AB 73                 3642 	ld	(hl), e
-   01AC 2B                 3643 	dec	hl
-   01AD 5E                 3644 	ld	e, (hl)
-   01AE 23                 3645 	inc	hl
-   01AF 56                 3646 	ld	d, (hl)
-   01B0 21 05 00           3647 	ld	hl, #0x0005
-   01B3 19                 3648 	add	hl, de
-   01B4 7D                 3649 	ld	a, l
-   01B5 54                 3650 	ld	d, h
-   01B6 F8 07              3651 	ldhl	sp,	#7
-   01B8 22                 3652 	ld	(hl+), a
-   01B9 72                 3653 	ld	(hl), d
-                           3654 ;./src/./player.c:19: if(JOYPAD_DOWN_PAD_L){
-   01BA F8 04              3655 	ldhl	sp,	#4
-   01BC CB 4E              3656 	bit	1, (hl)
-   01BE 28 19              3657 	jr	Z,00116$
-                           3658 ;./src/./player.c:23: player->sprite.speed.x = -movement_speed.x;
-   01C0 0A                 3659 	ld	a, (bc)
-   01C1 4F                 3660 	ld	c, a
-   01C2 AF                 3661 	xor	a, a
-   01C3 91                 3662 	sub	a, c
-   01C4 4F                 3663 	ld	c, a
-   01C5 F8 07              3664 	ldhl	sp,	#7
-   01C7 2A                 3665 	ld	a, (hl+)
-   01C8 66                 3666 	ld	h, (hl)
-   01C9 6F                 3667 	ld	l, a
-   01CA 71                 3668 	ld	(hl), c
-                           3669 ;./src/./player.c:24: next_animation(&(player->sprite));
-   01CB F8 05              3670 	ldhl	sp,	#5
-   01CD 2A                 3671 	ld	a, (hl+)
-   01CE 66                 3672 	ld	h, (hl)
-   01CF 6F                 3673 	ld	l, a
-   01D0 E5                 3674 	push	hl
-   01D1 CDr28r01           3675 	call	_next_animation
-   01D4 E8 02              3676 	add	sp, #2
-   01D6 C3r3Br02           3677 	jp	00117$
-   01D9                    3678 00116$:
-                           3679 ;./src/./player.c:26: else if(JOYPAD_DOWN_PAD_R){
-   01D9 C5                 3680 	push	bc
-   01DA CDr00r00           3681 	call	_joypad
-   01DD 7B                 3682 	ld	a, e
-   01DE C1                 3683 	pop	bc
-   01DF 0F                 3684 	rrca
-   01E0 30 16              3685 	jr	NC,00113$
-                           3686 ;./src/./player.c:30: player->sprite.speed.x = movement_speed.x;
-   01E2 0A                 3687 	ld	a, (bc)
-   01E3 4F                 3688 	ld	c, a
-   01E4 F8 07              3689 	ldhl	sp,	#7
-   01E6 2A                 3690 	ld	a, (hl+)
-   01E7 66                 3691 	ld	h, (hl)
-   01E8 6F                 3692 	ld	l, a
-   01E9 71                 3693 	ld	(hl), c
-                           3694 ;./src/./player.c:31: next_animation(&(player->sprite));
-   01EA F8 05              3695 	ldhl	sp,	#5
-   01EC 2A                 3696 	ld	a, (hl+)
-   01ED 66                 3697 	ld	h, (hl)
-   01EE 6F                 3698 	ld	l, a
-   01EF E5                 3699 	push	hl
-   01F0 CDr28r01           3700 	call	_next_animation
-   01F3 E8 02              3701 	add	sp, #2
-   01F5 C3r3Br02           3702 	jp	00117$
-   01F8                    3703 00113$:
-                           3704 ;./src/./player.c:34: else if(JOYPAD_UP_PAD_L && JOYPAD_UP_PAD_R){
-   01F8 CDr00r00           3705 	call	_joypad
-   01FB CB 4B              3706 	bit	1, e
-   01FD C2r3Br02           3707 	jp	NZ,00117$
-   0200 CDr00r00           3708 	call	_joypad
-   0203 7B                 3709 	ld	a, e
-   0204 0F                 3710 	rrca
-   0205 DAr3Br02           3711 	jp	C,00117$
-                           3712 ;./src/./player.c:36: if(player->sprite.speed.x < 0){
-   0208 F8 07              3713 	ldhl	sp,#(8 - 1)
-   020A 5E                 3714 	ld	e, (hl)
-   020B 23                 3715 	inc	hl
-   020C 56                 3716 	ld	d, (hl)
-   020D 1A                 3717 	ld	a,(de)
-   020E 4F                 3718 	ld	c, a
-   020F CB 79              3719 	bit	7, c
-   0211 28 08              3720 	jr	Z,00107$
-                           3721 ;./src/./player.c:37: player->sprite.speed.x += 1;
-   0213 0C                 3722 	inc	c
-   0214 2B                 3723 	dec	hl
-   0215 2A                 3724 	ld	a, (hl+)
-   0216 66                 3725 	ld	h, (hl)
-   0217 6F                 3726 	ld	l, a
-   0218 71                 3727 	ld	(hl), c
-   0219 18 20              3728 	jr	00117$
-   021B                    3729 00107$:
-                           3730 ;./src/./player.c:39: else if(player->sprite.speed.x > 0){
-   021B 79                 3731 	ld	a, c
-   021C 5F                 3732 	ld	e, a
-   021D 3E 00              3733 	ld	a, #0x00
-   021F 57                 3734 	ld	d, a
-   0220 AF                 3735 	xor	a, a
-   0221 91                 3736 	sub	a, c
-   0222 CB 7B              3737 	bit	7, e
-   0224 28 07              3738 	jr	Z,00171$
-   0226 CB 7A              3739 	bit	7, d
-   0228 20 08              3740 	jr	NZ,00172$
-   022A BF                 3741 	cp	a, a
-   022B 18 05              3742 	jr	00172$
-   022D                    3743 00171$:
-   022D CB 7A              3744 	bit	7, d
-   022F 28 01              3745 	jr	Z,00172$
-   0231 37                 3746 	scf
-   0232                    3747 00172$:
-   0232 30 07              3748 	jr	NC,00117$
-                           3749 ;./src/./player.c:40: player->sprite.speed.x -= 1;
-   0234 0D                 3750 	dec	c
-   0235 F8 07              3751 	ldhl	sp,	#7
-   0237 2A                 3752 	ld	a, (hl+)
-   0238 66                 3753 	ld	h, (hl)
-   0239 6F                 3754 	ld	l, a
-   023A 71                 3755 	ld	(hl), c
-   023B                    3756 00117$:
-                           3757 ;./src/./player.c:45: if(JOYPAD_DOWN_PAD_D){
-   023B CDr00r00           3758 	call	_joypad
-   023E F8 08              3759 	ldhl	sp,	#8
-   0240 73                 3760 	ld	(hl), e
-                           3761 ;./src/./player.c:46: player->sprite.speed.y = movement_speed.y;
-   0241 F8 05              3762 	ldhl	sp,#(6 - 1)
-   0243 5E                 3763 	ld	e, (hl)
-   0244 23                 3764 	inc	hl
-   0245 56                 3765 	ld	d, (hl)
-   0246 21 06 00           3766 	ld	hl, #0x0006
-   0249 19                 3767 	add	hl, de
-   024A 4D                 3768 	ld	c, l
-   024B 44                 3769 	ld	b, h
-                           3770 ;./src/./player.c:45: if(JOYPAD_DOWN_PAD_D){
-   024C F8 08              3771 	ldhl	sp,	#8
-   024E CB 5E              3772 	bit	3, (hl)
-   0250 28 09              3773 	jr	Z,00121$
-                           3774 ;./src/./player.c:46: player->sprite.speed.y = movement_speed.y;
-   0252 F8 02              3775 	ldhl	sp,#(3 - 1)
-   0254 5E                 3776 	ld	e, (hl)
-   0255 23                 3777 	inc	hl
-   0256 56                 3778 	ld	d, (hl)
-   0257 1A                 3779 	ld	a,(de)
-   0258 02                 3780 	ld	(bc), a
-   0259 18 0B              3781 	jr	00123$
-   025B                    3782 00121$:
-                           3783 ;./src/./player.c:48: else if(JOYPAD_UP_PAD_D){
-   025B C5                 3784 	push	bc
-   025C CDr00r00           3785 	call	_joypad
-   025F C1                 3786 	pop	bc
-   0260 CB 5B              3787 	bit	3, e
-   0262 20 02              3788 	jr	NZ,00123$
-                           3789 ;./src/./player.c:49: player->sprite.speed.y =0; //-= movement_speed.y;
-   0264 AF                 3790 	xor	a, a
-   0265 02                 3791 	ld	(bc), a
-   0266                    3792 00123$:
-                           3793 ;./src/./player.c:51: }
-   0266 E8 09              3794 	add	sp, #9
-   0268 C9                 3795 	ret
-                           3796 ;./src/./player.c:53: void jump(MPlayer* player){
-                           3797 ;	---------------------------------
-                           3798 ; Function jump
-                           3799 ; ---------------------------------
-   0269                    3800 _jump::
-   0269 E8 FC              3801 	add	sp, #-4
-                           3802 ;./src/./player.c:59: if(JOYPAD_DOWN_A){
-   026B CDr00r00           3803 	call	_joypad
-   026E CB 63              3804 	bit	4, e
-   0270 CArDBr02           3805 	jp	Z,00111$
-                           3806 ;./src/./player.c:60: if((player->sprite.col.direction.y == 1 ||
-   0273 F8 06              3807 	ldhl	sp,#(7 - 1)
-   0275 4E                 3808 	ld	c, (hl)
-   0276 23                 3809 	inc	hl
-   0277 46                 3810 	ld	b, (hl)
-   0278 21 08 00           3811 	ld	hl, #0x0008
-   027B 09                 3812 	add	hl, bc
-   027C 7D                 3813 	ld	a, l
-   027D 54                 3814 	ld	d, h
-   027E F8 02              3815 	ldhl	sp,	#2
-   0280 22                 3816 	ld	(hl+), a
-   0281 72                 3817 	ld	(hl), d
-   0282 21 09 00           3818 	ld	hl, #0x0009
-   0285 09                 3819 	add	hl, bc
-   0286 33                 3820 	inc	sp
-   0287 33                 3821 	inc	sp
-   0288 E5                 3822 	push	hl
-   0289 D1                 3823 	pop	de
-   028A D5                 3824 	push	de
-   028B 1A                 3825 	ld	a,(de)
-   028C 3D                 3826 	dec	a
-   028D 28 09              3827 	jr	Z,00101$
-                           3828 ;./src/./player.c:61: player->sprite.col.direction.x != 0)){
-   028F F8 02              3829 	ldhl	sp,#(3 - 1)
-   0291 5E                 3830 	ld	e, (hl)
-   0292 23                 3831 	inc	hl
-   0293 56                 3832 	ld	d, (hl)
-   0294 1A                 3833 	ld	a,(de)
-   0295 B7                 3834 	or	a, a
-   0296 28 0B              3835 	jr	Z,00102$
-   0298                    3836 00101$:
-                           3837 ;./src/./player.c:62: player->sprite.speed.y = -15;
-   0298 21 06 00           3838 	ld	hl, #0x0006
-   029B 09                 3839 	add	hl, bc
-   029C 33                 3840 	inc	sp
-   029D 33                 3841 	inc	sp
-   029E E5                 3842 	push	hl
-   029F E1                 3843 	pop	hl
-   02A0 E5                 3844 	push	hl
-   02A1 36 F1              3845 	ld	(hl), #0xf1
-   02A3                    3846 00102$:
-                           3847 ;./src/./player.c:65: if(player->sprite.col.direction.x == -1){
-   02A3 F8 02              3848 	ldhl	sp,#(3 - 1)
-   02A5 5E                 3849 	ld	e, (hl)
-   02A6 23                 3850 	inc	hl
-   02A7 56                 3851 	ld	d, (hl)
-   02A8 1A                 3852 	ld	a,(de)
-   02A9 77                 3853 	ld	(hl), a
-                           3854 ;./src/./player.c:67: player->sprite.speed.x = 5;
-   02AA 03                 3855 	inc	bc
-   02AB 03                 3856 	inc	bc
-   02AC 03                 3857 	inc	bc
-   02AD 03                 3858 	inc	bc
-   02AE 03                 3859 	inc	bc
-                           3860 ;./src/./player.c:65: if(player->sprite.col.direction.x == -1){
-   02AF 7E                 3861 	ld	a, (hl)
-   02B0 3C                 3862 	inc	a
-   02B1 20 1F              3863 	jr	NZ,00107$
-                           3864 ;./src/./player.c:66: DEBUG_LOG_MESSAGE("Left Side Collision!");
-   02B3 C5                 3865 	push	bc
-   02B4 21rDEr02           3866 	ld	hl, #___str_0
-   02B7 E5                 3867 	push	hl
-   02B8 21r35r00           3868 	ld	hl, #_debug_buffer
-   02BB E5                 3869 	push	hl
-   02BC CDr00r00           3870 	call	_sprintf
-   02BF E8 04              3871 	add	sp, #4
-   02C1 C1                 3872 	pop	bc
-   02C2 52                 3873 	ld d, d 
-   02C3 18 08              3874 	jr 6600$ 
-   02C5 64 64              3875 	.dw 0x6464 
-   02C7 01 00              3876 	.dw 0x0001 
-   02C9r35r00              3877 	.dw #_debug_buffer 
-   02CB 00 00              3878 	.dw 0 
-   02CD                    3879 	 6600$:
-                           3880 ;./src/./player.c:67: player->sprite.speed.x = 5;
-   02CD 3E 05              3881 	ld	a, #0x05
-   02CF 02                 3882 	ld	(bc), a
-   02D0 18 09              3883 	jr	00111$
-   02D2                    3884 00107$:
-                           3885 ;./src/./player.c:69: else if (player->sprite.col.direction.x == 1){
-   02D2 F8 03              3886 	ldhl	sp,	#3
-   02D4 7E                 3887 	ld	a, (hl)
-   02D5 3D                 3888 	dec	a
-   02D6 20 03              3889 	jr	NZ,00111$
-                           3890 ;./src/./player.c:70: player->sprite.speed.x = -5;
-   02D8 3E FB              3891 	ld	a, #0xfb
-   02DA 02                 3892 	ld	(bc), a
-   02DB                    3893 00111$:
-                           3894 ;./src/./player.c:73: }
-   02DB E8 04              3895 	add	sp, #4
-   02DD C9                 3896 	ret
-   02DE                    3897 ___str_0:
-   02DE 4C 65 66 74 20 53  3898 	.ascii "Left Side Collision!"
+   00B0 7D                 3424 	ld	a, l
+   00B1 54                 3425 	ld	d, h
+   00B2 F8 02              3426 	ldhl	sp,	#2
+   00B4 22                 3427 	ld	(hl+), a
+   00B5 72                 3428 	ld	(hl), d
+   00B6 2B                 3429 	dec	hl
+   00B7 5E                 3430 	ld	e, (hl)
+   00B8 23                 3431 	inc	hl
+   00B9 56                 3432 	ld	d, (hl)
+   00BA 1A                 3433 	ld	a,(de)
+   00BB 47                 3434 	ld	b, a
+   00BC 79                 3435 	ld	a, c
+   00BD 3C                 3436 	inc	a
+   00BE 20 04              3437 	jr	NZ,00106$
+   00C0 CB 78              3438 	bit	7, b
+   00C2 20 26              3439 	jr	NZ,00102$
+   00C4                    3440 00106$:
+                           3441 ;./src/./sprites.c:25: !(sprite->col.direction.x ==  1 && sprite->speed.x > 0)){
+   00C4 0D                 3442 	dec	c
+   00C5 20 19              3443 	jr	NZ,00101$
+   00C7 78                 3444 	ld	a, b
+   00C8 5F                 3445 	ld	e, a
+   00C9 3E 00              3446 	ld	a, #0x00
+   00CB 57                 3447 	ld	d, a
+   00CC AF                 3448 	xor	a, a
+   00CD 90                 3449 	sub	a, b
+   00CE CB 7B              3450 	bit	7, e
+   00D0 28 07              3451 	jr	Z,00139$
+   00D2 CB 7A              3452 	bit	7, d
+   00D4 20 08              3453 	jr	NZ,00140$
+   00D6 BF                 3454 	cp	a, a
+   00D7 18 05              3455 	jr	00140$
+   00D9                    3456 00139$:
+   00D9 CB 7A              3457 	bit	7, d
+   00DB 28 01              3458 	jr	Z,00140$
+   00DD 37                 3459 	scf
+   00DE                    3460 00140$:
+   00DE 38 0A              3461 	jr	C,00102$
+   00E0                    3462 00101$:
+                           3463 ;./src/./sprites.c:26: sprite->position.x += sprite->speed.x;
+   00E0 D1                 3464 	pop	de
+   00E1 D5                 3465 	push	de
+   00E2 1A                 3466 	ld	a,(de)
+   00E3 80                 3467 	add	a, b
+   00E4 4F                 3468 	ld	c, a
+   00E5 E1                 3469 	pop	hl
+   00E6 E5                 3470 	push	hl
+   00E7 71                 3471 	ld	(hl), c
+   00E8 18 06              3472 	jr	00103$
+   00EA                    3473 00102$:
+                           3474 ;./src/./sprites.c:29: sprite->speed.x = 0;
+   00EA C1                 3475 	pop	bc
+   00EB E1                 3476 	pop	hl
+   00EC E5                 3477 	push	hl
+   00ED C5                 3478 	push	bc
+   00EE 36 00              3479 	ld	(hl), #0x00
+   00F0                    3480 00103$:
+                           3481 ;./src/./sprites.c:32: if(!(sprite->col.direction.y == -1 && sprite->speed.y < 0) &&
+   00F0 D1                 3482 	pop	de
+   00F1 D5                 3483 	push	de
+   00F2 21 09 00           3484 	ld	hl, #0x0009
+   00F5 19                 3485 	add	hl, de
+   00F6 4D                 3486 	ld	c, l
+   00F7 44                 3487 	ld	b, h
+   00F8 0A                 3488 	ld	a, (bc)
+   00F9 F8 02              3489 	ldhl	sp,	#2
+   00FB 77                 3490 	ld	(hl), a
+   00FC D1                 3491 	pop	de
+   00FD D5                 3492 	push	de
+   00FE 21 06 00           3493 	ld	hl, #0x0006
+   0101 19                 3494 	add	hl, de
+   0102 4D                 3495 	ld	c, l
+   0103 44                 3496 	ld	b, h
+   0104 0A                 3497 	ld	a, (bc)
+   0105 F8 03              3498 	ldhl	sp,	#3
+   0107 32                 3499 	ld	(hl-), a
+   0108 7E                 3500 	ld	a, (hl)
+   0109 3C                 3501 	inc	a
+   010A 20 07              3502 	jr	NZ,00112$
+   010C F8 03              3503 	ldhl	sp,	#3
+   010E 7E                 3504 	ld	a, (hl)
+   010F CB 7F              3505 	bit	7, a
+   0111 20 2B              3506 	jr	NZ,00108$
+   0113                    3507 00112$:
+                           3508 ;./src/./sprites.c:33: !(sprite->col.direction.y ==  1 && sprite->speed.y > 0)){
+   0113 F8 02              3509 	ldhl	sp,	#2
+   0115 7E                 3510 	ld	a, (hl)
+   0116 3D                 3511 	dec	a
+   0117 20 1B              3512 	jr	NZ,00107$
+   0119 F8 03              3513 	ldhl	sp,	#3
+   011B 7E                 3514 	ld	a, (hl)
+   011C 5F                 3515 	ld	e, a
+   011D 3E 00              3516 	ld	a, #0x00
+   011F 57                 3517 	ld	d, a
+   0120 AF                 3518 	xor	a, a
+   0121 96                 3519 	sub	a, (hl)
+   0122 CB 7B              3520 	bit	7, e
+   0124 28 07              3521 	jr	Z,00145$
+   0126 CB 7A              3522 	bit	7, d
+   0128 20 08              3523 	jr	NZ,00146$
+   012A BF                 3524 	cp	a, a
+   012B 18 05              3525 	jr	00146$
+   012D                    3526 00145$:
+   012D CB 7A              3527 	bit	7, d
+   012F 28 01              3528 	jr	Z,00146$
+   0131 37                 3529 	scf
+   0132                    3530 00146$:
+   0132 38 0A              3531 	jr	C,00108$
+   0134                    3532 00107$:
+                           3533 ;./src/./sprites.c:34: sprite->position.y += sprite->speed.y;
+   0134 C1                 3534 	pop	bc
+   0135 C5                 3535 	push	bc
+   0136 03                 3536 	inc	bc
+   0137 0A                 3537 	ld	a, (bc)
+   0138 F8 03              3538 	ldhl	sp,	#3
+   013A 86                 3539 	add	a, (hl)
+   013B 02                 3540 	ld	(bc), a
+   013C 18 02              3541 	jr	00113$
+   013E                    3542 00108$:
+                           3543 ;./src/./sprites.c:37: sprite->speed.y = 0;
+   013E AF                 3544 	xor	a, a
+   013F 02                 3545 	ld	(bc), a
+   0140                    3546 00113$:
+                           3547 ;./src/./sprites.c:39: }
+   0140 E8 04              3548 	add	sp, #4
+   0142 C9                 3549 	ret
+                           3550 ;./src/./player.c:7: void next_animation(MSprite* sprite){
+                           3551 ;	---------------------------------
+                           3552 ; Function next_animation
+                           3553 ; ---------------------------------
+   0143                    3554 _next_animation::
+   0143 E8 FB              3555 	add	sp, #-5
+                           3556 ;./src/./player.c:8: ++(sprite->animation_index);
+   0145 F8 07              3557 	ldhl	sp,	#7
+   0147 2A                 3558 	ld	a, (hl+)
+   0148 5E                 3559 	ld	e, (hl)
+   0149 F8 00              3560 	ldhl	sp,	#0
+   014B 22                 3561 	ld	(hl+), a
+   014C 73                 3562 	ld	(hl), e
+   014D C1                 3563 	pop	bc
+   014E C5                 3564 	push	bc
+   014F 03                 3565 	inc	bc
+   0150 03                 3566 	inc	bc
+   0151 0A                 3567 	ld	a, (bc)
+   0152 3C                 3568 	inc	a
+   0153 23                 3569 	inc	hl
+   0154 77                 3570 	ld	(hl),a
+   0155 02                 3571 	ld	(bc), a
+                           3572 ;./src/./player.c:9: if(sprite->animation_index == sprite->max_animations){
+   0156 D1                 3573 	pop	de
+   0157 D5                 3574 	push	de
+   0158 21 03 00           3575 	ld	hl, #0x0003
+   015B 19                 3576 	add	hl, de
+   015C 7D                 3577 	ld	a, l
+   015D 54                 3578 	ld	d, h
+   015E F8 03              3579 	ldhl	sp,	#3
+   0160 22                 3580 	ld	(hl+), a
+   0161 72                 3581 	ld	(hl), d
+   0162 2B                 3582 	dec	hl
+   0163 5E                 3583 	ld	e, (hl)
+   0164 23                 3584 	inc	hl
+   0165 56                 3585 	ld	d, (hl)
+   0166 1A                 3586 	ld	a,(de)
+   0167 32                 3587 	ld	(hl-), a
+   0168 2B                 3588 	dec	hl
+   0169 2A                 3589 	ld	a, (hl+)
+   016A 23                 3590 	inc	hl
+   016B 96                 3591 	sub	a, (hl)
+   016C 20 02              3592 	jr	NZ,00102$
+                           3593 ;./src/./player.c:10: sprite->animation_index = 0;
+   016E AF                 3594 	xor	a, a
+   016F 02                 3595 	ld	(bc), a
+   0170                    3596 00102$:
+                           3597 ;./src/./player.c:12: set_sprite_tile(sprite->sprite_number, sprite->animation_index);
+   0170 0A                 3598 	ld	a, (bc)
+   0171 47                 3599 	ld	b, a
+   0172 D1                 3600 	pop	de
+   0173 D5                 3601 	push	de
+   0174 21 04 00           3602 	ld	hl, #0x0004
+   0177 19                 3603 	add	hl, de
+   0178 4D                 3604 	ld	c,l
+   0179 7C                 3605 	ld	a,h
+   017A 7E                 3606 	ld	a, (hl)
+   017B C5                 3607 	push	bc
+   017C 33                 3608 	inc	sp
+   017D F5                 3609 	push	af
+   017E 33                 3610 	inc	sp
+   017F CDr00r00           3611 	call	_set_sprite_tile
+   0182 E8 02              3612 	add	sp, #2
+                           3613 ;./src/./player.c:13: }
+   0184 E8 05              3614 	add	sp, #5
+   0186 C9                 3615 	ret
+                           3616 ;./src/./player.c:15: void player_movement(MPlayer* player)
+                           3617 ;	---------------------------------
+                           3618 ; Function player_movement
+                           3619 ; ---------------------------------
+   0187                    3620 _player_movement::
+   0187 E8 F7              3621 	add	sp, #-9
+                           3622 ;./src/./player.c:17: MVector movement_speed = {5, 5};
+   0189 F8 00              3623 	ldhl	sp,	#0
+   018B 4D                 3624 	ld	c, l
+   018C 44                 3625 	ld	b, h
+   018D 3E 05              3626 	ld	a, #0x05
+   018F 02                 3627 	ld	(bc), a
+   0190 F8 00              3628 	ldhl	sp,	#0
+   0192 4D                 3629 	ld	c, l
+   0193 44                 3630 	ld	b, h
+   0194 21 01 00           3631 	ld	hl, #0x0001
+   0197 09                 3632 	add	hl, bc
+   0198 7D                 3633 	ld	a, l
+   0199 54                 3634 	ld	d, h
+   019A F8 02              3635 	ldhl	sp,	#2
+   019C 22                 3636 	ld	(hl+), a
+   019D 72                 3637 	ld	(hl), d
+   019E 2B                 3638 	dec	hl
+   019F 2A                 3639 	ld	a, (hl+)
+   01A0 66                 3640 	ld	h, (hl)
+   01A1 6F                 3641 	ld	l, a
+   01A2 36 05              3642 	ld	(hl), #0x05
+                           3643 ;./src/./player.c:18: UPDATE_JOYPAD_STATE;
+   01A4 E5                 3644 	push	hl
+   01A5 21r31r00           3645 	ld	hl, #_joypad_curr_state
+   01A8 7E                 3646 	ld	a, (hl)
+   01A9 21r30r00           3647 	ld	hl, #_joypad_prev_state
+   01AC 77                 3648 	ld	(hl), a
+   01AD E1                 3649 	pop	hl
+   01AE C5                 3650 	push	bc
+   01AF CDr00r00           3651 	call	_joypad
+   01B2 C1                 3652 	pop	bc
+   01B3 21r31r00           3653 	ld	hl, #_joypad_curr_state
+   01B6 73                 3654 	ld	(hl), e
+                           3655 ;./src/./player.c:19: if(JOYPAD_DOWN_PAD_L){
+   01B7 C5                 3656 	push	bc
+   01B8 CDr00r00           3657 	call	_joypad
+   01BB F8 06              3658 	ldhl	sp,	#6
+   01BD 73                 3659 	ld	(hl), e
+   01BE C1                 3660 	pop	bc
+                           3661 ;./src/./player.c:23: player->sprite.speed.x = -movement_speed.x;
+   01BF F8 0B              3662 	ldhl	sp,	#11
+   01C1 2A                 3663 	ld	a, (hl+)
+   01C2 5E                 3664 	ld	e, (hl)
+   01C3 F8 05              3665 	ldhl	sp,	#5
+   01C5 22                 3666 	ld	(hl+), a
+   01C6 73                 3667 	ld	(hl), e
+   01C7 2B                 3668 	dec	hl
+   01C8 5E                 3669 	ld	e, (hl)
+   01C9 23                 3670 	inc	hl
+   01CA 56                 3671 	ld	d, (hl)
+   01CB 21 05 00           3672 	ld	hl, #0x0005
+   01CE 19                 3673 	add	hl, de
+   01CF 7D                 3674 	ld	a, l
+   01D0 54                 3675 	ld	d, h
+   01D1 F8 07              3676 	ldhl	sp,	#7
+   01D3 22                 3677 	ld	(hl+), a
+   01D4 72                 3678 	ld	(hl), d
+                           3679 ;./src/./player.c:19: if(JOYPAD_DOWN_PAD_L){
+   01D5 F8 04              3680 	ldhl	sp,	#4
+   01D7 CB 4E              3681 	bit	1, (hl)
+   01D9 28 19              3682 	jr	Z,00116$
+                           3683 ;./src/./player.c:23: player->sprite.speed.x = -movement_speed.x;
+   01DB 0A                 3684 	ld	a, (bc)
+   01DC 4F                 3685 	ld	c, a
+   01DD AF                 3686 	xor	a, a
+   01DE 91                 3687 	sub	a, c
+   01DF 4F                 3688 	ld	c, a
+   01E0 F8 07              3689 	ldhl	sp,	#7
+   01E2 2A                 3690 	ld	a, (hl+)
+   01E3 66                 3691 	ld	h, (hl)
+   01E4 6F                 3692 	ld	l, a
+   01E5 71                 3693 	ld	(hl), c
+                           3694 ;./src/./player.c:24: next_animation(&(player->sprite));
+   01E6 F8 05              3695 	ldhl	sp,	#5
+   01E8 2A                 3696 	ld	a, (hl+)
+   01E9 66                 3697 	ld	h, (hl)
+   01EA 6F                 3698 	ld	l, a
+   01EB E5                 3699 	push	hl
+   01EC CDr43r01           3700 	call	_next_animation
+   01EF E8 02              3701 	add	sp, #2
+   01F1 C3r56r02           3702 	jp	00117$
+   01F4                    3703 00116$:
+                           3704 ;./src/./player.c:26: else if(JOYPAD_DOWN_PAD_R){
+   01F4 C5                 3705 	push	bc
+   01F5 CDr00r00           3706 	call	_joypad
+   01F8 7B                 3707 	ld	a, e
+   01F9 C1                 3708 	pop	bc
+   01FA 0F                 3709 	rrca
+   01FB 30 16              3710 	jr	NC,00113$
+                           3711 ;./src/./player.c:30: player->sprite.speed.x = movement_speed.x;
+   01FD 0A                 3712 	ld	a, (bc)
+   01FE 4F                 3713 	ld	c, a
+   01FF F8 07              3714 	ldhl	sp,	#7
+   0201 2A                 3715 	ld	a, (hl+)
+   0202 66                 3716 	ld	h, (hl)
+   0203 6F                 3717 	ld	l, a
+   0204 71                 3718 	ld	(hl), c
+                           3719 ;./src/./player.c:31: next_animation(&(player->sprite));
+   0205 F8 05              3720 	ldhl	sp,	#5
+   0207 2A                 3721 	ld	a, (hl+)
+   0208 66                 3722 	ld	h, (hl)
+   0209 6F                 3723 	ld	l, a
+   020A E5                 3724 	push	hl
+   020B CDr43r01           3725 	call	_next_animation
+   020E E8 02              3726 	add	sp, #2
+   0210 C3r56r02           3727 	jp	00117$
+   0213                    3728 00113$:
+                           3729 ;./src/./player.c:34: else if(JOYPAD_UP_PAD_L && JOYPAD_UP_PAD_R){
+   0213 CDr00r00           3730 	call	_joypad
+   0216 CB 4B              3731 	bit	1, e
+   0218 C2r56r02           3732 	jp	NZ,00117$
+   021B CDr00r00           3733 	call	_joypad
+   021E 7B                 3734 	ld	a, e
+   021F 0F                 3735 	rrca
+   0220 DAr56r02           3736 	jp	C,00117$
+                           3737 ;./src/./player.c:36: if(player->sprite.speed.x < 0){
+   0223 F8 07              3738 	ldhl	sp,#(8 - 1)
+   0225 5E                 3739 	ld	e, (hl)
+   0226 23                 3740 	inc	hl
+   0227 56                 3741 	ld	d, (hl)
+   0228 1A                 3742 	ld	a,(de)
+   0229 4F                 3743 	ld	c, a
+   022A CB 79              3744 	bit	7, c
+   022C 28 08              3745 	jr	Z,00107$
+                           3746 ;./src/./player.c:37: player->sprite.speed.x += 1;
+   022E 0C                 3747 	inc	c
+   022F 2B                 3748 	dec	hl
+   0230 2A                 3749 	ld	a, (hl+)
+   0231 66                 3750 	ld	h, (hl)
+   0232 6F                 3751 	ld	l, a
+   0233 71                 3752 	ld	(hl), c
+   0234 18 20              3753 	jr	00117$
+   0236                    3754 00107$:
+                           3755 ;./src/./player.c:39: else if(player->sprite.speed.x > 0){
+   0236 79                 3756 	ld	a, c
+   0237 5F                 3757 	ld	e, a
+   0238 3E 00              3758 	ld	a, #0x00
+   023A 57                 3759 	ld	d, a
+   023B AF                 3760 	xor	a, a
+   023C 91                 3761 	sub	a, c
+   023D CB 7B              3762 	bit	7, e
+   023F 28 07              3763 	jr	Z,00171$
+   0241 CB 7A              3764 	bit	7, d
+   0243 20 08              3765 	jr	NZ,00172$
+   0245 BF                 3766 	cp	a, a
+   0246 18 05              3767 	jr	00172$
+   0248                    3768 00171$:
+   0248 CB 7A              3769 	bit	7, d
+   024A 28 01              3770 	jr	Z,00172$
+   024C 37                 3771 	scf
+   024D                    3772 00172$:
+   024D 30 07              3773 	jr	NC,00117$
+                           3774 ;./src/./player.c:40: player->sprite.speed.x -= 1;
+   024F 0D                 3775 	dec	c
+   0250 F8 07              3776 	ldhl	sp,	#7
+   0252 2A                 3777 	ld	a, (hl+)
+   0253 66                 3778 	ld	h, (hl)
+   0254 6F                 3779 	ld	l, a
+   0255 71                 3780 	ld	(hl), c
+   0256                    3781 00117$:
+                           3782 ;./src/./player.c:45: if(JOYPAD_DOWN_PAD_D){
+   0256 CDr00r00           3783 	call	_joypad
+   0259 F8 08              3784 	ldhl	sp,	#8
+   025B 73                 3785 	ld	(hl), e
+                           3786 ;./src/./player.c:46: player->sprite.speed.y = movement_speed.y;
+   025C F8 05              3787 	ldhl	sp,#(6 - 1)
+   025E 5E                 3788 	ld	e, (hl)
+   025F 23                 3789 	inc	hl
+   0260 56                 3790 	ld	d, (hl)
+   0261 21 06 00           3791 	ld	hl, #0x0006
+   0264 19                 3792 	add	hl, de
+   0265 4D                 3793 	ld	c, l
+   0266 44                 3794 	ld	b, h
+                           3795 ;./src/./player.c:45: if(JOYPAD_DOWN_PAD_D){
+   0267 F8 08              3796 	ldhl	sp,	#8
+   0269 CB 5E              3797 	bit	3, (hl)
+   026B 28 09              3798 	jr	Z,00121$
+                           3799 ;./src/./player.c:46: player->sprite.speed.y = movement_speed.y;
+   026D F8 02              3800 	ldhl	sp,#(3 - 1)
+   026F 5E                 3801 	ld	e, (hl)
+   0270 23                 3802 	inc	hl
+   0271 56                 3803 	ld	d, (hl)
+   0272 1A                 3804 	ld	a,(de)
+   0273 02                 3805 	ld	(bc), a
+   0274 18 0B              3806 	jr	00123$
+   0276                    3807 00121$:
+                           3808 ;./src/./player.c:48: else if(JOYPAD_UP_PAD_D){
+   0276 C5                 3809 	push	bc
+   0277 CDr00r00           3810 	call	_joypad
+   027A C1                 3811 	pop	bc
+   027B CB 5B              3812 	bit	3, e
+   027D 20 02              3813 	jr	NZ,00123$
+                           3814 ;./src/./player.c:49: player->sprite.speed.y =0; //-= movement_speed.y;
+   027F AF                 3815 	xor	a, a
+   0280 02                 3816 	ld	(bc), a
+   0281                    3817 00123$:
+                           3818 ;./src/./player.c:51: }
+   0281 E8 09              3819 	add	sp, #9
+   0283 C9                 3820 	ret
+                           3821 ;./src/./player.c:53: void jump(MPlayer* player){
+                           3822 ;	---------------------------------
+                           3823 ; Function jump
+                           3824 ; ---------------------------------
+   0284                    3825 _jump::
+   0284 E8 FC              3826 	add	sp, #-4
+                           3827 ;./src/./player.c:54: if(JOYPAD_DOWN_A){
+   0286 CDr00r00           3828 	call	_joypad
+   0289 CB 63              3829 	bit	4, e
+   028B CAr00r03           3830 	jp	Z,00113$
+                           3831 ;./src/./player.c:56: if(player->sprite.col.direction.y == -1){
+   028E F8 06              3832 	ldhl	sp,#(7 - 1)
+   0290 4E                 3833 	ld	c, (hl)
+   0291 23                 3834 	inc	hl
+   0292 46                 3835 	ld	b, (hl)
+   0293 21 08 00           3836 	ld	hl, #0x0008
+   0296 09                 3837 	add	hl, bc
+   0297 7D                 3838 	ld	a, l
+   0298 54                 3839 	ld	d, h
+   0299 F8 02              3840 	ldhl	sp,	#2
+   029B 22                 3841 	ld	(hl+), a
+   029C 72                 3842 	ld	(hl), d
+   029D 21 09 00           3843 	ld	hl, #0x0009
+   02A0 09                 3844 	add	hl, bc
+   02A1 33                 3845 	inc	sp
+   02A2 33                 3846 	inc	sp
+   02A3 E5                 3847 	push	hl
+   02A4 D1                 3848 	pop	de
+   02A5 D5                 3849 	push	de
+   02A6 1A                 3850 	ld	a,(de)
+   02A7 FE FF              3851 	cp	a, #0xff
+   02A9 CAr00r03           3852 	jp	Z,00113$
+   02AC 18 03              3853 	jr	00102$
+                           3854 ;./src/./player.c:57: return;
+   02AE C3r00r03           3855 	jp	00113$
+   02B1                    3856 00102$:
+                           3857 ;./src/./player.c:59: if((player->sprite.col.direction.y == 1 ||
+   02B1 3D                 3858 	dec	a
+   02B2 28 09              3859 	jr	Z,00103$
+                           3860 ;./src/./player.c:60: player->sprite.col.direction.x != 0)){
+   02B4 F8 02              3861 	ldhl	sp,#(3 - 1)
+   02B6 5E                 3862 	ld	e, (hl)
+   02B7 23                 3863 	inc	hl
+   02B8 56                 3864 	ld	d, (hl)
+   02B9 1A                 3865 	ld	a,(de)
+   02BA B7                 3866 	or	a, a
+   02BB 28 0B              3867 	jr	Z,00104$
+   02BD                    3868 00103$:
+                           3869 ;./src/./player.c:61: player->sprite.speed.y = -15;
+   02BD 21 06 00           3870 	ld	hl, #0x0006
+   02C0 09                 3871 	add	hl, bc
+   02C1 33                 3872 	inc	sp
+   02C2 33                 3873 	inc	sp
+   02C3 E5                 3874 	push	hl
+   02C4 E1                 3875 	pop	hl
+   02C5 E5                 3876 	push	hl
+   02C6 36 F1              3877 	ld	(hl), #0xf1
+   02C8                    3878 00104$:
+                           3879 ;./src/./player.c:64: if(player->sprite.col.direction.x == -1){
+   02C8 F8 02              3880 	ldhl	sp,#(3 - 1)
+   02CA 5E                 3881 	ld	e, (hl)
+   02CB 23                 3882 	inc	hl
+   02CC 56                 3883 	ld	d, (hl)
+   02CD 1A                 3884 	ld	a,(de)
+   02CE 77                 3885 	ld	(hl), a
+                           3886 ;./src/./player.c:66: player->sprite.speed.x = 5;
+   02CF 03                 3887 	inc	bc
+   02D0 03                 3888 	inc	bc
+   02D1 03                 3889 	inc	bc
+   02D2 03                 3890 	inc	bc
+   02D3 03                 3891 	inc	bc
+                           3892 ;./src/./player.c:64: if(player->sprite.col.direction.x == -1){
+   02D4 7E                 3893 	ld	a, (hl)
+   02D5 3C                 3894 	inc	a
+   02D6 20 1F              3895 	jr	NZ,00109$
+                           3896 ;./src/./player.c:65: DEBUG_LOG_MESSAGE("Left Side Collision!");
+   02D8 C5                 3897 	push	bc
+   02D9 21r03r03           3898 	ld	hl, #___str_0
+   02DC E5                 3899 	push	hl
+   02DD 21r35r00           3900 	ld	hl, #_debug_buffer
+   02E0 E5                 3901 	push	hl
+   02E1 CDr00r00           3902 	call	_sprintf
+   02E4 E8 04              3903 	add	sp, #4
+   02E6 C1                 3904 	pop	bc
+   02E7 52                 3905 	ld d, d 
+   02E8 18 08              3906 	jr 6500$ 
+   02EA 64 64              3907 	.dw 0x6464 
+   02EC 01 00              3908 	.dw 0x0001 
+   02EEr35r00              3909 	.dw #_debug_buffer 
+   02F0 00 00              3910 	.dw 0 
+   02F2                    3911 	 6500$:
+                           3912 ;./src/./player.c:66: player->sprite.speed.x = 5;
+   02F2 3E 05              3913 	ld	a, #0x05
+   02F4 02                 3914 	ld	(bc), a
+   02F5 18 09              3915 	jr	00113$
+   02F7                    3916 00109$:
+                           3917 ;./src/./player.c:68: else if (player->sprite.col.direction.x == 1){
+   02F7 F8 03              3918 	ldhl	sp,	#3
+   02F9 7E                 3919 	ld	a, (hl)
+   02FA 3D                 3920 	dec	a
+   02FB 20 03              3921 	jr	NZ,00113$
+                           3922 ;./src/./player.c:69: player->sprite.speed.x = -5;
+   02FD 3E FB              3923 	ld	a, #0xfb
+   02FF 02                 3924 	ld	(bc), a
+   0300                    3925 00113$:
+                           3926 ;./src/./player.c:72: }
+   0300 E8 04              3927 	add	sp, #4
+   0302 C9                 3928 	ret
+   0303                    3929 ___str_0:
+   0303 4C 65 66 74 20 53  3930 	.ascii "Left Side Collision!"
         69 64 65 20 43 6F
         6C 6C 69 73 69 6F
         6E 21
-   02F2 00                 3899 	.db 0x00
-                           3900 ;./src/./maps.c:18: UINT16 get_world_to_map(MVector* pos){
-                           3901 ;	---------------------------------
-                           3902 ; Function get_world_to_map
-                           3903 ; ---------------------------------
-   02F3                    3904 _get_world_to_map::
-   02F3 E8 FC              3905 	add	sp, #-4
-                           3906 ;./src/./maps.c:19: return ((pos->x - 8 ) >> 3) + ((pos->y - 16) >> 3 )* 20;
-   02F5 F8 06              3907 	ldhl	sp,	#6
-   02F7 2A                 3908 	ld	a, (hl+)
-   02F8 5E                 3909 	ld	e, (hl)
-   02F9 F8 00              3910 	ldhl	sp,	#0
-   02FB 22                 3911 	ld	(hl+), a
-   02FC 73                 3912 	ld	(hl), e
-   02FD D1                 3913 	pop	de
-   02FE D5                 3914 	push	de
-   02FF 1A                 3915 	ld	a,(de)
-   0300 4F                 3916 	ld	c, a
-   0301 06 00              3917 	ld	b, #0x00
-   0303 79                 3918 	ld	a, c
-   0304 C6 F8              3919 	add	a, #0xf8
-   0306 4F                 3920 	ld	c, a
-   0307 78                 3921 	ld	a, b
-   0308 CE FF              3922 	adc	a, #0xff
-   030A 47                 3923 	ld	b, a
-   030B 23                 3924 	inc	hl
-   030C 71                 3925 	ld	(hl), c
-   030D 23                 3926 	inc	hl
-   030E 70                 3927 	ld	(hl), b
-   030F CB 2E              3928 	sra	(hl)
-   0311 2B                 3929 	dec	hl
-   0312 CB 1E              3930 	rr	(hl)
-   0314 23                 3931 	inc	hl
-   0315 CB 2E              3932 	sra	(hl)
-   0317 2B                 3933 	dec	hl
-   0318 CB 1E              3934 	rr	(hl)
-   031A 23                 3935 	inc	hl
-   031B CB 2E              3936 	sra	(hl)
-   031D 2B                 3937 	dec	hl
-   031E CB 1E              3938 	rr	(hl)
-   0320 C1                 3939 	pop	bc
-   0321 C5                 3940 	push	bc
-   0322 03                 3941 	inc	bc
-   0323 0A                 3942 	ld	a, (bc)
-   0324 4F                 3943 	ld	c, a
-   0325 06 00              3944 	ld	b, #0x00
-   0327 79                 3945 	ld	a, c
-   0328 C6 F0              3946 	add	a, #0xf0
-   032A 4F                 3947 	ld	c, a
-   032B 78                 3948 	ld	a, b
-   032C CE FF              3949 	adc	a, #0xff
-   032E 47                 3950 	ld	b, a
-   032F CB 28              3951 	sra	b
-   0331 CB 19              3952 	rr	c
-   0333 CB 28              3953 	sra	b
-   0335 CB 19              3954 	rr	c
-   0337 CB 28              3955 	sra	b
-   0339 CB 19              3956 	rr	c
-   033B 69                 3957 	ld	l, c
-   033C 60                 3958 	ld	h, b
-   033D 29                 3959 	add	hl, hl
-   033E 29                 3960 	add	hl, hl
-   033F 09                 3961 	add	hl, bc
-   0340 29                 3962 	add	hl, hl
-   0341 29                 3963 	add	hl, hl
-   0342 4D                 3964 	ld	c, l
-   0343 44                 3965 	ld	b, h
-   0344 F8 02              3966 	ldhl	sp,	#2
-   0346 2A                 3967 	ld	a, (hl+)
-   0347 66                 3968 	ld	h, (hl)
-   0348 6F                 3969 	ld	l, a
-   0349 09                 3970 	add	hl, bc
-   034A 4D                 3971 	ld	c, l
-   034B 44                 3972 	ld	b, h
-   034C 59                 3973 	ld	e, c
-   034D 50                 3974 	ld	d, b
-                           3975 ;./src/./maps.c:20: }
-   034E E8 04              3976 	add	sp, #4
-   0350 C9                 3977 	ret
-                           3978 ;./src/./maps.c:34: void set_map (MPlayer* player){
-                           3979 ;	---------------------------------
-                           3980 ; Function set_map
-                           3981 ; ---------------------------------
-   0351                    3982 _set_map::
-   0351 E8 FC              3983 	add	sp, #-4
-                           3984 ;./src/./maps.c:35: set_bkg_tiles(0,0,20,18,GLOBAL_MAP);
-   0353 21r95r02           3985 	ld	hl, #_current_level
-   0356 4E                 3986 	ld	c, (hl)
-   0357 06 00              3987 	ld	b, #0x00
-   0359 69                 3988 	ld	l, c
-   035A 60                 3989 	ld	h, b
-   035B 29                 3990 	add	hl, hl
-   035C 29                 3991 	add	hl, hl
-   035D 09                 3992 	add	hl, bc
-   035E 29                 3993 	add	hl, hl
-   035F 09                 3994 	add	hl, bc
-   0360 29                 3995 	add	hl, hl
-   0361 29                 3996 	add	hl, hl
-   0362 09                 3997 	add	hl, bc
-   0363 29                 3998 	add	hl, hl
-   0364 29                 3999 	add	hl, hl
-   0365 29                 4000 	add	hl, hl
-   0366 4D                 4001 	ld	c, l
-   0367 44                 4002 	ld	b, h
-   0368 21r96r02           4003 	ld	hl, #_maps
-   036B 09                 4004 	add	hl, bc
-   036C 4D                 4005 	ld	c, l
-   036D 7C                 4006 	ld	a, h
-   036E 47                 4007 	ld	b, a
-   036F C5                 4008 	push	bc
-   0370 3E 12              4009 	ld	a, #0x12
-   0372 F5                 4010 	push	af
-   0373 33                 4011 	inc	sp
-   0374 3E 14              4012 	ld	a, #0x14
-   0376 F5                 4013 	push	af
-   0377 33                 4014 	inc	sp
-   0378 AF                 4015 	xor	a, a
-   0379 F5                 4016 	push	af
-   037A 33                 4017 	inc	sp
-   037B AF                 4018 	xor	a, a
-   037C F5                 4019 	push	af
-   037D 33                 4020 	inc	sp
-   037E CDr00r00           4021 	call	_set_bkg_tiles
-   0381 E8 06              4022 	add	sp, #6
-                           4023 ;./src/./maps.c:37: for(UINT16 i = 20 * 18 - 1; i >= 0; --i){
-   0383 F8 02              4024 	ldhl	sp,	#2
-   0385 36 67              4025 	ld	(hl), #0x67
-   0387 23                 4026 	inc	hl
-   0388 36 01              4027 	ld	(hl), #0x01
-   038A                    4028 00104$:
-                           4029 ;./src/./maps.c:38: if(GLOBAL_MAP[i] == START_TILE){
-   038A 21r95r02           4030 	ld	hl, #_current_level
-   038D 4E                 4031 	ld	c, (hl)
-   038E 06 00              4032 	ld	b, #0x00
-   0390 69                 4033 	ld	l, c
-   0391 60                 4034 	ld	h, b
-   0392 29                 4035 	add	hl, hl
-   0393 29                 4036 	add	hl, hl
-   0394 09                 4037 	add	hl, bc
-   0395 29                 4038 	add	hl, hl
-   0396 09                 4039 	add	hl, bc
-   0397 29                 4040 	add	hl, hl
-   0398 29                 4041 	add	hl, hl
-   0399 09                 4042 	add	hl, bc
-   039A 29                 4043 	add	hl, hl
-   039B 29                 4044 	add	hl, hl
-   039C 29                 4045 	add	hl, hl
-   039D 4D                 4046 	ld	c, l
-   039E 44                 4047 	ld	b, h
-   039F 21r96r02           4048 	ld	hl, #_maps
-   03A2 09                 4049 	add	hl, bc
-   03A3 4D                 4050 	ld	c, l
-   03A4 44                 4051 	ld	b, h
-   03A5 F8 02              4052 	ldhl	sp,	#2
-   03A7 2A                 4053 	ld	a, (hl+)
-   03A8 66                 4054 	ld	h, (hl)
-   03A9 6F                 4055 	ld	l, a
-   03AA 09                 4056 	add	hl, bc
-   03AB 4D                 4057 	ld	c, l
-   03AC 44                 4058 	ld	b, h
-   03AD 0A                 4059 	ld	a, (bc)
-   03AE D6 02              4060 	sub	a, #0x02
-   03B0 C2rF3r03           4061 	jp	NZ,00106$
-                           4062 ;./src/./maps.c:39: player->sprite.position.x = i % 20 * 8 + 8;
-   03B3 F8 06              4063 	ldhl	sp,#(7 - 1)
-   03B5 4E                 4064 	ld	c, (hl)
-   03B6 23                 4065 	inc	hl
-   03B7 46                 4066 	ld	b, (hl)
-   03B8 C5                 4067 	push	bc
-   03B9 21 14 00           4068 	ld	hl, #0x0014
-   03BC E5                 4069 	push	hl
-   03BD F8 06              4070 	ldhl	sp,	#6
-   03BF 2A                 4071 	ld	a, (hl+)
-   03C0 66                 4072 	ld	h, (hl)
-   03C1 6F                 4073 	ld	l, a
-   03C2 E5                 4074 	push	hl
-   03C3 CDr00r00           4075 	call	__moduint
-   03C6 E8 04              4076 	add	sp, #4
-   03C8 C1                 4077 	pop	bc
-   03C9 7B                 4078 	ld	a, e
-   03CA 87                 4079 	add	a, a
-   03CB 87                 4080 	add	a, a
-   03CC 87                 4081 	add	a, a
-   03CD C6 08              4082 	add	a, #0x08
-   03CF 02                 4083 	ld	(bc), a
-                           4084 ;./src/./maps.c:40: player->sprite.position.y = i / 20 * 8 + 16;
-   03D0 21 01 00           4085 	ld	hl, #0x0001
-   03D3 09                 4086 	add	hl, bc
-   03D4 33                 4087 	inc	sp
-   03D5 33                 4088 	inc	sp
-   03D6 E5                 4089 	push	hl
-   03D7 C5                 4090 	push	bc
-   03D8 21 14 00           4091 	ld	hl, #0x0014
-   03DB E5                 4092 	push	hl
-   03DC F8 06              4093 	ldhl	sp,	#6
-   03DE 2A                 4094 	ld	a, (hl+)
-   03DF 66                 4095 	ld	h, (hl)
-   03E0 6F                 4096 	ld	l, a
-   03E1 E5                 4097 	push	hl
-   03E2 CDr00r00           4098 	call	__divuint
-   03E5 E8 04              4099 	add	sp, #4
-   03E7 C1                 4100 	pop	bc
-   03E8 7B                 4101 	ld	a, e
-   03E9 87                 4102 	add	a, a
-   03EA 87                 4103 	add	a, a
-   03EB 87                 4104 	add	a, a
-   03EC C6 10              4105 	add	a, #0x10
-   03EE E1                 4106 	pop	hl
-   03EF E5                 4107 	push	hl
-   03F0 77                 4108 	ld	(hl), a
-                           4109 ;./src/./maps.c:41: break;
-   03F1 18 0D              4110 	jr	00103$
-   03F3                    4111 00106$:
-                           4112 ;./src/./maps.c:37: for(UINT16 i = 20 * 18 - 1; i >= 0; --i){
-   03F3 F8 02              4113 	ldhl	sp,#(3 - 1)
-   03F5 5E                 4114 	ld	e, (hl)
-   03F6 23                 4115 	inc	hl
-   03F7 56                 4116 	ld	d, (hl)
-   03F8 1B                 4117 	dec	de
-   03F9 2B                 4118 	dec	hl
-   03FA 73                 4119 	ld	(hl), e
-   03FB 23                 4120 	inc	hl
-   03FC 72                 4121 	ld	(hl), d
-   03FD C3r8Ar03           4122 	jp	00104$
-   0400                    4123 00103$:
-                           4124 ;./src/./maps.c:45: update_position(&(player->sprite));
-   0400 C5                 4125 	push	bc
-   0401 CDr97r00           4126 	call	_update_position
-   0404 E8 02              4127 	add	sp, #2
-                           4128 ;./src/./maps.c:46: }
-   0406 E8 04              4129 	add	sp, #4
-   0408 C9                 4130 	ret
-                           4131 ;./src/./maps.c:48: BYTE win_condition (MPlayer* player){
-                           4132 ;	---------------------------------
-                           4133 ; Function win_condition
-                           4134 ; ---------------------------------
-   0409                    4135 _win_condition::
-   0409 E8 FE              4136 	add	sp, #-2
-                           4137 ;./src/./maps.c:49: UINT16 pos = get_world_to_map(&(player->sprite.position));
-   040B F8 04              4138 	ldhl	sp,#(5 - 1)
-   040D 5E                 4139 	ld	e, (hl)
-   040E 23                 4140 	inc	hl
-   040F 56                 4141 	ld	d, (hl)
-   0410 D5                 4142 	push	de
-   0411 CDrF3r02           4143 	call	_get_world_to_map
-   0414 E8 02              4144 	add	sp, #2
-   0416 33                 4145 	inc	sp
-   0417 33                 4146 	inc	sp
-   0418 D5                 4147 	push	de
-                           4148 ;./src/./maps.c:50: if(GLOBAL_MAP[pos] == FLAG_TILE){
-   0419 21r95r02           4149 	ld	hl, #_current_level
-   041C 4E                 4150 	ld	c, (hl)
-   041D 06 00              4151 	ld	b, #0x00
-   041F 69                 4152 	ld	l, c
-   0420 60                 4153 	ld	h, b
-   0421 29                 4154 	add	hl, hl
-   0422 29                 4155 	add	hl, hl
-   0423 09                 4156 	add	hl, bc
-   0424 29                 4157 	add	hl, hl
-   0425 09                 4158 	add	hl, bc
-   0426 29                 4159 	add	hl, hl
-   0427 29                 4160 	add	hl, hl
-   0428 09                 4161 	add	hl, bc
-   0429 29                 4162 	add	hl, hl
-   042A 29                 4163 	add	hl, hl
-   042B 29                 4164 	add	hl, hl
-   042C 4D                 4165 	ld	c, l
-   042D 44                 4166 	ld	b, h
-   042E 21r96r02           4167 	ld	hl, #_maps
-   0431 09                 4168 	add	hl, bc
-   0432 4D                 4169 	ld	c, l
-   0433 44                 4170 	ld	b, h
-   0434 E1                 4171 	pop	hl
-   0435 E5                 4172 	push	hl
-   0436 09                 4173 	add	hl, bc
-   0437 4D                 4174 	ld	c, l
-   0438 44                 4175 	ld	b, h
-   0439 0A                 4176 	ld	a, (bc)
-   043A 3D                 4177 	dec	a
-   043B C2r92r04           4178 	jp	NZ,00105$
-                           4179 ;./src/./maps.c:51: if(current_level < TOTAL_MAP_NUM - 1){
-   043E 21r95r02           4180 	ld	hl, #_current_level
-   0441 7E                 4181 	ld	a, (hl)
-   0442 D6 03              4182 	sub	a, #0x03
-   0444 30 34              4183 	jr	NC,00102$
-                           4184 ;./src/./maps.c:52: DEBUG_LOG_MESSAGE("You did a win!!");
-   0446 21r97r04           4185 	ld	hl, #___str_1
-   0449 E5                 4186 	push	hl
-   044A 21r35r00           4187 	ld	hl, #_debug_buffer
-   044D E5                 4188 	push	hl
-   044E CDr00r00           4189 	call	_sprintf
-   0451 E8 04              4190 	add	sp, #4
-   0453 52                 4191 	ld d, d 
-   0454 18 08              4192 	jr 5200$ 
-   0456 64 64              4193 	.dw 0x6464 
-   0458 01 00              4194 	.dw 0x0001 
-   045Ar35r00              4195 	.dw #_debug_buffer 
-   045C 00 00              4196 	.dw 0 
-   045E                    4197 	 5200$:
-                           4198 ;./src/./maps.c:54: delay(100);
-   045E 21 64 00           4199 	ld	hl, #0x0064
-   0461 E5                 4200 	push	hl
-   0462 CDr00r00           4201 	call	_delay
-   0465 E8 02              4202 	add	sp, #2
-                           4203 ;./src/./maps.c:55: ++current_level;
-   0467 21r95r02           4204 	ld	hl, #_current_level
-   046A 34                 4205 	inc	(hl)
-                           4206 ;./src/./maps.c:56: set_map(player);
-   046B F8 04              4207 	ldhl	sp,	#4
-   046D 2A                 4208 	ld	a, (hl+)
-   046E 66                 4209 	ld	h, (hl)
-   046F 6F                 4210 	ld	l, a
-   0470 E5                 4211 	push	hl
-   0471 CDr51r03           4212 	call	_set_map
-   0474 E8 02              4213 	add	sp, #2
-                           4214 ;./src/./maps.c:57: return 1;
-   0476 1E 01              4215 	ld	e, #0x01
-   0478 18 1A              4216 	jr	00106$
-   047A                    4217 00102$:
-                           4218 ;./src/./maps.c:60: DEBUG_LOG_MESSAGE("You won the game!");
-   047A 21rA7r04           4219 	ld	hl, #___str_2
-   047D E5                 4220 	push	hl
-   047E 21r35r00           4221 	ld	hl, #_debug_buffer
-   0481 E5                 4222 	push	hl
-   0482 CDr00r00           4223 	call	_sprintf
-   0485 E8 04              4224 	add	sp, #4
-   0487 52                 4225 	ld d, d 
-   0488 18 08              4226 	jr 6000$ 
-   048A 64 64              4227 	.dw 0x6464 
-   048C 01 00              4228 	.dw 0x0001 
-   048Er35r00              4229 	.dw #_debug_buffer 
-   0490 00 00              4230 	.dw 0 
-   0492                    4231 	 6000$:
-   0492                    4232 00105$:
-                           4233 ;./src/./maps.c:64: return 0;
-   0492 1E 00              4234 	ld	e, #0x00
-   0494                    4235 00106$:
-                           4236 ;./src/./maps.c:65: }
-   0494 E8 02              4237 	add	sp, #2
-   0496 C9                 4238 	ret
-   0497                    4239 ___str_1:
-   0497 59 6F 75 20 64 69  4240 	.ascii "You did a win!!"
+   0317 00                 3931 	.db 0x00
+                           3932 ;./src/./maps.c:18: UINT16 get_world_to_map(MVector* pos){
+                           3933 ;	---------------------------------
+                           3934 ; Function get_world_to_map
+                           3935 ; ---------------------------------
+   0318                    3936 _get_world_to_map::
+   0318 E8 FC              3937 	add	sp, #-4
+                           3938 ;./src/./maps.c:19: return ((pos->x - 8 ) >> 3) + ((pos->y - 16) >> 3 )* 20;
+   031A F8 06              3939 	ldhl	sp,	#6
+   031C 2A                 3940 	ld	a, (hl+)
+   031D 5E                 3941 	ld	e, (hl)
+   031E F8 00              3942 	ldhl	sp,	#0
+   0320 22                 3943 	ld	(hl+), a
+   0321 73                 3944 	ld	(hl), e
+   0322 D1                 3945 	pop	de
+   0323 D5                 3946 	push	de
+   0324 1A                 3947 	ld	a,(de)
+   0325 4F                 3948 	ld	c, a
+   0326 06 00              3949 	ld	b, #0x00
+   0328 79                 3950 	ld	a, c
+   0329 C6 F8              3951 	add	a, #0xf8
+   032B 4F                 3952 	ld	c, a
+   032C 78                 3953 	ld	a, b
+   032D CE FF              3954 	adc	a, #0xff
+   032F 47                 3955 	ld	b, a
+   0330 23                 3956 	inc	hl
+   0331 71                 3957 	ld	(hl), c
+   0332 23                 3958 	inc	hl
+   0333 70                 3959 	ld	(hl), b
+   0334 CB 2E              3960 	sra	(hl)
+   0336 2B                 3961 	dec	hl
+   0337 CB 1E              3962 	rr	(hl)
+   0339 23                 3963 	inc	hl
+   033A CB 2E              3964 	sra	(hl)
+   033C 2B                 3965 	dec	hl
+   033D CB 1E              3966 	rr	(hl)
+   033F 23                 3967 	inc	hl
+   0340 CB 2E              3968 	sra	(hl)
+   0342 2B                 3969 	dec	hl
+   0343 CB 1E              3970 	rr	(hl)
+   0345 C1                 3971 	pop	bc
+   0346 C5                 3972 	push	bc
+   0347 03                 3973 	inc	bc
+   0348 0A                 3974 	ld	a, (bc)
+   0349 4F                 3975 	ld	c, a
+   034A 06 00              3976 	ld	b, #0x00
+   034C 79                 3977 	ld	a, c
+   034D C6 F0              3978 	add	a, #0xf0
+   034F 4F                 3979 	ld	c, a
+   0350 78                 3980 	ld	a, b
+   0351 CE FF              3981 	adc	a, #0xff
+   0353 47                 3982 	ld	b, a
+   0354 CB 28              3983 	sra	b
+   0356 CB 19              3984 	rr	c
+   0358 CB 28              3985 	sra	b
+   035A CB 19              3986 	rr	c
+   035C CB 28              3987 	sra	b
+   035E CB 19              3988 	rr	c
+   0360 69                 3989 	ld	l, c
+   0361 60                 3990 	ld	h, b
+   0362 29                 3991 	add	hl, hl
+   0363 29                 3992 	add	hl, hl
+   0364 09                 3993 	add	hl, bc
+   0365 29                 3994 	add	hl, hl
+   0366 29                 3995 	add	hl, hl
+   0367 4D                 3996 	ld	c, l
+   0368 44                 3997 	ld	b, h
+   0369 F8 02              3998 	ldhl	sp,	#2
+   036B 2A                 3999 	ld	a, (hl+)
+   036C 66                 4000 	ld	h, (hl)
+   036D 6F                 4001 	ld	l, a
+   036E 09                 4002 	add	hl, bc
+   036F 4D                 4003 	ld	c, l
+   0370 44                 4004 	ld	b, h
+   0371 59                 4005 	ld	e, c
+   0372 50                 4006 	ld	d, b
+                           4007 ;./src/./maps.c:20: }
+   0373 E8 04              4008 	add	sp, #4
+   0375 C9                 4009 	ret
+                           4010 ;./src/./maps.c:34: void set_map (MPlayer* player){
+                           4011 ;	---------------------------------
+                           4012 ; Function set_map
+                           4013 ; ---------------------------------
+   0376                    4014 _set_map::
+   0376 E8 FC              4015 	add	sp, #-4
+                           4016 ;./src/./maps.c:35: set_bkg_tiles(0,0,20,18,GLOBAL_MAP);
+   0378 21r95r02           4017 	ld	hl, #_current_level
+   037B 4E                 4018 	ld	c, (hl)
+   037C 06 00              4019 	ld	b, #0x00
+   037E 69                 4020 	ld	l, c
+   037F 60                 4021 	ld	h, b
+   0380 29                 4022 	add	hl, hl
+   0381 29                 4023 	add	hl, hl
+   0382 09                 4024 	add	hl, bc
+   0383 29                 4025 	add	hl, hl
+   0384 09                 4026 	add	hl, bc
+   0385 29                 4027 	add	hl, hl
+   0386 29                 4028 	add	hl, hl
+   0387 09                 4029 	add	hl, bc
+   0388 29                 4030 	add	hl, hl
+   0389 29                 4031 	add	hl, hl
+   038A 29                 4032 	add	hl, hl
+   038B 4D                 4033 	ld	c, l
+   038C 44                 4034 	ld	b, h
+   038D 21r96r02           4035 	ld	hl, #_maps
+   0390 09                 4036 	add	hl, bc
+   0391 4D                 4037 	ld	c, l
+   0392 7C                 4038 	ld	a, h
+   0393 47                 4039 	ld	b, a
+   0394 C5                 4040 	push	bc
+   0395 3E 12              4041 	ld	a, #0x12
+   0397 F5                 4042 	push	af
+   0398 33                 4043 	inc	sp
+   0399 3E 14              4044 	ld	a, #0x14
+   039B F5                 4045 	push	af
+   039C 33                 4046 	inc	sp
+   039D AF                 4047 	xor	a, a
+   039E F5                 4048 	push	af
+   039F 33                 4049 	inc	sp
+   03A0 AF                 4050 	xor	a, a
+   03A1 F5                 4051 	push	af
+   03A2 33                 4052 	inc	sp
+   03A3 CDr00r00           4053 	call	_set_bkg_tiles
+   03A6 E8 06              4054 	add	sp, #6
+                           4055 ;./src/./maps.c:37: for(UINT16 i = 20 * 18 - 1; i >= 0; --i){
+   03A8 F8 02              4056 	ldhl	sp,	#2
+   03AA 36 67              4057 	ld	(hl), #0x67
+   03AC 23                 4058 	inc	hl
+   03AD 36 01              4059 	ld	(hl), #0x01
+   03AF                    4060 00104$:
+                           4061 ;./src/./maps.c:38: if(GLOBAL_MAP[i] == START_TILE){
+   03AF 21r95r02           4062 	ld	hl, #_current_level
+   03B2 4E                 4063 	ld	c, (hl)
+   03B3 06 00              4064 	ld	b, #0x00
+   03B5 69                 4065 	ld	l, c
+   03B6 60                 4066 	ld	h, b
+   03B7 29                 4067 	add	hl, hl
+   03B8 29                 4068 	add	hl, hl
+   03B9 09                 4069 	add	hl, bc
+   03BA 29                 4070 	add	hl, hl
+   03BB 09                 4071 	add	hl, bc
+   03BC 29                 4072 	add	hl, hl
+   03BD 29                 4073 	add	hl, hl
+   03BE 09                 4074 	add	hl, bc
+   03BF 29                 4075 	add	hl, hl
+   03C0 29                 4076 	add	hl, hl
+   03C1 29                 4077 	add	hl, hl
+   03C2 4D                 4078 	ld	c, l
+   03C3 44                 4079 	ld	b, h
+   03C4 21r96r02           4080 	ld	hl, #_maps
+   03C7 09                 4081 	add	hl, bc
+   03C8 4D                 4082 	ld	c, l
+   03C9 44                 4083 	ld	b, h
+   03CA F8 02              4084 	ldhl	sp,	#2
+   03CC 2A                 4085 	ld	a, (hl+)
+   03CD 66                 4086 	ld	h, (hl)
+   03CE 6F                 4087 	ld	l, a
+   03CF 09                 4088 	add	hl, bc
+   03D0 4D                 4089 	ld	c, l
+   03D1 44                 4090 	ld	b, h
+   03D2 0A                 4091 	ld	a, (bc)
+   03D3 D6 02              4092 	sub	a, #0x02
+   03D5 C2r18r04           4093 	jp	NZ,00106$
+                           4094 ;./src/./maps.c:39: player->sprite.position.x = i % 20 * 8 + 8;
+   03D8 F8 06              4095 	ldhl	sp,#(7 - 1)
+   03DA 4E                 4096 	ld	c, (hl)
+   03DB 23                 4097 	inc	hl
+   03DC 46                 4098 	ld	b, (hl)
+   03DD C5                 4099 	push	bc
+   03DE 21 14 00           4100 	ld	hl, #0x0014
+   03E1 E5                 4101 	push	hl
+   03E2 F8 06              4102 	ldhl	sp,	#6
+   03E4 2A                 4103 	ld	a, (hl+)
+   03E5 66                 4104 	ld	h, (hl)
+   03E6 6F                 4105 	ld	l, a
+   03E7 E5                 4106 	push	hl
+   03E8 CDr00r00           4107 	call	__moduint
+   03EB E8 04              4108 	add	sp, #4
+   03ED C1                 4109 	pop	bc
+   03EE 7B                 4110 	ld	a, e
+   03EF 87                 4111 	add	a, a
+   03F0 87                 4112 	add	a, a
+   03F1 87                 4113 	add	a, a
+   03F2 C6 08              4114 	add	a, #0x08
+   03F4 02                 4115 	ld	(bc), a
+                           4116 ;./src/./maps.c:40: player->sprite.position.y = i / 20 * 8 + 16;
+   03F5 21 01 00           4117 	ld	hl, #0x0001
+   03F8 09                 4118 	add	hl, bc
+   03F9 33                 4119 	inc	sp
+   03FA 33                 4120 	inc	sp
+   03FB E5                 4121 	push	hl
+   03FC C5                 4122 	push	bc
+   03FD 21 14 00           4123 	ld	hl, #0x0014
+   0400 E5                 4124 	push	hl
+   0401 F8 06              4125 	ldhl	sp,	#6
+   0403 2A                 4126 	ld	a, (hl+)
+   0404 66                 4127 	ld	h, (hl)
+   0405 6F                 4128 	ld	l, a
+   0406 E5                 4129 	push	hl
+   0407 CDr00r00           4130 	call	__divuint
+   040A E8 04              4131 	add	sp, #4
+   040C C1                 4132 	pop	bc
+   040D 7B                 4133 	ld	a, e
+   040E 87                 4134 	add	a, a
+   040F 87                 4135 	add	a, a
+   0410 87                 4136 	add	a, a
+   0411 C6 10              4137 	add	a, #0x10
+   0413 E1                 4138 	pop	hl
+   0414 E5                 4139 	push	hl
+   0415 77                 4140 	ld	(hl), a
+                           4141 ;./src/./maps.c:41: break;
+   0416 18 0D              4142 	jr	00103$
+   0418                    4143 00106$:
+                           4144 ;./src/./maps.c:37: for(UINT16 i = 20 * 18 - 1; i >= 0; --i){
+   0418 F8 02              4145 	ldhl	sp,#(3 - 1)
+   041A 5E                 4146 	ld	e, (hl)
+   041B 23                 4147 	inc	hl
+   041C 56                 4148 	ld	d, (hl)
+   041D 1B                 4149 	dec	de
+   041E 2B                 4150 	dec	hl
+   041F 73                 4151 	ld	(hl), e
+   0420 23                 4152 	inc	hl
+   0421 72                 4153 	ld	(hl), d
+   0422 C3rAFr03           4154 	jp	00104$
+   0425                    4155 00103$:
+                           4156 ;./src/./maps.c:45: update_position(&(player->sprite));
+   0425 C5                 4157 	push	bc
+   0426 CDr97r00           4158 	call	_update_position
+   0429 E8 02              4159 	add	sp, #2
+                           4160 ;./src/./maps.c:46: }
+   042B E8 04              4161 	add	sp, #4
+   042D C9                 4162 	ret
+                           4163 ;./src/./maps.c:48: BYTE win_condition (MPlayer* player){
+                           4164 ;	---------------------------------
+                           4165 ; Function win_condition
+                           4166 ; ---------------------------------
+   042E                    4167 _win_condition::
+   042E E8 FE              4168 	add	sp, #-2
+                           4169 ;./src/./maps.c:49: UINT16 pos = get_world_to_map(&(player->sprite.position));
+   0430 F8 04              4170 	ldhl	sp,#(5 - 1)
+   0432 5E                 4171 	ld	e, (hl)
+   0433 23                 4172 	inc	hl
+   0434 56                 4173 	ld	d, (hl)
+   0435 D5                 4174 	push	de
+   0436 CDr18r03           4175 	call	_get_world_to_map
+   0439 E8 02              4176 	add	sp, #2
+   043B 33                 4177 	inc	sp
+   043C 33                 4178 	inc	sp
+   043D D5                 4179 	push	de
+                           4180 ;./src/./maps.c:50: if(GLOBAL_MAP[pos] == FLAG_TILE){
+   043E 21r95r02           4181 	ld	hl, #_current_level
+   0441 4E                 4182 	ld	c, (hl)
+   0442 06 00              4183 	ld	b, #0x00
+   0444 69                 4184 	ld	l, c
+   0445 60                 4185 	ld	h, b
+   0446 29                 4186 	add	hl, hl
+   0447 29                 4187 	add	hl, hl
+   0448 09                 4188 	add	hl, bc
+   0449 29                 4189 	add	hl, hl
+   044A 09                 4190 	add	hl, bc
+   044B 29                 4191 	add	hl, hl
+   044C 29                 4192 	add	hl, hl
+   044D 09                 4193 	add	hl, bc
+   044E 29                 4194 	add	hl, hl
+   044F 29                 4195 	add	hl, hl
+   0450 29                 4196 	add	hl, hl
+   0451 4D                 4197 	ld	c, l
+   0452 44                 4198 	ld	b, h
+   0453 21r96r02           4199 	ld	hl, #_maps
+   0456 09                 4200 	add	hl, bc
+   0457 4D                 4201 	ld	c, l
+   0458 44                 4202 	ld	b, h
+   0459 E1                 4203 	pop	hl
+   045A E5                 4204 	push	hl
+   045B 09                 4205 	add	hl, bc
+   045C 4D                 4206 	ld	c, l
+   045D 44                 4207 	ld	b, h
+   045E 0A                 4208 	ld	a, (bc)
+   045F 3D                 4209 	dec	a
+   0460 C2rB7r04           4210 	jp	NZ,00105$
+                           4211 ;./src/./maps.c:51: if(current_level < TOTAL_MAP_NUM - 1){
+   0463 21r95r02           4212 	ld	hl, #_current_level
+   0466 7E                 4213 	ld	a, (hl)
+   0467 D6 03              4214 	sub	a, #0x03
+   0469 30 34              4215 	jr	NC,00102$
+                           4216 ;./src/./maps.c:52: DEBUG_LOG_MESSAGE("You did a win!!");
+   046B 21rBCr04           4217 	ld	hl, #___str_1
+   046E E5                 4218 	push	hl
+   046F 21r35r00           4219 	ld	hl, #_debug_buffer
+   0472 E5                 4220 	push	hl
+   0473 CDr00r00           4221 	call	_sprintf
+   0476 E8 04              4222 	add	sp, #4
+   0478 52                 4223 	ld d, d 
+   0479 18 08              4224 	jr 5200$ 
+   047B 64 64              4225 	.dw 0x6464 
+   047D 01 00              4226 	.dw 0x0001 
+   047Fr35r00              4227 	.dw #_debug_buffer 
+   0481 00 00              4228 	.dw 0 
+   0483                    4229 	 5200$:
+                           4230 ;./src/./maps.c:54: delay(100);
+   0483 21 64 00           4231 	ld	hl, #0x0064
+   0486 E5                 4232 	push	hl
+   0487 CDr00r00           4233 	call	_delay
+   048A E8 02              4234 	add	sp, #2
+                           4235 ;./src/./maps.c:55: ++current_level;
+   048C 21r95r02           4236 	ld	hl, #_current_level
+   048F 34                 4237 	inc	(hl)
+                           4238 ;./src/./maps.c:56: set_map(player);
+   0490 F8 04              4239 	ldhl	sp,	#4
+   0492 2A                 4240 	ld	a, (hl+)
+   0493 66                 4241 	ld	h, (hl)
+   0494 6F                 4242 	ld	l, a
+   0495 E5                 4243 	push	hl
+   0496 CDr76r03           4244 	call	_set_map
+   0499 E8 02              4245 	add	sp, #2
+                           4246 ;./src/./maps.c:57: return 1;
+   049B 1E 01              4247 	ld	e, #0x01
+   049D 18 1A              4248 	jr	00106$
+   049F                    4249 00102$:
+                           4250 ;./src/./maps.c:60: DEBUG_LOG_MESSAGE("You won the game!");
+   049F 21rCCr04           4251 	ld	hl, #___str_2
+   04A2 E5                 4252 	push	hl
+   04A3 21r35r00           4253 	ld	hl, #_debug_buffer
+   04A6 E5                 4254 	push	hl
+   04A7 CDr00r00           4255 	call	_sprintf
+   04AA E8 04              4256 	add	sp, #4
+   04AC 52                 4257 	ld d, d 
+   04AD 18 08              4258 	jr 6000$ 
+   04AF 64 64              4259 	.dw 0x6464 
+   04B1 01 00              4260 	.dw 0x0001 
+   04B3r35r00              4261 	.dw #_debug_buffer 
+   04B5 00 00              4262 	.dw 0 
+   04B7                    4263 	 6000$:
+   04B7                    4264 00105$:
+                           4265 ;./src/./maps.c:64: return 0;
+   04B7 1E 00              4266 	ld	e, #0x00
+   04B9                    4267 00106$:
+                           4268 ;./src/./maps.c:65: }
+   04B9 E8 02              4269 	add	sp, #2
+   04BB C9                 4270 	ret
+   04BC                    4271 ___str_1:
+   04BC 59 6F 75 20 64 69  4272 	.ascii "You did a win!!"
         64 20 61 20 77 69
         6E 21 21
-   04A6 00                 4241 	.db 0x00
-   04A7                    4242 ___str_2:
-   04A7 59 6F 75 20 77 6F  4243 	.ascii "You won the game!"
+   04CB 00                 4273 	.db 0x00
+   04CC                    4274 ___str_2:
+   04CC 59 6F 75 20 77 6F  4275 	.ascii "You won the game!"
         6E 20 74 68 65 20
         67 61 6D 65 21
-   04B8 00                 4244 	.db 0x00
-                           4245 ;./src/./physics.c:3: void gravity(MSprite* sprite){
-                           4246 ;	---------------------------------
-                           4247 ; Function gravity
-                           4248 ; ---------------------------------
-   04B9                    4249 _gravity::
-   04B9 E8 FE              4250 	add	sp, #-2
-                           4251 ;./src/./physics.c:5: if(sprite->col.direction.y != 1){
-   04BB F8 04              4252 	ldhl	sp,#(5 - 1)
-   04BD 4E                 4253 	ld	c, (hl)
-   04BE 23                 4254 	inc	hl
-   04BF 46                 4255 	ld	b, (hl)
-   04C0 21 09 00           4256 	ld	hl, #0x0009
-   04C3 09                 4257 	add	hl, bc
-   04C4 33                 4258 	inc	sp
-   04C5 33                 4259 	inc	sp
-   04C6 E5                 4260 	push	hl
-   04C7 D1                 4261 	pop	de
-   04C8 D5                 4262 	push	de
-   04C9 1A                 4263 	ld	a,(de)
-   04CA 3D                 4264 	dec	a
-   04CB 28 0D              4265 	jr	Z,00103$
-                           4266 ;./src/./physics.c:6: sprite->speed.y += GRAVITY;
-   04CD 21 06 00           4267 	ld	hl, #0x0006
-   04D0 09                 4268 	add	hl, bc
-   04D1 4D                 4269 	ld	c, l
-   04D2 44                 4270 	ld	b, h
-   04D3 0A                 4271 	ld	a, (bc)
-   04D4 21r36r08           4272 	ld	hl, #_GRAVITY
-   04D7 5E                 4273 	ld	e, (hl)
-   04D8 83                 4274 	add	a, e
-   04D9 02                 4275 	ld	(bc), a
-   04DA                    4276 00103$:
-                           4277 ;./src/./physics.c:8: }
-   04DA E8 02              4278 	add	sp, #2
-   04DC C9                 4279 	ret
-                           4280 ;./src/./physics.c:10: void collision_check(MSprite* sprite){
-                           4281 ;	---------------------------------
-                           4282 ; Function collision_check
-                           4283 ; ---------------------------------
-   04DD                    4284 _collision_check::
-   04DD E8 F6              4285 	add	sp, #-10
-                           4286 ;./src/./physics.c:11: UINT16 pos = get_world_to_map(&(sprite->position));
-   04DF F8 0C              4287 	ldhl	sp,#(13 - 1)
-   04E1 4E                 4288 	ld	c, (hl)
-   04E2 23                 4289 	inc	hl
-   04E3 46                 4290 	ld	b, (hl)
-   04E4 C5                 4291 	push	bc
-   04E5 C5                 4292 	push	bc
-   04E6 CDrF3r02           4293 	call	_get_world_to_map
-   04E9 E8 02              4294 	add	sp, #2
-   04EB C1                 4295 	pop	bc
-   04EC 33                 4296 	inc	sp
-   04ED 33                 4297 	inc	sp
-   04EE D5                 4298 	push	de
-                           4299 ;./src/./physics.c:13: sprite->col.has_collided = false;
-   04EF 21 07 00           4300 	ld	hl, #0x0007
-   04F2 09                 4301 	add	hl, bc
-   04F3 7D                 4302 	ld	a, l
-   04F4 54                 4303 	ld	d, h
-   04F5 F8 02              4304 	ldhl	sp,	#2
-   04F7 22                 4305 	ld	(hl+), a
-   04F8 72                 4306 	ld	(hl), d
-   04F9 2B                 4307 	dec	hl
-   04FA 2A                 4308 	ld	a, (hl+)
-   04FB 66                 4309 	ld	h, (hl)
-   04FC 6F                 4310 	ld	l, a
-   04FD 36 00              4311 	ld	(hl), #0x00
-                           4312 ;./src/./physics.c:14: sprite->col.direction.x = 0;
-   04FF 21 08 00           4313 	ld	hl, #0x0008
-   0502 09                 4314 	add	hl, bc
-   0503 7D                 4315 	ld	a, l
-   0504 54                 4316 	ld	d, h
-   0505 F8 04              4317 	ldhl	sp,	#4
-   0507 22                 4318 	ld	(hl+), a
-   0508 72                 4319 	ld	(hl), d
-   0509 2B                 4320 	dec	hl
-   050A 2A                 4321 	ld	a, (hl+)
-   050B 66                 4322 	ld	h, (hl)
-   050C 6F                 4323 	ld	l, a
-   050D 36 00              4324 	ld	(hl), #0x00
-                           4325 ;./src/./physics.c:15: sprite->col.direction.y = 0;
-   050F 21 09 00           4326 	ld	hl, #0x0009
-   0512 09                 4327 	add	hl, bc
-   0513 7D                 4328 	ld	a, l
-   0514 54                 4329 	ld	d, h
-   0515 F8 06              4330 	ldhl	sp,	#6
-   0517 22                 4331 	ld	(hl+), a
-   0518 72                 4332 	ld	(hl), d
-   0519 2B                 4333 	dec	hl
-   051A 2A                 4334 	ld	a, (hl+)
-   051B 66                 4335 	ld	h, (hl)
-   051C 6F                 4336 	ld	l, a
-   051D 36 00              4337 	ld	(hl), #0x00
-                           4338 ;./src/./physics.c:17: if(pos - 1 % 20 == 0 ||
-   051F D1                 4339 	pop	de
-   0520 D5                 4340 	push	de
-   0521 21 01 00           4341 	ld	hl, #0x0001
-   0524 7B                 4342 	ld	a, e
-   0525 95                 4343 	sub	a, l
-   0526 5F                 4344 	ld	e, a
-   0527 7A                 4345 	ld	a, d
-   0528 9C                 4346 	sbc	a, h
-   0529 F8 09              4347 	ldhl	sp,	#9
-   052B 32                 4348 	ld	(hl-), a
-   052C 73                 4349 	ld	(hl), e
-   052D 23                 4350 	inc	hl
-   052E 3A                 4351 	ld	a, (hl-)
-   052F B6                 4352 	or	a, (hl)
-   0530 CAr62r05           4353 	jp	Z, 00101$
-                           4354 ;./src/./physics.c:18: (GLOBAL_MAP[pos - 1] != EMPTY_TILE &&
-   0533 21r95r02           4355 	ld	hl, #_current_level
-   0536 4E                 4356 	ld	c, (hl)
-   0537 06 00              4357 	ld	b, #0x00
-   0539 69                 4358 	ld	l, c
-   053A 60                 4359 	ld	h, b
-   053B 29                 4360 	add	hl, hl
-   053C 29                 4361 	add	hl, hl
-   053D 09                 4362 	add	hl, bc
-   053E 29                 4363 	add	hl, hl
-   053F 09                 4364 	add	hl, bc
-   0540 29                 4365 	add	hl, hl
-   0541 29                 4366 	add	hl, hl
-   0542 09                 4367 	add	hl, bc
-   0543 29                 4368 	add	hl, hl
-   0544 29                 4369 	add	hl, hl
-   0545 29                 4370 	add	hl, hl
-   0546 4D                 4371 	ld	c, l
-   0547 44                 4372 	ld	b, h
-   0548 21r96r02           4373 	ld	hl, #_maps
-   054B 09                 4374 	add	hl, bc
-   054C 4D                 4375 	ld	c, l
-   054D 44                 4376 	ld	b, h
-   054E F8 08              4377 	ldhl	sp,	#8
-   0550 2A                 4378 	ld	a, (hl+)
-   0551 66                 4379 	ld	h, (hl)
-   0552 6F                 4380 	ld	l, a
-   0553 09                 4381 	add	hl, bc
-   0554 4D                 4382 	ld	c, l
-   0555 44                 4383 	ld	b, h
-   0556 0A                 4384 	ld	a, (bc)
-   0557 B7                 4385 	or	a, a
-   0558 28 15              4386 	jr	Z,00102$
-                           4387 ;./src/./physics.c:19: GLOBAL_MAP[pos - 1] != FLAG_TILE  &&
-   055A FE 01              4388 	cp	a, #0x01
-   055C 28 11              4389 	jr	Z,00102$
-                           4390 ;./src/./physics.c:20: GLOBAL_MAP[pos - 1] != START_TILE)){
-   055E D6 02              4391 	sub	a, #0x02
-   0560 28 0D              4392 	jr	Z,00102$
-   0562                    4393 00101$:
-                           4394 ;./src/./physics.c:21: sprite->col.direction.x = -1;
-   0562 F8 04              4395 	ldhl	sp,	#4
-   0564 2A                 4396 	ld	a, (hl+)
-   0565 66                 4397 	ld	h, (hl)
-   0566 6F                 4398 	ld	l, a
-   0567 36 FF              4399 	ld	(hl), #0xff
-                           4400 ;./src/./physics.c:22: sprite->col.has_collided = true;
-   0569 C1                 4401 	pop	bc
-   056A E1                 4402 	pop	hl
-   056B E5                 4403 	push	hl
-   056C C5                 4404 	push	bc
-   056D 36 01              4405 	ld	(hl), #0x01
-   056F                    4406 00102$:
-                           4407 ;./src/./physics.c:25: if(pos + 1 % 20 == 19 ||
-   056F D1                 4408 	pop	de
-   0570 D5                 4409 	push	de
-   0571 21 01 00           4410 	ld	hl, #0x0001
-   0574 19                 4411 	add	hl, de
-   0575 7D                 4412 	ld	a, l
-   0576 54                 4413 	ld	d, h
-   0577 F8 08              4414 	ldhl	sp,	#8
-   0579 22                 4415 	ld	(hl+), a
-   057A 72                 4416 	ld	(hl), d
-   057B 2B                 4417 	dec	hl
-   057C 7E                 4418 	ld	a, (hl)
-   057D D6 13              4419 	sub	a, #0x13
-   057F 23                 4420 	inc	hl
-   0580 B6                 4421 	or	a, (hl)
-   0581 CArB3r05           4422 	jp	Z,00106$
-                           4423 ;./src/./physics.c:26: (GLOBAL_MAP[pos + 1] != EMPTY_TILE &&
-   0584 21r95r02           4424 	ld	hl, #_current_level
-   0587 4E                 4425 	ld	c, (hl)
-   0588 06 00              4426 	ld	b, #0x00
-   058A 69                 4427 	ld	l, c
-   058B 60                 4428 	ld	h, b
-   058C 29                 4429 	add	hl, hl
-   058D 29                 4430 	add	hl, hl
-   058E 09                 4431 	add	hl, bc
-   058F 29                 4432 	add	hl, hl
-   0590 09                 4433 	add	hl, bc
-   0591 29                 4434 	add	hl, hl
-   0592 29                 4435 	add	hl, hl
-   0593 09                 4436 	add	hl, bc
-   0594 29                 4437 	add	hl, hl
-   0595 29                 4438 	add	hl, hl
-   0596 29                 4439 	add	hl, hl
-   0597 4D                 4440 	ld	c, l
-   0598 44                 4441 	ld	b, h
-   0599 21r96r02           4442 	ld	hl, #_maps
-   059C 09                 4443 	add	hl, bc
-   059D 4D                 4444 	ld	c, l
-   059E 44                 4445 	ld	b, h
-   059F F8 08              4446 	ldhl	sp,	#8
-   05A1 2A                 4447 	ld	a, (hl+)
-   05A2 66                 4448 	ld	h, (hl)
-   05A3 6F                 4449 	ld	l, a
-   05A4 09                 4450 	add	hl, bc
-   05A5 4D                 4451 	ld	c, l
-   05A6 44                 4452 	ld	b, h
-   05A7 0A                 4453 	ld	a, (bc)
-   05A8 B7                 4454 	or	a, a
-   05A9 28 15              4455 	jr	Z,00115$
-                           4456 ;./src/./physics.c:27: GLOBAL_MAP[pos + 1] != FLAG_TILE  &&
-   05AB FE 01              4457 	cp	a, #0x01
-   05AD 28 11              4458 	jr	Z,00115$
-                           4459 ;./src/./physics.c:28: GLOBAL_MAP[pos + 1] != START_TILE)){
-   05AF D6 02              4460 	sub	a, #0x02
-   05B1 28 0D              4461 	jr	Z,00115$
-   05B3                    4462 00106$:
-                           4463 ;./src/./physics.c:29: sprite->col.direction.x = 1;
-   05B3 F8 04              4464 	ldhl	sp,	#4
-   05B5 2A                 4465 	ld	a, (hl+)
-   05B6 66                 4466 	ld	h, (hl)
-   05B7 6F                 4467 	ld	l, a
-   05B8 36 01              4468 	ld	(hl), #0x01
-                           4469 ;./src/./physics.c:30: sprite->col.has_collided = true;
-   05BA C1                 4470 	pop	bc
-   05BB E1                 4471 	pop	hl
-   05BC E5                 4472 	push	hl
-   05BD C5                 4473 	push	bc
-   05BE 36 01              4474 	ld	(hl), #0x01
-                           4475 ;./src/./physics.c:36: GLOBAL_MAP[pos - 20] != START_TILE)){
-   05C0                    4476 00115$:
-                           4477 ;./src/./physics.c:34: (GLOBAL_MAP[pos - 20] != EMPTY_TILE &&
-   05C0 21r95r02           4478 	ld	hl, #_current_level
-   05C3 4E                 4479 	ld	c, (hl)
-   05C4 06 00              4480 	ld	b, #0x00
-   05C6 69                 4481 	ld	l, c
-   05C7 60                 4482 	ld	h, b
-   05C8 29                 4483 	add	hl, hl
-   05C9 29                 4484 	add	hl, hl
-   05CA 09                 4485 	add	hl, bc
-   05CB 29                 4486 	add	hl, hl
-   05CC 09                 4487 	add	hl, bc
-   05CD 29                 4488 	add	hl, hl
-   05CE 29                 4489 	add	hl, hl
-   05CF 09                 4490 	add	hl, bc
-   05D0 29                 4491 	add	hl, hl
-   05D1 29                 4492 	add	hl, hl
-   05D2 29                 4493 	add	hl, hl
-   05D3 4D                 4494 	ld	c, l
-   05D4 44                 4495 	ld	b, h
-   05D5 21r96r02           4496 	ld	hl, #_maps
-   05D8 09                 4497 	add	hl, bc
-   05D9 4D                 4498 	ld	c, l
-   05DA 44                 4499 	ld	b, h
-   05DB D1                 4500 	pop	de
-   05DC D5                 4501 	push	de
-   05DD 21 14 00           4502 	ld	hl, #0x0014
-   05E0 7B                 4503 	ld	a, e
-   05E1 95                 4504 	sub	a, l
-   05E2 5F                 4505 	ld	e, a
-   05E3 7A                 4506 	ld	a, d
-   05E4 9C                 4507 	sbc	a, h
-   05E5 F8 09              4508 	ldhl	sp,	#9
-   05E7 32                 4509 	ld	(hl-), a
-   05E8 73                 4510 	ld	(hl), e
-   05E9 2A                 4511 	ld	a, (hl+)
-   05EA 66                 4512 	ld	h, (hl)
-   05EB 6F                 4513 	ld	l, a
-   05EC 09                 4514 	add	hl, bc
-   05ED 4D                 4515 	ld	c, l
-   05EE 44                 4516 	ld	b, h
-   05EF 0A                 4517 	ld	a, (bc)
-   05F0 B7                 4518 	or	a, a
-   05F1 28 15              4519 	jr	Z,00112$
-                           4520 ;./src/./physics.c:35: GLOBAL_MAP[pos - 20] != FLAG_TILE  &&
-   05F3 FE 01              4521 	cp	a, #0x01
-   05F5 28 11              4522 	jr	Z,00112$
-                           4523 ;./src/./physics.c:36: GLOBAL_MAP[pos - 20] != START_TILE)){
-   05F7 D6 02              4524 	sub	a, #0x02
-   05F9 28 0D              4525 	jr	Z,00112$
-                           4526 ;./src/./physics.c:37: sprite->col.direction.y = -1;
-   05FB F8 06              4527 	ldhl	sp,	#6
-   05FD 2A                 4528 	ld	a, (hl+)
-   05FE 66                 4529 	ld	h, (hl)
-   05FF 6F                 4530 	ld	l, a
-   0600 36 FF              4531 	ld	(hl), #0xff
-                           4532 ;./src/./physics.c:38: sprite->col.has_collided = true;
-   0602 C1                 4533 	pop	bc
-   0603 E1                 4534 	pop	hl
-   0604 E5                 4535 	push	hl
-   0605 C5                 4536 	push	bc
-   0606 36 01              4537 	ld	(hl), #0x01
-   0608                    4538 00112$:
-                           4539 ;./src/./physics.c:41: if(pos + 20 > 20 * 18 || 
-   0608 D1                 4540 	pop	de
-   0609 D5                 4541 	push	de
-   060A 21 14 00           4542 	ld	hl, #0x0014
-   060D 19                 4543 	add	hl, de
-   060E 7D                 4544 	ld	a, l
-   060F 54                 4545 	ld	d, h
-   0610 F8 08              4546 	ldhl	sp,	#8
-   0612 22                 4547 	ld	(hl+), a
-   0613 72                 4548 	ld	(hl), d
-   0614 2B                 4549 	dec	hl
-   0615 3E 68              4550 	ld	a, #0x68
-   0617 96                 4551 	sub	a, (hl)
-   0618 23                 4552 	inc	hl
-   0619 3E 01              4553 	ld	a, #0x01
-   061B 9E                 4554 	sbc	a, (hl)
-   061C DAr4Er06           4555 	jp	C, 00116$
-                           4556 ;./src/./physics.c:42: (GLOBAL_MAP[pos + 20] != EMPTY_TILE &&
-   061F 21r95r02           4557 	ld	hl, #_current_level
-   0622 4E                 4558 	ld	c, (hl)
-   0623 06 00              4559 	ld	b, #0x00
-   0625 69                 4560 	ld	l, c
-   0626 60                 4561 	ld	h, b
-   0627 29                 4562 	add	hl, hl
-   0628 29                 4563 	add	hl, hl
-   0629 09                 4564 	add	hl, bc
-   062A 29                 4565 	add	hl, hl
-   062B 09                 4566 	add	hl, bc
-   062C 29                 4567 	add	hl, hl
-   062D 29                 4568 	add	hl, hl
-   062E 09                 4569 	add	hl, bc
-   062F 29                 4570 	add	hl, hl
-   0630 29                 4571 	add	hl, hl
-   0631 29                 4572 	add	hl, hl
-   0632 4D                 4573 	ld	c, l
-   0633 44                 4574 	ld	b, h
-   0634 21r96r02           4575 	ld	hl, #_maps
-   0637 09                 4576 	add	hl, bc
-   0638 4D                 4577 	ld	c, l
-   0639 44                 4578 	ld	b, h
-   063A F8 08              4579 	ldhl	sp,	#8
-   063C 2A                 4580 	ld	a, (hl+)
-   063D 66                 4581 	ld	h, (hl)
-   063E 6F                 4582 	ld	l, a
-   063F 09                 4583 	add	hl, bc
-   0640 4D                 4584 	ld	c, l
-   0641 44                 4585 	ld	b, h
-   0642 0A                 4586 	ld	a, (bc)
-   0643 B7                 4587 	or	a, a
-   0644 28 15              4588 	jr	Z,00121$
-                           4589 ;./src/./physics.c:43: GLOBAL_MAP[pos + 20] != FLAG_TILE  &&
-   0646 FE 01              4590 	cp	a, #0x01
-   0648 28 11              4591 	jr	Z,00121$
-                           4592 ;./src/./physics.c:44: GLOBAL_MAP[pos + 20] != START_TILE)){
-   064A D6 02              4593 	sub	a, #0x02
-   064C 28 0D              4594 	jr	Z,00121$
-   064E                    4595 00116$:
-                           4596 ;./src/./physics.c:45: sprite->col.direction.y = 1;
-   064E F8 06              4597 	ldhl	sp,	#6
-   0650 2A                 4598 	ld	a, (hl+)
-   0651 66                 4599 	ld	h, (hl)
-   0652 6F                 4600 	ld	l, a
-   0653 36 01              4601 	ld	(hl), #0x01
-                           4602 ;./src/./physics.c:46: sprite->col.has_collided = true;
-   0655 C1                 4603 	pop	bc
-   0656 E1                 4604 	pop	hl
-   0657 E5                 4605 	push	hl
-   0658 C5                 4606 	push	bc
-   0659 36 01              4607 	ld	(hl), #0x01
-   065B                    4608 00121$:
-                           4609 ;./src/./physics.c:48: }
-   065B E8 0A              4610 	add	sp, #10
-   065D C9                 4611 	ret
-                           4612 ;./src/main.c:17: void performantdelay(UINT8 numloops){
-                           4613 ;	---------------------------------
-                           4614 ; Function performantdelay
-                           4615 ; ---------------------------------
-   065E                    4616 _performantdelay::
-                           4617 ;./src/main.c:19: for(i = 0; i < numloops; i++){
-   065E 0E 00              4618 	ld	c, #0x00
-   0660                    4619 00103$:
-   0660 79                 4620 	ld	a, c
-   0661 F8 02              4621 	ldhl	sp,	#2
-   0663 96                 4622 	sub	a, (hl)
-   0664 D0                 4623 	ret	NC
-                           4624 ;./src/main.c:20: wait_vbl_done();
-   0665 C5                 4625 	push	bc
-   0666 CDr00r00           4626 	call	_wait_vbl_done
-   0669 C1                 4627 	pop	bc
-                           4628 ;./src/main.c:19: for(i = 0; i < numloops; i++){
-   066A 0C                 4629 	inc	c
-   066B 18 F3              4630 	jr	00103$
-                           4631 ;./src/main.c:22: }
-   066D C9                 4632 	ret
-                           4633 ;./src/main.c:24: void main()
-                           4634 ;	---------------------------------
-                           4635 ; Function main
-                           4636 ; ---------------------------------
-   066E                    4637 _main::
-   066E E8 F1              4638 	add	sp, #-15
-                           4639 ;./src/main.c:26: set_bkg_data(0, 5, BackgroundTiles);
-   0670 21r35r02           4640 	ld	hl, #_BackgroundTiles
-   0673 E5                 4641 	push	hl
-   0674 3E 05              4642 	ld	a, #0x05
-   0676 F5                 4643 	push	af
-   0677 33                 4644 	inc	sp
-   0678 AF                 4645 	xor	a, a
-   0679 F5                 4646 	push	af
-   067A 33                 4647 	inc	sp
-   067B CDr00r00           4648 	call	_set_bkg_data
-   067E E8 04              4649 	add	sp, #4
-                           4650 ;./src/main.c:28: SHOW_BKG;
-   0680 F0r00              4651 	ldh	a, (_LCDC_REG+0)
-   0682 F6 01              4652 	or	a, #0x01
-   0684 E0r00              4653 	ldh	(_LCDC_REG+0),a
-                           4654 ;./src/main.c:30: MPlayer player = {{{70, 24}, 0, 3, 0, {0, 0}, {false, {0, 0}}}, false};
-   0686 F8 00              4655 	ldhl	sp,	#0
-   0688 7D                 4656 	ld	a, l
-   0689 54                 4657 	ld	d, h
-   068A F8 0D              4658 	ldhl	sp,	#13
-   068C 22                 4659 	ld	(hl+), a
-   068D 72                 4660 	ld	(hl), d
-   068E 2B                 4661 	dec	hl
-   068F 2A                 4662 	ld	a, (hl+)
-   0690 66                 4663 	ld	h, (hl)
-   0691 6F                 4664 	ld	l, a
-   0692 36 46              4665 	ld	(hl), #0x46
-   0694 F8 0D              4666 	ldhl	sp,#(14 - 1)
-   0696 4E                 4667 	ld	c, (hl)
-   0697 23                 4668 	inc	hl
-   0698 46                 4669 	ld	b, (hl)
-   0699 03                 4670 	inc	bc
-   069A 3E 18              4671 	ld	a, #0x18
-   069C 02                 4672 	ld	(bc), a
-   069D 2B                 4673 	dec	hl
-   069E 4E                 4674 	ld	c, (hl)
-   069F 23                 4675 	inc	hl
-   06A0 46                 4676 	ld	b, (hl)
-   06A1 03                 4677 	inc	bc
-   06A2 03                 4678 	inc	bc
-   06A3 AF                 4679 	xor	a, a
-   06A4 02                 4680 	ld	(bc), a
-   06A5 2B                 4681 	dec	hl
-   06A6 4E                 4682 	ld	c, (hl)
-   06A7 23                 4683 	inc	hl
-   06A8 46                 4684 	ld	b, (hl)
-   06A9 03                 4685 	inc	bc
-   06AA 03                 4686 	inc	bc
-   06AB 03                 4687 	inc	bc
-   06AC 3E 03              4688 	ld	a, #0x03
-   06AE 02                 4689 	ld	(bc), a
-   06AF 2B                 4690 	dec	hl
-   06B0 5E                 4691 	ld	e, (hl)
-   06B1 23                 4692 	inc	hl
-   06B2 56                 4693 	ld	d, (hl)
-   06B3 21 04 00           4694 	ld	hl, #0x0004
-   06B6 19                 4695 	add	hl, de
-   06B7 4D                 4696 	ld	c, l
-   06B8 44                 4697 	ld	b, h
-   06B9 AF                 4698 	xor	a, a
-   06BA 02                 4699 	ld	(bc), a
-   06BB F8 0D              4700 	ldhl	sp,#(14 - 1)
-   06BD 5E                 4701 	ld	e, (hl)
-   06BE 23                 4702 	inc	hl
-   06BF 56                 4703 	ld	d, (hl)
-   06C0 21 05 00           4704 	ld	hl, #0x0005
-   06C3 19                 4705 	add	hl, de
-   06C4 4D                 4706 	ld	c, l
-   06C5 44                 4707 	ld	b, h
-   06C6 AF                 4708 	xor	a, a
-   06C7 02                 4709 	ld	(bc), a
-   06C8 F8 0D              4710 	ldhl	sp,#(14 - 1)
-   06CA 5E                 4711 	ld	e, (hl)
-   06CB 23                 4712 	inc	hl
-   06CC 56                 4713 	ld	d, (hl)
-   06CD 21 06 00           4714 	ld	hl, #0x0006
-   06D0 19                 4715 	add	hl, de
-   06D1 4D                 4716 	ld	c, l
-   06D2 44                 4717 	ld	b, h
-   06D3 AF                 4718 	xor	a, a
-   06D4 02                 4719 	ld	(bc), a
-   06D5 F8 0D              4720 	ldhl	sp,#(14 - 1)
-   06D7 5E                 4721 	ld	e, (hl)
-   06D8 23                 4722 	inc	hl
-   06D9 56                 4723 	ld	d, (hl)
-   06DA 21 07 00           4724 	ld	hl, #0x0007
-   06DD 19                 4725 	add	hl, de
-   06DE 4D                 4726 	ld	c, l
-   06DF 44                 4727 	ld	b, h
-   06E0 AF                 4728 	xor	a, a
-   06E1 02                 4729 	ld	(bc), a
-   06E2 F8 0D              4730 	ldhl	sp,#(14 - 1)
-   06E4 5E                 4731 	ld	e, (hl)
-   06E5 23                 4732 	inc	hl
-   06E6 56                 4733 	ld	d, (hl)
-   06E7 21 08 00           4734 	ld	hl, #0x0008
-   06EA 19                 4735 	add	hl, de
-   06EB 4D                 4736 	ld	c, l
-   06EC 44                 4737 	ld	b, h
-   06ED AF                 4738 	xor	a, a
-   06EE 02                 4739 	ld	(bc), a
-   06EF F8 0D              4740 	ldhl	sp,#(14 - 1)
-   06F1 5E                 4741 	ld	e, (hl)
-   06F2 23                 4742 	inc	hl
-   06F3 56                 4743 	ld	d, (hl)
-   06F4 21 09 00           4744 	ld	hl, #0x0009
-   06F7 19                 4745 	add	hl, de
-   06F8 4D                 4746 	ld	c, l
-   06F9 44                 4747 	ld	b, h
-   06FA AF                 4748 	xor	a, a
-   06FB 02                 4749 	ld	(bc), a
-   06FC F8 00              4750 	ldhl	sp,	#0
-   06FE 7D                 4751 	ld	a, l
-   06FF 54                 4752 	ld	d, h
-   0700 F8 0B              4753 	ldhl	sp,	#11
-   0702 22                 4754 	ld	(hl+), a
-   0703 72                 4755 	ld	(hl), d
-   0704 2B                 4756 	dec	hl
-   0705 5E                 4757 	ld	e, (hl)
-   0706 23                 4758 	inc	hl
-   0707 56                 4759 	ld	d, (hl)
-   0708 21 0A 00           4760 	ld	hl, #0x000a
-   070B 19                 4761 	add	hl, de
-   070C 4D                 4762 	ld	c, l
-   070D 44                 4763 	ld	b, h
-   070E AF                 4764 	xor	a, a
-   070F 02                 4765 	ld	(bc), a
-                           4766 ;./src/main.c:32: set_sprite_data(player.sprite.sprite_number, player.sprite.max_animations, MainChar);
-   0710 F8 0B              4767 	ldhl	sp,#(12 - 1)
-   0712 4E                 4768 	ld	c, (hl)
-   0713 23                 4769 	inc	hl
-   0714 46                 4770 	ld	b, (hl)
-   0715 03                 4771 	inc	bc
-   0716 03                 4772 	inc	bc
-   0717 03                 4773 	inc	bc
-   0718 0A                 4774 	ld	a, (bc)
-   0719 47                 4775 	ld	b, a
-   071A 2B                 4776 	dec	hl
-   071B 5E                 4777 	ld	e, (hl)
-   071C 23                 4778 	inc	hl
-   071D 56                 4779 	ld	d, (hl)
-   071E 21 04 00           4780 	ld	hl, #0x0004
-   0721 19                 4781 	add	hl, de
-   0722 7D                 4782 	ld	a, l
-   0723 54                 4783 	ld	d, h
-   0724 F8 0D              4784 	ldhl	sp,	#13
-   0726 22                 4785 	ld	(hl+), a
-   0727 72                 4786 	ld	(hl), d
-   0728 2B                 4787 	dec	hl
-   0729 5E                 4788 	ld	e, (hl)
-   072A 23                 4789 	inc	hl
-   072B 56                 4790 	ld	d, (hl)
-   072C 1A                 4791 	ld	a,(de)
-   072D 4F                 4792 	ld	c, a
-   072E 21r00r00           4793 	ld	hl, #_MainChar
-   0731 E5                 4794 	push	hl
-   0732 C5                 4795 	push	bc
-   0733 33                 4796 	inc	sp
-   0734 79                 4797 	ld	a, c
-   0735 F5                 4798 	push	af
-   0736 33                 4799 	inc	sp
-   0737 CDr00r00           4800 	call	_set_sprite_data
-   073A E8 04              4801 	add	sp, #4
-                           4802 ;./src/main.c:33: set_sprite_tile(player.sprite.sprite_number, player.sprite.animation_index);
-   073C F8 0B              4803 	ldhl	sp,#(12 - 1)
-   073E 4E                 4804 	ld	c, (hl)
-   073F 23                 4805 	inc	hl
-   0740 46                 4806 	ld	b, (hl)
-   0741 03                 4807 	inc	bc
-   0742 03                 4808 	inc	bc
-   0743 0A                 4809 	ld	a, (bc)
-   0744 47                 4810 	ld	b, a
-   0745 23                 4811 	inc	hl
-   0746 5E                 4812 	ld	e, (hl)
-   0747 23                 4813 	inc	hl
-   0748 56                 4814 	ld	d, (hl)
-   0749 1A                 4815 	ld	a,(de)
-   074A C5                 4816 	push	bc
-   074B 33                 4817 	inc	sp
-   074C F5                 4818 	push	af
-   074D 33                 4819 	inc	sp
-   074E CDr00r00           4820 	call	_set_sprite_tile
-   0751 E8 02              4821 	add	sp, #2
-                           4822 ;./src/main.c:34: move_sprite(player.sprite.sprite_number, player.sprite.position.x, player.sprite.position.y);
-   0753 F8 0B              4823 	ldhl	sp,#(12 - 1)
-   0755 4E                 4824 	ld	c, (hl)
-   0756 23                 4825 	inc	hl
-   0757 46                 4826 	ld	b, (hl)
-   0758 03                 4827 	inc	bc
-   0759 0A                 4828 	ld	a, (bc)
-   075A 47                 4829 	ld	b, a
-   075B 2B                 4830 	dec	hl
-   075C 5E                 4831 	ld	e, (hl)
-   075D 23                 4832 	inc	hl
-   075E 56                 4833 	ld	d, (hl)
-   075F 1A                 4834 	ld	a,(de)
-   0760 23                 4835 	inc	hl
-   0761 5E                 4836 	ld	e, (hl)
-   0762 23                 4837 	inc	hl
-   0763 56                 4838 	ld	d, (hl)
-   0764 F5                 4839 	push	af
-   0765 1A                 4840 	ld	a,(de)
-   0766 4F                 4841 	ld	c, a
-   0767 F1                 4842 	pop	af
-   0768 C5                 4843 	push	bc
-   0769 33                 4844 	inc	sp
-   076A F5                 4845 	push	af
-   076B 33                 4846 	inc	sp
-   076C 79                 4847 	ld	a, c
-   076D F5                 4848 	push	af
-   076E 33                 4849 	inc	sp
-   076F CDr00r00           4850 	call	_move_sprite
-   0772 E8 03              4851 	add	sp, #3
-                           4852 ;./src/main.c:35: SHOW_SPRITES;
-   0774 F0r00              4853 	ldh	a, (_LCDC_REG+0)
-   0776 F6 02              4854 	or	a, #0x02
-   0778 E0r00              4855 	ldh	(_LCDC_REG+0),a
-                           4856 ;./src/main.c:37: set_map(&player);
-   077A F8 0B              4857 	ldhl	sp,#(12 - 1)
-   077C 4E                 4858 	ld	c, (hl)
-   077D 23                 4859 	inc	hl
-   077E 46                 4860 	ld	b, (hl)
-   077F C5                 4861 	push	bc
-   0780 CDr51r03           4862 	call	_set_map
-   0783 E8 02              4863 	add	sp, #2
-                           4864 ;./src/main.c:39: while(1){
-   0785                    4865 00105$:
-                           4866 ;./src/main.c:40: UPDATE_JOYPAD_STATE;
-   0785 E5                 4867 	push	hl
-   0786 21r31r00           4868 	ld	hl, #_joypad_curr_state
-   0789 7E                 4869 	ld	a, (hl)
-   078A 21r30r00           4870 	ld	hl, #_joypad_prev_state
-   078D 77                 4871 	ld	(hl), a
-   078E E1                 4872 	pop	hl
-   078F CDr00r00           4873 	call	_joypad
-   0792 21r31r00           4874 	ld	hl, #_joypad_curr_state
-   0795 73                 4875 	ld	(hl), e
-                           4876 ;./src/main.c:44: player_movement(&player);
-   0796 F8 0B              4877 	ldhl	sp,#(12 - 1)
-   0798 4E                 4878 	ld	c, (hl)
-   0799 23                 4879 	inc	hl
-   079A 46                 4880 	ld	b, (hl)
-   079B C5                 4881 	push	bc
-   079C CDr6Cr01           4882 	call	_player_movement
-   079F E8 02              4883 	add	sp, #2
-                           4884 ;./src/main.c:45: jump(&player);
-   07A1 F8 0B              4885 	ldhl	sp,#(12 - 1)
-   07A3 4E                 4886 	ld	c, (hl)
-   07A4 23                 4887 	inc	hl
-   07A5 46                 4888 	ld	b, (hl)
-   07A6 C5                 4889 	push	bc
-   07A7 CDr69r02           4890 	call	_jump
-   07AA E8 02              4891 	add	sp, #2
-                           4892 ;./src/main.c:48: collision_check(&(player.sprite));
-   07AC F8 0B              4893 	ldhl	sp,#(12 - 1)
-   07AE 4E                 4894 	ld	c, (hl)
-   07AF 23                 4895 	inc	hl
-   07B0 46                 4896 	ld	b, (hl)
-   07B1 C5                 4897 	push	bc
-   07B2 CDrDDr04           4898 	call	_collision_check
-   07B5 E8 02              4899 	add	sp, #2
-                           4900 ;./src/main.c:53: gravity(&(player.sprite));
-   07B7 F8 0B              4901 	ldhl	sp,#(12 - 1)
-   07B9 4E                 4902 	ld	c, (hl)
-   07BA 23                 4903 	inc	hl
-   07BB 46                 4904 	ld	b, (hl)
-   07BC C5                 4905 	push	bc
-   07BD CDrB9r04           4906 	call	_gravity
-   07C0 E8 02              4907 	add	sp, #2
-                           4908 ;./src/main.c:58: update_position(&(player.sprite));
-   07C2 F8 0B              4909 	ldhl	sp,#(12 - 1)
-   07C4 4E                 4910 	ld	c, (hl)
-   07C5 23                 4911 	inc	hl
-   07C6 46                 4912 	ld	b, (hl)
-   07C7 C5                 4913 	push	bc
-   07C8 CDr97r00           4914 	call	_update_position
-   07CB E8 02              4915 	add	sp, #2
-                           4916 ;./src/main.c:59: draw(&(player.sprite));
-   07CD F8 0B              4917 	ldhl	sp,#(12 - 1)
-   07CF 4E                 4918 	ld	c, (hl)
-   07D0 23                 4919 	inc	hl
-   07D1 46                 4920 	ld	b, (hl)
-   07D2 C5                 4921 	push	bc
-   07D3 CDr68r00           4922 	call	_draw
-   07D6 E8 02              4923 	add	sp, #2
-                           4924 ;./src/main.c:62: win_condition(&player);
-   07D8 F8 0B              4925 	ldhl	sp,#(12 - 1)
-   07DA 4E                 4926 	ld	c, (hl)
-   07DB 23                 4927 	inc	hl
-   07DC 46                 4928 	ld	b, (hl)
-   07DD C5                 4929 	push	bc
-   07DE CDr09r04           4930 	call	_win_condition
-   07E1 E8 02              4931 	add	sp, #2
-                           4932 ;./src/main.c:65: wait_vbl_done();
-   07E3 CDr00r00           4933 	call	_wait_vbl_done
-   07E6 C3r85r07           4934 	jp	00105$
-                           4935 ;./src/main.c:68: }
-   07E9 E8 0F              4936 	add	sp, #15
-   07EB C9                 4937 	ret
-                           4938 	.area _CODE
-                           4939 	.area _CABS (ABS)
+   04DD 00                 4276 	.db 0x00
+                           4277 ;./src/./physics.c:3: void gravity(MSprite* sprite){
+                           4278 ;	---------------------------------
+                           4279 ; Function gravity
+                           4280 ; ---------------------------------
+   04DE                    4281 _gravity::
+   04DE E8 FE              4282 	add	sp, #-2
+                           4283 ;./src/./physics.c:5: if(sprite->col.direction.y != 1){
+   04E0 F8 04              4284 	ldhl	sp,#(5 - 1)
+   04E2 4E                 4285 	ld	c, (hl)
+   04E3 23                 4286 	inc	hl
+   04E4 46                 4287 	ld	b, (hl)
+   04E5 21 09 00           4288 	ld	hl, #0x0009
+   04E8 09                 4289 	add	hl, bc
+   04E9 33                 4290 	inc	sp
+   04EA 33                 4291 	inc	sp
+   04EB E5                 4292 	push	hl
+   04EC D1                 4293 	pop	de
+   04ED D5                 4294 	push	de
+   04EE 1A                 4295 	ld	a,(de)
+   04EF 3D                 4296 	dec	a
+   04F0 28 0D              4297 	jr	Z,00103$
+                           4298 ;./src/./physics.c:6: sprite->speed.y += GRAVITY;
+   04F2 21 06 00           4299 	ld	hl, #0x0006
+   04F5 09                 4300 	add	hl, bc
+   04F6 4D                 4301 	ld	c, l
+   04F7 44                 4302 	ld	b, h
+   04F8 0A                 4303 	ld	a, (bc)
+   04F9 21r36r08           4304 	ld	hl, #_GRAVITY
+   04FC 5E                 4305 	ld	e, (hl)
+   04FD 83                 4306 	add	a, e
+   04FE 02                 4307 	ld	(bc), a
+   04FF                    4308 00103$:
+                           4309 ;./src/./physics.c:8: }
+   04FF E8 02              4310 	add	sp, #2
+   0501 C9                 4311 	ret
+                           4312 ;./src/./physics.c:10: void collision_check(MSprite* sprite){
+                           4313 ;	---------------------------------
+                           4314 ; Function collision_check
+                           4315 ; ---------------------------------
+   0502                    4316 _collision_check::
+   0502 E8 F6              4317 	add	sp, #-10
+                           4318 ;./src/./physics.c:11: UINT16 pos = get_world_to_map(&(sprite->position));
+   0504 F8 0C              4319 	ldhl	sp,#(13 - 1)
+   0506 4E                 4320 	ld	c, (hl)
+   0507 23                 4321 	inc	hl
+   0508 46                 4322 	ld	b, (hl)
+   0509 C5                 4323 	push	bc
+   050A C5                 4324 	push	bc
+   050B CDr18r03           4325 	call	_get_world_to_map
+   050E E8 02              4326 	add	sp, #2
+   0510 C1                 4327 	pop	bc
+   0511 33                 4328 	inc	sp
+   0512 33                 4329 	inc	sp
+   0513 D5                 4330 	push	de
+                           4331 ;./src/./physics.c:13: sprite->col.has_collided = false;
+   0514 21 07 00           4332 	ld	hl, #0x0007
+   0517 09                 4333 	add	hl, bc
+   0518 7D                 4334 	ld	a, l
+   0519 54                 4335 	ld	d, h
+   051A F8 02              4336 	ldhl	sp,	#2
+   051C 22                 4337 	ld	(hl+), a
+   051D 72                 4338 	ld	(hl), d
+   051E 2B                 4339 	dec	hl
+   051F 2A                 4340 	ld	a, (hl+)
+   0520 66                 4341 	ld	h, (hl)
+   0521 6F                 4342 	ld	l, a
+   0522 36 00              4343 	ld	(hl), #0x00
+                           4344 ;./src/./physics.c:14: sprite->col.direction.x = 0;
+   0524 21 08 00           4345 	ld	hl, #0x0008
+   0527 09                 4346 	add	hl, bc
+   0528 7D                 4347 	ld	a, l
+   0529 54                 4348 	ld	d, h
+   052A F8 04              4349 	ldhl	sp,	#4
+   052C 22                 4350 	ld	(hl+), a
+   052D 72                 4351 	ld	(hl), d
+   052E 2B                 4352 	dec	hl
+   052F 2A                 4353 	ld	a, (hl+)
+   0530 66                 4354 	ld	h, (hl)
+   0531 6F                 4355 	ld	l, a
+   0532 36 00              4356 	ld	(hl), #0x00
+                           4357 ;./src/./physics.c:15: sprite->col.direction.y = 0;
+   0534 21 09 00           4358 	ld	hl, #0x0009
+   0537 09                 4359 	add	hl, bc
+   0538 7D                 4360 	ld	a, l
+   0539 54                 4361 	ld	d, h
+   053A F8 06              4362 	ldhl	sp,	#6
+   053C 22                 4363 	ld	(hl+), a
+   053D 72                 4364 	ld	(hl), d
+   053E 2B                 4365 	dec	hl
+   053F 2A                 4366 	ld	a, (hl+)
+   0540 66                 4367 	ld	h, (hl)
+   0541 6F                 4368 	ld	l, a
+   0542 36 00              4369 	ld	(hl), #0x00
+                           4370 ;./src/./physics.c:17: if(pos - 1 % 20 == 0 ||
+   0544 D1                 4371 	pop	de
+   0545 D5                 4372 	push	de
+   0546 21 01 00           4373 	ld	hl, #0x0001
+   0549 7B                 4374 	ld	a, e
+   054A 95                 4375 	sub	a, l
+   054B 5F                 4376 	ld	e, a
+   054C 7A                 4377 	ld	a, d
+   054D 9C                 4378 	sbc	a, h
+   054E F8 09              4379 	ldhl	sp,	#9
+   0550 32                 4380 	ld	(hl-), a
+   0551 73                 4381 	ld	(hl), e
+   0552 23                 4382 	inc	hl
+   0553 3A                 4383 	ld	a, (hl-)
+   0554 B6                 4384 	or	a, (hl)
+   0555 CAr87r05           4385 	jp	Z, 00101$
+                           4386 ;./src/./physics.c:18: (GLOBAL_MAP[pos - 1] != EMPTY_TILE &&
+   0558 21r95r02           4387 	ld	hl, #_current_level
+   055B 4E                 4388 	ld	c, (hl)
+   055C 06 00              4389 	ld	b, #0x00
+   055E 69                 4390 	ld	l, c
+   055F 60                 4391 	ld	h, b
+   0560 29                 4392 	add	hl, hl
+   0561 29                 4393 	add	hl, hl
+   0562 09                 4394 	add	hl, bc
+   0563 29                 4395 	add	hl, hl
+   0564 09                 4396 	add	hl, bc
+   0565 29                 4397 	add	hl, hl
+   0566 29                 4398 	add	hl, hl
+   0567 09                 4399 	add	hl, bc
+   0568 29                 4400 	add	hl, hl
+   0569 29                 4401 	add	hl, hl
+   056A 29                 4402 	add	hl, hl
+   056B 4D                 4403 	ld	c, l
+   056C 44                 4404 	ld	b, h
+   056D 21r96r02           4405 	ld	hl, #_maps
+   0570 09                 4406 	add	hl, bc
+   0571 4D                 4407 	ld	c, l
+   0572 44                 4408 	ld	b, h
+   0573 F8 08              4409 	ldhl	sp,	#8
+   0575 2A                 4410 	ld	a, (hl+)
+   0576 66                 4411 	ld	h, (hl)
+   0577 6F                 4412 	ld	l, a
+   0578 09                 4413 	add	hl, bc
+   0579 4D                 4414 	ld	c, l
+   057A 44                 4415 	ld	b, h
+   057B 0A                 4416 	ld	a, (bc)
+   057C B7                 4417 	or	a, a
+   057D 28 15              4418 	jr	Z,00102$
+                           4419 ;./src/./physics.c:19: GLOBAL_MAP[pos - 1] != FLAG_TILE  &&
+   057F FE 01              4420 	cp	a, #0x01
+   0581 28 11              4421 	jr	Z,00102$
+                           4422 ;./src/./physics.c:20: GLOBAL_MAP[pos - 1] != START_TILE)){
+   0583 D6 02              4423 	sub	a, #0x02
+   0585 28 0D              4424 	jr	Z,00102$
+   0587                    4425 00101$:
+                           4426 ;./src/./physics.c:21: sprite->col.direction.x = -1;
+   0587 F8 04              4427 	ldhl	sp,	#4
+   0589 2A                 4428 	ld	a, (hl+)
+   058A 66                 4429 	ld	h, (hl)
+   058B 6F                 4430 	ld	l, a
+   058C 36 FF              4431 	ld	(hl), #0xff
+                           4432 ;./src/./physics.c:22: sprite->col.has_collided = true;
+   058E C1                 4433 	pop	bc
+   058F E1                 4434 	pop	hl
+   0590 E5                 4435 	push	hl
+   0591 C5                 4436 	push	bc
+   0592 36 01              4437 	ld	(hl), #0x01
+   0594                    4438 00102$:
+                           4439 ;./src/./physics.c:25: if(pos + 1 % 20 == 19 ||
+   0594 D1                 4440 	pop	de
+   0595 D5                 4441 	push	de
+   0596 21 01 00           4442 	ld	hl, #0x0001
+   0599 19                 4443 	add	hl, de
+   059A 7D                 4444 	ld	a, l
+   059B 54                 4445 	ld	d, h
+   059C F8 08              4446 	ldhl	sp,	#8
+   059E 22                 4447 	ld	(hl+), a
+   059F 72                 4448 	ld	(hl), d
+   05A0 2B                 4449 	dec	hl
+   05A1 7E                 4450 	ld	a, (hl)
+   05A2 D6 13              4451 	sub	a, #0x13
+   05A4 23                 4452 	inc	hl
+   05A5 B6                 4453 	or	a, (hl)
+   05A6 CArD8r05           4454 	jp	Z,00106$
+                           4455 ;./src/./physics.c:26: (GLOBAL_MAP[pos + 1] != EMPTY_TILE &&
+   05A9 21r95r02           4456 	ld	hl, #_current_level
+   05AC 4E                 4457 	ld	c, (hl)
+   05AD 06 00              4458 	ld	b, #0x00
+   05AF 69                 4459 	ld	l, c
+   05B0 60                 4460 	ld	h, b
+   05B1 29                 4461 	add	hl, hl
+   05B2 29                 4462 	add	hl, hl
+   05B3 09                 4463 	add	hl, bc
+   05B4 29                 4464 	add	hl, hl
+   05B5 09                 4465 	add	hl, bc
+   05B6 29                 4466 	add	hl, hl
+   05B7 29                 4467 	add	hl, hl
+   05B8 09                 4468 	add	hl, bc
+   05B9 29                 4469 	add	hl, hl
+   05BA 29                 4470 	add	hl, hl
+   05BB 29                 4471 	add	hl, hl
+   05BC 4D                 4472 	ld	c, l
+   05BD 44                 4473 	ld	b, h
+   05BE 21r96r02           4474 	ld	hl, #_maps
+   05C1 09                 4475 	add	hl, bc
+   05C2 4D                 4476 	ld	c, l
+   05C3 44                 4477 	ld	b, h
+   05C4 F8 08              4478 	ldhl	sp,	#8
+   05C6 2A                 4479 	ld	a, (hl+)
+   05C7 66                 4480 	ld	h, (hl)
+   05C8 6F                 4481 	ld	l, a
+   05C9 09                 4482 	add	hl, bc
+   05CA 4D                 4483 	ld	c, l
+   05CB 44                 4484 	ld	b, h
+   05CC 0A                 4485 	ld	a, (bc)
+   05CD B7                 4486 	or	a, a
+   05CE 28 15              4487 	jr	Z,00115$
+                           4488 ;./src/./physics.c:27: GLOBAL_MAP[pos + 1] != FLAG_TILE  &&
+   05D0 FE 01              4489 	cp	a, #0x01
+   05D2 28 11              4490 	jr	Z,00115$
+                           4491 ;./src/./physics.c:28: GLOBAL_MAP[pos + 1] != START_TILE)){
+   05D4 D6 02              4492 	sub	a, #0x02
+   05D6 28 0D              4493 	jr	Z,00115$
+   05D8                    4494 00106$:
+                           4495 ;./src/./physics.c:29: sprite->col.direction.x = 1;
+   05D8 F8 04              4496 	ldhl	sp,	#4
+   05DA 2A                 4497 	ld	a, (hl+)
+   05DB 66                 4498 	ld	h, (hl)
+   05DC 6F                 4499 	ld	l, a
+   05DD 36 01              4500 	ld	(hl), #0x01
+                           4501 ;./src/./physics.c:30: sprite->col.has_collided = true;    }
+   05DF C1                 4502 	pop	bc
+   05E0 E1                 4503 	pop	hl
+   05E1 E5                 4504 	push	hl
+   05E2 C5                 4505 	push	bc
+   05E3 36 01              4506 	ld	(hl), #0x01
+                           4507 ;./src/./physics.c:35: GLOBAL_MAP[pos - 20] != START_TILE)){
+   05E5                    4508 00115$:
+                           4509 ;./src/./physics.c:33: (GLOBAL_MAP[pos - 20] != EMPTY_TILE &&
+   05E5 21r95r02           4510 	ld	hl, #_current_level
+   05E8 4E                 4511 	ld	c, (hl)
+   05E9 06 00              4512 	ld	b, #0x00
+   05EB 69                 4513 	ld	l, c
+   05EC 60                 4514 	ld	h, b
+   05ED 29                 4515 	add	hl, hl
+   05EE 29                 4516 	add	hl, hl
+   05EF 09                 4517 	add	hl, bc
+   05F0 29                 4518 	add	hl, hl
+   05F1 09                 4519 	add	hl, bc
+   05F2 29                 4520 	add	hl, hl
+   05F3 29                 4521 	add	hl, hl
+   05F4 09                 4522 	add	hl, bc
+   05F5 29                 4523 	add	hl, hl
+   05F6 29                 4524 	add	hl, hl
+   05F7 29                 4525 	add	hl, hl
+   05F8 4D                 4526 	ld	c, l
+   05F9 44                 4527 	ld	b, h
+   05FA 21r96r02           4528 	ld	hl, #_maps
+   05FD 09                 4529 	add	hl, bc
+   05FE 4D                 4530 	ld	c, l
+   05FF 44                 4531 	ld	b, h
+   0600 D1                 4532 	pop	de
+   0601 D5                 4533 	push	de
+   0602 21 14 00           4534 	ld	hl, #0x0014
+   0605 7B                 4535 	ld	a, e
+   0606 95                 4536 	sub	a, l
+   0607 5F                 4537 	ld	e, a
+   0608 7A                 4538 	ld	a, d
+   0609 9C                 4539 	sbc	a, h
+   060A F8 09              4540 	ldhl	sp,	#9
+   060C 32                 4541 	ld	(hl-), a
+   060D 73                 4542 	ld	(hl), e
+   060E 2A                 4543 	ld	a, (hl+)
+   060F 66                 4544 	ld	h, (hl)
+   0610 6F                 4545 	ld	l, a
+   0611 09                 4546 	add	hl, bc
+   0612 4D                 4547 	ld	c, l
+   0613 44                 4548 	ld	b, h
+   0614 0A                 4549 	ld	a, (bc)
+   0615 B7                 4550 	or	a, a
+   0616 28 15              4551 	jr	Z,00112$
+                           4552 ;./src/./physics.c:34: GLOBAL_MAP[pos - 20] != FLAG_TILE  &&
+   0618 FE 01              4553 	cp	a, #0x01
+   061A 28 11              4554 	jr	Z,00112$
+                           4555 ;./src/./physics.c:35: GLOBAL_MAP[pos - 20] != START_TILE)){
+   061C D6 02              4556 	sub	a, #0x02
+   061E 28 0D              4557 	jr	Z,00112$
+                           4558 ;./src/./physics.c:36: sprite->col.direction.y = -1;
+   0620 F8 06              4559 	ldhl	sp,	#6
+   0622 2A                 4560 	ld	a, (hl+)
+   0623 66                 4561 	ld	h, (hl)
+   0624 6F                 4562 	ld	l, a
+   0625 36 FF              4563 	ld	(hl), #0xff
+                           4564 ;./src/./physics.c:37: sprite->col.has_collided = true;
+   0627 C1                 4565 	pop	bc
+   0628 E1                 4566 	pop	hl
+   0629 E5                 4567 	push	hl
+   062A C5                 4568 	push	bc
+   062B 36 01              4569 	ld	(hl), #0x01
+   062D                    4570 00112$:
+                           4571 ;./src/./physics.c:40: if(pos + 20 > 20 * 18 || 
+   062D D1                 4572 	pop	de
+   062E D5                 4573 	push	de
+   062F 21 14 00           4574 	ld	hl, #0x0014
+   0632 19                 4575 	add	hl, de
+   0633 7D                 4576 	ld	a, l
+   0634 54                 4577 	ld	d, h
+   0635 F8 08              4578 	ldhl	sp,	#8
+   0637 22                 4579 	ld	(hl+), a
+   0638 72                 4580 	ld	(hl), d
+   0639 2B                 4581 	dec	hl
+   063A 3E 68              4582 	ld	a, #0x68
+   063C 96                 4583 	sub	a, (hl)
+   063D 23                 4584 	inc	hl
+   063E 3E 01              4585 	ld	a, #0x01
+   0640 9E                 4586 	sbc	a, (hl)
+   0641 DAr73r06           4587 	jp	C, 00116$
+                           4588 ;./src/./physics.c:41: (GLOBAL_MAP[pos + 20] != EMPTY_TILE &&
+   0644 21r95r02           4589 	ld	hl, #_current_level
+   0647 4E                 4590 	ld	c, (hl)
+   0648 06 00              4591 	ld	b, #0x00
+   064A 69                 4592 	ld	l, c
+   064B 60                 4593 	ld	h, b
+   064C 29                 4594 	add	hl, hl
+   064D 29                 4595 	add	hl, hl
+   064E 09                 4596 	add	hl, bc
+   064F 29                 4597 	add	hl, hl
+   0650 09                 4598 	add	hl, bc
+   0651 29                 4599 	add	hl, hl
+   0652 29                 4600 	add	hl, hl
+   0653 09                 4601 	add	hl, bc
+   0654 29                 4602 	add	hl, hl
+   0655 29                 4603 	add	hl, hl
+   0656 29                 4604 	add	hl, hl
+   0657 4D                 4605 	ld	c, l
+   0658 44                 4606 	ld	b, h
+   0659 21r96r02           4607 	ld	hl, #_maps
+   065C 09                 4608 	add	hl, bc
+   065D 4D                 4609 	ld	c, l
+   065E 44                 4610 	ld	b, h
+   065F F8 08              4611 	ldhl	sp,	#8
+   0661 2A                 4612 	ld	a, (hl+)
+   0662 66                 4613 	ld	h, (hl)
+   0663 6F                 4614 	ld	l, a
+   0664 09                 4615 	add	hl, bc
+   0665 4D                 4616 	ld	c, l
+   0666 44                 4617 	ld	b, h
+   0667 0A                 4618 	ld	a, (bc)
+   0668 B7                 4619 	or	a, a
+   0669 28 15              4620 	jr	Z,00121$
+                           4621 ;./src/./physics.c:42: GLOBAL_MAP[pos + 20] != FLAG_TILE  &&
+   066B FE 01              4622 	cp	a, #0x01
+   066D 28 11              4623 	jr	Z,00121$
+                           4624 ;./src/./physics.c:43: GLOBAL_MAP[pos + 20] != START_TILE)){
+   066F D6 02              4625 	sub	a, #0x02
+   0671 28 0D              4626 	jr	Z,00121$
+   0673                    4627 00116$:
+                           4628 ;./src/./physics.c:44: sprite->col.direction.y = 1;
+   0673 F8 06              4629 	ldhl	sp,	#6
+   0675 2A                 4630 	ld	a, (hl+)
+   0676 66                 4631 	ld	h, (hl)
+   0677 6F                 4632 	ld	l, a
+   0678 36 01              4633 	ld	(hl), #0x01
+                           4634 ;./src/./physics.c:45: sprite->col.has_collided = true;
+   067A C1                 4635 	pop	bc
+   067B E1                 4636 	pop	hl
+   067C E5                 4637 	push	hl
+   067D C5                 4638 	push	bc
+   067E 36 01              4639 	ld	(hl), #0x01
+   0680                    4640 00121$:
+                           4641 ;./src/./physics.c:47: }
+   0680 E8 0A              4642 	add	sp, #10
+   0682 C9                 4643 	ret
+                           4644 ;./src/main.c:17: void performantdelay(UINT8 numloops){
+                           4645 ;	---------------------------------
+                           4646 ; Function performantdelay
+                           4647 ; ---------------------------------
+   0683                    4648 _performantdelay::
+                           4649 ;./src/main.c:19: for(i = 0; i < numloops; i++){
+   0683 0E 00              4650 	ld	c, #0x00
+   0685                    4651 00103$:
+   0685 79                 4652 	ld	a, c
+   0686 F8 02              4653 	ldhl	sp,	#2
+   0688 96                 4654 	sub	a, (hl)
+   0689 D0                 4655 	ret	NC
+                           4656 ;./src/main.c:20: wait_vbl_done();
+   068A C5                 4657 	push	bc
+   068B CDr00r00           4658 	call	_wait_vbl_done
+   068E C1                 4659 	pop	bc
+                           4660 ;./src/main.c:19: for(i = 0; i < numloops; i++){
+   068F 0C                 4661 	inc	c
+   0690 18 F3              4662 	jr	00103$
+                           4663 ;./src/main.c:22: }
+   0692 C9                 4664 	ret
+                           4665 ;./src/main.c:24: void main()
+                           4666 ;	---------------------------------
+                           4667 ; Function main
+                           4668 ; ---------------------------------
+   0693                    4669 _main::
+   0693 E8 F1              4670 	add	sp, #-15
+                           4671 ;./src/main.c:26: set_bkg_data(0, 5, BackgroundTiles);
+   0695 21r35r02           4672 	ld	hl, #_BackgroundTiles
+   0698 E5                 4673 	push	hl
+   0699 3E 05              4674 	ld	a, #0x05
+   069B F5                 4675 	push	af
+   069C 33                 4676 	inc	sp
+   069D AF                 4677 	xor	a, a
+   069E F5                 4678 	push	af
+   069F 33                 4679 	inc	sp
+   06A0 CDr00r00           4680 	call	_set_bkg_data
+   06A3 E8 04              4681 	add	sp, #4
+                           4682 ;./src/main.c:28: SHOW_BKG;
+   06A5 F0r00              4683 	ldh	a, (_LCDC_REG+0)
+   06A7 F6 01              4684 	or	a, #0x01
+   06A9 E0r00              4685 	ldh	(_LCDC_REG+0),a
+                           4686 ;./src/main.c:30: MPlayer player = {{{70, 24}, 0, 3, 0, {0, 0}, {false, {0, 0}}}, false};
+   06AB F8 00              4687 	ldhl	sp,	#0
+   06AD 7D                 4688 	ld	a, l
+   06AE 54                 4689 	ld	d, h
+   06AF F8 0D              4690 	ldhl	sp,	#13
+   06B1 22                 4691 	ld	(hl+), a
+   06B2 72                 4692 	ld	(hl), d
+   06B3 2B                 4693 	dec	hl
+   06B4 2A                 4694 	ld	a, (hl+)
+   06B5 66                 4695 	ld	h, (hl)
+   06B6 6F                 4696 	ld	l, a
+   06B7 36 46              4697 	ld	(hl), #0x46
+   06B9 F8 0D              4698 	ldhl	sp,#(14 - 1)
+   06BB 4E                 4699 	ld	c, (hl)
+   06BC 23                 4700 	inc	hl
+   06BD 46                 4701 	ld	b, (hl)
+   06BE 03                 4702 	inc	bc
+   06BF 3E 18              4703 	ld	a, #0x18
+   06C1 02                 4704 	ld	(bc), a
+   06C2 2B                 4705 	dec	hl
+   06C3 4E                 4706 	ld	c, (hl)
+   06C4 23                 4707 	inc	hl
+   06C5 46                 4708 	ld	b, (hl)
+   06C6 03                 4709 	inc	bc
+   06C7 03                 4710 	inc	bc
+   06C8 AF                 4711 	xor	a, a
+   06C9 02                 4712 	ld	(bc), a
+   06CA 2B                 4713 	dec	hl
+   06CB 4E                 4714 	ld	c, (hl)
+   06CC 23                 4715 	inc	hl
+   06CD 46                 4716 	ld	b, (hl)
+   06CE 03                 4717 	inc	bc
+   06CF 03                 4718 	inc	bc
+   06D0 03                 4719 	inc	bc
+   06D1 3E 03              4720 	ld	a, #0x03
+   06D3 02                 4721 	ld	(bc), a
+   06D4 2B                 4722 	dec	hl
+   06D5 5E                 4723 	ld	e, (hl)
+   06D6 23                 4724 	inc	hl
+   06D7 56                 4725 	ld	d, (hl)
+   06D8 21 04 00           4726 	ld	hl, #0x0004
+   06DB 19                 4727 	add	hl, de
+   06DC 4D                 4728 	ld	c, l
+   06DD 44                 4729 	ld	b, h
+   06DE AF                 4730 	xor	a, a
+   06DF 02                 4731 	ld	(bc), a
+   06E0 F8 0D              4732 	ldhl	sp,#(14 - 1)
+   06E2 5E                 4733 	ld	e, (hl)
+   06E3 23                 4734 	inc	hl
+   06E4 56                 4735 	ld	d, (hl)
+   06E5 21 05 00           4736 	ld	hl, #0x0005
+   06E8 19                 4737 	add	hl, de
+   06E9 4D                 4738 	ld	c, l
+   06EA 44                 4739 	ld	b, h
+   06EB AF                 4740 	xor	a, a
+   06EC 02                 4741 	ld	(bc), a
+   06ED F8 0D              4742 	ldhl	sp,#(14 - 1)
+   06EF 5E                 4743 	ld	e, (hl)
+   06F0 23                 4744 	inc	hl
+   06F1 56                 4745 	ld	d, (hl)
+   06F2 21 06 00           4746 	ld	hl, #0x0006
+   06F5 19                 4747 	add	hl, de
+   06F6 4D                 4748 	ld	c, l
+   06F7 44                 4749 	ld	b, h
+   06F8 AF                 4750 	xor	a, a
+   06F9 02                 4751 	ld	(bc), a
+   06FA F8 0D              4752 	ldhl	sp,#(14 - 1)
+   06FC 5E                 4753 	ld	e, (hl)
+   06FD 23                 4754 	inc	hl
+   06FE 56                 4755 	ld	d, (hl)
+   06FF 21 07 00           4756 	ld	hl, #0x0007
+   0702 19                 4757 	add	hl, de
+   0703 4D                 4758 	ld	c, l
+   0704 44                 4759 	ld	b, h
+   0705 AF                 4760 	xor	a, a
+   0706 02                 4761 	ld	(bc), a
+   0707 F8 0D              4762 	ldhl	sp,#(14 - 1)
+   0709 5E                 4763 	ld	e, (hl)
+   070A 23                 4764 	inc	hl
+   070B 56                 4765 	ld	d, (hl)
+   070C 21 08 00           4766 	ld	hl, #0x0008
+   070F 19                 4767 	add	hl, de
+   0710 4D                 4768 	ld	c, l
+   0711 44                 4769 	ld	b, h
+   0712 AF                 4770 	xor	a, a
+   0713 02                 4771 	ld	(bc), a
+   0714 F8 0D              4772 	ldhl	sp,#(14 - 1)
+   0716 5E                 4773 	ld	e, (hl)
+   0717 23                 4774 	inc	hl
+   0718 56                 4775 	ld	d, (hl)
+   0719 21 09 00           4776 	ld	hl, #0x0009
+   071C 19                 4777 	add	hl, de
+   071D 4D                 4778 	ld	c, l
+   071E 44                 4779 	ld	b, h
+   071F AF                 4780 	xor	a, a
+   0720 02                 4781 	ld	(bc), a
+   0721 F8 00              4782 	ldhl	sp,	#0
+   0723 7D                 4783 	ld	a, l
+   0724 54                 4784 	ld	d, h
+   0725 F8 0B              4785 	ldhl	sp,	#11
+   0727 22                 4786 	ld	(hl+), a
+   0728 72                 4787 	ld	(hl), d
+   0729 2B                 4788 	dec	hl
+   072A 5E                 4789 	ld	e, (hl)
+   072B 23                 4790 	inc	hl
+   072C 56                 4791 	ld	d, (hl)
+   072D 21 0A 00           4792 	ld	hl, #0x000a
+   0730 19                 4793 	add	hl, de
+   0731 4D                 4794 	ld	c, l
+   0732 44                 4795 	ld	b, h
+   0733 AF                 4796 	xor	a, a
+   0734 02                 4797 	ld	(bc), a
+                           4798 ;./src/main.c:32: set_sprite_data(player.sprite.sprite_number, player.sprite.max_animations, MainChar);
+   0735 F8 0B              4799 	ldhl	sp,#(12 - 1)
+   0737 4E                 4800 	ld	c, (hl)
+   0738 23                 4801 	inc	hl
+   0739 46                 4802 	ld	b, (hl)
+   073A 03                 4803 	inc	bc
+   073B 03                 4804 	inc	bc
+   073C 03                 4805 	inc	bc
+   073D 0A                 4806 	ld	a, (bc)
+   073E 47                 4807 	ld	b, a
+   073F 2B                 4808 	dec	hl
+   0740 5E                 4809 	ld	e, (hl)
+   0741 23                 4810 	inc	hl
+   0742 56                 4811 	ld	d, (hl)
+   0743 21 04 00           4812 	ld	hl, #0x0004
+   0746 19                 4813 	add	hl, de
+   0747 7D                 4814 	ld	a, l
+   0748 54                 4815 	ld	d, h
+   0749 F8 0D              4816 	ldhl	sp,	#13
+   074B 22                 4817 	ld	(hl+), a
+   074C 72                 4818 	ld	(hl), d
+   074D 2B                 4819 	dec	hl
+   074E 5E                 4820 	ld	e, (hl)
+   074F 23                 4821 	inc	hl
+   0750 56                 4822 	ld	d, (hl)
+   0751 1A                 4823 	ld	a,(de)
+   0752 4F                 4824 	ld	c, a
+   0753 21r00r00           4825 	ld	hl, #_MainChar
+   0756 E5                 4826 	push	hl
+   0757 C5                 4827 	push	bc
+   0758 33                 4828 	inc	sp
+   0759 79                 4829 	ld	a, c
+   075A F5                 4830 	push	af
+   075B 33                 4831 	inc	sp
+   075C CDr00r00           4832 	call	_set_sprite_data
+   075F E8 04              4833 	add	sp, #4
+                           4834 ;./src/main.c:33: set_sprite_tile(player.sprite.sprite_number, player.sprite.animation_index);
+   0761 F8 0B              4835 	ldhl	sp,#(12 - 1)
+   0763 4E                 4836 	ld	c, (hl)
+   0764 23                 4837 	inc	hl
+   0765 46                 4838 	ld	b, (hl)
+   0766 03                 4839 	inc	bc
+   0767 03                 4840 	inc	bc
+   0768 0A                 4841 	ld	a, (bc)
+   0769 47                 4842 	ld	b, a
+   076A 23                 4843 	inc	hl
+   076B 5E                 4844 	ld	e, (hl)
+   076C 23                 4845 	inc	hl
+   076D 56                 4846 	ld	d, (hl)
+   076E 1A                 4847 	ld	a,(de)
+   076F C5                 4848 	push	bc
+   0770 33                 4849 	inc	sp
+   0771 F5                 4850 	push	af
+   0772 33                 4851 	inc	sp
+   0773 CDr00r00           4852 	call	_set_sprite_tile
+   0776 E8 02              4853 	add	sp, #2
+                           4854 ;./src/main.c:34: move_sprite(player.sprite.sprite_number, player.sprite.position.x, player.sprite.position.y);
+   0778 F8 0B              4855 	ldhl	sp,#(12 - 1)
+   077A 4E                 4856 	ld	c, (hl)
+   077B 23                 4857 	inc	hl
+   077C 46                 4858 	ld	b, (hl)
+   077D 03                 4859 	inc	bc
+   077E 0A                 4860 	ld	a, (bc)
+   077F 47                 4861 	ld	b, a
+   0780 2B                 4862 	dec	hl
+   0781 5E                 4863 	ld	e, (hl)
+   0782 23                 4864 	inc	hl
+   0783 56                 4865 	ld	d, (hl)
+   0784 1A                 4866 	ld	a,(de)
+   0785 23                 4867 	inc	hl
+   0786 5E                 4868 	ld	e, (hl)
+   0787 23                 4869 	inc	hl
+   0788 56                 4870 	ld	d, (hl)
+   0789 F5                 4871 	push	af
+   078A 1A                 4872 	ld	a,(de)
+   078B 4F                 4873 	ld	c, a
+   078C F1                 4874 	pop	af
+   078D C5                 4875 	push	bc
+   078E 33                 4876 	inc	sp
+   078F F5                 4877 	push	af
+   0790 33                 4878 	inc	sp
+   0791 79                 4879 	ld	a, c
+   0792 F5                 4880 	push	af
+   0793 33                 4881 	inc	sp
+   0794 CDr00r00           4882 	call	_move_sprite
+   0797 E8 03              4883 	add	sp, #3
+                           4884 ;./src/main.c:35: SHOW_SPRITES;
+   0799 F0r00              4885 	ldh	a, (_LCDC_REG+0)
+   079B F6 02              4886 	or	a, #0x02
+   079D E0r00              4887 	ldh	(_LCDC_REG+0),a
+                           4888 ;./src/main.c:37: set_map(&player);
+   079F F8 0B              4889 	ldhl	sp,#(12 - 1)
+   07A1 4E                 4890 	ld	c, (hl)
+   07A2 23                 4891 	inc	hl
+   07A3 46                 4892 	ld	b, (hl)
+   07A4 C5                 4893 	push	bc
+   07A5 CDr76r03           4894 	call	_set_map
+   07A8 E8 02              4895 	add	sp, #2
+                           4896 ;./src/main.c:39: while(1){
+   07AA                    4897 00105$:
+                           4898 ;./src/main.c:40: UPDATE_JOYPAD_STATE;
+   07AA E5                 4899 	push	hl
+   07AB 21r31r00           4900 	ld	hl, #_joypad_curr_state
+   07AE 7E                 4901 	ld	a, (hl)
+   07AF 21r30r00           4902 	ld	hl, #_joypad_prev_state
+   07B2 77                 4903 	ld	(hl), a
+   07B3 E1                 4904 	pop	hl
+   07B4 CDr00r00           4905 	call	_joypad
+   07B7 21r31r00           4906 	ld	hl, #_joypad_curr_state
+   07BA 73                 4907 	ld	(hl), e
+                           4908 ;./src/main.c:44: player_movement(&player);
+   07BB F8 0B              4909 	ldhl	sp,#(12 - 1)
+   07BD 4E                 4910 	ld	c, (hl)
+   07BE 23                 4911 	inc	hl
+   07BF 46                 4912 	ld	b, (hl)
+   07C0 C5                 4913 	push	bc
+   07C1 CDr87r01           4914 	call	_player_movement
+   07C4 E8 02              4915 	add	sp, #2
+                           4916 ;./src/main.c:45: jump(&player);
+   07C6 F8 0B              4917 	ldhl	sp,#(12 - 1)
+   07C8 4E                 4918 	ld	c, (hl)
+   07C9 23                 4919 	inc	hl
+   07CA 46                 4920 	ld	b, (hl)
+   07CB C5                 4921 	push	bc
+   07CC CDr84r02           4922 	call	_jump
+   07CF E8 02              4923 	add	sp, #2
+                           4924 ;./src/main.c:48: collision_check(&(player.sprite));
+   07D1 F8 0B              4925 	ldhl	sp,#(12 - 1)
+   07D3 4E                 4926 	ld	c, (hl)
+   07D4 23                 4927 	inc	hl
+   07D5 46                 4928 	ld	b, (hl)
+   07D6 C5                 4929 	push	bc
+   07D7 CDr02r05           4930 	call	_collision_check
+   07DA E8 02              4931 	add	sp, #2
+                           4932 ;./src/main.c:53: gravity(&(player.sprite));
+   07DC F8 0B              4933 	ldhl	sp,#(12 - 1)
+   07DE 4E                 4934 	ld	c, (hl)
+   07DF 23                 4935 	inc	hl
+   07E0 46                 4936 	ld	b, (hl)
+   07E1 C5                 4937 	push	bc
+   07E2 CDrDEr04           4938 	call	_gravity
+   07E5 E8 02              4939 	add	sp, #2
+                           4940 ;./src/main.c:58: update_position(&(player.sprite));
+   07E7 F8 0B              4941 	ldhl	sp,#(12 - 1)
+   07E9 4E                 4942 	ld	c, (hl)
+   07EA 23                 4943 	inc	hl
+   07EB 46                 4944 	ld	b, (hl)
+   07EC C5                 4945 	push	bc
+   07ED CDr97r00           4946 	call	_update_position
+   07F0 E8 02              4947 	add	sp, #2
+                           4948 ;./src/main.c:59: draw(&(player.sprite));
+   07F2 F8 0B              4949 	ldhl	sp,#(12 - 1)
+   07F4 4E                 4950 	ld	c, (hl)
+   07F5 23                 4951 	inc	hl
+   07F6 46                 4952 	ld	b, (hl)
+   07F7 C5                 4953 	push	bc
+   07F8 CDr68r00           4954 	call	_draw
+   07FB E8 02              4955 	add	sp, #2
+                           4956 ;./src/main.c:62: win_condition(&player);
+   07FD F8 0B              4957 	ldhl	sp,#(12 - 1)
+   07FF 4E                 4958 	ld	c, (hl)
+   0800 23                 4959 	inc	hl
+   0801 46                 4960 	ld	b, (hl)
+   0802 C5                 4961 	push	bc
+   0803 CDr2Er04           4962 	call	_win_condition
+   0806 E8 02              4963 	add	sp, #2
+                           4964 ;./src/main.c:66: performantdelay(5);
+   0808 3E 05              4965 	ld	a, #0x05
+   080A F5                 4966 	push	af
+   080B 33                 4967 	inc	sp
+   080C CDr83r06           4968 	call	_performantdelay
+   080F 33                 4969 	inc	sp
+   0810 C3rAAr07           4970 	jp	00105$
+                           4971 ;./src/main.c:68: }
+   0813 E8 0F              4972 	add	sp, #15
+   0815 C9                 4973 	ret
+                           4974 	.area _CODE
+                           4975 	.area _CABS (ABS)

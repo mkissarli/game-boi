@@ -1,4 +1,4 @@
-static UINT8 GRAVITY = 1;
+static UINT8 GRAVITY = 2;
 UINT8 gravity_time = 0;
 void gravity(MSprite* sprite){
     //Collision Check
@@ -27,8 +27,7 @@ void collision_check(MSprite* sprite){
         GLOBAL_MAP[pos + 1] != FLAG_TILE  &&
         GLOBAL_MAP[pos + 1] != START_TILE)){
         sprite->col.direction.x = 1;
-        sprite->col.has_collided = true;
-    }
+        sprite->col.has_collided = true;    }
     // Up
     if(pos - 20 < 0 ||
        (GLOBAL_MAP[pos - 20] != EMPTY_TILE &&

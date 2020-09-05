@@ -14,7 +14,7 @@ void next_animation(MSprite* sprite){
 
 void player_movement(MPlayer* player)
 {
-    MVector movement_speed = {4, 4};
+    MVector movement_speed = {5, 5};
     UPDATE_JOYPAD_STATE;
     if(JOYPAD_DOWN_PAD_L){
         //if(player->sprite.speed.x != -movement_speed.x){
@@ -51,12 +51,11 @@ void player_movement(MPlayer* player)
 }
 
 void jump(MPlayer* player){
-    //if(player->sprite.col.has_collided == true){
-    //    player->jumped = false;
-    //}
-    
-    //DEBUG_LOG_MESSAGE("Collision: %d %d", player->sprite.col.direction.x, player->sprite.col.direction.y);
     if(JOYPAD_DOWN_A){
+        //No jumping off the top.
+        if(player->sprite.col.direction.y == -1){
+            return;
+        }
         if((player->sprite.col.direction.y == 1 ||
             player->sprite.col.direction.x != 0)){
             player->sprite.speed.y = -15;
