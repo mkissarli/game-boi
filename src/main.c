@@ -5,6 +5,10 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "../sprites/char.c"
+
+#include "../src/globals.c"
+
+#include "../src/math.c"
 #include "../src/input.c"
 #include "../src/debug.c"
 
@@ -58,8 +62,7 @@ void main()
         // Draw
         update_position(&(player.sprite));
         draw(&(player.sprite));
-
-
+        
         win_condition(&player);
         
         // V-Sync

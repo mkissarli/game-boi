@@ -6,6 +6,6 @@ typedef struct MVector
 
 typedef struct MVel
 {
-    INT8 x;
-    INT8 y;
+    FIXED x;
+    FIXED y;
 } MVel;
