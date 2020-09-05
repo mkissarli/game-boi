@@ -63,7 +63,7 @@ void jump(MPlayer* player){
         }
         if((player->sprite.col.direction.y == 1 ||
             player->sprite.col.direction.x != 0)){
-            player->sprite.speed.y = ITOF(-7);
+            player->sprite.speed.y = ITOF(-5);
         }
     
         if(player->sprite.col.direction.x == -1){

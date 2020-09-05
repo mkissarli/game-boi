@@ -22,6 +22,31 @@ void gravity(MSprite* sprite){
      !COL_DEATH_CHECK(x))
 
 
+UINT16 round_up(UINT16 num, UINT16 multiple)
+{
+    if (multiple == 0){
+        return num;
+    }
+    
+    UINT16 remainder = num % multiple;
+    if (remainder == 0){
+        return num;
+    }
+    return num + multiple - remainder;
+}
+
+UINT16 round_down(UINT16 num, UINT16 multiple){
+    if (multiple == 0){
+        return num;
+    }
+    
+    UINT16 remainder = num % multiple;
+    if (remainder == 0){
+        return num;
+    }
+    return num - remainder;
+}
+
 void collision_check(MSprite* sprite){
     UINT16 pos = get_world_to_map(&(sprite->position));
     
@@ -33,24 +58,29 @@ void collision_check(MSprite* sprite){
        COL_CHECK(-1)){
         sprite->col.direction.x = -1;
         sprite->col.has_collided = true;
+        sprite->position.x = round_up(sprite->position.x, 8);//(((sprite->position.x - 8) >> 3) * 8) + 8;
     }
     // Right
     if(pos + 1 % 20 == 19 ||
        COL_CHECK(1)){
         sprite->col.direction.x = 1;
         sprite->col.has_collided = true;
+      
+        sprite->position.x = round_down(sprite->position.x, 8);//(((sprite->position.x - 8) >> 3) * 8) + 8;
     }
     // Up
     if(pos - 20 < 0 ||
        COL_CHECK(-20)){
         sprite->col.direction.y = -1;
-        sprite->col.has_collided = true;
+        sprite->col.has_collided = true;        
+        sprite->position.y = round_up(sprite->position.y, 8);//(((sprite->position.y - 16) >> 3) * 8) + 16;
     }
     // Down
     if(pos + 20 > 20 * 18 ||
        COL_CHECK(20)){
         sprite->col.direction.y = 1;
         sprite->col.has_collided = true;
+        sprite->position.y = round_down(sprite->position.y, 8);//sprite->position.y = (((sprite->position.x - 16) >> 3) * 8) + 16;
     }
 }
 
