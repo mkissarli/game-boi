@@ -56,7 +56,7 @@ void player_movement(MPlayer* player)
 }
 
 void jump(MPlayer* player){
-    if(JOYPAD_DOWN_A){
+    if(JOYPAD_DOWN_A && player->sprite.col.has_collided){
         //No jumping off the top.
         if(player->sprite.col.direction.y == -1){
             return;
