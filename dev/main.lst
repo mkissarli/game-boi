@@ -2,7 +2,7 @@
                               2 ; File Created by SDCC : free open source ANSI-C Compiler
                               3 ; Version 4.0.0 #11528 (MINGW32)
                               4 ;--------------------------------------------------------
-                              5 	.module C__Users_Thief3_AppData_Local_Temp_lcc84321
+                              5 	.module C__Users_Thief3_AppData_Local_Temp_lcc50881
                               6 	.optsdcc -mgbz80
                               7 	
                               8 ;--------------------------------------------------------
@@ -4902,10 +4902,10 @@
                            4893 ; ---------------------------------
    0767                    4894 _main::
    0767 E8 F1              4895 	add	sp, #-15
-                           4896 ;./src/main.c:26: set_bkg_data(0, 5, BackgroundTiles);
+                           4896 ;./src/main.c:26: set_bkg_data(0, 7, BackgroundTiles);
    0769 21r35r02           4897 	ld	hl, #_BackgroundTiles
    076C E5                 4898 	push	hl
-   076D 3E 05              4899 	ld	a, #0x05
+   076D 3E 07              4899 	ld	a, #0x07
    076F F5                 4900 	push	af
    0770 33                 4901 	inc	sp
    0771 AF                 4902 	xor	a, a

@@ -23,7 +23,7 @@ void performantdelay(UINT8 numloops){
 
 void main()
 {
-    set_bkg_data(0, 5, BackgroundTiles);
+    set_bkg_data(0, 7, BackgroundTiles);
     
     SHOW_BKG;
     
