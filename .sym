@@ -95,12 +95,12 @@
 00:1F12 s__BASE
 00:2EFF s__LIT
 00:2EFF s__GSINIT
-01:4EF1 s__GSINITTAIL
-01:4EF2 s__GSFINAL
+01:6409 s__GSINITTAIL
+01:640A s__GSFINAL
 00:C000 .OAM
 00:C0A0 s__DATA
-00:C907 s__BSS
-00:C98A s__HEAP
+00:CD3F s__BSS
+00:CDC2 s__HEAP
 00:E000 .STACK
 00:FF80 .refresh_OAM
 ; Area: _CODE
@@ -293,30 +293,30 @@
 ; Area: _DATA
 00:C0A0 _MainChar
 00:C2D5 _BackgroundTiles
-00:C906 _gravity_time
+00:CD3E _gravity_time
 ; Area: _BSS
-00:C907 __cpu
-00:C908 .mode
-00:C909 __io_out
-00:C90A __io_in
-00:C90B __io_status
-00:C90C .vbl_done
-00:C90D _sys_time
-00:C90D .sys_time
-00:C90F .int_0x40
-00:C91F .int_0x48
-00:C92F .int_0x50
-00:C93F .int_0x58
-00:C94F .int_0x60
-00:C95F font_current
-00:C962 font_first_free_tile
-00:C963 font_table
-00:C975 .curx
-00:C976 .cury
-00:C977 .fg_colour
-00:C978 .bg_colour
+00:CD3F __cpu
+00:CD40 .mode
+00:CD41 __io_out
+00:CD42 __io_in
+00:CD43 __io_status
+00:CD44 .vbl_done
+00:CD45 _sys_time
+00:CD45 .sys_time
+00:CD47 .int_0x40
+00:CD57 .int_0x48
+00:CD67 .int_0x50
+00:CD77 .int_0x58
+00:CD87 .int_0x60
+00:CD97 font_current
+00:CD9A font_first_free_tile
+00:CD9B font_table
+00:CDAD .curx
+00:CDAE .cury
+00:CDAF .fg_colour
+00:CDB0 .bg_colour
 ; Area: _HEAP
-00:C98A _malloc_heap_start
+00:CDC2 _malloc_heap_start
 ; Area: _HRAM13
 00:FF90 __current_bank
 ; Area: _EMU_HEADER0

@@ -12,7 +12,7 @@ Symbol Table
     __divsin   **** GX  |     __divuin   **** GX  |     __moduin   **** GX
   0 _collisi   0B45 GR  |   1 _current   02C5 R   |   0 _death_c   0DB2 GR
   1 _debug_b   0035 R   |     _delay     **** GX  |   0 _draw      03D9 GR
-  0 _get_wor   07D8 GR  |   0 _gravity   099E GR  |   1 _gravity   0866 GR
+  0 _get_wor   07D8 GR  |   0 _gravity   099E GR  |   1 _gravity   0C9E GR
   1 _input_t   0032 R   |     _joypad    **** GX  |   1 _joypad_   0031 R
   1 _joypad_   0030 R   |   0 _joypad_   0371 R   |   0 _joypad_   0399 R
   0 _jump      073F GR  |   0 _main      0E58 GR  |   1 _maps      02C6 R
@@ -28,10 +28,10 @@ Hexadecimal [16-Bits]
 Area Table
 
    0 _CODE      size  FEE   flags    0
-   1 _DATA      size  867   flags    0
+   1 _DATA      size  C9F   flags    0
    2 _DABS      size    0   flags    8
    3 _HOME      size    0   flags    0
-   4 _GSINIT    size 1FF2   flags    0
+   4 _GSINIT    size 350A   flags    0
    5 _GSFINAL   size    0   flags    0
    6 _CABS      size    0   flags    8
 

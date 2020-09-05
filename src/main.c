@@ -27,7 +27,7 @@ void performantdelay(UINT8 numloops){
 
 void main()
 {
-    set_bkg_data(0, 7, BackgroundTiles);
+    set_bkg_data(0, 9, BackgroundTiles);
     
     SHOW_BKG;
     
@@ -53,11 +53,7 @@ void main()
         collision_check(&(player.sprite));
         
         // Gravity
-        //++gravity_time;
-        //if(gravity_time > 3){
         gravity(&(player.sprite));
-        //++gravity_time;
-        //}
         
         // Draw
         update_position(&(player.sprite));
