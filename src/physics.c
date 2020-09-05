@@ -2,7 +2,8 @@
 UINT8 gravity_time = 0;
 void gravity(MSprite* sprite){
     //Collision Check
-    if(sprite->col.direction.y != 1){
+    if(sprite->col.direction.y != 1 &&
+       FINT(sprite->speed.y) <= 8){
         sprite->speed.y =  FADD(sprite->speed.y, FDIV(GRAVITY, ITOF(FPS)));
         DEBUG_LOG_MESSAGE("ACC: %d.%d", FINT(FDIV(GRAVITY, ITOF(FPS))), FFRAC(FDIV(GRAVITY, ITOF(FPS)), 10))
         DEBUG_LOG_MESSAGE("sprite y speed: %d.%d", FINT(sprite->speed.y), FFRAC(sprite->speed.y, 10));
