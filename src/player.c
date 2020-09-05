@@ -50,8 +50,8 @@ void player_movement(MPlayer* player)
     if(JOYPAD_DOWN_PAD_D){
         player->sprite.speed.y = ITOF(movement_speed);//FADD(player->sprite.speed.y, FDIV(movement_speed.y, FPS));
     }
-    else if(JOYPAD_UP_PAD_D){
-        player->sprite.speed.y =0; //-= movement_speed.y;
+    else if(JOYPAD_RELEASED_PAD_D){
+        //player->sprite.speed.y = FSUB(player->sprite.speed.y, FMUL(ITOF(-1),movement_speed.y));
     }
 }
 
@@ -63,14 +63,14 @@ void jump(MPlayer* player){
         }
         if((player->sprite.col.direction.y == 1 ||
             player->sprite.col.direction.x != 0)){
-            player->sprite.speed.y = ITOF(-15);
+            player->sprite.speed.y = ITOF(-7);
         }
     
         if(player->sprite.col.direction.x == -1){
-            player->sprite.speed.x = ITOF(5);
+            player->sprite.speed.x = ITOF(7);
         }
         else if (player->sprite.col.direction.x == 1){
-            player->sprite.speed.x = ITOF(-5);
+            player->sprite.speed.x = ITOF(-7);
         }
     }
 }

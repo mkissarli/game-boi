@@ -1,11 +1,11 @@
-#define GRAVITY ITOF(2)
+#define GRAVITY ITOF(54)
 UINT8 gravity_time = 0;
 void gravity(MSprite* sprite){
     //Collision Check
     if(sprite->col.direction.y != 1){
-        sprite->speed.y = FADD(sprite->speed.y, FDIV(GRAVITY, FPS));
-        DEBUG_LOG_MESSAGE("sprite y speed: %d", sprite->speed.y);
-        
+        sprite->speed.y =  FADD(sprite->speed.y, FDIV(GRAVITY, ITOF(FPS)));
+        DEBUG_LOG_MESSAGE("ACC: %d.%d", FINT(FDIV(GRAVITY, ITOF(FPS))), FFRAC(FDIV(GRAVITY, ITOF(FPS)), 10))
+        DEBUG_LOG_MESSAGE("sprite y speed: %d.%d", FINT(sprite->speed.y), FFRAC(sprite->speed.y, 10));
     }
 }
 

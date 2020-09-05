@@ -7,26 +7,27 @@ Symbol Table
     .__.H$L.=  0000 L   |   0 _ATAN2     0000 R   |     _BGB_pro   **** GX
   1 _Backgro   0235 GR  |     _LCDC_RE   **** GX  |   1 _MainCha   0000 GR
   0 _SIN_TAB   0117 R   |   0 _SQRT      0317 R   |   1 ___BGB_P   0033 R
-  0 ___str_0   0740 R   |   0 ___str_1   0990 R   |   0 ___str_2   09A0 R
-  0 ___str_3   0A0C R   |   0 ___str_4   0C73 R   |     __divsin   **** GX
-    __divuin   **** GX  |     __moduin   **** GX  |   0 _collisi   0A1F GR
-  1 _current   02C5 R   |   0 _death_c   0BEC GR  |   1 _debug_b   0035 R
-    _delay     **** GX  |   0 _draw      03D9 GR  |   0 _get_wor   07EC GR
-  0 _gravity   09B2 GR  |   1 _gravity   0866 GR  |   1 _input_t   0032 R
-    _joypad    **** GX  |   1 _joypad_   0031 R   |   1 _joypad_   0030 R
-  0 _joypad_   0371 R   |   0 _joypad_   0399 R   |   0 _jump      0753 GR
-  0 _main      0C92 GR  |   1 _maps      02C6 R   |     _move_sp   **** GX
-  0 _next_an   05CC GR  |   0 _perform   0C82 GR  |   0 _player_   0610 GR
-    _set_bkg   **** GX  |     _set_bkg   **** GX  |   0 _set_map   084A GR
-    _set_spr   **** GX  |     _set_spr   **** GX  |     _sprintf   **** GX
-  0 _update_   0408 GR  |     _wait_vb   **** GX  |   0 _win_con   0902 GR
+  0 ___str_0   072C R   |   0 ___str_1   097C R   |   0 ___str_2   098C R
+  0 ___str_3   0A71 R   |   0 ___str_4   0A7C R   |   0 ___str_5   0CE6 R
+    __divsin   **** GX  |     __divuin   **** GX  |     __moduin   **** GX
+  0 _collisi   0A92 GR  |   1 _current   02C5 R   |   0 _death_c   0C5F GR
+  1 _debug_b   0035 R   |     _delay     **** GX  |   0 _draw      03D9 GR
+  0 _get_wor   07D8 GR  |   0 _gravity   099E GR  |   1 _gravity   0866 GR
+  1 _input_t   0032 R   |     _joypad    **** GX  |   1 _joypad_   0031 R
+  1 _joypad_   0030 R   |   0 _joypad_   0371 R   |   0 _joypad_   0399 R
+  0 _jump      073F GR  |   0 _main      0D05 GR  |   1 _maps      02C6 R
+    _move_sp   **** GX  |   0 _next_an   05CC GR  |   0 _perform   0CF5 GR
+  0 _player_   0610 GR  |     _set_bkg   **** GX  |     _set_bkg   **** GX
+  0 _set_map   0836 GR  |     _set_spr   **** GX  |     _set_spr   **** GX
+    _sprintf   **** GX  |   0 _update_   0408 GR  |     _wait_vb   **** GX
+  0 _win_con   08EE GR
 
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy Z80-like CPU), page 2.
 Hexadecimal [16-Bits]
 
 Area Table
 
-   0 _CODE      size  E28   flags    0
+   0 _CODE      size  E9B   flags    0
    1 _DATA      size  867   flags    0
    2 _DABS      size    0   flags    8
    3 _HOME      size    0   flags    0
