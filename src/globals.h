@@ -17,7 +17,7 @@
 #define MAP_HEIGHT    18
 #define TOTAL_TILES   MAP_WIDTH * MAP_HEIGHT
 #define TOTAL_MAP_NUM 4
-#define TOTAL_WORLD_NUM 1
+#define TOTAL_WORLD_NUM 2
 
 
-#define GLOBAL_MAP meta_maps[current_world][current_level]
+#define GLOBAL_MAP maps[current_level]

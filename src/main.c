@@ -19,7 +19,9 @@
 #include "./maps.c"
 #include "./physics.c"
 
-#include "./bank.c"
+//#include "./bank.c"
+//#include "./bank2.c"
+//#include "./bank3.c"
 
 #include "../sprites/splash_data.c"
 #include "../sprites/splash_map.c"

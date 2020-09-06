@@ -29,7 +29,7 @@
 //extern void update_player();
 //extern void update_position_split(UINT16, UINT16);
 
-unsigned char maps2[TOTAL_MAP_NUM][TOTAL_TILES] =
+unsigned char maps[TOTAL_MAP_NUM][TOTAL_TILES] =
 {
     //{Map1},
     //{Map2},
@@ -43,3 +43,4 @@ unsigned char maps2[TOTAL_MAP_NUM][TOTAL_TILES] =
     //{Map10},
 };
 
+//..\gbdk\bin\lcc -Wa-l -Wl-m -Wl-j -DUSE_SFR_FOR_REG -Wf-bo2 -Wf-ba2 -c -o ./dev/bank2.o ./src/bank2.c

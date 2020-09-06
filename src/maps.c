@@ -31,10 +31,8 @@ extern unsigned char maps2[TOTAL_MAP_NUM][TOTAL_TILES];
 //extern void death_check(MPlayer* player);
 //extern void set_map(MPlayer* player);
 
-unsigned char** meta_maps[TOTAL_WORLD_NUM + 1];
-meta_maps[0] = &maps;
-meta_maps[1] = &maps2;
-
+unsigned char** meta_maps[TOTAL_WORLD_NUM];
+meta_maps[0] = maps;
 /*
 static UINT8 current_level = 0;
 
@@ -54,12 +52,12 @@ static unsigned char maps[TOTAL_MAP_NUM][TOTAL_TILES] =
 
 */
 void set_map (MPlayer* player){
-    SWITCH_ROM_MBC1(current_world); 
+    SWITCH_ROM_MBC5(current_world); 
     set_bkg_tiles(0,0,20,18,GLOBAL_MAP);
-    SWITCH_ROM_MBC1(0);
+    SWITCH_ROM_MBC5(0);
     // Start from bottom as more likely the start is near the bottom
     for(UINT16 i = 20 * 18 - 1; i >= 0; --i){
-        SWITCH_ROM_MBC1(current_world);
+        SWITCH_ROM_MBC5(current_world);
         if(GLOBAL_MAP[i] == START_TILE){
             SWITCH_ROM_MBC1(0);
             player->sprite.position.x = i % 20 * 8 + 8;
@@ -74,9 +72,9 @@ void set_map (MPlayer* player){
 
 BYTE win_condition (MPlayer* player){
     UINT16 pos = get_world_to_map((player->sprite.position.x), player->sprite.position.y);
-    SWITCH_ROM_MBC1(current_world);
+    SWITCH_ROM_MBC5(current_world);
     if(GLOBAL_MAP[pos] == FLAG_TILE){
-        SWITCH_ROM_MBC1(0);
+        SWITCH_ROM_MBC5(0);
         if(current_level < TOTAL_MAP_NUM - 1){
             //DEBUG_LOG_MESSAGE("You did a win!!");
             // Some form of congrats

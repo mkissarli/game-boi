@@ -55,11 +55,11 @@ void collision_check(MSprite* sprite){
     sprite->col.has_collided = false;
     sprite->col.direction.x = 0;
     sprite->col.direction.y = 0;
-    SWITCH_ROM_MBC1(current_world);
+    SWITCH_ROM_MBC5(current_world);
     // Left
     if(pos - 1 % 20 == 0 ||
        COL_CHECK(-1)){
-        SWITCH_ROM_MBC1(0);
+        SWITCH_ROM_MBC5(0);
         sprite->col.direction.x = -1;
         sprite->col.has_collided = true;
         sprite->position.x = round_up(sprite->position.x, 8);//(((sprite->position.x - 8) >> 3) * 8) + 8;
@@ -67,7 +67,7 @@ void collision_check(MSprite* sprite){
     // Right
     if(pos + 1 % 20 == 19 ||
        COL_CHECK(1)){
-        SWITCH_ROM_MBC1(0);
+        SWITCH_ROM_MBC5(0);
         sprite->col.direction.x = 1;
         sprite->col.has_collided = true;
       
@@ -76,7 +76,7 @@ void collision_check(MSprite* sprite){
     // Up
     if(pos - 20 < 0 ||
        COL_CHECK(-20)){
-        SWITCH_ROM_MBC1(0);
+        SWITCH_ROM_MBC5(0);
         sprite->col.direction.y = -1;
         sprite->col.has_collided = true;        
         sprite->position.y = round_up(sprite->position.y, 8);//(((sprite->position.y - 16) >> 3) * 8) + 16;
@@ -84,7 +84,7 @@ void collision_check(MSprite* sprite){
     // Down
     if(pos + 20 > 20 * 18 ||
        COL_CHECK(20)){
-        SWITCH_ROM_MBC1(0);
+        SWITCH_ROM_MBC5(0);
         sprite->col.direction.y = 1;
         sprite->col.has_collided = true;
         sprite->position.y = round_down(sprite->position.y, 8);//sprite->position.y = (((sprite->position.x - 16) >> 3) * 8) + 16;
@@ -95,16 +95,16 @@ void collision_check(MSprite* sprite){
 void death_check(MPlayer* player){
     //SWITCH_ROM_MBC1(1);
     UINT16 pos = get_world_to_map((player->sprite.position.x), player->sprite.position.y);
-    SWITCH_ROM_MBC1(current_world);
+    SWITCH_ROM_MBC5(current_world);
     if(COL_DEATH_CHECK(0)){
-        SWITCH_ROM_MBC1(0);
+        SWITCH_ROM_MBC5(0);
         update_position(&(player->sprite));
 
         //current_level = 0;
         JOYPAD_WAIT_ANY;
         set_map(player);
     }
-    //SWITCH_ROM_MBC1(0);
+    SWITCH_ROM_MBC5(0);
 }
 
 void teleporter_check(MPlayer* player){
@@ -113,14 +113,14 @@ void teleporter_check(MPlayer* player){
         teleporter_active = false;
         UINT16 pos = get_world_to_map((player->sprite.position.x), player->sprite.position.y);
         
-        SWITCH_ROM_MBC1(current_world);
+        SWITCH_ROM_MBC5(current_world);
         if(GLOBAL_MAP[pos] == TELEPORTER_TILE  ||
            GLOBAL_MAP[pos] == TELEPORTER2_TILE ||
            GLOBAL_MAP[pos] == TELEPORTER3_TILE){
             //DEBUG_LOG_MESSAGE("Teleporter active");
             for(int i = 0; i < TOTAL_TILES; ++i){
                 if(i != pos && GLOBAL_MAP[i] == GLOBAL_MAP[pos]){
-                    SWITCH_ROM_MBC1(0);
+                    SWITCH_ROM_MBC5(0);
                     player->sprite.position.x = (i % 20) * 8 + 8;
                     player->sprite.position.y = (i / 20) * 8 + 16;
                     delay(100);

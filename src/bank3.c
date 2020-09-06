@@ -9,13 +9,13 @@
 //#include "../sprites/you_win_map.c"
 
 //#include "../sprites/background.c"
-#include "../maps/map1.c"
-#include "../maps/map2.c"
-#include "../maps/map3.c"
+//#include "../maps/map1.c"
+//#include "../maps/map2.c"
+//#include "../maps/map3.c"
 //#include "../maps/map4.c"
-//#include "../maps/map4b.c"
-#include "../maps/map5.c"
-//#include "../maps/map6.c"
+#include "../maps/map4b.c"
+//#include "../maps/map5.c"
+#include "../maps/map6.c"
 //#include "../maps/map7.c"
 //#include "../maps/map8.c"
 //#include "../maps/map9.c"
@@ -29,19 +29,17 @@
 //extern void update_player();
 //extern void update_position_split(UINT16, UINT16);
 
-unsigned char maps[TOTAL_MAP_NUM][TOTAL_TILES] =
+unsigned char maps3[TOTAL_MAP_NUM][TOTAL_TILES] =
 {
-    {Map1},
-    {Map2},
-    {Map3},
-    {Map5},
-    //{Map4b},
-    //{Map6},
+    //{Map1},
+    //{Map2},
+    //{Map3},
+    //{Map5},
+    {Map4b},
+    {Map6},
     //{Map7},
     //{Map8},
     //{Map9},
     //{Map10},
 };
-
-
 
