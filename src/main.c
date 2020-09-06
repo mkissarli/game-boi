@@ -55,6 +55,7 @@ void main()
     move_sprite(player.sprite.sprite_number, player.sprite.position.x, player.sprite.position.y);
     SHOW_SPRITES;
 
+    reset_map(1);
     set_map(&player);
     //SWITCH_ROM_MBC1(0);
 

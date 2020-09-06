@@ -25,8 +25,9 @@ UINT16 get_world_to_map(UINT16 x, UINT16 y){
 }
 
 //extern BYTE win_condition(MPlayer* player);
+unsigned char use_maps[TOTAL_MAP_NUM][TOTAL_TILES];
 extern unsigned char maps[TOTAL_MAP_NUM][TOTAL_TILES];
-//extern unsigned char maps2[TOTAL_MAP_NUM][TOTAL_TILES];
+extern unsigned char maps2[TOTAL_MAP_NUM][TOTAL_TILES];
 //extern void death_check(MPlayer* player);
 //extern void set_map(MPlayer* player);
 
@@ -48,6 +49,24 @@ static unsigned char maps[TOTAL_MAP_NUM][TOTAL_TILES] =
 };
 
 */
+
+void reset_map(UINT8 cur){
+    if(cur == 1){
+        for(int j = 0; j < TOTAL_MAP_NUM; ++j){
+            for(int i = 0; i < TOTAL_TILES; ++i){
+                use_maps[j][i] = maps[j][i];
+            }
+        }
+    }
+    else{
+        for(int j = 0; j < TOTAL_MAP_NUM; ++j){
+            for(int i = 0; i < TOTAL_TILES; ++i){
+                use_maps[j][i] = maps2[j][i];
+            }
+        }
+    }
+}
+
 void set_map (MPlayer* player){
     SWITCH_ROM_MBC5(current_world); 
     DEBUG_LOG_MESSAGE("world %d \n",current_world);
@@ -66,7 +85,6 @@ void set_map (MPlayer* player){
     }
 
     update_position(&(player->sprite));
-    
 }
 
 BYTE win_condition (MPlayer* player){
@@ -85,6 +103,8 @@ BYTE win_condition (MPlayer* player){
         else {
             current_level = 0;
             ++current_world;
+
+            reset_map(current_world);
             
             //DEBUG_LOG_MESSAGE("You won the game!");
             if(current_world > TOTAL_WORLD_NUM){
@@ -94,6 +114,7 @@ BYTE win_condition (MPlayer* player){
                 
                 current_level = 0;
                 current_world = 1;
+                reset_map(1);
                 JOYPAD_WAIT_ANY;
                 delay(100);
                 

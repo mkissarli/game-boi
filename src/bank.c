@@ -13,7 +13,7 @@
 #include "../maps/map2.c"
 #include "../maps/map3.c"
 //#include "../maps/map4.c"
-#include "../maps/map4b.c"
+//#include "../maps/map4b.c"
 #include "../maps/map5.c"
 //#include "../maps/map6.c"
 //#include "../maps/map7.c"
@@ -35,7 +35,7 @@ unsigned char maps[TOTAL_MAP_NUM][TOTAL_TILES] =
     {Map2},
     {Map3},
     {Map5},
-    {Map4b},
+    //{Map4b},
     //{Map6},
     //{Map7},
     //{Map8},
