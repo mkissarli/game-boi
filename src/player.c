@@ -1,3 +1,5 @@
+#include "./player.h"
+static bool teleporter_active = true;
 typedef struct MPlayer
 {
     MSprite sprite;

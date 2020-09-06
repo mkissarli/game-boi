@@ -1,3 +1,5 @@
+#include "./sprites.h"
+
 typedef struct MCollision
 {
     bool has_collided;
@@ -38,4 +40,7 @@ void update_position(MSprite* sprite){
     else {
         sprite->speed.y = 0;
     }
+}
+
+void update_position_split(UINT16 x, UINT16 y){
 }

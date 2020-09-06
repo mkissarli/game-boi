@@ -5,8 +5,9 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "../sprites/char.c"
+#include "../sprites/background.c"
 
-#include "../src/globals.c"
+#include "../src/globals.h"
 
 #include "../src/math.c"
 #include "../src/input.c"
@@ -18,6 +19,8 @@
 #include "./maps.c"
 #include "./physics.c"
 
+#include "./bank.c"
+
 #include "../sprites/splash_data.c"
 #include "../sprites/splash_map.c"
 
@@ -27,6 +30,7 @@ void performantdelay(UINT8 numloops){
         wait_vbl_done();
     }     
 }
+
 
 void main()
 {
@@ -40,8 +44,8 @@ void main()
     waitpad(J_START);
     
     // Load Actual game stuff
-    set_bkg_data(0, 10, BackgroundTiles);
-    
+    set_bkg_data(0, 12, BackgroundTiles);
+
     MPlayer player = {{{70, 24}, 0, 3, 0, {0, 0}, {false, {0, 0}}}, false};
 
     set_sprite_data(player.sprite.sprite_number, player.sprite.max_animations, MainChar);
@@ -50,6 +54,7 @@ void main()
     SHOW_SPRITES;
 
     set_map(&player);
+    //SWITCH_ROM_MBC1(0);
 
     // Game Loop
     while(1){

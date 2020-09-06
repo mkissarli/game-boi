@@ -50,7 +50,7 @@ static FIXED SQRT  (FIXED n         );                   /* Square root.    */
 
 /* Table of fixed-point sin values for implementing sin() and cos() functions.*/
 /* The table goes from the range [0x00 - 0xFF] with 0xFF representing 2pi.    */
-
+/*
 static const UINT16 SIN_TABLE[] =
 {
 0x0000,0x0000,0x0000,0x0001,0x0001,0x0001,0x0002,0x0002,
@@ -85,10 +85,10 @@ static const UINT16 SIN_TABLE[] =
 0xFFF8,0xFFF8,0xFFF8,0xFFF9,0xFFF9,0xFFF9,0xFFFA,0xFFFA,
 0xFFFA,0xFFFB,0xFFFB,0xFFFB,0xFFFC,0xFFFC,0xFFFD,0xFFFD,
 0xFFFD,0xFFFE,0xFFFE,0xFFFF,0xFFFF,0xFFFF,0x0000,0x0000
-};
+};*/
 
 /* The implementations for a number of different fixed-point math operations. */
-
+/*
 static FIXED ATAN2 (FIXED y, FIXED x)
 {
     FIXED coeff_1,coeff_2, abs_y, r, angle;
@@ -121,6 +121,6 @@ static FIXED SQRT (FIXED n)
         s = (s + FDIV(n,s)) >> 1;
     }
     return s;
-}
+}*/
 
 /*////////////////////////////////////////////////////////////////////////////*/

@@ -1,3 +1,5 @@
+#include "./tuple_types.h"
+
 typedef struct MVector
 {
     UINT8 x;
@@ -9,3 +11,4 @@ typedef struct MVel
     FIXED x;
     FIXED y;
 } MVel;
+

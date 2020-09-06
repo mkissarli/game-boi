@@ -89,6 +89,7 @@ while (0)
 #define JOYPAD_WAITTIMEOUT_ANY(   t) JOYPAD_WAITTIMEOUT(J_ANY,    t)
 
 /* Internal implementation of the JOYPAD_WAIT macro. */
+
 static void joypad_wait (UINT8 buttons)
 {
     while (TRUE) {
