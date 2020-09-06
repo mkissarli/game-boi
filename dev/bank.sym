@@ -13,10 +13,10 @@ Area Table
 
    0 _CODE      size    0   flags    0
    1 _DATA_1    size    0   flags    0
-   2 _DATA      size  E10   flags    0
+   2 _DATA      size  870   flags    0
    3 _DABS      size    0   flags    8
    4 _HOME      size    0   flags    0
-   5 _GSINIT    size 4650   flags    0
+   5 _GSINIT    size 1C20   flags    0
    6 _GSFINAL   size    0   flags    0
    7 _CODE_1    size    0   flags    0
    8 _CABS      size    0   flags    8

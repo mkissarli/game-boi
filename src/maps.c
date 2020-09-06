@@ -18,6 +18,7 @@
 //#include "../maps/map10.c"
 
 UINT8 current_level = 0;
+UINT8 current_world = 1;
 
 UINT16 get_world_to_map(UINT16 x, UINT16 y){
     return ((x - 8 ) >> 3) + ((y - 16) >> 3 )* 20;

@@ -29,10 +29,10 @@ Hexadecimal [16-Bits]
 Area Table
 
    0 _CODE      size 1ECC   flags    0
-   1 _DATA      size 1108   flags    0
+   1 _DATA      size  B68   flags    0
    2 _DABS      size    0   flags    8
    3 _HOME      size    0   flags    0
-   4 _GSINIT    size 4B17   flags    0
+   4 _GSINIT    size 20E7   flags    0
    5 _GSFINAL   size    0   flags    0
    6 _CABS      size    0   flags    8
 
