@@ -19,6 +19,7 @@ void player_movement(MPlayer* player)
         //if(player->sprite.speed.x != -movement_speed.x){
         //    player->sprite.speed.x -= 1;
         //}
+        teleporter_active = true;
         player->sprite.speed.x = ITOF(-movement_speed);  //FSUB(player->sprite.speed.x, FDIV(movement_speed.x,FPS));
         //DEBUG_LOG_MESSAGE("speed: %d.%d", FINT(player->sprite.speed.x), FFRAC(player->sprite.speed.x,10));  
         next_animation(&(player->sprite));
@@ -27,6 +28,7 @@ void player_movement(MPlayer* player)
         //if(player->sprite.speed.x != movement_speed.x){
             //player->sprite.speed.x += 1;
             //}
+        teleporter_active = true;
         player->sprite.speed.x = ITOF(movement_speed);//movement_speed.x;// FADD(player->sprite.speed.x, FDIV(movement_speed.x,FPS));
         DEBUG_LOG_MESSAGE("speed: %d -> %d.%d",
                           FROUNDI(player->sprite.speed.x),
@@ -48,6 +50,7 @@ void player_movement(MPlayer* player)
     }
     
     if(JOYPAD_DOWN_PAD_D){
+        teleporter_active = true;
         player->sprite.speed.y = ITOF(movement_speed);//FADD(player->sprite.speed.y, FDIV(movement_speed.y, FPS));
     }
     else if(JOYPAD_RELEASED_PAD_D){
@@ -61,6 +64,7 @@ void jump(MPlayer* player){
         if(player->sprite.col.direction.y == -1){
             return;
         }
+        teleporter_active = true;
         if((player->sprite.col.direction.y == 1 ||
             player->sprite.col.direction.x != 0)){
             player->sprite.speed.y = ITOF(-6);

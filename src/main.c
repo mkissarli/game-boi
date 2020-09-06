@@ -18,6 +18,9 @@
 #include "./maps.c"
 #include "./physics.c"
 
+#include "../sprites/splash_data.c"
+#include "../sprites/splash_map.c"
+
 void performantdelay(UINT8 numloops){
     UINT8 i;
     for(i = 0; i < numloops; i++){
@@ -27,9 +30,17 @@ void performantdelay(UINT8 numloops){
 
 void main()
 {
-    set_bkg_data(0, 9, BackgroundTiles);
-    
+    // Splash screen
+    set_bkg_data(0, 114, splash_data);
+    set_bkg_tiles(0, 0, 20, 18, splash_map);
+
     SHOW_BKG;
+    DISPLAY_ON;
+
+    waitpad(J_START);
+    
+    // Load Actual game stuff
+    set_bkg_data(0, 10, BackgroundTiles);
     
     MPlayer player = {{{70, 24}, 0, 3, 0, {0, 0}, {false, {0, 0}}}, false};
 
@@ -39,7 +50,8 @@ void main()
     SHOW_SPRITES;
 
     set_map(&player);
-    
+
+    // Game Loop
     while(1){
         UPDATE_JOYPAD_STATE;
         //Update loop
@@ -50,6 +62,7 @@ void main()
 
         // Collisions
         death_check(&player);
+        teleporter_check(&player);
         collision_check(&(player.sprite));
         
         // Gravity

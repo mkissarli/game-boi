@@ -20,7 +20,8 @@ void gravity(MSprite* sprite){
     (GLOBAL_MAP[pos + x] != EMPTY_TILE &&      \
      GLOBAL_MAP[pos + x] != FLAG_TILE  &&      \
      GLOBAL_MAP[pos + x] != START_TILE &&      \
-     !COL_DEATH_CHECK(x))
+     GLOBAL_MAP[pos + x] != TELEPORTER_TILE && \
+     !COL_DEATH_CHECK(x))                      \
 
 
 UINT16 round_up(UINT16 num, UINT16 multiple)
@@ -89,11 +90,29 @@ void death_check(MPlayer* player){
     UINT16 pos = get_world_to_map(&(player->sprite.position));
 
     if(COL_DEATH_CHECK(0)){
-        DEBUG_LOG_MESSAGE("YOU HAVE DIED.");
         update_position(&(player->sprite));
 
         current_level = 0;
         JOYPAD_WAIT_ANY;
         set_map(player);
+    }
+}
+
+void teleporter_check(MPlayer* player){
+    if(teleporter_active == true){
+        teleporter_active = false;
+        UINT16 pos = get_world_to_map(&(player->sprite.position));
+
+        if(GLOBAL_MAP[pos] == TELEPORTER_TILE){
+            DEBUG_LOG_MESSAGE("Teleporter active");
+            for(int i = 0; i < TOTAL_TILES; ++i){
+                if(i != pos && GLOBAL_MAP[i] == TELEPORTER_TILE){
+                    player->sprite.position.x = (i % 20) * 8 + 8;
+                    player->sprite.position.y = (i / 20) * 8 + 16;
+                    delay(100);
+                    update_position(&(player->sprite));
+                }
+            }
+        }
     }
 }
