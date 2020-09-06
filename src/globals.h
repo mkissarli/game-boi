@@ -10,8 +10,8 @@
 #define SPIKE_R 0x08
 
 #define TELEPORTER_TILE 0x09
-#define TELEPORTER2_TILE 0x10
-#define TELEPORTER3_TILE 0x11
+#define TELEPORTER2_TILE 0x0A
+#define TELEPORTER3_TILE 0x0B
 
 #define MAP_WIDTH     20
 #define MAP_HEIGHT    18

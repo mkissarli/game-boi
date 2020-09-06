@@ -5,8 +5,8 @@ void gravity(MSprite* sprite){
     if(sprite->col.direction.y != 1 &&
        FINT(sprite->speed.y) <= 8){
         sprite->speed.y =  FADD(sprite->speed.y, FDIV(GRAVITY, ITOF(FPS)));
-        DEBUG_LOG_MESSAGE("ACC: %d.%d", FINT(FDIV(GRAVITY, ITOF(FPS))), FFRAC(FDIV(GRAVITY, ITOF(FPS)), 10))
-        DEBUG_LOG_MESSAGE("sprite y speed: %d.%d", FINT(sprite->speed.y), FFRAC(sprite->speed.y, 10));
+        //DEBUG_LOG_MESSAGE("ACC: %d.%d", FINT(FDIV(GRAVITY, ITOF(FPS))), FFRAC(FDIV(GRAVITY, ITOF(FPS)), 10))
+        //DEBUG_LOG_MESSAGE("sprite y speed: %d.%d", FINT(sprite->speed.y), FFRAC(sprite->speed.y, 10));
     }
 }
 
@@ -17,11 +17,13 @@ void gravity(MSprite* sprite){
      GLOBAL_MAP[pos + x] == SPIKE_R)           \
 
 #define COL_CHECK(x)\
-    (GLOBAL_MAP[pos + x] != EMPTY_TILE &&      \
-     GLOBAL_MAP[pos + x] != FLAG_TILE  &&      \
-     GLOBAL_MAP[pos + x] != START_TILE &&      \
-     GLOBAL_MAP[pos + x] != TELEPORTER_TILE && \
-     !COL_DEATH_CHECK(x))                      \
+    (GLOBAL_MAP[pos + x] != EMPTY_TILE &&       \
+     GLOBAL_MAP[pos + x] != FLAG_TILE  &&       \
+     GLOBAL_MAP[pos + x] != START_TILE &&       \
+     GLOBAL_MAP[pos + x] != TELEPORTER_TILE &&  \
+     GLOBAL_MAP[pos + x] != TELEPORTER2_TILE && \
+     GLOBAL_MAP[pos + x] != TELEPORTER3_TILE && \
+     !COL_DEATH_CHECK(x))                       \
 
 
 UINT16 round_up(UINT16 num, UINT16 multiple)
@@ -117,7 +119,7 @@ void teleporter_check(MPlayer* player){
         if(GLOBAL_MAP[pos] == TELEPORTER_TILE  ||
            GLOBAL_MAP[pos] == TELEPORTER2_TILE ||
            GLOBAL_MAP[pos] == TELEPORTER3_TILE){
-            //DEBUG_LOG_MESSAGE("Teleporter active");
+            DEBUG_LOG_MESSAGE("Teleporter active");
             for(int i = 0; i < TOTAL_TILES; ++i){
                 if(i != pos && GLOBAL_MAP[i] == GLOBAL_MAP[pos]){
                     SWITCH_ROM_MBC5(0);

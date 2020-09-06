@@ -2,7 +2,7 @@
                               2 ; File Created by SDCC : free open source ANSI-C Compiler
                               3 ; Version 4.0.0 #11528 (MINGW32)
                               4 ;--------------------------------------------------------
-                              5 	.module C__Users_Thief3_AppData_Local_Temp_lcc103881
+                              5 	.module C__Users_Thief3_AppData_Local_Temp_lcc108321
                               6 	.optsdcc -mgbz80
                               7 	
                               8 ;--------------------------------------------------------
@@ -2454,7 +2454,7 @@
    17A2 21rBAr04           2454 	ld	hl, #(_maps2 + 0x04ba)
    17A5 36 05              2455 	ld	(hl), #0x05
    17A7 21rBBr04           2456 	ld	hl, #(_maps2 + 0x04bb)
-   17AA 36 05              2457 	ld	(hl), #0x05
+   17AA 36 00              2457 	ld	(hl), #0x00
    17AC 21rBCr04           2458 	ld	hl, #(_maps2 + 0x04bc)
    17AF 36 0A              2459 	ld	(hl), #0x0a
    17B1 21rBDr04           2460 	ld	hl, #(_maps2 + 0x04bd)
