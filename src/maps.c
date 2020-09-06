@@ -18,7 +18,7 @@
 //#include "../maps/map10.c"
 
 UINT8 current_level = 0;
-UINT8 current_world = 1;
+UINT8 current_world = 0;
 
 UINT16 get_world_to_map(UINT16 x, UINT16 y){
     return ((x - 8 ) >> 3) + ((y - 16) >> 3 )* 20;
@@ -27,8 +27,13 @@ UINT16 get_world_to_map(UINT16 x, UINT16 y){
 
 //extern BYTE win_condition(MPlayer* player);
 extern unsigned char maps[TOTAL_MAP_NUM][TOTAL_TILES];
+extern unsigned char maps2[TOTAL_MAP_NUM][TOTAL_TILES];
 //extern void death_check(MPlayer* player);
 //extern void set_map(MPlayer* player);
+
+unsigned char** meta_maps[TOTAL_WORLD_NUM + 1];
+meta_maps[0] = &maps;
+meta_maps[1] = &maps2;
 
 /*
 static UINT8 current_level = 0;
@@ -49,12 +54,12 @@ static unsigned char maps[TOTAL_MAP_NUM][TOTAL_TILES] =
 
 */
 void set_map (MPlayer* player){
-    SWITCH_ROM_MBC1(1); 
+    SWITCH_ROM_MBC1(current_world); 
     set_bkg_tiles(0,0,20,18,GLOBAL_MAP);
     SWITCH_ROM_MBC1(0);
     // Start from bottom as more likely the start is near the bottom
     for(UINT16 i = 20 * 18 - 1; i >= 0; --i){
-        SWITCH_ROM_MBC1(1);
+        SWITCH_ROM_MBC1(current_world);
         if(GLOBAL_MAP[i] == START_TILE){
             SWITCH_ROM_MBC1(0);
             player->sprite.position.x = i % 20 * 8 + 8;
@@ -69,7 +74,7 @@ void set_map (MPlayer* player){
 
 BYTE win_condition (MPlayer* player){
     UINT16 pos = get_world_to_map((player->sprite.position.x), player->sprite.position.y);
-    SWITCH_ROM_MBC1(1);
+    SWITCH_ROM_MBC1(current_world);
     if(GLOBAL_MAP[pos] == FLAG_TILE){
         SWITCH_ROM_MBC1(0);
         if(current_level < TOTAL_MAP_NUM - 1){
@@ -81,14 +86,19 @@ BYTE win_condition (MPlayer* player){
             return 1;
         }
         else {
-            //DEBUG_LOG_MESSAGE("You won the game!");
-            move_sprite(player->sprite.sprite_number, 180, 0 );
-            set_bkg_data(0, 114, you_win_data);
-            set_bkg_tiles(0, 0, 20, 18, you_win_map);
-
             current_level = 0;
-            JOYPAD_WAIT_ANY;
-            set_map(player);
+            ++current_world;
+            //DEBUG_LOG_MESSAGE("You won the game!");
+            if(current_world == TOTAL_WORLD_NUM){
+                move_sprite(player->sprite.sprite_number, 180, 0 );
+                set_bkg_data(0, 114, you_win_data);
+                set_bkg_tiles(0, 0, 20, 18, you_win_map);
+                
+                current_level = 0;
+                current_world = 0;
+                JOYPAD_WAIT_ANY;
+                set_map(player);
+            }
         }
     }
     return 0;
