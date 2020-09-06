@@ -18,7 +18,7 @@
 #include "../maps/map6.c"
 #include "../maps/map7.c"
 #include "../maps/map8.c"
-//#include "../maps/map9.c"
+#include "../maps/map9.c"
 //#include "../maps/map10.c"
 
 // These are our extern(ally) defined functions we use in bank1
@@ -29,7 +29,7 @@
 //extern void update_player();
 //extern void update_position_split(UINT16, UINT16);
 
-unsigned char maps[TOTAL_MAP_NUM][TOTAL_TILES] =
+unsigned char maps2[TOTAL_MAP_NUM][TOTAL_TILES] =
 {
     //{Map1},
     //{Map2},
@@ -39,7 +39,7 @@ unsigned char maps[TOTAL_MAP_NUM][TOTAL_TILES] =
     {Map6},
     {Map7},
     {Map8},
-    //{Map9},
+    {Map9},
     //{Map10},
 };
 

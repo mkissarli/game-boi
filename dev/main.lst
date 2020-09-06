@@ -2,7 +2,7 @@
                               2 ; File Created by SDCC : free open source ANSI-C Compiler
                               3 ; Version 4.0.0 #11528 (MINGW32)
                               4 ;--------------------------------------------------------
-                              5 	.module C__Users_Thief3_AppData_Local_Temp_lcc100081
+                              5 	.module C__Users_Thief3_AppData_Local_Temp_lcc58361
                               6 	.optsdcc -mgbz80
                               7 	
                               8 ;--------------------------------------------------------
@@ -3943,7 +3943,7 @@
                            3940 ;./src/./maps.c:77: if(current_level < TOTAL_MAP_NUM - 1){
    0E63 21rF6r02           3941 	ld	hl, #_current_level
    0E66 7E                 3942 	ld	a, (hl)
-   0E67 D6 07              3943 	sub	a, #0x07
+   0E67 D6 04              3943 	sub	a, #0x04
    0E69 30 1A              3944 	jr	NC,00104$
                            3945 ;./src/./maps.c:80: delay(100);
    0E6B 21 64 00           3946 	ld	hl, #0x0064
@@ -3970,7 +3970,7 @@
    0E8A 21rF7r02           3967 	ld	hl, #_current_world
    0E8D 34                 3968 	inc	(hl)
                            3969 ;./src/./maps.c:90: if(current_world > TOTAL_WORLD_NUM){
-   0E8E 3E 01              3970 	ld	a, #0x01
+   0E8E 3E 02              3970 	ld	a, #0x02
    0E90 96                 3971 	sub	a, (hl)
    0E91 D2r05r0F           3972 	jp	NC, 00107$
                            3973 ;./src/./maps.c:91: move_sprite(player->sprite.sprite_number, 180, 0 );
