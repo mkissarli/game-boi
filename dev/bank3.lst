@@ -1,0 +1,764 @@
+                              1 ;--------------------------------------------------------
+                              2 ; File Created by SDCC : free open source ANSI-C Compiler
+                              3 ; Version 4.0.0 #11528 (MINGW32)
+                              4 ;--------------------------------------------------------
+                              5 	.module C__Users_Thief3_AppData_Local_Temp_lcc102961
+                              6 	.optsdcc -mgbz80
+                              7 	
+                              8 ;--------------------------------------------------------
+                              9 ; Public variables in this module
+                             10 ;--------------------------------------------------------
+                             11 	.globl _maps3
+                             12 ;--------------------------------------------------------
+                             13 ; special function registers
+                             14 ;--------------------------------------------------------
+                             15 ;--------------------------------------------------------
+                             16 ; ram data
+                             17 ;--------------------------------------------------------
+                             18 	.area _DATA_3
+                             19 	.area _DATA
+   0000                      20 _maps3::
+   0000                      21 	.ds 1440
+                             22 ;--------------------------------------------------------
+                             23 ; absolute external ram data
+                             24 ;--------------------------------------------------------
+                             25 	.area _DABS (ABS)
+                             26 ;--------------------------------------------------------
+                             27 ; global & static initialisations
+                             28 ;--------------------------------------------------------
+                             29 	.area _HOME
+                             30 	.area _GSINIT
+                             31 	.area _GSFINAL
+                             32 	.area _GSINIT
+                             33 ;./src/bank3.c:32: unsigned char maps3[TOTAL_MAP_NUM][TOTAL_TILES] =
+   0000 21r00r00             34 	ld	hl, #_maps3
+   0003 36 04                35 	ld	(hl), #0x04
+   0005 21r01r00             36 	ld	hl, #(_maps3 + 0x0001)
+   0008 36 04                37 	ld	(hl), #0x04
+   000A 21r02r00             38 	ld	hl, #(_maps3 + 0x0002)
+   000D 36 04                39 	ld	(hl), #0x04
+   000F 21r03r00             40 	ld	hl, #(_maps3 + 0x0003)
+   0012 36 04                41 	ld	(hl), #0x04
+   0014 21r04r00             42 	ld	hl, #(_maps3 + 0x0004)
+   0017 36 04                43 	ld	(hl), #0x04
+   0019 21r05r00             44 	ld	hl, #(_maps3 + 0x0005)
+   001C 36 04                45 	ld	(hl), #0x04
+   001E 21r06r00             46 	ld	hl, #(_maps3 + 0x0006)
+   0021 36 04                47 	ld	(hl), #0x04
+   0023 21r07r00             48 	ld	hl, #(_maps3 + 0x0007)
+   0026 36 04                49 	ld	(hl), #0x04
+   0028 21r08r00             50 	ld	hl, #(_maps3 + 0x0008)
+   002B 36 04                51 	ld	(hl), #0x04
+   002D 21r09r00             52 	ld	hl, #(_maps3 + 0x0009)
+   0030 36 04                53 	ld	(hl), #0x04
+   0032 21r0Ar00             54 	ld	hl, #(_maps3 + 0x000a)
+   0035 36 04                55 	ld	(hl), #0x04
+   0037 21r0Br00             56 	ld	hl, #(_maps3 + 0x000b)
+   003A 36 04                57 	ld	(hl), #0x04
+   003C 21r0Cr00             58 	ld	hl, #(_maps3 + 0x000c)
+   003F 36 04                59 	ld	(hl), #0x04
+   0041 21r0Dr00             60 	ld	hl, #(_maps3 + 0x000d)
+   0044 36 04                61 	ld	(hl), #0x04
+   0046 21r0Er00             62 	ld	hl, #(_maps3 + 0x000e)
+   0049 36 04                63 	ld	(hl), #0x04
+   004B 21r0Fr00             64 	ld	hl, #(_maps3 + 0x000f)
+   004E 36 04                65 	ld	(hl), #0x04
+   0050 21r10r00             66 	ld	hl, #(_maps3 + 0x0010)
+   0053 36 04                67 	ld	(hl), #0x04
+   0055 21r11r00             68 	ld	hl, #(_maps3 + 0x0011)
+   0058 36 04                69 	ld	(hl), #0x04
+   005A 21r12r00             70 	ld	hl, #(_maps3 + 0x0012)
+   005D 36 04                71 	ld	(hl), #0x04
+   005F 21r13r00             72 	ld	hl, #(_maps3 + 0x0013)
+   0062 36 04                73 	ld	(hl), #0x04
+   0064 21r14r00             74 	ld	hl, #(_maps3 + 0x0014)
+   0067 36 04                75 	ld	(hl), #0x04
+   0069 21r15r00             76 	ld	hl, #(_maps3 + 0x0015)
+   006C 36 00                77 	ld	(hl), #0x00
+   006E 21r16r00             78 	ld	hl, #(_maps3 + 0x0016)
+   0071 36 00                79 	ld	(hl), #0x00
+   0073 21r17r00             80 	ld	hl, #(_maps3 + 0x0017)
+   0076 36 00                81 	ld	(hl), #0x00
+   0078 21r18r00             82 	ld	hl, #(_maps3 + 0x0018)
+   007B 36 00                83 	ld	(hl), #0x00
+   007D 21r19r00             84 	ld	hl, #(_maps3 + 0x0019)
+   0080 36 00                85 	ld	(hl), #0x00
+   0082 21r1Ar00             86 	ld	hl, #(_maps3 + 0x001a)
+   0085 36 00                87 	ld	(hl), #0x00
+   0087 21r1Br00             88 	ld	hl, #(_maps3 + 0x001b)
+   008A 36 00                89 	ld	(hl), #0x00
+   008C 21r1Cr00             90 	ld	hl, #(_maps3 + 0x001c)
+   008F 36 00                91 	ld	(hl), #0x00
+   0091 21r1Dr00             92 	ld	hl, #(_maps3 + 0x001d)
+   0094 36 00                93 	ld	(hl), #0x00
+   0096 21r1Er00             94 	ld	hl, #(_maps3 + 0x001e)
+   0099 36 00                95 	ld	(hl), #0x00
+   009B 21r1Fr00             96 	ld	hl, #(_maps3 + 0x001f)
+   009E 36 00                97 	ld	(hl), #0x00
+   00A0 21r20r00             98 	ld	hl, #(_maps3 + 0x0020)
+   00A3 36 00                99 	ld	(hl), #0x00
+   00A5 21r21r00            100 	ld	hl, #(_maps3 + 0x0021)
+   00A8 36 00               101 	ld	(hl), #0x00
+   00AA 21r22r00            102 	ld	hl, #(_maps3 + 0x0022)
+   00AD 36 00               103 	ld	(hl), #0x00
+   00AF 21r23r00            104 	ld	hl, #(_maps3 + 0x0023)
+   00B2 36 00               105 	ld	(hl), #0x00
+   00B4 21r24r00            106 	ld	hl, #(_maps3 + 0x0024)
+   00B7 36 00               107 	ld	(hl), #0x00
+   00B9 21r25r00            108 	ld	hl, #(_maps3 + 0x0025)
+   00BC 36 00               109 	ld	(hl), #0x00
+   00BE 21r26r00            110 	ld	hl, #(_maps3 + 0x0026)
+   00C1 36 00               111 	ld	(hl), #0x00
+   00C3 21r27r00            112 	ld	hl, #(_maps3 + 0x0027)
+   00C6 36 04               113 	ld	(hl), #0x04
+   00C8 21r28r00            114 	ld	hl, #(_maps3 + 0x0028)
+   00CB 36 04               115 	ld	(hl), #0x04
+   00CD 21r29r00            116 	ld	hl, #(_maps3 + 0x0029)
+   00D0 36 00               117 	ld	(hl), #0x00
+   00D2 21r2Ar00            118 	ld	hl, #(_maps3 + 0x002a)
+   00D5 36 00               119 	ld	(hl), #0x00
+   00D7 21r2Br00            120 	ld	hl, #(_maps3 + 0x002b)
+   00DA 36 00               121 	ld	(hl), #0x00
+   00DC 21r2Cr00            122 	ld	hl, #(_maps3 + 0x002c)
+   00DF 36 00               123 	ld	(hl), #0x00
+   00E1 21r2Dr00            124 	ld	hl, #(_maps3 + 0x002d)
+   00E4 36 00               125 	ld	(hl), #0x00
+   00E6 21r2Er00            126 	ld	hl, #(_maps3 + 0x002e)
+   00E9 36 00               127 	ld	(hl), #0x00
+   00EB 21r2Fr00            128 	ld	hl, #(_maps3 + 0x002f)
+   00EE 36 00               129 	ld	(hl), #0x00
+   00F0 21r30r00            130 	ld	hl, #(_maps3 + 0x0030)
+   00F3 36 00               131 	ld	(hl), #0x00
+   00F5 21r31r00            132 	ld	hl, #(_maps3 + 0x0031)
+   00F8 36 00               133 	ld	(hl), #0x00
+   00FA 21r32r00            134 	ld	hl, #(_maps3 + 0x0032)
+   00FD 36 00               135 	ld	(hl), #0x00
+   00FF 21r33r00            136 	ld	hl, #(_maps3 + 0x0033)
+   0102 36 00               137 	ld	(hl), #0x00
+   0104 21r34r00            138 	ld	hl, #(_maps3 + 0x0034)
+   0107 36 00               139 	ld	(hl), #0x00
+   0109 21r35r00            140 	ld	hl, #(_maps3 + 0x0035)
+   010C 36 00               141 	ld	(hl), #0x00
+   010E 21r36r00            142 	ld	hl, #(_maps3 + 0x0036)
+   0111 36 00               143 	ld	(hl), #0x00
+   0113 21r37r00            144 	ld	hl, #(_maps3 + 0x0037)
+   0116 36 00               145 	ld	(hl), #0x00
+   0118 21r38r00            146 	ld	hl, #(_maps3 + 0x0038)
+   011B 36 00               147 	ld	(hl), #0x00
+   011D 21r39r00            148 	ld	hl, #(_maps3 + 0x0039)
+   0120 36 00               149 	ld	(hl), #0x00
+   0122 21r3Ar00            150 	ld	hl, #(_maps3 + 0x003a)
+   0125 36 00               151 	ld	(hl), #0x00
+   0127 21r3Br00            152 	ld	hl, #(_maps3 + 0x003b)
+   012A 36 04               153 	ld	(hl), #0x04
+   012C 21r3Cr00            154 	ld	hl, #(_maps3 + 0x003c)
+   012F 36 04               155 	ld	(hl), #0x04
+   0131 21r3Dr00            156 	ld	hl, #(_maps3 + 0x003d)
+   0134 36 00               157 	ld	(hl), #0x00
+   0136 21r3Er00            158 	ld	hl, #(_maps3 + 0x003e)
+   0139 36 00               159 	ld	(hl), #0x00
+   013B 21r3Fr00            160 	ld	hl, #(_maps3 + 0x003f)
+   013E 36 00               161 	ld	(hl), #0x00
+   0140 21r40r00            162 	ld	hl, #(_maps3 + 0x0040)
+   0143 36 00               163 	ld	(hl), #0x00
+   0145 21r41r00            164 	ld	hl, #(_maps3 + 0x0041)
+   0148 36 00               165 	ld	(hl), #0x00
+   014A 21r42r00            166 	ld	hl, #(_maps3 + 0x0042)
+   014D 36 00               167 	ld	(hl), #0x00
+   014F 21r43r00            168 	ld	hl, #(_maps3 + 0x0043)
+   0152 36 00               169 	ld	(hl), #0x00
+   0154 21r44r00            170 	ld	hl, #(_maps3 + 0x0044)
+   0157 36 00               171 	ld	(hl), #0x00
+   0159 21r45r00            172 	ld	hl, #(_maps3 + 0x0045)
+   015C 36 00               173 	ld	(hl), #0x00
+   015E 21r46r00            174 	ld	hl, #(_maps3 + 0x0046)
+   0161 36 00               175 	ld	(hl), #0x00
+   0163 21r47r00            176 	ld	hl, #(_maps3 + 0x0047)
+   0166 36 00               177 	ld	(hl), #0x00
+   0168 21r48r00            178 	ld	hl, #(_maps3 + 0x0048)
+   016B 36 00               179 	ld	(hl), #0x00
+   016D 21r49r00            180 	ld	hl, #(_maps3 + 0x0049)
+   0170 36 00               181 	ld	(hl), #0x00
+   0172 21r4Ar00            182 	ld	hl, #(_maps3 + 0x004a)
+   0175 36 00               183 	ld	(hl), #0x00
+   0177 21r4Br00            184 	ld	hl, #(_maps3 + 0x004b)
+   017A 36 00               185 	ld	(hl), #0x00
+   017C 21r4Cr00            186 	ld	hl, #(_maps3 + 0x004c)
+   017F 36 00               187 	ld	(hl), #0x00
+   0181 21r4Dr00            188 	ld	hl, #(_maps3 + 0x004d)
+   0184 36 00               189 	ld	(hl), #0x00
+   0186 21r4Er00            190 	ld	hl, #(_maps3 + 0x004e)
+   0189 36 00               191 	ld	(hl), #0x00
+   018B 21r4Fr00            192 	ld	hl, #(_maps3 + 0x004f)
+   018E 36 04               193 	ld	(hl), #0x04
+   0190 21r50r00            194 	ld	hl, #(_maps3 + 0x0050)
+   0193 36 04               195 	ld	(hl), #0x04
+   0195 21r51r00            196 	ld	hl, #(_maps3 + 0x0051)
+   0198 36 00               197 	ld	(hl), #0x00
+   019A 21r52r00            198 	ld	hl, #(_maps3 + 0x0052)
+   019D 36 00               199 	ld	(hl), #0x00
+   019F 21r53r00            200 	ld	hl, #(_maps3 + 0x0053)
+   01A2 36 00               201 	ld	(hl), #0x00
+   01A4 21r54r00            202 	ld	hl, #(_maps3 + 0x0054)
+   01A7 36 00               203 	ld	(hl), #0x00
+   01A9 21r55r00            204 	ld	hl, #(_maps3 + 0x0055)
+   01AC 36 00               205 	ld	(hl), #0x00
+   01AE 21r56r00            206 	ld	hl, #(_maps3 + 0x0056)
+   01B1 36 00               207 	ld	(hl), #0x00
+   01B3 21r57r00            208 	ld	hl, #(_maps3 + 0x0057)
+   01B6 36 00               209 	ld	(hl), #0x00
+   01B8 21r58r00            210 	ld	hl, #(_maps3 + 0x0058)
+   01BB 36 00               211 	ld	(hl), #0x00
+   01BD 21r59r00            212 	ld	hl, #(_maps3 + 0x0059)
+   01C0 36 00               213 	ld	(hl), #0x00
+   01C2 21r5Ar00            214 	ld	hl, #(_maps3 + 0x005a)
+   01C5 36 00               215 	ld	(hl), #0x00
+   01C7 21r5Br00            216 	ld	hl, #(_maps3 + 0x005b)
+   01CA 36 00               217 	ld	(hl), #0x00
+   01CC 21r5Cr00            218 	ld	hl, #(_maps3 + 0x005c)
+   01CF 36 00               219 	ld	(hl), #0x00
+   01D1 21r5Dr00            220 	ld	hl, #(_maps3 + 0x005d)
+   01D4 36 00               221 	ld	(hl), #0x00
+   01D6 21r5Er00            222 	ld	hl, #(_maps3 + 0x005e)
+   01D9 36 00               223 	ld	(hl), #0x00
+   01DB 21r5Fr00            224 	ld	hl, #(_maps3 + 0x005f)
+   01DE 36 00               225 	ld	(hl), #0x00
+   01E0 21r60r00            226 	ld	hl, #(_maps3 + 0x0060)
+   01E3 36 00               227 	ld	(hl), #0x00
+   01E5 21r61r00            228 	ld	hl, #(_maps3 + 0x0061)
+   01E8 36 00               229 	ld	(hl), #0x00
+   01EA 21r62r00            230 	ld	hl, #(_maps3 + 0x0062)
+   01ED 36 00               231 	ld	(hl), #0x00
+   01EF 21r63r00            232 	ld	hl, #(_maps3 + 0x0063)
+   01F2 36 04               233 	ld	(hl), #0x04
+   01F4 21r64r00            234 	ld	hl, #(_maps3 + 0x0064)
+   01F7 36 04               235 	ld	(hl), #0x04
+   01F9 21r65r00            236 	ld	hl, #(_maps3 + 0x0065)
+   01FC 36 00               237 	ld	(hl), #0x00
+   01FE 21r66r00            238 	ld	hl, #(_maps3 + 0x0066)
+   0201 36 00               239 	ld	(hl), #0x00
+   0203 21r67r00            240 	ld	hl, #(_maps3 + 0x0067)
+   0206 36 00               241 	ld	(hl), #0x00
+   0208 21r68r00            242 	ld	hl, #(_maps3 + 0x0068)
+   020B 36 00               243 	ld	(hl), #0x00
+   020D 21r69r00            244 	ld	hl, #(_maps3 + 0x0069)
+   0210 36 00               245 	ld	(hl), #0x00
+   0212 21r6Ar00            246 	ld	hl, #(_maps3 + 0x006a)
+   0215 36 00               247 	ld	(hl), #0x00
+   0217 21r6Br00            248 	ld	hl, #(_maps3 + 0x006b)
+   021A 36 00               249 	ld	(hl), #0x00
+   021C 21r6Cr00            250 	ld	hl, #(_maps3 + 0x006c)
+   021F 36 00               251 	ld	(hl), #0x00
+   0221 21r6Dr00            252 	ld	hl, #(_maps3 + 0x006d)
+   0224 36 00               253 	ld	(hl), #0x00
+   0226 21r6Er00            254 	ld	hl, #(_maps3 + 0x006e)
+   0229 36 00               255 	ld	(hl), #0x00
+   022B 21r6Fr00            256 	ld	hl, #(_maps3 + 0x006f)
+   022E 36 00               257 	ld	(hl), #0x00
+   0230 21r70r00            258 	ld	hl, #(_maps3 + 0x0070)
+   0233 36 00               259 	ld	(hl), #0x00
+   0235 21r71r00            260 	ld	hl, #(_maps3 + 0x0071)
+   0238 36 00               261 	ld	(hl), #0x00
+   023A 21r72r00            262 	ld	hl, #(_maps3 + 0x0072)
+   023D 36 00               263 	ld	(hl), #0x00
+   023F 21r73r00            264 	ld	hl, #(_maps3 + 0x0073)
+   0242 36 00               265 	ld	(hl), #0x00
+   0244 21r74r00            266 	ld	hl, #(_maps3 + 0x0074)
+   0247 36 00               267 	ld	(hl), #0x00
+   0249 21r75r00            268 	ld	hl, #(_maps3 + 0x0075)
+   024C 36 00               269 	ld	(hl), #0x00
+   024E 21r76r00            270 	ld	hl, #(_maps3 + 0x0076)
+   0251 36 00               271 	ld	(hl), #0x00
+   0253 21r77r00            272 	ld	hl, #(_maps3 + 0x0077)
+   0256 36 04               273 	ld	(hl), #0x04
+   0258 21r78r00            274 	ld	hl, #(_maps3 + 0x0078)
+   025B 36 04               275 	ld	(hl), #0x04
+   025D 21r79r00            276 	ld	hl, #(_maps3 + 0x0079)
+   0260 36 00               277 	ld	(hl), #0x00
+   0262 21r7Ar00            278 	ld	hl, #(_maps3 + 0x007a)
+   0265 36 00               279 	ld	(hl), #0x00
+   0267 21r7Br00            280 	ld	hl, #(_maps3 + 0x007b)
+   026A 36 00               281 	ld	(hl), #0x00
+   026C 21r7Cr00            282 	ld	hl, #(_maps3 + 0x007c)
+   026F 36 00               283 	ld	(hl), #0x00
+   0271 21r7Dr00            284 	ld	hl, #(_maps3 + 0x007d)
+   0274 36 00               285 	ld	(hl), #0x00
+   0276 21r7Er00            286 	ld	hl, #(_maps3 + 0x007e)
+   0279 36 00               287 	ld	(hl), #0x00
+   027B 21r7Fr00            288 	ld	hl, #(_maps3 + 0x007f)
+   027E 36 00               289 	ld	(hl), #0x00
+   0280 21r80r00            290 	ld	hl, #(_maps3 + 0x0080)
+   0283 36 00               291 	ld	(hl), #0x00
+   0285 21r81r00            292 	ld	hl, #(_maps3 + 0x0081)
+   0288 36 00               293 	ld	(hl), #0x00
+   028A 21r82r00            294 	ld	hl, #(_maps3 + 0x0082)
+   028D 36 00               295 	ld	(hl), #0x00
+   028F 21r83r00            296 	ld	hl, #(_maps3 + 0x0083)
+   0292 36 00               297 	ld	(hl), #0x00
+   0294 21r84r00            298 	ld	hl, #(_maps3 + 0x0084)
+   0297 36 00               299 	ld	(hl), #0x00
+   0299 21r85r00            300 	ld	hl, #(_maps3 + 0x0085)
+   029C 36 00               301 	ld	(hl), #0x00
+   029E 21r86r00            302 	ld	hl, #(_maps3 + 0x0086)
+   02A1 36 00               303 	ld	(hl), #0x00
+   02A3 21r87r00            304 	ld	hl, #(_maps3 + 0x0087)
+   02A6 36 00               305 	ld	(hl), #0x00
+   02A8 21r88r00            306 	ld	hl, #(_maps3 + 0x0088)
+   02AB 36 00               307 	ld	(hl), #0x00
+   02AD 21r89r00            308 	ld	hl, #(_maps3 + 0x0089)
+   02B0 36 00               309 	ld	(hl), #0x00
+   02B2 21r8Ar00            310 	ld	hl, #(_maps3 + 0x008a)
+   02B5 36 00               311 	ld	(hl), #0x00
+   02B7 21r8Br00            312 	ld	hl, #(_maps3 + 0x008b)
+   02BA 36 04               313 	ld	(hl), #0x04
+   02BC 21r8Cr00            314 	ld	hl, #(_maps3 + 0x008c)
+   02BF 36 04               315 	ld	(hl), #0x04
+   02C1 21r8Dr00            316 	ld	hl, #(_maps3 + 0x008d)
+   02C4 36 00               317 	ld	(hl), #0x00
+   02C6 21r8Er00            318 	ld	hl, #(_maps3 + 0x008e)
+   02C9 36 00               319 	ld	(hl), #0x00
+   02CB 21r8Fr00            320 	ld	hl, #(_maps3 + 0x008f)
+   02CE 36 00               321 	ld	(hl), #0x00
+   02D0 21r90r00            322 	ld	hl, #(_maps3 + 0x0090)
+   02D3 36 00               323 	ld	(hl), #0x00
+   02D5 21r91r00            324 	ld	hl, #(_maps3 + 0x0091)
+   02D8 36 00               325 	ld	(hl), #0x00
+   02DA 21r92r00            326 	ld	hl, #(_maps3 + 0x0092)
+   02DD 36 00               327 	ld	(hl), #0x00
+   02DF 21r93r00            328 	ld	hl, #(_maps3 + 0x0093)
+   02E2 36 00               329 	ld	(hl), #0x00
+   02E4 21r94r00            330 	ld	hl, #(_maps3 + 0x0094)
+   02E7 36 00               331 	ld	(hl), #0x00
+   02E9 21r95r00            332 	ld	hl, #(_maps3 + 0x0095)
+   02EC 36 00               333 	ld	(hl), #0x00
+   02EE 21r96r00            334 	ld	hl, #(_maps3 + 0x0096)
+   02F1 36 00               335 	ld	(hl), #0x00
+   02F3 21r97r00            336 	ld	hl, #(_maps3 + 0x0097)
+   02F6 36 00               337 	ld	(hl), #0x00
+   02F8 21r98r00            338 	ld	hl, #(_maps3 + 0x0098)
+   02FB 36 00               339 	ld	(hl), #0x00
+   02FD 21r99r00            340 	ld	hl, #(_maps3 + 0x0099)
+   0300 36 00               341 	ld	(hl), #0x00
+   0302 21r9Ar00            342 	ld	hl, #(_maps3 + 0x009a)
+   0305 36 00               343 	ld	(hl), #0x00
+   0307 21r9Br00            344 	ld	hl, #(_maps3 + 0x009b)
+   030A 36 00               345 	ld	(hl), #0x00
+   030C 21r9Cr00            346 	ld	hl, #(_maps3 + 0x009c)
+   030F 36 00               347 	ld	(hl), #0x00
+   0311 21r9Dr00            348 	ld	hl, #(_maps3 + 0x009d)
+   0314 36 00               349 	ld	(hl), #0x00
+   0316 21r9Er00            350 	ld	hl, #(_maps3 + 0x009e)
+   0319 36 00               351 	ld	(hl), #0x00
+   031B 21r9Fr00            352 	ld	hl, #(_maps3 + 0x009f)
+   031E 36 04               353 	ld	(hl), #0x04
+   0320 21rA0r00            354 	ld	hl, #(_maps3 + 0x00a0)
+   0323 36 04               355 	ld	(hl), #0x04
+   0325 21rA1r00            356 	ld	hl, #(_maps3 + 0x00a1)
+   0328 36 00               357 	ld	(hl), #0x00
+   032A 21rA2r00            358 	ld	hl, #(_maps3 + 0x00a2)
+   032D 36 00               359 	ld	(hl), #0x00
+   032F 21rA3r00            360 	ld	hl, #(_maps3 + 0x00a3)
+   0332 36 00               361 	ld	(hl), #0x00
+   0334 21rA4r00            362 	ld	hl, #(_maps3 + 0x00a4)
+   0337 36 00               363 	ld	(hl), #0x00
+   0339 21rA5r00            364 	ld	hl, #(_maps3 + 0x00a5)
+   033C 36 00               365 	ld	(hl), #0x00
+   033E 21rA6r00            366 	ld	hl, #(_maps3 + 0x00a6)
+   0341 36 00               367 	ld	(hl), #0x00
+   0343 21rA7r00            368 	ld	hl, #(_maps3 + 0x00a7)
+   0346 36 00               369 	ld	(hl), #0x00
+   0348 21rA8r00            370 	ld	hl, #(_maps3 + 0x00a8)
+   034B 36 00               371 	ld	(hl), #0x00
+   034D 21rA9r00            372 	ld	hl, #(_maps3 + 0x00a9)
+   0350 36 00               373 	ld	(hl), #0x00
+   0352 21rAAr00            374 	ld	hl, #(_maps3 + 0x00aa)
+   0355 36 00               375 	ld	(hl), #0x00
+   0357 21rABr00            376 	ld	hl, #(_maps3 + 0x00ab)
+   035A 36 00               377 	ld	(hl), #0x00
+   035C 21rACr00            378 	ld	hl, #(_maps3 + 0x00ac)
+   035F 36 00               379 	ld	(hl), #0x00
+   0361 21rADr00            380 	ld	hl, #(_maps3 + 0x00ad)
+   0364 36 00               381 	ld	(hl), #0x00
+   0366 21rAEr00            382 	ld	hl, #(_maps3 + 0x00ae)
+   0369 36 00               383 	ld	(hl), #0x00
+   036B 21rAFr00            384 	ld	hl, #(_maps3 + 0x00af)
+   036E 36 00               385 	ld	(hl), #0x00
+   0370 21rB0r00            386 	ld	hl, #(_maps3 + 0x00b0)
+   0373 36 00               387 	ld	(hl), #0x00
+   0375 21rB1r00            388 	ld	hl, #(_maps3 + 0x00b1)
+   0378 36 00               389 	ld	(hl), #0x00
+   037A 21rB2r00            390 	ld	hl, #(_maps3 + 0x00b2)
+   037D 36 00               391 	ld	(hl), #0x00
+   037F 21rB3r00            392 	ld	hl, #(_maps3 + 0x00b3)
+   0382 36 04               393 	ld	(hl), #0x04
+   0384 21rB4r00            394 	ld	hl, #(_maps3 + 0x00b4)
+   0387 36 04               395 	ld	(hl), #0x04
+   0389 21rB5r00            396 	ld	hl, #(_maps3 + 0x00b5)
+   038C 36 00               397 	ld	(hl), #0x00
+   038E 21rB6r00            398 	ld	hl, #(_maps3 + 0x00b6)
+   0391 36 00               399 	ld	(hl), #0x00
+   0393 21rB7r00            400 	ld	hl, #(_maps3 + 0x00b7)
+   0396 36 00               401 	ld	(hl), #0x00
+   0398 21rB8r00            402 	ld	hl, #(_maps3 + 0x00b8)
+   039B 36 00               403 	ld	(hl), #0x00
+   039D 21rB9r00            404 	ld	hl, #(_maps3 + 0x00b9)
+   03A0 36 00               405 	ld	(hl), #0x00
+   03A2 21rBAr00            406 	ld	hl, #(_maps3 + 0x00ba)
+   03A5 36 00               407 	ld	(hl), #0x00
+   03A7 21rBBr00            408 	ld	hl, #(_maps3 + 0x00bb)
+   03AA 36 00               409 	ld	(hl), #0x00
+   03AC 21rBCr00            410 	ld	hl, #(_maps3 + 0x00bc)
+   03AF 36 00               411 	ld	(hl), #0x00
+   03B1 21rBDr00            412 	ld	hl, #(_maps3 + 0x00bd)
+   03B4 36 00               413 	ld	(hl), #0x00
+   03B6 21rBEr00            414 	ld	hl, #(_maps3 + 0x00be)
+   03B9 36 00               415 	ld	(hl), #0x00
+   03BB 21rBFr00            416 	ld	hl, #(_maps3 + 0x00bf)
+   03BE 36 00               417 	ld	(hl), #0x00
+   03C0 21rC0r00            418 	ld	hl, #(_maps3 + 0x00c0)
+   03C3 36 00               419 	ld	(hl), #0x00
+   03C5 21rC1r00            420 	ld	hl, #(_maps3 + 0x00c1)
+   03C8 36 00               421 	ld	(hl), #0x00
+   03CA 21rC2r00            422 	ld	hl, #(_maps3 + 0x00c2)
+   03CD 36 00               423 	ld	(hl), #0x00
+   03CF 21rC3r00            424 	ld	hl, #(_maps3 + 0x00c3)
+   03D2 36 00               425 	ld	(hl), #0x00
+   03D4 21rC4r00            426 	ld	hl, #(_maps3 + 0x00c4)
+   03D7 36 00               427 	ld	(hl), #0x00
+   03D9 21rC5r00            428 	ld	hl, #(_maps3 + 0x00c5)
+   03DC 36 00               429 	ld	(hl), #0x00
+   03DE 21rC6r00            430 	ld	hl, #(_maps3 + 0x00c6)
+   03E1 36 00               431 	ld	(hl), #0x00
+   03E3 21rC7r00            432 	ld	hl, #(_maps3 + 0x00c7)
+   03E6 36 04               433 	ld	(hl), #0x04
+   03E8 21rC8r00            434 	ld	hl, #(_maps3 + 0x00c8)
+   03EB 36 04               435 	ld	(hl), #0x04
+   03ED 21rC9r00            436 	ld	hl, #(_maps3 + 0x00c9)
+   03F0 36 00               437 	ld	(hl), #0x00
+   03F2 21rCAr00            438 	ld	hl, #(_maps3 + 0x00ca)
+   03F5 36 00               439 	ld	(hl), #0x00
+   03F7 21rCBr00            440 	ld	hl, #(_maps3 + 0x00cb)
+   03FA 36 00               441 	ld	(hl), #0x00
+   03FC 21rCCr00            442 	ld	hl, #(_maps3 + 0x00cc)
+   03FF 36 00               443 	ld	(hl), #0x00
+   0401 21rCDr00            444 	ld	hl, #(_maps3 + 0x00cd)
+   0404 36 00               445 	ld	(hl), #0x00
+   0406 21rCEr00            446 	ld	hl, #(_maps3 + 0x00ce)
+   0409 36 00               447 	ld	(hl), #0x00
+   040B 21rCFr00            448 	ld	hl, #(_maps3 + 0x00cf)
+   040E 36 00               449 	ld	(hl), #0x00
+   0410 21rD0r00            450 	ld	hl, #(_maps3 + 0x00d0)
+   0413 36 00               451 	ld	(hl), #0x00
+   0415 21rD1r00            452 	ld	hl, #(_maps3 + 0x00d1)
+   0418 36 00               453 	ld	(hl), #0x00
+   041A 21rD2r00            454 	ld	hl, #(_maps3 + 0x00d2)
+   041D 36 00               455 	ld	(hl), #0x00
+   041F 21rD3r00            456 	ld	hl, #(_maps3 + 0x00d3)
+   0422 36 00               457 	ld	(hl), #0x00
+   0424 21rD4r00            458 	ld	hl, #(_maps3 + 0x00d4)
+   0427 36 00               459 	ld	(hl), #0x00
+   0429 21rD5r00            460 	ld	hl, #(_maps3 + 0x00d5)
+   042C 36 00               461 	ld	(hl), #0x00
+   042E 21rD6r00            462 	ld	hl, #(_maps3 + 0x00d6)
+   0431 36 00               463 	ld	(hl), #0x00
+   0433 21rD7r00            464 	ld	hl, #(_maps3 + 0x00d7)
+   0436 36 00               465 	ld	(hl), #0x00
+   0438 21rD8r00            466 	ld	hl, #(_maps3 + 0x00d8)
+   043B 36 00               467 	ld	(hl), #0x00
+   043D 21rD9r00            468 	ld	hl, #(_maps3 + 0x00d9)
+   0440 36 00               469 	ld	(hl), #0x00
+   0442 21rDAr00            470 	ld	hl, #(_maps3 + 0x00da)
+   0445 36 00               471 	ld	(hl), #0x00
+   0447 21rDBr00            472 	ld	hl, #(_maps3 + 0x00db)
+   044A 36 04               473 	ld	(hl), #0x04
+   044C 21rDCr00            474 	ld	hl, #(_maps3 + 0x00dc)
+   044F 36 04               475 	ld	(hl), #0x04
+   0451 21rDDr00            476 	ld	hl, #(_maps3 + 0x00dd)
+   0454 36 00               477 	ld	(hl), #0x00
+   0456 21rDEr00            478 	ld	hl, #(_maps3 + 0x00de)
+   0459 36 00               479 	ld	(hl), #0x00
+   045B 21rDFr00            480 	ld	hl, #(_maps3 + 0x00df)
+   045E 36 00               481 	ld	(hl), #0x00
+   0460 21rE0r00            482 	ld	hl, #(_maps3 + 0x00e0)
+   0463 36 00               483 	ld	(hl), #0x00
+   0465 21rE1r00            484 	ld	hl, #(_maps3 + 0x00e1)
+   0468 36 00               485 	ld	(hl), #0x00
+   046A 21rE2r00            486 	ld	hl, #(_maps3 + 0x00e2)
+   046D 36 00               487 	ld	(hl), #0x00
+   046F 21rE3r00            488 	ld	hl, #(_maps3 + 0x00e3)
+   0472 36 00               489 	ld	(hl), #0x00
+   0474 21rE4r00            490 	ld	hl, #(_maps3 + 0x00e4)
+   0477 36 00               491 	ld	(hl), #0x00
+   0479 21rE5r00            492 	ld	hl, #(_maps3 + 0x00e5)
+   047C 36 00               493 	ld	(hl), #0x00
+   047E 21rE6r00            494 	ld	hl, #(_maps3 + 0x00e6)
+   0481 36 00               495 	ld	(hl), #0x00
+   0483 21rE7r00            496 	ld	hl, #(_maps3 + 0x00e7)
+   0486 36 00               497 	ld	(hl), #0x00
+   0488 21rE8r00            498 	ld	hl, #(_maps3 + 0x00e8)
+   048B 36 00               499 	ld	(hl), #0x00
+   048D 21rE9r00            500 	ld	hl, #(_maps3 + 0x00e9)
+   0490 36 00               501 	ld	(hl), #0x00
+   0492 21rEAr00            502 	ld	hl, #(_maps3 + 0x00ea)
+   0495 36 00               503 	ld	(hl), #0x00
+   0497 21rEBr00            504 	ld	hl, #(_maps3 + 0x00eb)
+   049A 36 00               505 	ld	(hl), #0x00
+   049C 21rECr00            506 	ld	hl, #(_maps3 + 0x00ec)
+   049F 36 00               507 	ld	(hl), #0x00
+   04A1 21rEDr00            508 	ld	hl, #(_maps3 + 0x00ed)
+   04A4 36 00               509 	ld	(hl), #0x00
+   04A6 21rEEr00            510 	ld	hl, #(_maps3 + 0x00ee)
+   04A9 36 00               511 	ld	(hl), #0x00
+   04AB 21rEFr00            512 	ld	hl, #(_maps3 + 0x00ef)
+   04AE 36 04               513 	ld	(hl), #0x04
+   04B0 21rF0r00            514 	ld	hl, #(_maps3 + 0x00f0)
+   04B3 36 04               515 	ld	(hl), #0x04
+   04B5 21rF1r00            516 	ld	hl, #(_maps3 + 0x00f1)
+   04B8 36 00               517 	ld	(hl), #0x00
+   04BA 21rF2r00            518 	ld	hl, #(_maps3 + 0x00f2)
+   04BD 36 00               519 	ld	(hl), #0x00
+   04BF 21rF3r00            520 	ld	hl, #(_maps3 + 0x00f3)
+   04C2 36 00               521 	ld	(hl), #0x00
+   04C4 21rF4r00            522 	ld	hl, #(_maps3 + 0x00f4)
+   04C7 36 00               523 	ld	(hl), #0x00
+   04C9 21rF5r00            524 	ld	hl, #(_maps3 + 0x00f5)
+   04CC 36 00               525 	ld	(hl), #0x00
+   04CE 21rF6r00            526 	ld	hl, #(_maps3 + 0x00f6)
+   04D1 36 00               527 	ld	(hl), #0x00
+   04D3 21rF7r00            528 	ld	hl, #(_maps3 + 0x00f7)
+   04D6 36 00               529 	ld	(hl), #0x00
+   04D8 21rF8r00            530 	ld	hl, #(_maps3 + 0x00f8)
+   04DB 36 00               531 	ld	(hl), #0x00
+   04DD 21rF9r00            532 	ld	hl, #(_maps3 + 0x00f9)
+   04E0 36 00               533 	ld	(hl), #0x00
+   04E2 21rFAr00            534 	ld	hl, #(_maps3 + 0x00fa)
+   04E5 36 00               535 	ld	(hl), #0x00
+   04E7 21rFBr00            536 	ld	hl, #(_maps3 + 0x00fb)
+   04EA 36 00               537 	ld	(hl), #0x00
+   04EC 21rFCr00            538 	ld	hl, #(_maps3 + 0x00fc)
+   04EF 36 00               539 	ld	(hl), #0x00
+   04F1 21rFDr00            540 	ld	hl, #(_maps3 + 0x00fd)
+   04F4 36 00               541 	ld	(hl), #0x00
+   04F6 21rFEr00            542 	ld	hl, #(_maps3 + 0x00fe)
+   04F9 36 00               543 	ld	(hl), #0x00
+   04FB 21rFFr00            544 	ld	hl, #(_maps3 + 0x00ff)
+   04FE 36 00               545 	ld	(hl), #0x00
+   0500 21r00r01            546 	ld	hl, #(_maps3 + 0x0100)
+   0503 36 00               547 	ld	(hl), #0x00
+   0505 21r01r01            548 	ld	hl, #(_maps3 + 0x0101)
+   0508 36 00               549 	ld	(hl), #0x00
+   050A 21r02r01            550 	ld	hl, #(_maps3 + 0x0102)
+   050D 36 00               551 	ld	(hl), #0x00
+   050F 21r03r01            552 	ld	hl, #(_maps3 + 0x0103)
+   0512 36 04               553 	ld	(hl), #0x04
+   0514 21r04r01            554 	ld	hl, #(_maps3 + 0x0104)
+   0517 36 04               555 	ld	(hl), #0x04
+   0519 21r05r01            556 	ld	hl, #(_maps3 + 0x0105)
+   051C 36 00               557 	ld	(hl), #0x00
+   051E 21r06r01            558 	ld	hl, #(_maps3 + 0x0106)
+   0521 36 00               559 	ld	(hl), #0x00
+   0523 21r07r01            560 	ld	hl, #(_maps3 + 0x0107)
+   0526 36 00               561 	ld	(hl), #0x00
+   0528 21r08r01            562 	ld	hl, #(_maps3 + 0x0108)
+   052B 36 00               563 	ld	(hl), #0x00
+   052D 21r09r01            564 	ld	hl, #(_maps3 + 0x0109)
+   0530 36 00               565 	ld	(hl), #0x00
+   0532 21r0Ar01            566 	ld	hl, #(_maps3 + 0x010a)
+   0535 36 00               567 	ld	(hl), #0x00
+   0537 21r0Br01            568 	ld	hl, #(_maps3 + 0x010b)
+   053A 36 00               569 	ld	(hl), #0x00
+   053C 21r0Cr01            570 	ld	hl, #(_maps3 + 0x010c)
+   053F 36 00               571 	ld	(hl), #0x00
+   0541 21r0Dr01            572 	ld	hl, #(_maps3 + 0x010d)
+   0544 36 00               573 	ld	(hl), #0x00
+   0546 21r0Er01            574 	ld	hl, #(_maps3 + 0x010e)
+   0549 36 00               575 	ld	(hl), #0x00
+   054B 21r0Fr01            576 	ld	hl, #(_maps3 + 0x010f)
+   054E 36 00               577 	ld	(hl), #0x00
+   0550 21r10r01            578 	ld	hl, #(_maps3 + 0x0110)
+   0553 36 00               579 	ld	(hl), #0x00
+   0555 21r11r01            580 	ld	hl, #(_maps3 + 0x0111)
+   0558 36 00               581 	ld	(hl), #0x00
+   055A 21r12r01            582 	ld	hl, #(_maps3 + 0x0112)
+   055D 36 00               583 	ld	(hl), #0x00
+   055F 21r13r01            584 	ld	hl, #(_maps3 + 0x0113)
+   0562 36 00               585 	ld	(hl), #0x00
+   0564 21r14r01            586 	ld	hl, #(_maps3 + 0x0114)
+   0567 36 00               587 	ld	(hl), #0x00
+   0569 21r15r01            588 	ld	hl, #(_maps3 + 0x0115)
+   056C 36 00               589 	ld	(hl), #0x00
+   056E 21r16r01            590 	ld	hl, #(_maps3 + 0x0116)
+   0571 36 00               591 	ld	(hl), #0x00
+   0573 21r17r01            592 	ld	hl, #(_maps3 + 0x0117)
+   0576 36 04               593 	ld	(hl), #0x04
+   0578 21r18r01            594 	ld	hl, #(_maps3 + 0x0118)
+   057B 36 04               595 	ld	(hl), #0x04
+   057D 21r19r01            596 	ld	hl, #(_maps3 + 0x0119)
+   0580 36 00               597 	ld	(hl), #0x00
+   0582 21r1Ar01            598 	ld	hl, #(_maps3 + 0x011a)
+   0585 36 00               599 	ld	(hl), #0x00
+   0587 21r1Br01            600 	ld	hl, #(_maps3 + 0x011b)
+   058A 36 00               601 	ld	(hl), #0x00
+   058C 21r1Cr01            602 	ld	hl, #(_maps3 + 0x011c)
+   058F 36 00               603 	ld	(hl), #0x00
+   0591 21r1Dr01            604 	ld	hl, #(_maps3 + 0x011d)
+   0594 36 00               605 	ld	(hl), #0x00
+   0596 21r1Er01            606 	ld	hl, #(_maps3 + 0x011e)
+   0599 36 00               607 	ld	(hl), #0x00
+   059B 21r1Fr01            608 	ld	hl, #(_maps3 + 0x011f)
+   059E 36 00               609 	ld	(hl), #0x00
+   05A0 21r20r01            610 	ld	hl, #(_maps3 + 0x0120)
+   05A3 36 00               611 	ld	(hl), #0x00
+   05A5 21r21r01            612 	ld	hl, #(_maps3 + 0x0121)
+   05A8 36 00               613 	ld	(hl), #0x00
+   05AA 21r22r01            614 	ld	hl, #(_maps3 + 0x0122)
+   05AD 36 00               615 	ld	(hl), #0x00
+   05AF 21r23r01            616 	ld	hl, #(_maps3 + 0x0123)
+   05B2 36 00               617 	ld	(hl), #0x00
+   05B4 21r24r01            618 	ld	hl, #(_maps3 + 0x0124)
+   05B7 36 00               619 	ld	(hl), #0x00
+   05B9 21r25r01            620 	ld	hl, #(_maps3 + 0x0125)
+   05BC 36 00               621 	ld	(hl), #0x00
+   05BE 21r26r01            622 	ld	hl, #(_maps3 + 0x0126)
+   05C1 36 00               623 	ld	(hl), #0x00
+   05C3 21r27r01            624 	ld	hl, #(_maps3 + 0x0127)
+   05C6 36 00               625 	ld	(hl), #0x00
+   05C8 21r28r01            626 	ld	hl, #(_maps3 + 0x0128)
+   05CB 36 00               627 	ld	(hl), #0x00
+   05CD 21r29r01            628 	ld	hl, #(_maps3 + 0x0129)
+   05D0 36 00               629 	ld	(hl), #0x00
+   05D2 21r2Ar01            630 	ld	hl, #(_maps3 + 0x012a)
+   05D5 36 00               631 	ld	(hl), #0x00
+   05D7 21r2Br01            632 	ld	hl, #(_maps3 + 0x012b)
+   05DA 36 04               633 	ld	(hl), #0x04
+   05DC 21r2Cr01            634 	ld	hl, #(_maps3 + 0x012c)
+   05DF 36 04               635 	ld	(hl), #0x04
+   05E1 21r2Dr01            636 	ld	hl, #(_maps3 + 0x012d)
+   05E4 36 00               637 	ld	(hl), #0x00
+   05E6 21r2Er01            638 	ld	hl, #(_maps3 + 0x012e)
+   05E9 36 00               639 	ld	(hl), #0x00
+   05EB 21r2Fr01            640 	ld	hl, #(_maps3 + 0x012f)
+   05EE 36 00               641 	ld	(hl), #0x00
+   05F0 21r30r01            642 	ld	hl, #(_maps3 + 0x0130)
+   05F3 36 00               643 	ld	(hl), #0x00
+   05F5 21r31r01            644 	ld	hl, #(_maps3 + 0x0131)
+   05F8 36 00               645 	ld	(hl), #0x00
+   05FA 21r32r01            646 	ld	hl, #(_maps3 + 0x0132)
+   05FD 36 00               647 	ld	(hl), #0x00
+   05FF 21r33r01            648 	ld	hl, #(_maps3 + 0x0133)
+   0602 36 00               649 	ld	(hl), #0x00
+   0604 21r34r01            650 	ld	hl, #(_maps3 + 0x0134)
+   0607 36 00               651 	ld	(hl), #0x00
+   0609 21r35r01            652 	ld	hl, #(_maps3 + 0x0135)
+   060C 36 00               653 	ld	(hl), #0x00
+   060E 21r36r01            654 	ld	hl, #(_maps3 + 0x0136)
+   0611 36 00               655 	ld	(hl), #0x00
+   0613 21r37r01            656 	ld	hl, #(_maps3 + 0x0137)
+   0616 36 00               657 	ld	(hl), #0x00
+   0618 21r38r01            658 	ld	hl, #(_maps3 + 0x0138)
+   061B 36 00               659 	ld	(hl), #0x00
+   061D 21r39r01            660 	ld	hl, #(_maps3 + 0x0139)
+   0620 36 00               661 	ld	(hl), #0x00
+   0622 21r3Ar01            662 	ld	hl, #(_maps3 + 0x013a)
+   0625 36 00               663 	ld	(hl), #0x00
+   0627 21r3Br01            664 	ld	hl, #(_maps3 + 0x013b)
+   062A 36 00               665 	ld	(hl), #0x00
+   062C 21r3Cr01            666 	ld	hl, #(_maps3 + 0x013c)
+   062F 36 00               667 	ld	(hl), #0x00
+   0631 21r3Dr01            668 	ld	hl, #(_maps3 + 0x013d)
+   0634 36 00               669 	ld	(hl), #0x00
+   0636 21r3Er01            670 	ld	hl, #(_maps3 + 0x013e)
+   0639 36 00               671 	ld	(hl), #0x00
+   063B 21r3Fr01            672 	ld	hl, #(_maps3 + 0x013f)
+   063E 36 04               673 	ld	(hl), #0x04
+   0640 21r40r01            674 	ld	hl, #(_maps3 + 0x0140)
+   0643 36 04               675 	ld	(hl), #0x04
+   0645 21r41r01            676 	ld	hl, #(_maps3 + 0x0141)
+   0648 36 02               677 	ld	(hl), #0x02
+   064A 21r42r01            678 	ld	hl, #(_maps3 + 0x0142)
+   064D 36 00               679 	ld	(hl), #0x00
+   064F 21r43r01            680 	ld	hl, #(_maps3 + 0x0143)
+   0652 36 00               681 	ld	(hl), #0x00
+   0654 21r44r01            682 	ld	hl, #(_maps3 + 0x0144)
+   0657 36 00               683 	ld	(hl), #0x00
+   0659 21r45r01            684 	ld	hl, #(_maps3 + 0x0145)
+   065C 36 00               685 	ld	(hl), #0x00
+   065E 21r46r01            686 	ld	hl, #(_maps3 + 0x0146)
+   0661 36 00               687 	ld	(hl), #0x00
+   0663 21r47r01            688 	ld	hl, #(_maps3 + 0x0147)
+   0666 36 00               689 	ld	(hl), #0x00
+   0668 21r48r01            690 	ld	hl, #(_maps3 + 0x0148)
+   066B 36 00               691 	ld	(hl), #0x00
+   066D 21r49r01            692 	ld	hl, #(_maps3 + 0x0149)
+   0670 36 00               693 	ld	(hl), #0x00
+   0672 21r4Ar01            694 	ld	hl, #(_maps3 + 0x014a)
+   0675 36 00               695 	ld	(hl), #0x00
+   0677 21r4Br01            696 	ld	hl, #(_maps3 + 0x014b)
+   067A 36 00               697 	ld	(hl), #0x00
+   067C 21r4Cr01            698 	ld	hl, #(_maps3 + 0x014c)
+   067F 36 00               699 	ld	(hl), #0x00
+   0681 21r4Dr01            700 	ld	hl, #(_maps3 + 0x014d)
+   0684 36 00               701 	ld	(hl), #0x00
+   0686 21r4Er01            702 	ld	hl, #(_maps3 + 0x014e)
+   0689 36 00               703 	ld	(hl), #0x00
+   068B 21r4Fr01            704 	ld	hl, #(_maps3 + 0x014f)
+   068E 36 00               705 	ld	(hl), #0x00
+   0690 21r50r01            706 	ld	hl, #(_maps3 + 0x0150)
+   0693 36 00               707 	ld	(hl), #0x00
+   0695 21r51r01            708 	ld	hl, #(_maps3 + 0x0151)
+   0698 36 00               709 	ld	(hl), #0x00
+   069A 21r52r01            710 	ld	hl, #(_maps3 + 0x0152)
+   069D 36 01               711 	ld	(hl), #0x01
+   069F 21r53r01            712 	ld	hl, #(_maps3 + 0x0153)
+   06A2 36 04               713 	ld	(hl), #0x04
+   06A4 21r54r01            714 	ld	hl, #(_maps3 + 0x0154)
+   06A7 36 04               715 	ld	(hl), #0x04
+   06A9 21r55r01            716 	ld	hl, #(_maps3 + 0x0155)
+   06AC 36 04               717 	ld	(hl), #0x04
+   06AE 21r56r01            718 	ld	hl, #(_maps3 + 0x0156)
+   06B1 36 04               719 	ld	(hl), #0x04
+   06B3 21r57r01            720 	ld	hl, #(_maps3 + 0x0157)
+   06B6 36 04               721 	ld	(hl), #0x04
+   06B8 21r58r01            722 	ld	hl, #(_maps3 + 0x0158)
+   06BB 36 04               723 	ld	(hl), #0x04
+   06BD 21r59r01            724 	ld	hl, #(_maps3 + 0x0159)
+   06C0 36 04               725 	ld	(hl), #0x04
+   06C2 21r5Ar01            726 	ld	hl, #(_maps3 + 0x015a)
+   06C5 36 04               727 	ld	(hl), #0x04
+   06C7 21r5Br01            728 	ld	hl, #(_maps3 + 0x015b)
+   06CA 36 04               729 	ld	(hl), #0x04
+   06CC 21r5Cr01            730 	ld	hl, #(_maps3 + 0x015c)
+   06CF 36 04               731 	ld	(hl), #0x04
+   06D1 21r5Dr01            732 	ld	hl, #(_maps3 + 0x015d)
+   06D4 36 04               733 	ld	(hl), #0x04
+   06D6 21r5Er01            734 	ld	hl, #(_maps3 + 0x015e)
+   06D9 36 04               735 	ld	(hl), #0x04
+   06DB 21r5Fr01            736 	ld	hl, #(_maps3 + 0x015f)
+   06DE 36 04               737 	ld	(hl), #0x04
+   06E0 21r60r01            738 	ld	hl, #(_maps3 + 0x0160)
+   06E3 36 04               739 	ld	(hl), #0x04
+   06E5 21r61r01            740 	ld	hl, #(_maps3 + 0x0161)
+   06E8 36 04               741 	ld	(hl), #0x04
+   06EA 21r62r01            742 	ld	hl, #(_maps3 + 0x0162)
+   06ED 36 04               743 	ld	(hl), #0x04
+   06EF 21r63r01            744 	ld	hl, #(_maps3 + 0x0163)
+   06F2 36 04               745 	ld	(hl), #0x04
+   06F4 21r64r01            746 	ld	hl, #(_maps3 + 0x0164)
+   06F7 36 04               747 	ld	(hl), #0x04
+   06F9 21r65r01            748 	ld	hl, #(_maps3 + 0x0165)
+   06FC 36 04               749 	ld	(hl), #0x04
+   06FE 21r66r01            750 	ld	hl, #(_maps3 + 0x0166)
+   0701 36 04               751 	ld	(hl), #0x04
+   0703 21r67r01            752 	ld	hl, #(_maps3 + 0x0167)
+   0706 36 04               753 	ld	(hl), #0x04
+                            754 ;--------------------------------------------------------
+                            755 ; Home
+                            756 ;--------------------------------------------------------
+                            757 	.area _HOME
+                            758 	.area _HOME
+                            759 ;--------------------------------------------------------
+                            760 ; code
+                            761 ;--------------------------------------------------------
+                            762 	.area _CODE_3
+                            763 	.area _CODE_3
+                            764 	.area _CABS (ABS)

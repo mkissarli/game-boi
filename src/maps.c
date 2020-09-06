@@ -28,6 +28,7 @@ UINT16 get_world_to_map(UINT16 x, UINT16 y){
 unsigned char use_maps[TOTAL_MAP_NUM][TOTAL_TILES];
 extern unsigned char maps[TOTAL_MAP_NUM][TOTAL_TILES];
 extern unsigned char maps2[TOTAL_MAP_NUM][TOTAL_TILES];
+//extern unsigned char maps3[TOTAL_MAP_NUM][TOTAL_TILES];
 //extern void death_check(MPlayer* player);
 //extern void set_map(MPlayer* player);
 
@@ -58,13 +59,20 @@ void reset_map(UINT8 cur){
             }
         }
     }
-    else{
+    else if (cur == 2){
         for(int j = 0; j < TOTAL_MAP_NUM; ++j){
             for(int i = 0; i < TOTAL_TILES; ++i){
                 use_maps[j][i] = maps2[j][i];
             }
         }
-    }
+    }/*
+    else{
+        for(int j = 0; j < TOTAL_MAP_NUM; ++j){
+            for(int i = 0; i < TOTAL_TILES; ++i){
+                use_maps[j][i] = maps3[j][i];
+            }
+        }        
+        }*/
 }
 
 void set_map (MPlayer* player){
