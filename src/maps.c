@@ -18,21 +18,18 @@
 //#include "../maps/map10.c"
 
 UINT8 current_level = 0;
-UINT8 current_world = 0;
+UINT8 current_world = 1;
 
 UINT16 get_world_to_map(UINT16 x, UINT16 y){
     return ((x - 8 ) >> 3) + ((y - 16) >> 3 )* 20;
 }
 
-
 //extern BYTE win_condition(MPlayer* player);
 extern unsigned char maps[TOTAL_MAP_NUM][TOTAL_TILES];
-extern unsigned char maps2[TOTAL_MAP_NUM][TOTAL_TILES];
+//extern unsigned char maps2[TOTAL_MAP_NUM][TOTAL_TILES];
 //extern void death_check(MPlayer* player);
 //extern void set_map(MPlayer* player);
 
-unsigned char** meta_maps[TOTAL_WORLD_NUM];
-meta_maps[0] = maps;
 /*
 static UINT8 current_level = 0;
 
@@ -53,13 +50,15 @@ static unsigned char maps[TOTAL_MAP_NUM][TOTAL_TILES] =
 */
 void set_map (MPlayer* player){
     SWITCH_ROM_MBC5(current_world); 
-    set_bkg_tiles(0,0,20,18,GLOBAL_MAP);
+    DEBUG_LOG_MESSAGE("world %d \n",current_world);
+    set_bkg_tiles(0,0,20,18, GLOBAL_MAP);
+    
     SWITCH_ROM_MBC5(0);
     // Start from bottom as more likely the start is near the bottom
     for(UINT16 i = 20 * 18 - 1; i >= 0; --i){
         SWITCH_ROM_MBC5(current_world);
         if(GLOBAL_MAP[i] == START_TILE){
-            SWITCH_ROM_MBC1(0);
+            SWITCH_ROM_MBC5(0);
             player->sprite.position.x = i % 20 * 8 + 8;
             player->sprite.position.y = i / 20 * 8 + 16;
             break;
@@ -86,16 +85,21 @@ BYTE win_condition (MPlayer* player){
         else {
             current_level = 0;
             ++current_world;
+            
             //DEBUG_LOG_MESSAGE("You won the game!");
-            if(current_world == TOTAL_WORLD_NUM){
+            if(current_world > TOTAL_WORLD_NUM){
                 move_sprite(player->sprite.sprite_number, 180, 0 );
                 set_bkg_data(0, 114, you_win_data);
                 set_bkg_tiles(0, 0, 20, 18, you_win_map);
                 
                 current_level = 0;
-                current_world = 0;
+                current_world = 1;
                 JOYPAD_WAIT_ANY;
+                delay(100);
+                
+                set_bkg_data(0, 12, BackgroundTiles);
                 set_map(player);
+                
             }
         }
     }

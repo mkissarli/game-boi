@@ -2,7 +2,7 @@
                               2 ; File Created by SDCC : free open source ANSI-C Compiler
                               3 ; Version 4.0.0 #11528 (MINGW32)
                               4 ;--------------------------------------------------------
-                              5 	.module C__Users_Thief3_AppData_Local_Temp_lcc103921
+                              5 	.module C__Users_Thief3_AppData_Local_Temp_lcc82641
                               6 	.optsdcc -mgbz80
                               7 	
                               8 ;--------------------------------------------------------
@@ -18,7 +18,7 @@
                              18 	.area _DATA_1
                              19 	.area _DATA
    0000                      20 _maps::
-   0000                      21 	.ds 1440
+   0000                      21 	.ds 2880
                              22 ;--------------------------------------------------------
                              23 ; absolute external ram data
                              24 ;--------------------------------------------------------
@@ -2911,14 +2911,2894 @@
    1C19 36 04              2911 	ld	(hl), #0x04
    1C1B 21r9Fr05           2912 	ld	hl, #(_maps + 0x059f)
    1C1E 36 04              2913 	ld	(hl), #0x04
-                           2914 ;--------------------------------------------------------
-                           2915 ; Home
-                           2916 ;--------------------------------------------------------
-                           2917 	.area _HOME
-                           2918 	.area _HOME
-                           2919 ;--------------------------------------------------------
-                           2920 ; code
-                           2921 ;--------------------------------------------------------
-                           2922 	.area _CODE_1
-                           2923 	.area _CODE_1
-                           2924 	.area _CABS (ABS)
+   1C20 21rA0r05           2914 	ld	hl, #(_maps + 0x05a0)
+   1C23 36 04              2915 	ld	(hl), #0x04
+   1C25 21rA1r05           2916 	ld	hl, #(_maps + 0x05a1)
+   1C28 36 04              2917 	ld	(hl), #0x04
+   1C2A 21rA2r05           2918 	ld	hl, #(_maps + 0x05a2)
+   1C2D 36 04              2919 	ld	(hl), #0x04
+   1C2F 21rA3r05           2920 	ld	hl, #(_maps + 0x05a3)
+   1C32 36 04              2921 	ld	(hl), #0x04
+   1C34 21rA4r05           2922 	ld	hl, #(_maps + 0x05a4)
+   1C37 36 04              2923 	ld	(hl), #0x04
+   1C39 21rA5r05           2924 	ld	hl, #(_maps + 0x05a5)
+   1C3C 36 04              2925 	ld	(hl), #0x04
+   1C3E 21rA6r05           2926 	ld	hl, #(_maps + 0x05a6)
+   1C41 36 04              2927 	ld	(hl), #0x04
+   1C43 21rA7r05           2928 	ld	hl, #(_maps + 0x05a7)
+   1C46 36 04              2929 	ld	(hl), #0x04
+   1C48 21rA8r05           2930 	ld	hl, #(_maps + 0x05a8)
+   1C4B 36 04              2931 	ld	(hl), #0x04
+   1C4D 21rA9r05           2932 	ld	hl, #(_maps + 0x05a9)
+   1C50 36 04              2933 	ld	(hl), #0x04
+   1C52 21rAAr05           2934 	ld	hl, #(_maps + 0x05aa)
+   1C55 36 04              2935 	ld	(hl), #0x04
+   1C57 21rABr05           2936 	ld	hl, #(_maps + 0x05ab)
+   1C5A 36 04              2937 	ld	(hl), #0x04
+   1C5C 21rACr05           2938 	ld	hl, #(_maps + 0x05ac)
+   1C5F 36 04              2939 	ld	(hl), #0x04
+   1C61 21rADr05           2940 	ld	hl, #(_maps + 0x05ad)
+   1C64 36 04              2941 	ld	(hl), #0x04
+   1C66 21rAEr05           2942 	ld	hl, #(_maps + 0x05ae)
+   1C69 36 04              2943 	ld	(hl), #0x04
+   1C6B 21rAFr05           2944 	ld	hl, #(_maps + 0x05af)
+   1C6E 36 04              2945 	ld	(hl), #0x04
+   1C70 21rB0r05           2946 	ld	hl, #(_maps + 0x05b0)
+   1C73 36 04              2947 	ld	(hl), #0x04
+   1C75 21rB1r05           2948 	ld	hl, #(_maps + 0x05b1)
+   1C78 36 04              2949 	ld	(hl), #0x04
+   1C7A 21rB2r05           2950 	ld	hl, #(_maps + 0x05b2)
+   1C7D 36 04              2951 	ld	(hl), #0x04
+   1C7F 21rB3r05           2952 	ld	hl, #(_maps + 0x05b3)
+   1C82 36 04              2953 	ld	(hl), #0x04
+   1C84 21rB4r05           2954 	ld	hl, #(_maps + 0x05b4)
+   1C87 36 04              2955 	ld	(hl), #0x04
+   1C89 21rB5r05           2956 	ld	hl, #(_maps + 0x05b5)
+   1C8C 36 00              2957 	ld	(hl), #0x00
+   1C8E 21rB6r05           2958 	ld	hl, #(_maps + 0x05b6)
+   1C91 36 00              2959 	ld	(hl), #0x00
+   1C93 21rB7r05           2960 	ld	hl, #(_maps + 0x05b7)
+   1C96 36 00              2961 	ld	(hl), #0x00
+   1C98 21rB8r05           2962 	ld	hl, #(_maps + 0x05b8)
+   1C9B 36 00              2963 	ld	(hl), #0x00
+   1C9D 21rB9r05           2964 	ld	hl, #(_maps + 0x05b9)
+   1CA0 36 00              2965 	ld	(hl), #0x00
+   1CA2 21rBAr05           2966 	ld	hl, #(_maps + 0x05ba)
+   1CA5 36 00              2967 	ld	(hl), #0x00
+   1CA7 21rBBr05           2968 	ld	hl, #(_maps + 0x05bb)
+   1CAA 36 00              2969 	ld	(hl), #0x00
+   1CAC 21rBCr05           2970 	ld	hl, #(_maps + 0x05bc)
+   1CAF 36 00              2971 	ld	(hl), #0x00
+   1CB1 21rBDr05           2972 	ld	hl, #(_maps + 0x05bd)
+   1CB4 36 00              2973 	ld	(hl), #0x00
+   1CB6 21rBEr05           2974 	ld	hl, #(_maps + 0x05be)
+   1CB9 36 00              2975 	ld	(hl), #0x00
+   1CBB 21rBFr05           2976 	ld	hl, #(_maps + 0x05bf)
+   1CBE 36 00              2977 	ld	(hl), #0x00
+   1CC0 21rC0r05           2978 	ld	hl, #(_maps + 0x05c0)
+   1CC3 36 00              2979 	ld	(hl), #0x00
+   1CC5 21rC1r05           2980 	ld	hl, #(_maps + 0x05c1)
+   1CC8 36 00              2981 	ld	(hl), #0x00
+   1CCA 21rC2r05           2982 	ld	hl, #(_maps + 0x05c2)
+   1CCD 36 00              2983 	ld	(hl), #0x00
+   1CCF 21rC3r05           2984 	ld	hl, #(_maps + 0x05c3)
+   1CD2 36 00              2985 	ld	(hl), #0x00
+   1CD4 21rC4r05           2986 	ld	hl, #(_maps + 0x05c4)
+   1CD7 36 00              2987 	ld	(hl), #0x00
+   1CD9 21rC5r05           2988 	ld	hl, #(_maps + 0x05c5)
+   1CDC 36 00              2989 	ld	(hl), #0x00
+   1CDE 21rC6r05           2990 	ld	hl, #(_maps + 0x05c6)
+   1CE1 36 00              2991 	ld	(hl), #0x00
+   1CE3 21rC7r05           2992 	ld	hl, #(_maps + 0x05c7)
+   1CE6 36 04              2993 	ld	(hl), #0x04
+   1CE8 21rC8r05           2994 	ld	hl, #(_maps + 0x05c8)
+   1CEB 36 04              2995 	ld	(hl), #0x04
+   1CED 21rC9r05           2996 	ld	hl, #(_maps + 0x05c9)
+   1CF0 36 00              2997 	ld	(hl), #0x00
+   1CF2 21rCAr05           2998 	ld	hl, #(_maps + 0x05ca)
+   1CF5 36 00              2999 	ld	(hl), #0x00
+   1CF7 21rCBr05           3000 	ld	hl, #(_maps + 0x05cb)
+   1CFA 36 00              3001 	ld	(hl), #0x00
+   1CFC 21rCCr05           3002 	ld	hl, #(_maps + 0x05cc)
+   1CFF 36 00              3003 	ld	(hl), #0x00
+   1D01 21rCDr05           3004 	ld	hl, #(_maps + 0x05cd)
+   1D04 36 00              3005 	ld	(hl), #0x00
+   1D06 21rCEr05           3006 	ld	hl, #(_maps + 0x05ce)
+   1D09 36 00              3007 	ld	(hl), #0x00
+   1D0B 21rCFr05           3008 	ld	hl, #(_maps + 0x05cf)
+   1D0E 36 00              3009 	ld	(hl), #0x00
+   1D10 21rD0r05           3010 	ld	hl, #(_maps + 0x05d0)
+   1D13 36 00              3011 	ld	(hl), #0x00
+   1D15 21rD1r05           3012 	ld	hl, #(_maps + 0x05d1)
+   1D18 36 00              3013 	ld	(hl), #0x00
+   1D1A 21rD2r05           3014 	ld	hl, #(_maps + 0x05d2)
+   1D1D 36 00              3015 	ld	(hl), #0x00
+   1D1F 21rD3r05           3016 	ld	hl, #(_maps + 0x05d3)
+   1D22 36 00              3017 	ld	(hl), #0x00
+   1D24 21rD4r05           3018 	ld	hl, #(_maps + 0x05d4)
+   1D27 36 00              3019 	ld	(hl), #0x00
+   1D29 21rD5r05           3020 	ld	hl, #(_maps + 0x05d5)
+   1D2C 36 00              3021 	ld	(hl), #0x00
+   1D2E 21rD6r05           3022 	ld	hl, #(_maps + 0x05d6)
+   1D31 36 00              3023 	ld	(hl), #0x00
+   1D33 21rD7r05           3024 	ld	hl, #(_maps + 0x05d7)
+   1D36 36 00              3025 	ld	(hl), #0x00
+   1D38 21rD8r05           3026 	ld	hl, #(_maps + 0x05d8)
+   1D3B 36 00              3027 	ld	(hl), #0x00
+   1D3D 21rD9r05           3028 	ld	hl, #(_maps + 0x05d9)
+   1D40 36 00              3029 	ld	(hl), #0x00
+   1D42 21rDAr05           3030 	ld	hl, #(_maps + 0x05da)
+   1D45 36 00              3031 	ld	(hl), #0x00
+   1D47 21rDBr05           3032 	ld	hl, #(_maps + 0x05db)
+   1D4A 36 04              3033 	ld	(hl), #0x04
+   1D4C 21rDCr05           3034 	ld	hl, #(_maps + 0x05dc)
+   1D4F 36 04              3035 	ld	(hl), #0x04
+   1D51 21rDDr05           3036 	ld	hl, #(_maps + 0x05dd)
+   1D54 36 00              3037 	ld	(hl), #0x00
+   1D56 21rDEr05           3038 	ld	hl, #(_maps + 0x05de)
+   1D59 36 00              3039 	ld	(hl), #0x00
+   1D5B 21rDFr05           3040 	ld	hl, #(_maps + 0x05df)
+   1D5E 36 00              3041 	ld	(hl), #0x00
+   1D60 21rE0r05           3042 	ld	hl, #(_maps + 0x05e0)
+   1D63 36 00              3043 	ld	(hl), #0x00
+   1D65 21rE1r05           3044 	ld	hl, #(_maps + 0x05e1)
+   1D68 36 03              3045 	ld	(hl), #0x03
+   1D6A 21rE2r05           3046 	ld	hl, #(_maps + 0x05e2)
+   1D6D 36 00              3047 	ld	(hl), #0x00
+   1D6F 21rE3r05           3048 	ld	hl, #(_maps + 0x05e3)
+   1D72 36 00              3049 	ld	(hl), #0x00
+   1D74 21rE4r05           3050 	ld	hl, #(_maps + 0x05e4)
+   1D77 36 00              3051 	ld	(hl), #0x00
+   1D79 21rE5r05           3052 	ld	hl, #(_maps + 0x05e5)
+   1D7C 36 00              3053 	ld	(hl), #0x00
+   1D7E 21rE6r05           3054 	ld	hl, #(_maps + 0x05e6)
+   1D81 36 00              3055 	ld	(hl), #0x00
+   1D83 21rE7r05           3056 	ld	hl, #(_maps + 0x05e7)
+   1D86 36 00              3057 	ld	(hl), #0x00
+   1D88 21rE8r05           3058 	ld	hl, #(_maps + 0x05e8)
+   1D8B 36 00              3059 	ld	(hl), #0x00
+   1D8D 21rE9r05           3060 	ld	hl, #(_maps + 0x05e9)
+   1D90 36 00              3061 	ld	(hl), #0x00
+   1D92 21rEAr05           3062 	ld	hl, #(_maps + 0x05ea)
+   1D95 36 00              3063 	ld	(hl), #0x00
+   1D97 21rEBr05           3064 	ld	hl, #(_maps + 0x05eb)
+   1D9A 36 00              3065 	ld	(hl), #0x00
+   1D9C 21rECr05           3066 	ld	hl, #(_maps + 0x05ec)
+   1D9F 36 00              3067 	ld	(hl), #0x00
+   1DA1 21rEDr05           3068 	ld	hl, #(_maps + 0x05ed)
+   1DA4 36 00              3069 	ld	(hl), #0x00
+   1DA6 21rEEr05           3070 	ld	hl, #(_maps + 0x05ee)
+   1DA9 36 00              3071 	ld	(hl), #0x00
+   1DAB 21rEFr05           3072 	ld	hl, #(_maps + 0x05ef)
+   1DAE 36 04              3073 	ld	(hl), #0x04
+   1DB0 21rF0r05           3074 	ld	hl, #(_maps + 0x05f0)
+   1DB3 36 04              3075 	ld	(hl), #0x04
+   1DB5 21rF1r05           3076 	ld	hl, #(_maps + 0x05f1)
+   1DB8 36 00              3077 	ld	(hl), #0x00
+   1DBA 21rF2r05           3078 	ld	hl, #(_maps + 0x05f2)
+   1DBD 36 00              3079 	ld	(hl), #0x00
+   1DBF 21rF3r05           3080 	ld	hl, #(_maps + 0x05f3)
+   1DC2 36 00              3081 	ld	(hl), #0x00
+   1DC4 21rF4r05           3082 	ld	hl, #(_maps + 0x05f4)
+   1DC7 36 00              3083 	ld	(hl), #0x00
+   1DC9 21rF5r05           3084 	ld	hl, #(_maps + 0x05f5)
+   1DCC 36 03              3085 	ld	(hl), #0x03
+   1DCE 21rF6r05           3086 	ld	hl, #(_maps + 0x05f6)
+   1DD1 36 00              3087 	ld	(hl), #0x00
+   1DD3 21rF7r05           3088 	ld	hl, #(_maps + 0x05f7)
+   1DD6 36 00              3089 	ld	(hl), #0x00
+   1DD8 21rF8r05           3090 	ld	hl, #(_maps + 0x05f8)
+   1DDB 36 00              3091 	ld	(hl), #0x00
+   1DDD 21rF9r05           3092 	ld	hl, #(_maps + 0x05f9)
+   1DE0 36 00              3093 	ld	(hl), #0x00
+   1DE2 21rFAr05           3094 	ld	hl, #(_maps + 0x05fa)
+   1DE5 36 00              3095 	ld	(hl), #0x00
+   1DE7 21rFBr05           3096 	ld	hl, #(_maps + 0x05fb)
+   1DEA 36 00              3097 	ld	(hl), #0x00
+   1DEC 21rFCr05           3098 	ld	hl, #(_maps + 0x05fc)
+   1DEF 36 00              3099 	ld	(hl), #0x00
+   1DF1 21rFDr05           3100 	ld	hl, #(_maps + 0x05fd)
+   1DF4 36 00              3101 	ld	(hl), #0x00
+   1DF6 21rFEr05           3102 	ld	hl, #(_maps + 0x05fe)
+   1DF9 36 00              3103 	ld	(hl), #0x00
+   1DFB 21rFFr05           3104 	ld	hl, #(_maps + 0x05ff)
+   1DFE 36 00              3105 	ld	(hl), #0x00
+   1E00 21r00r06           3106 	ld	hl, #(_maps + 0x0600)
+   1E03 36 00              3107 	ld	(hl), #0x00
+   1E05 21r01r06           3108 	ld	hl, #(_maps + 0x0601)
+   1E08 36 00              3109 	ld	(hl), #0x00
+   1E0A 21r02r06           3110 	ld	hl, #(_maps + 0x0602)
+   1E0D 36 00              3111 	ld	(hl), #0x00
+   1E0F 21r03r06           3112 	ld	hl, #(_maps + 0x0603)
+   1E12 36 04              3113 	ld	(hl), #0x04
+   1E14 21r04r06           3114 	ld	hl, #(_maps + 0x0604)
+   1E17 36 04              3115 	ld	(hl), #0x04
+   1E19 21r05r06           3116 	ld	hl, #(_maps + 0x0605)
+   1E1C 36 00              3117 	ld	(hl), #0x00
+   1E1E 21r06r06           3118 	ld	hl, #(_maps + 0x0606)
+   1E21 36 00              3119 	ld	(hl), #0x00
+   1E23 21r07r06           3120 	ld	hl, #(_maps + 0x0607)
+   1E26 36 00              3121 	ld	(hl), #0x00
+   1E28 21r08r06           3122 	ld	hl, #(_maps + 0x0608)
+   1E2B 36 00              3123 	ld	(hl), #0x00
+   1E2D 21r09r06           3124 	ld	hl, #(_maps + 0x0609)
+   1E30 36 03              3125 	ld	(hl), #0x03
+   1E32 21r0Ar06           3126 	ld	hl, #(_maps + 0x060a)
+   1E35 36 00              3127 	ld	(hl), #0x00
+   1E37 21r0Br06           3128 	ld	hl, #(_maps + 0x060b)
+   1E3A 36 00              3129 	ld	(hl), #0x00
+   1E3C 21r0Cr06           3130 	ld	hl, #(_maps + 0x060c)
+   1E3F 36 00              3131 	ld	(hl), #0x00
+   1E41 21r0Dr06           3132 	ld	hl, #(_maps + 0x060d)
+   1E44 36 00              3133 	ld	(hl), #0x00
+   1E46 21r0Er06           3134 	ld	hl, #(_maps + 0x060e)
+   1E49 36 00              3135 	ld	(hl), #0x00
+   1E4B 21r0Fr06           3136 	ld	hl, #(_maps + 0x060f)
+   1E4E 36 00              3137 	ld	(hl), #0x00
+   1E50 21r10r06           3138 	ld	hl, #(_maps + 0x0610)
+   1E53 36 00              3139 	ld	(hl), #0x00
+   1E55 21r11r06           3140 	ld	hl, #(_maps + 0x0611)
+   1E58 36 00              3141 	ld	(hl), #0x00
+   1E5A 21r12r06           3142 	ld	hl, #(_maps + 0x0612)
+   1E5D 36 00              3143 	ld	(hl), #0x00
+   1E5F 21r13r06           3144 	ld	hl, #(_maps + 0x0613)
+   1E62 36 00              3145 	ld	(hl), #0x00
+   1E64 21r14r06           3146 	ld	hl, #(_maps + 0x0614)
+   1E67 36 00              3147 	ld	(hl), #0x00
+   1E69 21r15r06           3148 	ld	hl, #(_maps + 0x0615)
+   1E6C 36 00              3149 	ld	(hl), #0x00
+   1E6E 21r16r06           3150 	ld	hl, #(_maps + 0x0616)
+   1E71 36 00              3151 	ld	(hl), #0x00
+   1E73 21r17r06           3152 	ld	hl, #(_maps + 0x0617)
+   1E76 36 04              3153 	ld	(hl), #0x04
+   1E78 21r18r06           3154 	ld	hl, #(_maps + 0x0618)
+   1E7B 36 04              3155 	ld	(hl), #0x04
+   1E7D 21r19r06           3156 	ld	hl, #(_maps + 0x0619)
+   1E80 36 00              3157 	ld	(hl), #0x00
+   1E82 21r1Ar06           3158 	ld	hl, #(_maps + 0x061a)
+   1E85 36 00              3159 	ld	(hl), #0x00
+   1E87 21r1Br06           3160 	ld	hl, #(_maps + 0x061b)
+   1E8A 36 03              3161 	ld	(hl), #0x03
+   1E8C 21r1Cr06           3162 	ld	hl, #(_maps + 0x061c)
+   1E8F 36 03              3163 	ld	(hl), #0x03
+   1E91 21r1Dr06           3164 	ld	hl, #(_maps + 0x061d)
+   1E94 36 03              3165 	ld	(hl), #0x03
+   1E96 21r1Er06           3166 	ld	hl, #(_maps + 0x061e)
+   1E99 36 00              3167 	ld	(hl), #0x00
+   1E9B 21r1Fr06           3168 	ld	hl, #(_maps + 0x061f)
+   1E9E 36 00              3169 	ld	(hl), #0x00
+   1EA0 21r20r06           3170 	ld	hl, #(_maps + 0x0620)
+   1EA3 36 00              3171 	ld	(hl), #0x00
+   1EA5 21r21r06           3172 	ld	hl, #(_maps + 0x0621)
+   1EA8 36 00              3173 	ld	(hl), #0x00
+   1EAA 21r22r06           3174 	ld	hl, #(_maps + 0x0622)
+   1EAD 36 00              3175 	ld	(hl), #0x00
+   1EAF 21r23r06           3176 	ld	hl, #(_maps + 0x0623)
+   1EB2 36 00              3177 	ld	(hl), #0x00
+   1EB4 21r24r06           3178 	ld	hl, #(_maps + 0x0624)
+   1EB7 36 00              3179 	ld	(hl), #0x00
+   1EB9 21r25r06           3180 	ld	hl, #(_maps + 0x0625)
+   1EBC 36 00              3181 	ld	(hl), #0x00
+   1EBE 21r26r06           3182 	ld	hl, #(_maps + 0x0626)
+   1EC1 36 00              3183 	ld	(hl), #0x00
+   1EC3 21r27r06           3184 	ld	hl, #(_maps + 0x0627)
+   1EC6 36 00              3185 	ld	(hl), #0x00
+   1EC8 21r28r06           3186 	ld	hl, #(_maps + 0x0628)
+   1ECB 36 00              3187 	ld	(hl), #0x00
+   1ECD 21r29r06           3188 	ld	hl, #(_maps + 0x0629)
+   1ED0 36 00              3189 	ld	(hl), #0x00
+   1ED2 21r2Ar06           3190 	ld	hl, #(_maps + 0x062a)
+   1ED5 36 00              3191 	ld	(hl), #0x00
+   1ED7 21r2Br06           3192 	ld	hl, #(_maps + 0x062b)
+   1EDA 36 04              3193 	ld	(hl), #0x04
+   1EDC 21r2Cr06           3194 	ld	hl, #(_maps + 0x062c)
+   1EDF 36 04              3195 	ld	(hl), #0x04
+   1EE1 21r2Dr06           3196 	ld	hl, #(_maps + 0x062d)
+   1EE4 36 00              3197 	ld	(hl), #0x00
+   1EE6 21r2Er06           3198 	ld	hl, #(_maps + 0x062e)
+   1EE9 36 00              3199 	ld	(hl), #0x00
+   1EEB 21r2Fr06           3200 	ld	hl, #(_maps + 0x062f)
+   1EEE 36 03              3201 	ld	(hl), #0x03
+   1EF0 21r30r06           3202 	ld	hl, #(_maps + 0x0630)
+   1EF3 36 06              3203 	ld	(hl), #0x06
+   1EF5 21r31r06           3204 	ld	hl, #(_maps + 0x0631)
+   1EF8 36 00              3205 	ld	(hl), #0x00
+   1EFA 21r32r06           3206 	ld	hl, #(_maps + 0x0632)
+   1EFD 36 00              3207 	ld	(hl), #0x00
+   1EFF 21r33r06           3208 	ld	hl, #(_maps + 0x0633)
+   1F02 36 00              3209 	ld	(hl), #0x00
+   1F04 21r34r06           3210 	ld	hl, #(_maps + 0x0634)
+   1F07 36 00              3211 	ld	(hl), #0x00
+   1F09 21r35r06           3212 	ld	hl, #(_maps + 0x0635)
+   1F0C 36 00              3213 	ld	(hl), #0x00
+   1F0E 21r36r06           3214 	ld	hl, #(_maps + 0x0636)
+   1F11 36 03              3215 	ld	(hl), #0x03
+   1F13 21r37r06           3216 	ld	hl, #(_maps + 0x0637)
+   1F16 36 00              3217 	ld	(hl), #0x00
+   1F18 21r38r06           3218 	ld	hl, #(_maps + 0x0638)
+   1F1B 36 00              3219 	ld	(hl), #0x00
+   1F1D 21r39r06           3220 	ld	hl, #(_maps + 0x0639)
+   1F20 36 00              3221 	ld	(hl), #0x00
+   1F22 21r3Ar06           3222 	ld	hl, #(_maps + 0x063a)
+   1F25 36 00              3223 	ld	(hl), #0x00
+   1F27 21r3Br06           3224 	ld	hl, #(_maps + 0x063b)
+   1F2A 36 00              3225 	ld	(hl), #0x00
+   1F2C 21r3Cr06           3226 	ld	hl, #(_maps + 0x063c)
+   1F2F 36 00              3227 	ld	(hl), #0x00
+   1F31 21r3Dr06           3228 	ld	hl, #(_maps + 0x063d)
+   1F34 36 00              3229 	ld	(hl), #0x00
+   1F36 21r3Er06           3230 	ld	hl, #(_maps + 0x063e)
+   1F39 36 00              3231 	ld	(hl), #0x00
+   1F3B 21r3Fr06           3232 	ld	hl, #(_maps + 0x063f)
+   1F3E 36 04              3233 	ld	(hl), #0x04
+   1F40 21r40r06           3234 	ld	hl, #(_maps + 0x0640)
+   1F43 36 04              3235 	ld	(hl), #0x04
+   1F45 21r41r06           3236 	ld	hl, #(_maps + 0x0641)
+   1F48 36 00              3237 	ld	(hl), #0x00
+   1F4A 21r42r06           3238 	ld	hl, #(_maps + 0x0642)
+   1F4D 36 00              3239 	ld	(hl), #0x00
+   1F4F 21r43r06           3240 	ld	hl, #(_maps + 0x0643)
+   1F52 36 03              3241 	ld	(hl), #0x03
+   1F54 21r44r06           3242 	ld	hl, #(_maps + 0x0644)
+   1F57 36 06              3243 	ld	(hl), #0x06
+   1F59 21r45r06           3244 	ld	hl, #(_maps + 0x0645)
+   1F5C 36 00              3245 	ld	(hl), #0x00
+   1F5E 21r46r06           3246 	ld	hl, #(_maps + 0x0646)
+   1F61 36 00              3247 	ld	(hl), #0x00
+   1F63 21r47r06           3248 	ld	hl, #(_maps + 0x0647)
+   1F66 36 00              3249 	ld	(hl), #0x00
+   1F68 21r48r06           3250 	ld	hl, #(_maps + 0x0648)
+   1F6B 36 00              3251 	ld	(hl), #0x00
+   1F6D 21r49r06           3252 	ld	hl, #(_maps + 0x0649)
+   1F70 36 00              3253 	ld	(hl), #0x00
+   1F72 21r4Ar06           3254 	ld	hl, #(_maps + 0x064a)
+   1F75 36 03              3255 	ld	(hl), #0x03
+   1F77 21r4Br06           3256 	ld	hl, #(_maps + 0x064b)
+   1F7A 36 00              3257 	ld	(hl), #0x00
+   1F7C 21r4Cr06           3258 	ld	hl, #(_maps + 0x064c)
+   1F7F 36 00              3259 	ld	(hl), #0x00
+   1F81 21r4Dr06           3260 	ld	hl, #(_maps + 0x064d)
+   1F84 36 00              3261 	ld	(hl), #0x00
+   1F86 21r4Er06           3262 	ld	hl, #(_maps + 0x064e)
+   1F89 36 00              3263 	ld	(hl), #0x00
+   1F8B 21r4Fr06           3264 	ld	hl, #(_maps + 0x064f)
+   1F8E 36 00              3265 	ld	(hl), #0x00
+   1F90 21r50r06           3266 	ld	hl, #(_maps + 0x0650)
+   1F93 36 00              3267 	ld	(hl), #0x00
+   1F95 21r51r06           3268 	ld	hl, #(_maps + 0x0651)
+   1F98 36 00              3269 	ld	(hl), #0x00
+   1F9A 21r52r06           3270 	ld	hl, #(_maps + 0x0652)
+   1F9D 36 00              3271 	ld	(hl), #0x00
+   1F9F 21r53r06           3272 	ld	hl, #(_maps + 0x0653)
+   1FA2 36 04              3273 	ld	(hl), #0x04
+   1FA4 21r54r06           3274 	ld	hl, #(_maps + 0x0654)
+   1FA7 36 04              3275 	ld	(hl), #0x04
+   1FA9 21r55r06           3276 	ld	hl, #(_maps + 0x0655)
+   1FAC 36 00              3277 	ld	(hl), #0x00
+   1FAE 21r56r06           3278 	ld	hl, #(_maps + 0x0656)
+   1FB1 36 00              3279 	ld	(hl), #0x00
+   1FB3 21r57r06           3280 	ld	hl, #(_maps + 0x0657)
+   1FB6 36 03              3281 	ld	(hl), #0x03
+   1FB8 21r58r06           3282 	ld	hl, #(_maps + 0x0658)
+   1FBB 36 06              3283 	ld	(hl), #0x06
+   1FBD 21r59r06           3284 	ld	hl, #(_maps + 0x0659)
+   1FC0 36 00              3285 	ld	(hl), #0x00
+   1FC2 21r5Ar06           3286 	ld	hl, #(_maps + 0x065a)
+   1FC5 36 00              3287 	ld	(hl), #0x00
+   1FC7 21r5Br06           3288 	ld	hl, #(_maps + 0x065b)
+   1FCA 36 00              3289 	ld	(hl), #0x00
+   1FCC 21r5Cr06           3290 	ld	hl, #(_maps + 0x065c)
+   1FCF 36 00              3291 	ld	(hl), #0x00
+   1FD1 21r5Dr06           3292 	ld	hl, #(_maps + 0x065d)
+   1FD4 36 00              3293 	ld	(hl), #0x00
+   1FD6 21r5Er06           3294 	ld	hl, #(_maps + 0x065e)
+   1FD9 36 03              3295 	ld	(hl), #0x03
+   1FDB 21r5Fr06           3296 	ld	hl, #(_maps + 0x065f)
+   1FDE 36 00              3297 	ld	(hl), #0x00
+   1FE0 21r60r06           3298 	ld	hl, #(_maps + 0x0660)
+   1FE3 36 00              3299 	ld	(hl), #0x00
+   1FE5 21r61r06           3300 	ld	hl, #(_maps + 0x0661)
+   1FE8 36 00              3301 	ld	(hl), #0x00
+   1FEA 21r62r06           3302 	ld	hl, #(_maps + 0x0662)
+   1FED 36 00              3303 	ld	(hl), #0x00
+   1FEF 21r63r06           3304 	ld	hl, #(_maps + 0x0663)
+   1FF2 36 00              3305 	ld	(hl), #0x00
+   1FF4 21r64r06           3306 	ld	hl, #(_maps + 0x0664)
+   1FF7 36 00              3307 	ld	(hl), #0x00
+   1FF9 21r65r06           3308 	ld	hl, #(_maps + 0x0665)
+   1FFC 36 00              3309 	ld	(hl), #0x00
+   1FFE 21r66r06           3310 	ld	hl, #(_maps + 0x0666)
+   2001 36 00              3311 	ld	(hl), #0x00
+   2003 21r67r06           3312 	ld	hl, #(_maps + 0x0667)
+   2006 36 04              3313 	ld	(hl), #0x04
+   2008 21r68r06           3314 	ld	hl, #(_maps + 0x0668)
+   200B 36 04              3315 	ld	(hl), #0x04
+   200D 21r69r06           3316 	ld	hl, #(_maps + 0x0669)
+   2010 36 00              3317 	ld	(hl), #0x00
+   2012 21r6Ar06           3318 	ld	hl, #(_maps + 0x066a)
+   2015 36 00              3319 	ld	(hl), #0x00
+   2017 21r6Br06           3320 	ld	hl, #(_maps + 0x066b)
+   201A 36 03              3321 	ld	(hl), #0x03
+   201C 21r6Cr06           3322 	ld	hl, #(_maps + 0x066c)
+   201F 36 06              3323 	ld	(hl), #0x06
+   2021 21r6Dr06           3324 	ld	hl, #(_maps + 0x066d)
+   2024 36 00              3325 	ld	(hl), #0x00
+   2026 21r6Er06           3326 	ld	hl, #(_maps + 0x066e)
+   2029 36 00              3327 	ld	(hl), #0x00
+   202B 21r6Fr06           3328 	ld	hl, #(_maps + 0x066f)
+   202E 36 00              3329 	ld	(hl), #0x00
+   2030 21r70r06           3330 	ld	hl, #(_maps + 0x0670)
+   2033 36 00              3331 	ld	(hl), #0x00
+   2035 21r71r06           3332 	ld	hl, #(_maps + 0x0671)
+   2038 36 00              3333 	ld	(hl), #0x00
+   203A 21r72r06           3334 	ld	hl, #(_maps + 0x0672)
+   203D 36 03              3335 	ld	(hl), #0x03
+   203F 21r73r06           3336 	ld	hl, #(_maps + 0x0673)
+   2042 36 03              3337 	ld	(hl), #0x03
+   2044 21r74r06           3338 	ld	hl, #(_maps + 0x0674)
+   2047 36 03              3339 	ld	(hl), #0x03
+   2049 21r75r06           3340 	ld	hl, #(_maps + 0x0675)
+   204C 36 00              3341 	ld	(hl), #0x00
+   204E 21r76r06           3342 	ld	hl, #(_maps + 0x0676)
+   2051 36 00              3343 	ld	(hl), #0x00
+   2053 21r77r06           3344 	ld	hl, #(_maps + 0x0677)
+   2056 36 00              3345 	ld	(hl), #0x00
+   2058 21r78r06           3346 	ld	hl, #(_maps + 0x0678)
+   205B 36 00              3347 	ld	(hl), #0x00
+   205D 21r79r06           3348 	ld	hl, #(_maps + 0x0679)
+   2060 36 00              3349 	ld	(hl), #0x00
+   2062 21r7Ar06           3350 	ld	hl, #(_maps + 0x067a)
+   2065 36 00              3351 	ld	(hl), #0x00
+   2067 21r7Br06           3352 	ld	hl, #(_maps + 0x067b)
+   206A 36 04              3353 	ld	(hl), #0x04
+   206C 21r7Cr06           3354 	ld	hl, #(_maps + 0x067c)
+   206F 36 04              3355 	ld	(hl), #0x04
+   2071 21r7Dr06           3356 	ld	hl, #(_maps + 0x067d)
+   2074 36 00              3357 	ld	(hl), #0x00
+   2076 21r7Er06           3358 	ld	hl, #(_maps + 0x067e)
+   2079 36 00              3359 	ld	(hl), #0x00
+   207B 21r7Fr06           3360 	ld	hl, #(_maps + 0x067f)
+   207E 36 03              3361 	ld	(hl), #0x03
+   2080 21r80r06           3362 	ld	hl, #(_maps + 0x0680)
+   2083 36 03              3363 	ld	(hl), #0x03
+   2085 21r81r06           3364 	ld	hl, #(_maps + 0x0681)
+   2088 36 03              3365 	ld	(hl), #0x03
+   208A 21r82r06           3366 	ld	hl, #(_maps + 0x0682)
+   208D 36 00              3367 	ld	(hl), #0x00
+   208F 21r83r06           3368 	ld	hl, #(_maps + 0x0683)
+   2092 36 00              3369 	ld	(hl), #0x00
+   2094 21r84r06           3370 	ld	hl, #(_maps + 0x0684)
+   2097 36 00              3371 	ld	(hl), #0x00
+   2099 21r85r06           3372 	ld	hl, #(_maps + 0x0685)
+   209C 36 00              3373 	ld	(hl), #0x00
+   209E 21r86r06           3374 	ld	hl, #(_maps + 0x0686)
+   20A1 36 00              3375 	ld	(hl), #0x00
+   20A3 21r87r06           3376 	ld	hl, #(_maps + 0x0687)
+   20A6 36 08              3377 	ld	(hl), #0x08
+   20A8 21r88r06           3378 	ld	hl, #(_maps + 0x0688)
+   20AB 36 03              3379 	ld	(hl), #0x03
+   20AD 21r89r06           3380 	ld	hl, #(_maps + 0x0689)
+   20B0 36 00              3381 	ld	(hl), #0x00
+   20B2 21r8Ar06           3382 	ld	hl, #(_maps + 0x068a)
+   20B5 36 00              3383 	ld	(hl), #0x00
+   20B7 21r8Br06           3384 	ld	hl, #(_maps + 0x068b)
+   20BA 36 00              3385 	ld	(hl), #0x00
+   20BC 21r8Cr06           3386 	ld	hl, #(_maps + 0x068c)
+   20BF 36 00              3387 	ld	(hl), #0x00
+   20C1 21r8Dr06           3388 	ld	hl, #(_maps + 0x068d)
+   20C4 36 00              3389 	ld	(hl), #0x00
+   20C6 21r8Er06           3390 	ld	hl, #(_maps + 0x068e)
+   20C9 36 00              3391 	ld	(hl), #0x00
+   20CB 21r8Fr06           3392 	ld	hl, #(_maps + 0x068f)
+   20CE 36 04              3393 	ld	(hl), #0x04
+   20D0 21r90r06           3394 	ld	hl, #(_maps + 0x0690)
+   20D3 36 04              3395 	ld	(hl), #0x04
+   20D5 21r91r06           3396 	ld	hl, #(_maps + 0x0691)
+   20D8 36 00              3397 	ld	(hl), #0x00
+   20DA 21r92r06           3398 	ld	hl, #(_maps + 0x0692)
+   20DD 36 00              3399 	ld	(hl), #0x00
+   20DF 21r93r06           3400 	ld	hl, #(_maps + 0x0693)
+   20E2 36 00              3401 	ld	(hl), #0x00
+   20E4 21r94r06           3402 	ld	hl, #(_maps + 0x0694)
+   20E7 36 00              3403 	ld	(hl), #0x00
+   20E9 21r95r06           3404 	ld	hl, #(_maps + 0x0695)
+   20EC 36 03              3405 	ld	(hl), #0x03
+   20EE 21r96r06           3406 	ld	hl, #(_maps + 0x0696)
+   20F1 36 00              3407 	ld	(hl), #0x00
+   20F3 21r97r06           3408 	ld	hl, #(_maps + 0x0697)
+   20F6 36 00              3409 	ld	(hl), #0x00
+   20F8 21r98r06           3410 	ld	hl, #(_maps + 0x0698)
+   20FB 36 00              3411 	ld	(hl), #0x00
+   20FD 21r99r06           3412 	ld	hl, #(_maps + 0x0699)
+   2100 36 00              3413 	ld	(hl), #0x00
+   2102 21r9Ar06           3414 	ld	hl, #(_maps + 0x069a)
+   2105 36 00              3415 	ld	(hl), #0x00
+   2107 21r9Br06           3416 	ld	hl, #(_maps + 0x069b)
+   210A 36 08              3417 	ld	(hl), #0x08
+   210C 21r9Cr06           3418 	ld	hl, #(_maps + 0x069c)
+   210F 36 03              3419 	ld	(hl), #0x03
+   2111 21r9Dr06           3420 	ld	hl, #(_maps + 0x069d)
+   2114 36 00              3421 	ld	(hl), #0x00
+   2116 21r9Er06           3422 	ld	hl, #(_maps + 0x069e)
+   2119 36 00              3423 	ld	(hl), #0x00
+   211B 21r9Fr06           3424 	ld	hl, #(_maps + 0x069f)
+   211E 36 00              3425 	ld	(hl), #0x00
+   2120 21rA0r06           3426 	ld	hl, #(_maps + 0x06a0)
+   2123 36 00              3427 	ld	(hl), #0x00
+   2125 21rA1r06           3428 	ld	hl, #(_maps + 0x06a1)
+   2128 36 00              3429 	ld	(hl), #0x00
+   212A 21rA2r06           3430 	ld	hl, #(_maps + 0x06a2)
+   212D 36 00              3431 	ld	(hl), #0x00
+   212F 21rA3r06           3432 	ld	hl, #(_maps + 0x06a3)
+   2132 36 04              3433 	ld	(hl), #0x04
+   2134 21rA4r06           3434 	ld	hl, #(_maps + 0x06a4)
+   2137 36 04              3435 	ld	(hl), #0x04
+   2139 21rA5r06           3436 	ld	hl, #(_maps + 0x06a5)
+   213C 36 00              3437 	ld	(hl), #0x00
+   213E 21rA6r06           3438 	ld	hl, #(_maps + 0x06a6)
+   2141 36 00              3439 	ld	(hl), #0x00
+   2143 21rA7r06           3440 	ld	hl, #(_maps + 0x06a7)
+   2146 36 00              3441 	ld	(hl), #0x00
+   2148 21rA8r06           3442 	ld	hl, #(_maps + 0x06a8)
+   214B 36 00              3443 	ld	(hl), #0x00
+   214D 21rA9r06           3444 	ld	hl, #(_maps + 0x06a9)
+   2150 36 03              3445 	ld	(hl), #0x03
+   2152 21rAAr06           3446 	ld	hl, #(_maps + 0x06aa)
+   2155 36 00              3447 	ld	(hl), #0x00
+   2157 21rABr06           3448 	ld	hl, #(_maps + 0x06ab)
+   215A 36 00              3449 	ld	(hl), #0x00
+   215C 21rACr06           3450 	ld	hl, #(_maps + 0x06ac)
+   215F 36 00              3451 	ld	(hl), #0x00
+   2161 21rADr06           3452 	ld	hl, #(_maps + 0x06ad)
+   2164 36 00              3453 	ld	(hl), #0x00
+   2166 21rAEr06           3454 	ld	hl, #(_maps + 0x06ae)
+   2169 36 00              3455 	ld	(hl), #0x00
+   216B 21rAFr06           3456 	ld	hl, #(_maps + 0x06af)
+   216E 36 08              3457 	ld	(hl), #0x08
+   2170 21rB0r06           3458 	ld	hl, #(_maps + 0x06b0)
+   2173 36 03              3459 	ld	(hl), #0x03
+   2175 21rB1r06           3460 	ld	hl, #(_maps + 0x06b1)
+   2178 36 00              3461 	ld	(hl), #0x00
+   217A 21rB2r06           3462 	ld	hl, #(_maps + 0x06b2)
+   217D 36 00              3463 	ld	(hl), #0x00
+   217F 21rB3r06           3464 	ld	hl, #(_maps + 0x06b3)
+   2182 36 00              3465 	ld	(hl), #0x00
+   2184 21rB4r06           3466 	ld	hl, #(_maps + 0x06b4)
+   2187 36 00              3467 	ld	(hl), #0x00
+   2189 21rB5r06           3468 	ld	hl, #(_maps + 0x06b5)
+   218C 36 00              3469 	ld	(hl), #0x00
+   218E 21rB6r06           3470 	ld	hl, #(_maps + 0x06b6)
+   2191 36 00              3471 	ld	(hl), #0x00
+   2193 21rB7r06           3472 	ld	hl, #(_maps + 0x06b7)
+   2196 36 04              3473 	ld	(hl), #0x04
+   2198 21rB8r06           3474 	ld	hl, #(_maps + 0x06b8)
+   219B 36 04              3475 	ld	(hl), #0x04
+   219D 21rB9r06           3476 	ld	hl, #(_maps + 0x06b9)
+   21A0 36 00              3477 	ld	(hl), #0x00
+   21A2 21rBAr06           3478 	ld	hl, #(_maps + 0x06ba)
+   21A5 36 00              3479 	ld	(hl), #0x00
+   21A7 21rBBr06           3480 	ld	hl, #(_maps + 0x06bb)
+   21AA 36 00              3481 	ld	(hl), #0x00
+   21AC 21rBCr06           3482 	ld	hl, #(_maps + 0x06bc)
+   21AF 36 00              3483 	ld	(hl), #0x00
+   21B1 21rBDr06           3484 	ld	hl, #(_maps + 0x06bd)
+   21B4 36 03              3485 	ld	(hl), #0x03
+   21B6 21rBEr06           3486 	ld	hl, #(_maps + 0x06be)
+   21B9 36 00              3487 	ld	(hl), #0x00
+   21BB 21rBFr06           3488 	ld	hl, #(_maps + 0x06bf)
+   21BE 36 00              3489 	ld	(hl), #0x00
+   21C0 21rC0r06           3490 	ld	hl, #(_maps + 0x06c0)
+   21C3 36 00              3491 	ld	(hl), #0x00
+   21C5 21rC1r06           3492 	ld	hl, #(_maps + 0x06c1)
+   21C8 36 00              3493 	ld	(hl), #0x00
+   21CA 21rC2r06           3494 	ld	hl, #(_maps + 0x06c2)
+   21CD 36 03              3495 	ld	(hl), #0x03
+   21CF 21rC3r06           3496 	ld	hl, #(_maps + 0x06c3)
+   21D2 36 03              3497 	ld	(hl), #0x03
+   21D4 21rC4r06           3498 	ld	hl, #(_maps + 0x06c4)
+   21D7 36 03              3499 	ld	(hl), #0x03
+   21D9 21rC5r06           3500 	ld	hl, #(_maps + 0x06c5)
+   21DC 36 00              3501 	ld	(hl), #0x00
+   21DE 21rC6r06           3502 	ld	hl, #(_maps + 0x06c6)
+   21E1 36 00              3503 	ld	(hl), #0x00
+   21E3 21rC7r06           3504 	ld	hl, #(_maps + 0x06c7)
+   21E6 36 00              3505 	ld	(hl), #0x00
+   21E8 21rC8r06           3506 	ld	hl, #(_maps + 0x06c8)
+   21EB 36 00              3507 	ld	(hl), #0x00
+   21ED 21rC9r06           3508 	ld	hl, #(_maps + 0x06c9)
+   21F0 36 00              3509 	ld	(hl), #0x00
+   21F2 21rCAr06           3510 	ld	hl, #(_maps + 0x06ca)
+   21F5 36 00              3511 	ld	(hl), #0x00
+   21F7 21rCBr06           3512 	ld	hl, #(_maps + 0x06cb)
+   21FA 36 04              3513 	ld	(hl), #0x04
+   21FC 21rCCr06           3514 	ld	hl, #(_maps + 0x06cc)
+   21FF 36 04              3515 	ld	(hl), #0x04
+   2201 21rCDr06           3516 	ld	hl, #(_maps + 0x06cd)
+   2204 36 00              3517 	ld	(hl), #0x00
+   2206 21rCEr06           3518 	ld	hl, #(_maps + 0x06ce)
+   2209 36 00              3519 	ld	(hl), #0x00
+   220B 21rCFr06           3520 	ld	hl, #(_maps + 0x06cf)
+   220E 36 00              3521 	ld	(hl), #0x00
+   2210 21rD0r06           3522 	ld	hl, #(_maps + 0x06d0)
+   2213 36 00              3523 	ld	(hl), #0x00
+   2215 21rD1r06           3524 	ld	hl, #(_maps + 0x06d1)
+   2218 36 00              3525 	ld	(hl), #0x00
+   221A 21rD2r06           3526 	ld	hl, #(_maps + 0x06d2)
+   221D 36 00              3527 	ld	(hl), #0x00
+   221F 21rD3r06           3528 	ld	hl, #(_maps + 0x06d3)
+   2222 36 00              3529 	ld	(hl), #0x00
+   2224 21rD4r06           3530 	ld	hl, #(_maps + 0x06d4)
+   2227 36 00              3531 	ld	(hl), #0x00
+   2229 21rD5r06           3532 	ld	hl, #(_maps + 0x06d5)
+   222C 36 00              3533 	ld	(hl), #0x00
+   222E 21rD6r06           3534 	ld	hl, #(_maps + 0x06d6)
+   2231 36 03              3535 	ld	(hl), #0x03
+   2233 21rD7r06           3536 	ld	hl, #(_maps + 0x06d7)
+   2236 36 00              3537 	ld	(hl), #0x00
+   2238 21rD8r06           3538 	ld	hl, #(_maps + 0x06d8)
+   223B 36 00              3539 	ld	(hl), #0x00
+   223D 21rD9r06           3540 	ld	hl, #(_maps + 0x06d9)
+   2240 36 00              3541 	ld	(hl), #0x00
+   2242 21rDAr06           3542 	ld	hl, #(_maps + 0x06da)
+   2245 36 00              3543 	ld	(hl), #0x00
+   2247 21rDBr06           3544 	ld	hl, #(_maps + 0x06db)
+   224A 36 00              3545 	ld	(hl), #0x00
+   224C 21rDCr06           3546 	ld	hl, #(_maps + 0x06dc)
+   224F 36 00              3547 	ld	(hl), #0x00
+   2251 21rDDr06           3548 	ld	hl, #(_maps + 0x06dd)
+   2254 36 00              3549 	ld	(hl), #0x00
+   2256 21rDEr06           3550 	ld	hl, #(_maps + 0x06de)
+   2259 36 00              3551 	ld	(hl), #0x00
+   225B 21rDFr06           3552 	ld	hl, #(_maps + 0x06df)
+   225E 36 04              3553 	ld	(hl), #0x04
+   2260 21rE0r06           3554 	ld	hl, #(_maps + 0x06e0)
+   2263 36 04              3555 	ld	(hl), #0x04
+   2265 21rE1r06           3556 	ld	hl, #(_maps + 0x06e1)
+   2268 36 02              3557 	ld	(hl), #0x02
+   226A 21rE2r06           3558 	ld	hl, #(_maps + 0x06e2)
+   226D 36 00              3559 	ld	(hl), #0x00
+   226F 21rE3r06           3560 	ld	hl, #(_maps + 0x06e3)
+   2272 36 00              3561 	ld	(hl), #0x00
+   2274 21rE4r06           3562 	ld	hl, #(_maps + 0x06e4)
+   2277 36 00              3563 	ld	(hl), #0x00
+   2279 21rE5r06           3564 	ld	hl, #(_maps + 0x06e5)
+   227C 36 00              3565 	ld	(hl), #0x00
+   227E 21rE6r06           3566 	ld	hl, #(_maps + 0x06e6)
+   2281 36 00              3567 	ld	(hl), #0x00
+   2283 21rE7r06           3568 	ld	hl, #(_maps + 0x06e7)
+   2286 36 00              3569 	ld	(hl), #0x00
+   2288 21rE8r06           3570 	ld	hl, #(_maps + 0x06e8)
+   228B 36 00              3571 	ld	(hl), #0x00
+   228D 21rE9r06           3572 	ld	hl, #(_maps + 0x06e9)
+   2290 36 00              3573 	ld	(hl), #0x00
+   2292 21rEAr06           3574 	ld	hl, #(_maps + 0x06ea)
+   2295 36 03              3575 	ld	(hl), #0x03
+   2297 21rEBr06           3576 	ld	hl, #(_maps + 0x06eb)
+   229A 36 00              3577 	ld	(hl), #0x00
+   229C 21rECr06           3578 	ld	hl, #(_maps + 0x06ec)
+   229F 36 00              3579 	ld	(hl), #0x00
+   22A1 21rEDr06           3580 	ld	hl, #(_maps + 0x06ed)
+   22A4 36 00              3581 	ld	(hl), #0x00
+   22A6 21rEEr06           3582 	ld	hl, #(_maps + 0x06ee)
+   22A9 36 00              3583 	ld	(hl), #0x00
+   22AB 21rEFr06           3584 	ld	hl, #(_maps + 0x06ef)
+   22AE 36 00              3585 	ld	(hl), #0x00
+   22B0 21rF0r06           3586 	ld	hl, #(_maps + 0x06f0)
+   22B3 36 00              3587 	ld	(hl), #0x00
+   22B5 21rF1r06           3588 	ld	hl, #(_maps + 0x06f1)
+   22B8 36 00              3589 	ld	(hl), #0x00
+   22BA 21rF2r06           3590 	ld	hl, #(_maps + 0x06f2)
+   22BD 36 01              3591 	ld	(hl), #0x01
+   22BF 21rF3r06           3592 	ld	hl, #(_maps + 0x06f3)
+   22C2 36 04              3593 	ld	(hl), #0x04
+   22C4 21rF4r06           3594 	ld	hl, #(_maps + 0x06f4)
+   22C7 36 04              3595 	ld	(hl), #0x04
+   22C9 21rF5r06           3596 	ld	hl, #(_maps + 0x06f5)
+   22CC 36 04              3597 	ld	(hl), #0x04
+   22CE 21rF6r06           3598 	ld	hl, #(_maps + 0x06f6)
+   22D1 36 04              3599 	ld	(hl), #0x04
+   22D3 21rF7r06           3600 	ld	hl, #(_maps + 0x06f7)
+   22D6 36 04              3601 	ld	(hl), #0x04
+   22D8 21rF8r06           3602 	ld	hl, #(_maps + 0x06f8)
+   22DB 36 04              3603 	ld	(hl), #0x04
+   22DD 21rF9r06           3604 	ld	hl, #(_maps + 0x06f9)
+   22E0 36 04              3605 	ld	(hl), #0x04
+   22E2 21rFAr06           3606 	ld	hl, #(_maps + 0x06fa)
+   22E5 36 04              3607 	ld	(hl), #0x04
+   22E7 21rFBr06           3608 	ld	hl, #(_maps + 0x06fb)
+   22EA 36 04              3609 	ld	(hl), #0x04
+   22EC 21rFCr06           3610 	ld	hl, #(_maps + 0x06fc)
+   22EF 36 04              3611 	ld	(hl), #0x04
+   22F1 21rFDr06           3612 	ld	hl, #(_maps + 0x06fd)
+   22F4 36 04              3613 	ld	(hl), #0x04
+   22F6 21rFEr06           3614 	ld	hl, #(_maps + 0x06fe)
+   22F9 36 04              3615 	ld	(hl), #0x04
+   22FB 21rFFr06           3616 	ld	hl, #(_maps + 0x06ff)
+   22FE 36 04              3617 	ld	(hl), #0x04
+   2300 21r00r07           3618 	ld	hl, #(_maps + 0x0700)
+   2303 36 04              3619 	ld	(hl), #0x04
+   2305 21r01r07           3620 	ld	hl, #(_maps + 0x0701)
+   2308 36 04              3621 	ld	(hl), #0x04
+   230A 21r02r07           3622 	ld	hl, #(_maps + 0x0702)
+   230D 36 04              3623 	ld	(hl), #0x04
+   230F 21r03r07           3624 	ld	hl, #(_maps + 0x0703)
+   2312 36 04              3625 	ld	(hl), #0x04
+   2314 21r04r07           3626 	ld	hl, #(_maps + 0x0704)
+   2317 36 04              3627 	ld	(hl), #0x04
+   2319 21r05r07           3628 	ld	hl, #(_maps + 0x0705)
+   231C 36 04              3629 	ld	(hl), #0x04
+   231E 21r06r07           3630 	ld	hl, #(_maps + 0x0706)
+   2321 36 04              3631 	ld	(hl), #0x04
+   2323 21r07r07           3632 	ld	hl, #(_maps + 0x0707)
+   2326 36 04              3633 	ld	(hl), #0x04
+   2328 21r08r07           3634 	ld	hl, #(_maps + 0x0708)
+   232B 36 04              3635 	ld	(hl), #0x04
+   232D 21r09r07           3636 	ld	hl, #(_maps + 0x0709)
+   2330 36 04              3637 	ld	(hl), #0x04
+   2332 21r0Ar07           3638 	ld	hl, #(_maps + 0x070a)
+   2335 36 04              3639 	ld	(hl), #0x04
+   2337 21r0Br07           3640 	ld	hl, #(_maps + 0x070b)
+   233A 36 04              3641 	ld	(hl), #0x04
+   233C 21r0Cr07           3642 	ld	hl, #(_maps + 0x070c)
+   233F 36 04              3643 	ld	(hl), #0x04
+   2341 21r0Dr07           3644 	ld	hl, #(_maps + 0x070d)
+   2344 36 04              3645 	ld	(hl), #0x04
+   2346 21r0Er07           3646 	ld	hl, #(_maps + 0x070e)
+   2349 36 04              3647 	ld	(hl), #0x04
+   234B 21r0Fr07           3648 	ld	hl, #(_maps + 0x070f)
+   234E 36 04              3649 	ld	(hl), #0x04
+   2350 21r10r07           3650 	ld	hl, #(_maps + 0x0710)
+   2353 36 04              3651 	ld	(hl), #0x04
+   2355 21r11r07           3652 	ld	hl, #(_maps + 0x0711)
+   2358 36 04              3653 	ld	(hl), #0x04
+   235A 21r12r07           3654 	ld	hl, #(_maps + 0x0712)
+   235D 36 04              3655 	ld	(hl), #0x04
+   235F 21r13r07           3656 	ld	hl, #(_maps + 0x0713)
+   2362 36 04              3657 	ld	(hl), #0x04
+   2364 21r14r07           3658 	ld	hl, #(_maps + 0x0714)
+   2367 36 04              3659 	ld	(hl), #0x04
+   2369 21r15r07           3660 	ld	hl, #(_maps + 0x0715)
+   236C 36 04              3661 	ld	(hl), #0x04
+   236E 21r16r07           3662 	ld	hl, #(_maps + 0x0716)
+   2371 36 04              3663 	ld	(hl), #0x04
+   2373 21r17r07           3664 	ld	hl, #(_maps + 0x0717)
+   2376 36 04              3665 	ld	(hl), #0x04
+   2378 21r18r07           3666 	ld	hl, #(_maps + 0x0718)
+   237B 36 04              3667 	ld	(hl), #0x04
+   237D 21r19r07           3668 	ld	hl, #(_maps + 0x0719)
+   2380 36 04              3669 	ld	(hl), #0x04
+   2382 21r1Ar07           3670 	ld	hl, #(_maps + 0x071a)
+   2385 36 04              3671 	ld	(hl), #0x04
+   2387 21r1Br07           3672 	ld	hl, #(_maps + 0x071b)
+   238A 36 04              3673 	ld	(hl), #0x04
+   238C 21r1Cr07           3674 	ld	hl, #(_maps + 0x071c)
+   238F 36 04              3675 	ld	(hl), #0x04
+   2391 21r1Dr07           3676 	ld	hl, #(_maps + 0x071d)
+   2394 36 00              3677 	ld	(hl), #0x00
+   2396 21r1Er07           3678 	ld	hl, #(_maps + 0x071e)
+   2399 36 00              3679 	ld	(hl), #0x00
+   239B 21r1Fr07           3680 	ld	hl, #(_maps + 0x071f)
+   239E 36 00              3681 	ld	(hl), #0x00
+   23A0 21r20r07           3682 	ld	hl, #(_maps + 0x0720)
+   23A3 36 00              3683 	ld	(hl), #0x00
+   23A5 21r21r07           3684 	ld	hl, #(_maps + 0x0721)
+   23A8 36 00              3685 	ld	(hl), #0x00
+   23AA 21r22r07           3686 	ld	hl, #(_maps + 0x0722)
+   23AD 36 00              3687 	ld	(hl), #0x00
+   23AF 21r23r07           3688 	ld	hl, #(_maps + 0x0723)
+   23B2 36 00              3689 	ld	(hl), #0x00
+   23B4 21r24r07           3690 	ld	hl, #(_maps + 0x0724)
+   23B7 36 00              3691 	ld	(hl), #0x00
+   23B9 21r25r07           3692 	ld	hl, #(_maps + 0x0725)
+   23BC 36 00              3693 	ld	(hl), #0x00
+   23BE 21r26r07           3694 	ld	hl, #(_maps + 0x0726)
+   23C1 36 00              3695 	ld	(hl), #0x00
+   23C3 21r27r07           3696 	ld	hl, #(_maps + 0x0727)
+   23C6 36 00              3697 	ld	(hl), #0x00
+   23C8 21r28r07           3698 	ld	hl, #(_maps + 0x0728)
+   23CB 36 00              3699 	ld	(hl), #0x00
+   23CD 21r29r07           3700 	ld	hl, #(_maps + 0x0729)
+   23D0 36 00              3701 	ld	(hl), #0x00
+   23D2 21r2Ar07           3702 	ld	hl, #(_maps + 0x072a)
+   23D5 36 00              3703 	ld	(hl), #0x00
+   23D7 21r2Br07           3704 	ld	hl, #(_maps + 0x072b)
+   23DA 36 00              3705 	ld	(hl), #0x00
+   23DC 21r2Cr07           3706 	ld	hl, #(_maps + 0x072c)
+   23DF 36 00              3707 	ld	(hl), #0x00
+   23E1 21r2Dr07           3708 	ld	hl, #(_maps + 0x072d)
+   23E4 36 00              3709 	ld	(hl), #0x00
+   23E6 21r2Er07           3710 	ld	hl, #(_maps + 0x072e)
+   23E9 36 00              3711 	ld	(hl), #0x00
+   23EB 21r2Fr07           3712 	ld	hl, #(_maps + 0x072f)
+   23EE 36 04              3713 	ld	(hl), #0x04
+   23F0 21r30r07           3714 	ld	hl, #(_maps + 0x0730)
+   23F3 36 04              3715 	ld	(hl), #0x04
+   23F5 21r31r07           3716 	ld	hl, #(_maps + 0x0731)
+   23F8 36 00              3717 	ld	(hl), #0x00
+   23FA 21r32r07           3718 	ld	hl, #(_maps + 0x0732)
+   23FD 36 00              3719 	ld	(hl), #0x00
+   23FF 21r33r07           3720 	ld	hl, #(_maps + 0x0733)
+   2402 36 00              3721 	ld	(hl), #0x00
+   2404 21r34r07           3722 	ld	hl, #(_maps + 0x0734)
+   2407 36 00              3723 	ld	(hl), #0x00
+   2409 21r35r07           3724 	ld	hl, #(_maps + 0x0735)
+   240C 36 00              3725 	ld	(hl), #0x00
+   240E 21r36r07           3726 	ld	hl, #(_maps + 0x0736)
+   2411 36 00              3727 	ld	(hl), #0x00
+   2413 21r37r07           3728 	ld	hl, #(_maps + 0x0737)
+   2416 36 00              3729 	ld	(hl), #0x00
+   2418 21r38r07           3730 	ld	hl, #(_maps + 0x0738)
+   241B 36 00              3731 	ld	(hl), #0x00
+   241D 21r39r07           3732 	ld	hl, #(_maps + 0x0739)
+   2420 36 00              3733 	ld	(hl), #0x00
+   2422 21r3Ar07           3734 	ld	hl, #(_maps + 0x073a)
+   2425 36 00              3735 	ld	(hl), #0x00
+   2427 21r3Br07           3736 	ld	hl, #(_maps + 0x073b)
+   242A 36 00              3737 	ld	(hl), #0x00
+   242C 21r3Cr07           3738 	ld	hl, #(_maps + 0x073c)
+   242F 36 00              3739 	ld	(hl), #0x00
+   2431 21r3Dr07           3740 	ld	hl, #(_maps + 0x073d)
+   2434 36 00              3741 	ld	(hl), #0x00
+   2436 21r3Er07           3742 	ld	hl, #(_maps + 0x073e)
+   2439 36 00              3743 	ld	(hl), #0x00
+   243B 21r3Fr07           3744 	ld	hl, #(_maps + 0x073f)
+   243E 36 00              3745 	ld	(hl), #0x00
+   2440 21r40r07           3746 	ld	hl, #(_maps + 0x0740)
+   2443 36 00              3747 	ld	(hl), #0x00
+   2445 21r41r07           3748 	ld	hl, #(_maps + 0x0741)
+   2448 36 00              3749 	ld	(hl), #0x00
+   244A 21r42r07           3750 	ld	hl, #(_maps + 0x0742)
+   244D 36 00              3751 	ld	(hl), #0x00
+   244F 21r43r07           3752 	ld	hl, #(_maps + 0x0743)
+   2452 36 04              3753 	ld	(hl), #0x04
+   2454 21r44r07           3754 	ld	hl, #(_maps + 0x0744)
+   2457 36 04              3755 	ld	(hl), #0x04
+   2459 21r45r07           3756 	ld	hl, #(_maps + 0x0745)
+   245C 36 00              3757 	ld	(hl), #0x00
+   245E 21r46r07           3758 	ld	hl, #(_maps + 0x0746)
+   2461 36 00              3759 	ld	(hl), #0x00
+   2463 21r47r07           3760 	ld	hl, #(_maps + 0x0747)
+   2466 36 00              3761 	ld	(hl), #0x00
+   2468 21r48r07           3762 	ld	hl, #(_maps + 0x0748)
+   246B 36 00              3763 	ld	(hl), #0x00
+   246D 21r49r07           3764 	ld	hl, #(_maps + 0x0749)
+   2470 36 00              3765 	ld	(hl), #0x00
+   2472 21r4Ar07           3766 	ld	hl, #(_maps + 0x074a)
+   2475 36 00              3767 	ld	(hl), #0x00
+   2477 21r4Br07           3768 	ld	hl, #(_maps + 0x074b)
+   247A 36 00              3769 	ld	(hl), #0x00
+   247C 21r4Cr07           3770 	ld	hl, #(_maps + 0x074c)
+   247F 36 00              3771 	ld	(hl), #0x00
+   2481 21r4Dr07           3772 	ld	hl, #(_maps + 0x074d)
+   2484 36 00              3773 	ld	(hl), #0x00
+   2486 21r4Er07           3774 	ld	hl, #(_maps + 0x074e)
+   2489 36 00              3775 	ld	(hl), #0x00
+   248B 21r4Fr07           3776 	ld	hl, #(_maps + 0x074f)
+   248E 36 00              3777 	ld	(hl), #0x00
+   2490 21r50r07           3778 	ld	hl, #(_maps + 0x0750)
+   2493 36 00              3779 	ld	(hl), #0x00
+   2495 21r51r07           3780 	ld	hl, #(_maps + 0x0751)
+   2498 36 00              3781 	ld	(hl), #0x00
+   249A 21r52r07           3782 	ld	hl, #(_maps + 0x0752)
+   249D 36 00              3783 	ld	(hl), #0x00
+   249F 21r53r07           3784 	ld	hl, #(_maps + 0x0753)
+   24A2 36 00              3785 	ld	(hl), #0x00
+   24A4 21r54r07           3786 	ld	hl, #(_maps + 0x0754)
+   24A7 36 00              3787 	ld	(hl), #0x00
+   24A9 21r55r07           3788 	ld	hl, #(_maps + 0x0755)
+   24AC 36 00              3789 	ld	(hl), #0x00
+   24AE 21r56r07           3790 	ld	hl, #(_maps + 0x0756)
+   24B1 36 00              3791 	ld	(hl), #0x00
+   24B3 21r57r07           3792 	ld	hl, #(_maps + 0x0757)
+   24B6 36 04              3793 	ld	(hl), #0x04
+   24B8 21r58r07           3794 	ld	hl, #(_maps + 0x0758)
+   24BB 36 04              3795 	ld	(hl), #0x04
+   24BD 21r59r07           3796 	ld	hl, #(_maps + 0x0759)
+   24C0 36 05              3797 	ld	(hl), #0x05
+   24C2 21r5Ar07           3798 	ld	hl, #(_maps + 0x075a)
+   24C5 36 05              3799 	ld	(hl), #0x05
+   24C7 21r5Br07           3800 	ld	hl, #(_maps + 0x075b)
+   24CA 36 05              3801 	ld	(hl), #0x05
+   24CC 21r5Cr07           3802 	ld	hl, #(_maps + 0x075c)
+   24CF 36 00              3803 	ld	(hl), #0x00
+   24D1 21r5Dr07           3804 	ld	hl, #(_maps + 0x075d)
+   24D4 36 00              3805 	ld	(hl), #0x00
+   24D6 21r5Er07           3806 	ld	hl, #(_maps + 0x075e)
+   24D9 36 00              3807 	ld	(hl), #0x00
+   24DB 21r5Fr07           3808 	ld	hl, #(_maps + 0x075f)
+   24DE 36 00              3809 	ld	(hl), #0x00
+   24E0 21r60r07           3810 	ld	hl, #(_maps + 0x0760)
+   24E3 36 00              3811 	ld	(hl), #0x00
+   24E5 21r61r07           3812 	ld	hl, #(_maps + 0x0761)
+   24E8 36 00              3813 	ld	(hl), #0x00
+   24EA 21r62r07           3814 	ld	hl, #(_maps + 0x0762)
+   24ED 36 00              3815 	ld	(hl), #0x00
+   24EF 21r63r07           3816 	ld	hl, #(_maps + 0x0763)
+   24F2 36 00              3817 	ld	(hl), #0x00
+   24F4 21r64r07           3818 	ld	hl, #(_maps + 0x0764)
+   24F7 36 00              3819 	ld	(hl), #0x00
+   24F9 21r65r07           3820 	ld	hl, #(_maps + 0x0765)
+   24FC 36 00              3821 	ld	(hl), #0x00
+   24FE 21r66r07           3822 	ld	hl, #(_maps + 0x0766)
+   2501 36 00              3823 	ld	(hl), #0x00
+   2503 21r67r07           3824 	ld	hl, #(_maps + 0x0767)
+   2506 36 00              3825 	ld	(hl), #0x00
+   2508 21r68r07           3826 	ld	hl, #(_maps + 0x0768)
+   250B 36 00              3827 	ld	(hl), #0x00
+   250D 21r69r07           3828 	ld	hl, #(_maps + 0x0769)
+   2510 36 00              3829 	ld	(hl), #0x00
+   2512 21r6Ar07           3830 	ld	hl, #(_maps + 0x076a)
+   2515 36 00              3831 	ld	(hl), #0x00
+   2517 21r6Br07           3832 	ld	hl, #(_maps + 0x076b)
+   251A 36 04              3833 	ld	(hl), #0x04
+   251C 21r6Cr07           3834 	ld	hl, #(_maps + 0x076c)
+   251F 36 04              3835 	ld	(hl), #0x04
+   2521 21r6Dr07           3836 	ld	hl, #(_maps + 0x076d)
+   2524 36 03              3837 	ld	(hl), #0x03
+   2526 21r6Er07           3838 	ld	hl, #(_maps + 0x076e)
+   2529 36 03              3839 	ld	(hl), #0x03
+   252B 21r6Fr07           3840 	ld	hl, #(_maps + 0x076f)
+   252E 36 03              3841 	ld	(hl), #0x03
+   2530 21r70r07           3842 	ld	hl, #(_maps + 0x0770)
+   2533 36 00              3843 	ld	(hl), #0x00
+   2535 21r71r07           3844 	ld	hl, #(_maps + 0x0771)
+   2538 36 00              3845 	ld	(hl), #0x00
+   253A 21r72r07           3846 	ld	hl, #(_maps + 0x0772)
+   253D 36 00              3847 	ld	(hl), #0x00
+   253F 21r73r07           3848 	ld	hl, #(_maps + 0x0773)
+   2542 36 00              3849 	ld	(hl), #0x00
+   2544 21r74r07           3850 	ld	hl, #(_maps + 0x0774)
+   2547 36 03              3851 	ld	(hl), #0x03
+   2549 21r75r07           3852 	ld	hl, #(_maps + 0x0775)
+   254C 36 00              3853 	ld	(hl), #0x00
+   254E 21r76r07           3854 	ld	hl, #(_maps + 0x0776)
+   2551 36 00              3855 	ld	(hl), #0x00
+   2553 21r77r07           3856 	ld	hl, #(_maps + 0x0777)
+   2556 36 00              3857 	ld	(hl), #0x00
+   2558 21r78r07           3858 	ld	hl, #(_maps + 0x0778)
+   255B 36 00              3859 	ld	(hl), #0x00
+   255D 21r79r07           3860 	ld	hl, #(_maps + 0x0779)
+   2560 36 00              3861 	ld	(hl), #0x00
+   2562 21r7Ar07           3862 	ld	hl, #(_maps + 0x077a)
+   2565 36 00              3863 	ld	(hl), #0x00
+   2567 21r7Br07           3864 	ld	hl, #(_maps + 0x077b)
+   256A 36 00              3865 	ld	(hl), #0x00
+   256C 21r7Cr07           3866 	ld	hl, #(_maps + 0x077c)
+   256F 36 00              3867 	ld	(hl), #0x00
+   2571 21r7Dr07           3868 	ld	hl, #(_maps + 0x077d)
+   2574 36 00              3869 	ld	(hl), #0x00
+   2576 21r7Er07           3870 	ld	hl, #(_maps + 0x077e)
+   2579 36 00              3871 	ld	(hl), #0x00
+   257B 21r7Fr07           3872 	ld	hl, #(_maps + 0x077f)
+   257E 36 04              3873 	ld	(hl), #0x04
+   2580 21r80r07           3874 	ld	hl, #(_maps + 0x0780)
+   2583 36 04              3875 	ld	(hl), #0x04
+   2585 21r81r07           3876 	ld	hl, #(_maps + 0x0781)
+   2588 36 00              3877 	ld	(hl), #0x00
+   258A 21r82r07           3878 	ld	hl, #(_maps + 0x0782)
+   258D 36 00              3879 	ld	(hl), #0x00
+   258F 21r83r07           3880 	ld	hl, #(_maps + 0x0783)
+   2592 36 03              3881 	ld	(hl), #0x03
+   2594 21r84r07           3882 	ld	hl, #(_maps + 0x0784)
+   2597 36 00              3883 	ld	(hl), #0x00
+   2599 21r85r07           3884 	ld	hl, #(_maps + 0x0785)
+   259C 36 00              3885 	ld	(hl), #0x00
+   259E 21r86r07           3886 	ld	hl, #(_maps + 0x0786)
+   25A1 36 00              3887 	ld	(hl), #0x00
+   25A3 21r87r07           3888 	ld	hl, #(_maps + 0x0787)
+   25A6 36 00              3889 	ld	(hl), #0x00
+   25A8 21r88r07           3890 	ld	hl, #(_maps + 0x0788)
+   25AB 36 03              3891 	ld	(hl), #0x03
+   25AD 21r89r07           3892 	ld	hl, #(_maps + 0x0789)
+   25B0 36 00              3893 	ld	(hl), #0x00
+   25B2 21r8Ar07           3894 	ld	hl, #(_maps + 0x078a)
+   25B5 36 00              3895 	ld	(hl), #0x00
+   25B7 21r8Br07           3896 	ld	hl, #(_maps + 0x078b)
+   25BA 36 00              3897 	ld	(hl), #0x00
+   25BC 21r8Cr07           3898 	ld	hl, #(_maps + 0x078c)
+   25BF 36 00              3899 	ld	(hl), #0x00
+   25C1 21r8Dr07           3900 	ld	hl, #(_maps + 0x078d)
+   25C4 36 00              3901 	ld	(hl), #0x00
+   25C6 21r8Er07           3902 	ld	hl, #(_maps + 0x078e)
+   25C9 36 00              3903 	ld	(hl), #0x00
+   25CB 21r8Fr07           3904 	ld	hl, #(_maps + 0x078f)
+   25CE 36 00              3905 	ld	(hl), #0x00
+   25D0 21r90r07           3906 	ld	hl, #(_maps + 0x0790)
+   25D3 36 00              3907 	ld	(hl), #0x00
+   25D5 21r91r07           3908 	ld	hl, #(_maps + 0x0791)
+   25D8 36 00              3909 	ld	(hl), #0x00
+   25DA 21r92r07           3910 	ld	hl, #(_maps + 0x0792)
+   25DD 36 00              3911 	ld	(hl), #0x00
+   25DF 21r93r07           3912 	ld	hl, #(_maps + 0x0793)
+   25E2 36 04              3913 	ld	(hl), #0x04
+   25E4 21r94r07           3914 	ld	hl, #(_maps + 0x0794)
+   25E7 36 04              3915 	ld	(hl), #0x04
+   25E9 21r95r07           3916 	ld	hl, #(_maps + 0x0795)
+   25EC 36 00              3917 	ld	(hl), #0x00
+   25EE 21r96r07           3918 	ld	hl, #(_maps + 0x0796)
+   25F1 36 00              3919 	ld	(hl), #0x00
+   25F3 21r97r07           3920 	ld	hl, #(_maps + 0x0797)
+   25F6 36 03              3921 	ld	(hl), #0x03
+   25F8 21r98r07           3922 	ld	hl, #(_maps + 0x0798)
+   25FB 36 00              3923 	ld	(hl), #0x00
+   25FD 21r99r07           3924 	ld	hl, #(_maps + 0x0799)
+   2600 36 00              3925 	ld	(hl), #0x00
+   2602 21r9Ar07           3926 	ld	hl, #(_maps + 0x079a)
+   2605 36 00              3927 	ld	(hl), #0x00
+   2607 21r9Br07           3928 	ld	hl, #(_maps + 0x079b)
+   260A 36 00              3929 	ld	(hl), #0x00
+   260C 21r9Cr07           3930 	ld	hl, #(_maps + 0x079c)
+   260F 36 03              3931 	ld	(hl), #0x03
+   2611 21r9Dr07           3932 	ld	hl, #(_maps + 0x079d)
+   2614 36 00              3933 	ld	(hl), #0x00
+   2616 21r9Er07           3934 	ld	hl, #(_maps + 0x079e)
+   2619 36 00              3935 	ld	(hl), #0x00
+   261B 21r9Fr07           3936 	ld	hl, #(_maps + 0x079f)
+   261E 36 00              3937 	ld	(hl), #0x00
+   2620 21rA0r07           3938 	ld	hl, #(_maps + 0x07a0)
+   2623 36 00              3939 	ld	(hl), #0x00
+   2625 21rA1r07           3940 	ld	hl, #(_maps + 0x07a1)
+   2628 36 00              3941 	ld	(hl), #0x00
+   262A 21rA2r07           3942 	ld	hl, #(_maps + 0x07a2)
+   262D 36 00              3943 	ld	(hl), #0x00
+   262F 21rA3r07           3944 	ld	hl, #(_maps + 0x07a3)
+   2632 36 00              3945 	ld	(hl), #0x00
+   2634 21rA4r07           3946 	ld	hl, #(_maps + 0x07a4)
+   2637 36 00              3947 	ld	(hl), #0x00
+   2639 21rA5r07           3948 	ld	hl, #(_maps + 0x07a5)
+   263C 36 00              3949 	ld	(hl), #0x00
+   263E 21rA6r07           3950 	ld	hl, #(_maps + 0x07a6)
+   2641 36 00              3951 	ld	(hl), #0x00
+   2643 21rA7r07           3952 	ld	hl, #(_maps + 0x07a7)
+   2646 36 04              3953 	ld	(hl), #0x04
+   2648 21rA8r07           3954 	ld	hl, #(_maps + 0x07a8)
+   264B 36 04              3955 	ld	(hl), #0x04
+   264D 21rA9r07           3956 	ld	hl, #(_maps + 0x07a9)
+   2650 36 00              3957 	ld	(hl), #0x00
+   2652 21rAAr07           3958 	ld	hl, #(_maps + 0x07aa)
+   2655 36 00              3959 	ld	(hl), #0x00
+   2657 21rABr07           3960 	ld	hl, #(_maps + 0x07ab)
+   265A 36 03              3961 	ld	(hl), #0x03
+   265C 21rACr07           3962 	ld	hl, #(_maps + 0x07ac)
+   265F 36 00              3963 	ld	(hl), #0x00
+   2661 21rADr07           3964 	ld	hl, #(_maps + 0x07ad)
+   2664 36 00              3965 	ld	(hl), #0x00
+   2666 21rAEr07           3966 	ld	hl, #(_maps + 0x07ae)
+   2669 36 00              3967 	ld	(hl), #0x00
+   266B 21rAFr07           3968 	ld	hl, #(_maps + 0x07af)
+   266E 36 00              3969 	ld	(hl), #0x00
+   2670 21rB0r07           3970 	ld	hl, #(_maps + 0x07b0)
+   2673 36 03              3971 	ld	(hl), #0x03
+   2675 21rB1r07           3972 	ld	hl, #(_maps + 0x07b1)
+   2678 36 00              3973 	ld	(hl), #0x00
+   267A 21rB2r07           3974 	ld	hl, #(_maps + 0x07b2)
+   267D 36 00              3975 	ld	(hl), #0x00
+   267F 21rB3r07           3976 	ld	hl, #(_maps + 0x07b3)
+   2682 36 00              3977 	ld	(hl), #0x00
+   2684 21rB4r07           3978 	ld	hl, #(_maps + 0x07b4)
+   2687 36 00              3979 	ld	(hl), #0x00
+   2689 21rB5r07           3980 	ld	hl, #(_maps + 0x07b5)
+   268C 36 00              3981 	ld	(hl), #0x00
+   268E 21rB6r07           3982 	ld	hl, #(_maps + 0x07b6)
+   2691 36 00              3983 	ld	(hl), #0x00
+   2693 21rB7r07           3984 	ld	hl, #(_maps + 0x07b7)
+   2696 36 00              3985 	ld	(hl), #0x00
+   2698 21rB8r07           3986 	ld	hl, #(_maps + 0x07b8)
+   269B 36 00              3987 	ld	(hl), #0x00
+   269D 21rB9r07           3988 	ld	hl, #(_maps + 0x07b9)
+   26A0 36 00              3989 	ld	(hl), #0x00
+   26A2 21rBAr07           3990 	ld	hl, #(_maps + 0x07ba)
+   26A5 36 00              3991 	ld	(hl), #0x00
+   26A7 21rBBr07           3992 	ld	hl, #(_maps + 0x07bb)
+   26AA 36 04              3993 	ld	(hl), #0x04
+   26AC 21rBCr07           3994 	ld	hl, #(_maps + 0x07bc)
+   26AF 36 04              3995 	ld	(hl), #0x04
+   26B1 21rBDr07           3996 	ld	hl, #(_maps + 0x07bd)
+   26B4 36 00              3997 	ld	(hl), #0x00
+   26B6 21rBEr07           3998 	ld	hl, #(_maps + 0x07be)
+   26B9 36 00              3999 	ld	(hl), #0x00
+   26BB 21rBFr07           4000 	ld	hl, #(_maps + 0x07bf)
+   26BE 36 03              4001 	ld	(hl), #0x03
+   26C0 21rC0r07           4002 	ld	hl, #(_maps + 0x07c0)
+   26C3 36 00              4003 	ld	(hl), #0x00
+   26C5 21rC1r07           4004 	ld	hl, #(_maps + 0x07c1)
+   26C8 36 00              4005 	ld	(hl), #0x00
+   26CA 21rC2r07           4006 	ld	hl, #(_maps + 0x07c2)
+   26CD 36 00              4007 	ld	(hl), #0x00
+   26CF 21rC3r07           4008 	ld	hl, #(_maps + 0x07c3)
+   26D2 36 08              4009 	ld	(hl), #0x08
+   26D4 21rC4r07           4010 	ld	hl, #(_maps + 0x07c4)
+   26D7 36 03              4011 	ld	(hl), #0x03
+   26D9 21rC5r07           4012 	ld	hl, #(_maps + 0x07c5)
+   26DC 36 00              4013 	ld	(hl), #0x00
+   26DE 21rC6r07           4014 	ld	hl, #(_maps + 0x07c6)
+   26E1 36 00              4015 	ld	(hl), #0x00
+   26E3 21rC7r07           4016 	ld	hl, #(_maps + 0x07c7)
+   26E6 36 00              4017 	ld	(hl), #0x00
+   26E8 21rC8r07           4018 	ld	hl, #(_maps + 0x07c8)
+   26EB 36 00              4019 	ld	(hl), #0x00
+   26ED 21rC9r07           4020 	ld	hl, #(_maps + 0x07c9)
+   26F0 36 00              4021 	ld	(hl), #0x00
+   26F2 21rCAr07           4022 	ld	hl, #(_maps + 0x07ca)
+   26F5 36 00              4023 	ld	(hl), #0x00
+   26F7 21rCBr07           4024 	ld	hl, #(_maps + 0x07cb)
+   26FA 36 00              4025 	ld	(hl), #0x00
+   26FC 21rCCr07           4026 	ld	hl, #(_maps + 0x07cc)
+   26FF 36 00              4027 	ld	(hl), #0x00
+   2701 21rCDr07           4028 	ld	hl, #(_maps + 0x07cd)
+   2704 36 00              4029 	ld	(hl), #0x00
+   2706 21rCEr07           4030 	ld	hl, #(_maps + 0x07ce)
+   2709 36 00              4031 	ld	(hl), #0x00
+   270B 21rCFr07           4032 	ld	hl, #(_maps + 0x07cf)
+   270E 36 04              4033 	ld	(hl), #0x04
+   2710 21rD0r07           4034 	ld	hl, #(_maps + 0x07d0)
+   2713 36 04              4035 	ld	(hl), #0x04
+   2715 21rD1r07           4036 	ld	hl, #(_maps + 0x07d1)
+   2718 36 00              4037 	ld	(hl), #0x00
+   271A 21rD2r07           4038 	ld	hl, #(_maps + 0x07d2)
+   271D 36 00              4039 	ld	(hl), #0x00
+   271F 21rD3r07           4040 	ld	hl, #(_maps + 0x07d3)
+   2722 36 03              4041 	ld	(hl), #0x03
+   2724 21rD4r07           4042 	ld	hl, #(_maps + 0x07d4)
+   2727 36 00              4043 	ld	(hl), #0x00
+   2729 21rD5r07           4044 	ld	hl, #(_maps + 0x07d5)
+   272C 36 00              4045 	ld	(hl), #0x00
+   272E 21rD6r07           4046 	ld	hl, #(_maps + 0x07d6)
+   2731 36 00              4047 	ld	(hl), #0x00
+   2733 21rD7r07           4048 	ld	hl, #(_maps + 0x07d7)
+   2736 36 08              4049 	ld	(hl), #0x08
+   2738 21rD8r07           4050 	ld	hl, #(_maps + 0x07d8)
+   273B 36 03              4051 	ld	(hl), #0x03
+   273D 21rD9r07           4052 	ld	hl, #(_maps + 0x07d9)
+   2740 36 00              4053 	ld	(hl), #0x00
+   2742 21rDAr07           4054 	ld	hl, #(_maps + 0x07da)
+   2745 36 00              4055 	ld	(hl), #0x00
+   2747 21rDBr07           4056 	ld	hl, #(_maps + 0x07db)
+   274A 36 00              4057 	ld	(hl), #0x00
+   274C 21rDCr07           4058 	ld	hl, #(_maps + 0x07dc)
+   274F 36 00              4059 	ld	(hl), #0x00
+   2751 21rDDr07           4060 	ld	hl, #(_maps + 0x07dd)
+   2754 36 00              4061 	ld	(hl), #0x00
+   2756 21rDEr07           4062 	ld	hl, #(_maps + 0x07de)
+   2759 36 00              4063 	ld	(hl), #0x00
+   275B 21rDFr07           4064 	ld	hl, #(_maps + 0x07df)
+   275E 36 00              4065 	ld	(hl), #0x00
+   2760 21rE0r07           4066 	ld	hl, #(_maps + 0x07e0)
+   2763 36 00              4067 	ld	(hl), #0x00
+   2765 21rE1r07           4068 	ld	hl, #(_maps + 0x07e1)
+   2768 36 00              4069 	ld	(hl), #0x00
+   276A 21rE2r07           4070 	ld	hl, #(_maps + 0x07e2)
+   276D 36 00              4071 	ld	(hl), #0x00
+   276F 21rE3r07           4072 	ld	hl, #(_maps + 0x07e3)
+   2772 36 04              4073 	ld	(hl), #0x04
+   2774 21rE4r07           4074 	ld	hl, #(_maps + 0x07e4)
+   2777 36 04              4075 	ld	(hl), #0x04
+   2779 21rE5r07           4076 	ld	hl, #(_maps + 0x07e5)
+   277C 36 00              4077 	ld	(hl), #0x00
+   277E 21rE6r07           4078 	ld	hl, #(_maps + 0x07e6)
+   2781 36 00              4079 	ld	(hl), #0x00
+   2783 21rE7r07           4080 	ld	hl, #(_maps + 0x07e7)
+   2786 36 03              4081 	ld	(hl), #0x03
+   2788 21rE8r07           4082 	ld	hl, #(_maps + 0x07e8)
+   278B 36 00              4083 	ld	(hl), #0x00
+   278D 21rE9r07           4084 	ld	hl, #(_maps + 0x07e9)
+   2790 36 00              4085 	ld	(hl), #0x00
+   2792 21rEAr07           4086 	ld	hl, #(_maps + 0x07ea)
+   2795 36 00              4087 	ld	(hl), #0x00
+   2797 21rEBr07           4088 	ld	hl, #(_maps + 0x07eb)
+   279A 36 08              4089 	ld	(hl), #0x08
+   279C 21rECr07           4090 	ld	hl, #(_maps + 0x07ec)
+   279F 36 03              4091 	ld	(hl), #0x03
+   27A1 21rEDr07           4092 	ld	hl, #(_maps + 0x07ed)
+   27A4 36 00              4093 	ld	(hl), #0x00
+   27A6 21rEEr07           4094 	ld	hl, #(_maps + 0x07ee)
+   27A9 36 00              4095 	ld	(hl), #0x00
+   27AB 21rEFr07           4096 	ld	hl, #(_maps + 0x07ef)
+   27AE 36 00              4097 	ld	(hl), #0x00
+   27B0 21rF0r07           4098 	ld	hl, #(_maps + 0x07f0)
+   27B3 36 00              4099 	ld	(hl), #0x00
+   27B5 21rF1r07           4100 	ld	hl, #(_maps + 0x07f1)
+   27B8 36 00              4101 	ld	(hl), #0x00
+   27BA 21rF2r07           4102 	ld	hl, #(_maps + 0x07f2)
+   27BD 36 00              4103 	ld	(hl), #0x00
+   27BF 21rF3r07           4104 	ld	hl, #(_maps + 0x07f3)
+   27C2 36 00              4105 	ld	(hl), #0x00
+   27C4 21rF4r07           4106 	ld	hl, #(_maps + 0x07f4)
+   27C7 36 00              4107 	ld	(hl), #0x00
+   27C9 21rF5r07           4108 	ld	hl, #(_maps + 0x07f5)
+   27CC 36 00              4109 	ld	(hl), #0x00
+   27CE 21rF6r07           4110 	ld	hl, #(_maps + 0x07f6)
+   27D1 36 00              4111 	ld	(hl), #0x00
+   27D3 21rF7r07           4112 	ld	hl, #(_maps + 0x07f7)
+   27D6 36 04              4113 	ld	(hl), #0x04
+   27D8 21rF8r07           4114 	ld	hl, #(_maps + 0x07f8)
+   27DB 36 04              4115 	ld	(hl), #0x04
+   27DD 21rF9r07           4116 	ld	hl, #(_maps + 0x07f9)
+   27E0 36 00              4117 	ld	(hl), #0x00
+   27E2 21rFAr07           4118 	ld	hl, #(_maps + 0x07fa)
+   27E5 36 00              4119 	ld	(hl), #0x00
+   27E7 21rFBr07           4120 	ld	hl, #(_maps + 0x07fb)
+   27EA 36 03              4121 	ld	(hl), #0x03
+   27EC 21rFCr07           4122 	ld	hl, #(_maps + 0x07fc)
+   27EF 36 00              4123 	ld	(hl), #0x00
+   27F1 21rFDr07           4124 	ld	hl, #(_maps + 0x07fd)
+   27F4 36 00              4125 	ld	(hl), #0x00
+   27F6 21rFEr07           4126 	ld	hl, #(_maps + 0x07fe)
+   27F9 36 00              4127 	ld	(hl), #0x00
+   27FB 21rFFr07           4128 	ld	hl, #(_maps + 0x07ff)
+   27FE 36 00              4129 	ld	(hl), #0x00
+   2800 21r00r08           4130 	ld	hl, #(_maps + 0x0800)
+   2803 36 03              4131 	ld	(hl), #0x03
+   2805 21r01r08           4132 	ld	hl, #(_maps + 0x0801)
+   2808 36 00              4133 	ld	(hl), #0x00
+   280A 21r02r08           4134 	ld	hl, #(_maps + 0x0802)
+   280D 36 00              4135 	ld	(hl), #0x00
+   280F 21r03r08           4136 	ld	hl, #(_maps + 0x0803)
+   2812 36 00              4137 	ld	(hl), #0x00
+   2814 21r04r08           4138 	ld	hl, #(_maps + 0x0804)
+   2817 36 00              4139 	ld	(hl), #0x00
+   2819 21r05r08           4140 	ld	hl, #(_maps + 0x0805)
+   281C 36 00              4141 	ld	(hl), #0x00
+   281E 21r06r08           4142 	ld	hl, #(_maps + 0x0806)
+   2821 36 00              4143 	ld	(hl), #0x00
+   2823 21r07r08           4144 	ld	hl, #(_maps + 0x0807)
+   2826 36 00              4145 	ld	(hl), #0x00
+   2828 21r08r08           4146 	ld	hl, #(_maps + 0x0808)
+   282B 36 00              4147 	ld	(hl), #0x00
+   282D 21r09r08           4148 	ld	hl, #(_maps + 0x0809)
+   2830 36 00              4149 	ld	(hl), #0x00
+   2832 21r0Ar08           4150 	ld	hl, #(_maps + 0x080a)
+   2835 36 00              4151 	ld	(hl), #0x00
+   2837 21r0Br08           4152 	ld	hl, #(_maps + 0x080b)
+   283A 36 04              4153 	ld	(hl), #0x04
+   283C 21r0Cr08           4154 	ld	hl, #(_maps + 0x080c)
+   283F 36 04              4155 	ld	(hl), #0x04
+   2841 21r0Dr08           4156 	ld	hl, #(_maps + 0x080d)
+   2844 36 00              4157 	ld	(hl), #0x00
+   2846 21r0Er08           4158 	ld	hl, #(_maps + 0x080e)
+   2849 36 00              4159 	ld	(hl), #0x00
+   284B 21r0Fr08           4160 	ld	hl, #(_maps + 0x080f)
+   284E 36 00              4161 	ld	(hl), #0x00
+   2850 21r10r08           4162 	ld	hl, #(_maps + 0x0810)
+   2853 36 00              4163 	ld	(hl), #0x00
+   2855 21r11r08           4164 	ld	hl, #(_maps + 0x0811)
+   2858 36 00              4165 	ld	(hl), #0x00
+   285A 21r12r08           4166 	ld	hl, #(_maps + 0x0812)
+   285D 36 00              4167 	ld	(hl), #0x00
+   285F 21r13r08           4168 	ld	hl, #(_maps + 0x0813)
+   2862 36 00              4169 	ld	(hl), #0x00
+   2864 21r14r08           4170 	ld	hl, #(_maps + 0x0814)
+   2867 36 03              4171 	ld	(hl), #0x03
+   2869 21r15r08           4172 	ld	hl, #(_maps + 0x0815)
+   286C 36 00              4173 	ld	(hl), #0x00
+   286E 21r16r08           4174 	ld	hl, #(_maps + 0x0816)
+   2871 36 00              4175 	ld	(hl), #0x00
+   2873 21r17r08           4176 	ld	hl, #(_maps + 0x0817)
+   2876 36 00              4177 	ld	(hl), #0x00
+   2878 21r18r08           4178 	ld	hl, #(_maps + 0x0818)
+   287B 36 00              4179 	ld	(hl), #0x00
+   287D 21r19r08           4180 	ld	hl, #(_maps + 0x0819)
+   2880 36 00              4181 	ld	(hl), #0x00
+   2882 21r1Ar08           4182 	ld	hl, #(_maps + 0x081a)
+   2885 36 00              4183 	ld	(hl), #0x00
+   2887 21r1Br08           4184 	ld	hl, #(_maps + 0x081b)
+   288A 36 00              4185 	ld	(hl), #0x00
+   288C 21r1Cr08           4186 	ld	hl, #(_maps + 0x081c)
+   288F 36 00              4187 	ld	(hl), #0x00
+   2891 21r1Dr08           4188 	ld	hl, #(_maps + 0x081d)
+   2894 36 00              4189 	ld	(hl), #0x00
+   2896 21r1Er08           4190 	ld	hl, #(_maps + 0x081e)
+   2899 36 00              4191 	ld	(hl), #0x00
+   289B 21r1Fr08           4192 	ld	hl, #(_maps + 0x081f)
+   289E 36 04              4193 	ld	(hl), #0x04
+   28A0 21r20r08           4194 	ld	hl, #(_maps + 0x0820)
+   28A3 36 04              4195 	ld	(hl), #0x04
+   28A5 21r21r08           4196 	ld	hl, #(_maps + 0x0821)
+   28A8 36 00              4197 	ld	(hl), #0x00
+   28AA 21r22r08           4198 	ld	hl, #(_maps + 0x0822)
+   28AD 36 00              4199 	ld	(hl), #0x00
+   28AF 21r23r08           4200 	ld	hl, #(_maps + 0x0823)
+   28B2 36 00              4201 	ld	(hl), #0x00
+   28B4 21r24r08           4202 	ld	hl, #(_maps + 0x0824)
+   28B7 36 00              4203 	ld	(hl), #0x00
+   28B9 21r25r08           4204 	ld	hl, #(_maps + 0x0825)
+   28BC 36 00              4205 	ld	(hl), #0x00
+   28BE 21r26r08           4206 	ld	hl, #(_maps + 0x0826)
+   28C1 36 00              4207 	ld	(hl), #0x00
+   28C3 21r27r08           4208 	ld	hl, #(_maps + 0x0827)
+   28C6 36 00              4209 	ld	(hl), #0x00
+   28C8 21r28r08           4210 	ld	hl, #(_maps + 0x0828)
+   28CB 36 03              4211 	ld	(hl), #0x03
+   28CD 21r29r08           4212 	ld	hl, #(_maps + 0x0829)
+   28D0 36 00              4213 	ld	(hl), #0x00
+   28D2 21r2Ar08           4214 	ld	hl, #(_maps + 0x082a)
+   28D5 36 00              4215 	ld	(hl), #0x00
+   28D7 21r2Br08           4216 	ld	hl, #(_maps + 0x082b)
+   28DA 36 00              4217 	ld	(hl), #0x00
+   28DC 21r2Cr08           4218 	ld	hl, #(_maps + 0x082c)
+   28DF 36 00              4219 	ld	(hl), #0x00
+   28E1 21r2Dr08           4220 	ld	hl, #(_maps + 0x082d)
+   28E4 36 00              4221 	ld	(hl), #0x00
+   28E6 21r2Er08           4222 	ld	hl, #(_maps + 0x082e)
+   28E9 36 00              4223 	ld	(hl), #0x00
+   28EB 21r2Fr08           4224 	ld	hl, #(_maps + 0x082f)
+   28EE 36 00              4225 	ld	(hl), #0x00
+   28F0 21r30r08           4226 	ld	hl, #(_maps + 0x0830)
+   28F3 36 00              4227 	ld	(hl), #0x00
+   28F5 21r31r08           4228 	ld	hl, #(_maps + 0x0831)
+   28F8 36 00              4229 	ld	(hl), #0x00
+   28FA 21r32r08           4230 	ld	hl, #(_maps + 0x0832)
+   28FD 36 00              4231 	ld	(hl), #0x00
+   28FF 21r33r08           4232 	ld	hl, #(_maps + 0x0833)
+   2902 36 04              4233 	ld	(hl), #0x04
+   2904 21r34r08           4234 	ld	hl, #(_maps + 0x0834)
+   2907 36 04              4235 	ld	(hl), #0x04
+   2909 21r35r08           4236 	ld	hl, #(_maps + 0x0835)
+   290C 36 00              4237 	ld	(hl), #0x00
+   290E 21r36r08           4238 	ld	hl, #(_maps + 0x0836)
+   2911 36 00              4239 	ld	(hl), #0x00
+   2913 21r37r08           4240 	ld	hl, #(_maps + 0x0837)
+   2916 36 00              4241 	ld	(hl), #0x00
+   2918 21r38r08           4242 	ld	hl, #(_maps + 0x0838)
+   291B 36 00              4243 	ld	(hl), #0x00
+   291D 21r39r08           4244 	ld	hl, #(_maps + 0x0839)
+   2920 36 00              4245 	ld	(hl), #0x00
+   2922 21r3Ar08           4246 	ld	hl, #(_maps + 0x083a)
+   2925 36 00              4247 	ld	(hl), #0x00
+   2927 21r3Br08           4248 	ld	hl, #(_maps + 0x083b)
+   292A 36 00              4249 	ld	(hl), #0x00
+   292C 21r3Cr08           4250 	ld	hl, #(_maps + 0x083c)
+   292F 36 03              4251 	ld	(hl), #0x03
+   2931 21r3Dr08           4252 	ld	hl, #(_maps + 0x083d)
+   2934 36 00              4253 	ld	(hl), #0x00
+   2936 21r3Er08           4254 	ld	hl, #(_maps + 0x083e)
+   2939 36 00              4255 	ld	(hl), #0x00
+   293B 21r3Fr08           4256 	ld	hl, #(_maps + 0x083f)
+   293E 36 00              4257 	ld	(hl), #0x00
+   2940 21r40r08           4258 	ld	hl, #(_maps + 0x0840)
+   2943 36 00              4259 	ld	(hl), #0x00
+   2945 21r41r08           4260 	ld	hl, #(_maps + 0x0841)
+   2948 36 00              4261 	ld	(hl), #0x00
+   294A 21r42r08           4262 	ld	hl, #(_maps + 0x0842)
+   294D 36 00              4263 	ld	(hl), #0x00
+   294F 21r43r08           4264 	ld	hl, #(_maps + 0x0843)
+   2952 36 00              4265 	ld	(hl), #0x00
+   2954 21r44r08           4266 	ld	hl, #(_maps + 0x0844)
+   2957 36 00              4267 	ld	(hl), #0x00
+   2959 21r45r08           4268 	ld	hl, #(_maps + 0x0845)
+   295C 36 00              4269 	ld	(hl), #0x00
+   295E 21r46r08           4270 	ld	hl, #(_maps + 0x0846)
+   2961 36 00              4271 	ld	(hl), #0x00
+   2963 21r47r08           4272 	ld	hl, #(_maps + 0x0847)
+   2966 36 04              4273 	ld	(hl), #0x04
+   2968 21r48r08           4274 	ld	hl, #(_maps + 0x0848)
+   296B 36 04              4275 	ld	(hl), #0x04
+   296D 21r49r08           4276 	ld	hl, #(_maps + 0x0849)
+   2970 36 02              4277 	ld	(hl), #0x02
+   2972 21r4Ar08           4278 	ld	hl, #(_maps + 0x084a)
+   2975 36 00              4279 	ld	(hl), #0x00
+   2977 21r4Br08           4280 	ld	hl, #(_maps + 0x084b)
+   297A 36 00              4281 	ld	(hl), #0x00
+   297C 21r4Cr08           4282 	ld	hl, #(_maps + 0x084c)
+   297F 36 00              4283 	ld	(hl), #0x00
+   2981 21r4Dr08           4284 	ld	hl, #(_maps + 0x084d)
+   2984 36 00              4285 	ld	(hl), #0x00
+   2986 21r4Er08           4286 	ld	hl, #(_maps + 0x084e)
+   2989 36 00              4287 	ld	(hl), #0x00
+   298B 21r4Fr08           4288 	ld	hl, #(_maps + 0x084f)
+   298E 36 00              4289 	ld	(hl), #0x00
+   2990 21r50r08           4290 	ld	hl, #(_maps + 0x0850)
+   2993 36 03              4291 	ld	(hl), #0x03
+   2995 21r51r08           4292 	ld	hl, #(_maps + 0x0851)
+   2998 36 00              4293 	ld	(hl), #0x00
+   299A 21r52r08           4294 	ld	hl, #(_maps + 0x0852)
+   299D 36 00              4295 	ld	(hl), #0x00
+   299F 21r53r08           4296 	ld	hl, #(_maps + 0x0853)
+   29A2 36 00              4297 	ld	(hl), #0x00
+   29A4 21r54r08           4298 	ld	hl, #(_maps + 0x0854)
+   29A7 36 00              4299 	ld	(hl), #0x00
+   29A9 21r55r08           4300 	ld	hl, #(_maps + 0x0855)
+   29AC 36 00              4301 	ld	(hl), #0x00
+   29AE 21r56r08           4302 	ld	hl, #(_maps + 0x0856)
+   29B1 36 00              4303 	ld	(hl), #0x00
+   29B3 21r57r08           4304 	ld	hl, #(_maps + 0x0857)
+   29B6 36 00              4305 	ld	(hl), #0x00
+   29B8 21r58r08           4306 	ld	hl, #(_maps + 0x0858)
+   29BB 36 00              4307 	ld	(hl), #0x00
+   29BD 21r59r08           4308 	ld	hl, #(_maps + 0x0859)
+   29C0 36 00              4309 	ld	(hl), #0x00
+   29C2 21r5Ar08           4310 	ld	hl, #(_maps + 0x085a)
+   29C5 36 01              4311 	ld	(hl), #0x01
+   29C7 21r5Br08           4312 	ld	hl, #(_maps + 0x085b)
+   29CA 36 04              4313 	ld	(hl), #0x04
+   29CC 21r5Cr08           4314 	ld	hl, #(_maps + 0x085c)
+   29CF 36 04              4315 	ld	(hl), #0x04
+   29D1 21r5Dr08           4316 	ld	hl, #(_maps + 0x085d)
+   29D4 36 04              4317 	ld	(hl), #0x04
+   29D6 21r5Er08           4318 	ld	hl, #(_maps + 0x085e)
+   29D9 36 04              4319 	ld	(hl), #0x04
+   29DB 21r5Fr08           4320 	ld	hl, #(_maps + 0x085f)
+   29DE 36 04              4321 	ld	(hl), #0x04
+   29E0 21r60r08           4322 	ld	hl, #(_maps + 0x0860)
+   29E3 36 04              4323 	ld	(hl), #0x04
+   29E5 21r61r08           4324 	ld	hl, #(_maps + 0x0861)
+   29E8 36 04              4325 	ld	(hl), #0x04
+   29EA 21r62r08           4326 	ld	hl, #(_maps + 0x0862)
+   29ED 36 04              4327 	ld	(hl), #0x04
+   29EF 21r63r08           4328 	ld	hl, #(_maps + 0x0863)
+   29F2 36 04              4329 	ld	(hl), #0x04
+   29F4 21r64r08           4330 	ld	hl, #(_maps + 0x0864)
+   29F7 36 04              4331 	ld	(hl), #0x04
+   29F9 21r65r08           4332 	ld	hl, #(_maps + 0x0865)
+   29FC 36 04              4333 	ld	(hl), #0x04
+   29FE 21r66r08           4334 	ld	hl, #(_maps + 0x0866)
+   2A01 36 04              4335 	ld	(hl), #0x04
+   2A03 21r67r08           4336 	ld	hl, #(_maps + 0x0867)
+   2A06 36 04              4337 	ld	(hl), #0x04
+   2A08 21r68r08           4338 	ld	hl, #(_maps + 0x0868)
+   2A0B 36 04              4339 	ld	(hl), #0x04
+   2A0D 21r69r08           4340 	ld	hl, #(_maps + 0x0869)
+   2A10 36 04              4341 	ld	(hl), #0x04
+   2A12 21r6Ar08           4342 	ld	hl, #(_maps + 0x086a)
+   2A15 36 04              4343 	ld	(hl), #0x04
+   2A17 21r6Br08           4344 	ld	hl, #(_maps + 0x086b)
+   2A1A 36 04              4345 	ld	(hl), #0x04
+   2A1C 21r6Cr08           4346 	ld	hl, #(_maps + 0x086c)
+   2A1F 36 04              4347 	ld	(hl), #0x04
+   2A21 21r6Dr08           4348 	ld	hl, #(_maps + 0x086d)
+   2A24 36 04              4349 	ld	(hl), #0x04
+   2A26 21r6Er08           4350 	ld	hl, #(_maps + 0x086e)
+   2A29 36 04              4351 	ld	(hl), #0x04
+   2A2B 21r6Fr08           4352 	ld	hl, #(_maps + 0x086f)
+   2A2E 36 04              4353 	ld	(hl), #0x04
+   2A30 21r70r08           4354 	ld	hl, #(_maps + 0x0870)
+   2A33 36 04              4355 	ld	(hl), #0x04
+   2A35 21r71r08           4356 	ld	hl, #(_maps + 0x0871)
+   2A38 36 04              4357 	ld	(hl), #0x04
+   2A3A 21r72r08           4358 	ld	hl, #(_maps + 0x0872)
+   2A3D 36 04              4359 	ld	(hl), #0x04
+   2A3F 21r73r08           4360 	ld	hl, #(_maps + 0x0873)
+   2A42 36 04              4361 	ld	(hl), #0x04
+   2A44 21r74r08           4362 	ld	hl, #(_maps + 0x0874)
+   2A47 36 04              4363 	ld	(hl), #0x04
+   2A49 21r75r08           4364 	ld	hl, #(_maps + 0x0875)
+   2A4C 36 04              4365 	ld	(hl), #0x04
+   2A4E 21r76r08           4366 	ld	hl, #(_maps + 0x0876)
+   2A51 36 04              4367 	ld	(hl), #0x04
+   2A53 21r77r08           4368 	ld	hl, #(_maps + 0x0877)
+   2A56 36 04              4369 	ld	(hl), #0x04
+   2A58 21r78r08           4370 	ld	hl, #(_maps + 0x0878)
+   2A5B 36 04              4371 	ld	(hl), #0x04
+   2A5D 21r79r08           4372 	ld	hl, #(_maps + 0x0879)
+   2A60 36 04              4373 	ld	(hl), #0x04
+   2A62 21r7Ar08           4374 	ld	hl, #(_maps + 0x087a)
+   2A65 36 04              4375 	ld	(hl), #0x04
+   2A67 21r7Br08           4376 	ld	hl, #(_maps + 0x087b)
+   2A6A 36 04              4377 	ld	(hl), #0x04
+   2A6C 21r7Cr08           4378 	ld	hl, #(_maps + 0x087c)
+   2A6F 36 04              4379 	ld	(hl), #0x04
+   2A71 21r7Dr08           4380 	ld	hl, #(_maps + 0x087d)
+   2A74 36 04              4381 	ld	(hl), #0x04
+   2A76 21r7Er08           4382 	ld	hl, #(_maps + 0x087e)
+   2A79 36 04              4383 	ld	(hl), #0x04
+   2A7B 21r7Fr08           4384 	ld	hl, #(_maps + 0x087f)
+   2A7E 36 04              4385 	ld	(hl), #0x04
+   2A80 21r80r08           4386 	ld	hl, #(_maps + 0x0880)
+   2A83 36 04              4387 	ld	(hl), #0x04
+   2A85 21r81r08           4388 	ld	hl, #(_maps + 0x0881)
+   2A88 36 04              4389 	ld	(hl), #0x04
+   2A8A 21r82r08           4390 	ld	hl, #(_maps + 0x0882)
+   2A8D 36 04              4391 	ld	(hl), #0x04
+   2A8F 21r83r08           4392 	ld	hl, #(_maps + 0x0883)
+   2A92 36 04              4393 	ld	(hl), #0x04
+   2A94 21r84r08           4394 	ld	hl, #(_maps + 0x0884)
+   2A97 36 04              4395 	ld	(hl), #0x04
+   2A99 21r85r08           4396 	ld	hl, #(_maps + 0x0885)
+   2A9C 36 00              4397 	ld	(hl), #0x00
+   2A9E 21r86r08           4398 	ld	hl, #(_maps + 0x0886)
+   2AA1 36 00              4399 	ld	(hl), #0x00
+   2AA3 21r87r08           4400 	ld	hl, #(_maps + 0x0887)
+   2AA6 36 00              4401 	ld	(hl), #0x00
+   2AA8 21r88r08           4402 	ld	hl, #(_maps + 0x0888)
+   2AAB 36 00              4403 	ld	(hl), #0x00
+   2AAD 21r89r08           4404 	ld	hl, #(_maps + 0x0889)
+   2AB0 36 00              4405 	ld	(hl), #0x00
+   2AB2 21r8Ar08           4406 	ld	hl, #(_maps + 0x088a)
+   2AB5 36 00              4407 	ld	(hl), #0x00
+   2AB7 21r8Br08           4408 	ld	hl, #(_maps + 0x088b)
+   2ABA 36 00              4409 	ld	(hl), #0x00
+   2ABC 21r8Cr08           4410 	ld	hl, #(_maps + 0x088c)
+   2ABF 36 00              4411 	ld	(hl), #0x00
+   2AC1 21r8Dr08           4412 	ld	hl, #(_maps + 0x088d)
+   2AC4 36 00              4413 	ld	(hl), #0x00
+   2AC6 21r8Er08           4414 	ld	hl, #(_maps + 0x088e)
+   2AC9 36 00              4415 	ld	(hl), #0x00
+   2ACB 21r8Fr08           4416 	ld	hl, #(_maps + 0x088f)
+   2ACE 36 00              4417 	ld	(hl), #0x00
+   2AD0 21r90r08           4418 	ld	hl, #(_maps + 0x0890)
+   2AD3 36 00              4419 	ld	(hl), #0x00
+   2AD5 21r91r08           4420 	ld	hl, #(_maps + 0x0891)
+   2AD8 36 00              4421 	ld	(hl), #0x00
+   2ADA 21r92r08           4422 	ld	hl, #(_maps + 0x0892)
+   2ADD 36 00              4423 	ld	(hl), #0x00
+   2ADF 21r93r08           4424 	ld	hl, #(_maps + 0x0893)
+   2AE2 36 00              4425 	ld	(hl), #0x00
+   2AE4 21r94r08           4426 	ld	hl, #(_maps + 0x0894)
+   2AE7 36 00              4427 	ld	(hl), #0x00
+   2AE9 21r95r08           4428 	ld	hl, #(_maps + 0x0895)
+   2AEC 36 00              4429 	ld	(hl), #0x00
+   2AEE 21r96r08           4430 	ld	hl, #(_maps + 0x0896)
+   2AF1 36 00              4431 	ld	(hl), #0x00
+   2AF3 21r97r08           4432 	ld	hl, #(_maps + 0x0897)
+   2AF6 36 04              4433 	ld	(hl), #0x04
+   2AF8 21r98r08           4434 	ld	hl, #(_maps + 0x0898)
+   2AFB 36 04              4435 	ld	(hl), #0x04
+   2AFD 21r99r08           4436 	ld	hl, #(_maps + 0x0899)
+   2B00 36 00              4437 	ld	(hl), #0x00
+   2B02 21r9Ar08           4438 	ld	hl, #(_maps + 0x089a)
+   2B05 36 00              4439 	ld	(hl), #0x00
+   2B07 21r9Br08           4440 	ld	hl, #(_maps + 0x089b)
+   2B0A 36 00              4441 	ld	(hl), #0x00
+   2B0C 21r9Cr08           4442 	ld	hl, #(_maps + 0x089c)
+   2B0F 36 00              4443 	ld	(hl), #0x00
+   2B11 21r9Dr08           4444 	ld	hl, #(_maps + 0x089d)
+   2B14 36 00              4445 	ld	(hl), #0x00
+   2B16 21r9Er08           4446 	ld	hl, #(_maps + 0x089e)
+   2B19 36 00              4447 	ld	(hl), #0x00
+   2B1B 21r9Fr08           4448 	ld	hl, #(_maps + 0x089f)
+   2B1E 36 00              4449 	ld	(hl), #0x00
+   2B20 21rA0r08           4450 	ld	hl, #(_maps + 0x08a0)
+   2B23 36 00              4451 	ld	(hl), #0x00
+   2B25 21rA1r08           4452 	ld	hl, #(_maps + 0x08a1)
+   2B28 36 00              4453 	ld	(hl), #0x00
+   2B2A 21rA2r08           4454 	ld	hl, #(_maps + 0x08a2)
+   2B2D 36 00              4455 	ld	(hl), #0x00
+   2B2F 21rA3r08           4456 	ld	hl, #(_maps + 0x08a3)
+   2B32 36 00              4457 	ld	(hl), #0x00
+   2B34 21rA4r08           4458 	ld	hl, #(_maps + 0x08a4)
+   2B37 36 00              4459 	ld	(hl), #0x00
+   2B39 21rA5r08           4460 	ld	hl, #(_maps + 0x08a5)
+   2B3C 36 00              4461 	ld	(hl), #0x00
+   2B3E 21rA6r08           4462 	ld	hl, #(_maps + 0x08a6)
+   2B41 36 00              4463 	ld	(hl), #0x00
+   2B43 21rA7r08           4464 	ld	hl, #(_maps + 0x08a7)
+   2B46 36 00              4465 	ld	(hl), #0x00
+   2B48 21rA8r08           4466 	ld	hl, #(_maps + 0x08a8)
+   2B4B 36 00              4467 	ld	(hl), #0x00
+   2B4D 21rA9r08           4468 	ld	hl, #(_maps + 0x08a9)
+   2B50 36 00              4469 	ld	(hl), #0x00
+   2B52 21rAAr08           4470 	ld	hl, #(_maps + 0x08aa)
+   2B55 36 01              4471 	ld	(hl), #0x01
+   2B57 21rABr08           4472 	ld	hl, #(_maps + 0x08ab)
+   2B5A 36 04              4473 	ld	(hl), #0x04
+   2B5C 21rACr08           4474 	ld	hl, #(_maps + 0x08ac)
+   2B5F 36 04              4475 	ld	(hl), #0x04
+   2B61 21rADr08           4476 	ld	hl, #(_maps + 0x08ad)
+   2B64 36 00              4477 	ld	(hl), #0x00
+   2B66 21rAEr08           4478 	ld	hl, #(_maps + 0x08ae)
+   2B69 36 00              4479 	ld	(hl), #0x00
+   2B6B 21rAFr08           4480 	ld	hl, #(_maps + 0x08af)
+   2B6E 36 00              4481 	ld	(hl), #0x00
+   2B70 21rB0r08           4482 	ld	hl, #(_maps + 0x08b0)
+   2B73 36 00              4483 	ld	(hl), #0x00
+   2B75 21rB1r08           4484 	ld	hl, #(_maps + 0x08b1)
+   2B78 36 00              4485 	ld	(hl), #0x00
+   2B7A 21rB2r08           4486 	ld	hl, #(_maps + 0x08b2)
+   2B7D 36 00              4487 	ld	(hl), #0x00
+   2B7F 21rB3r08           4488 	ld	hl, #(_maps + 0x08b3)
+   2B82 36 00              4489 	ld	(hl), #0x00
+   2B84 21rB4r08           4490 	ld	hl, #(_maps + 0x08b4)
+   2B87 36 00              4491 	ld	(hl), #0x00
+   2B89 21rB5r08           4492 	ld	hl, #(_maps + 0x08b5)
+   2B8C 36 00              4493 	ld	(hl), #0x00
+   2B8E 21rB6r08           4494 	ld	hl, #(_maps + 0x08b6)
+   2B91 36 00              4495 	ld	(hl), #0x00
+   2B93 21rB7r08           4496 	ld	hl, #(_maps + 0x08b7)
+   2B96 36 00              4497 	ld	(hl), #0x00
+   2B98 21rB8r08           4498 	ld	hl, #(_maps + 0x08b8)
+   2B9B 36 00              4499 	ld	(hl), #0x00
+   2B9D 21rB9r08           4500 	ld	hl, #(_maps + 0x08b9)
+   2BA0 36 00              4501 	ld	(hl), #0x00
+   2BA2 21rBAr08           4502 	ld	hl, #(_maps + 0x08ba)
+   2BA5 36 03              4503 	ld	(hl), #0x03
+   2BA7 21rBBr08           4504 	ld	hl, #(_maps + 0x08bb)
+   2BAA 36 03              4505 	ld	(hl), #0x03
+   2BAC 21rBCr08           4506 	ld	hl, #(_maps + 0x08bc)
+   2BAF 36 03              4507 	ld	(hl), #0x03
+   2BB1 21rBDr08           4508 	ld	hl, #(_maps + 0x08bd)
+   2BB4 36 03              4509 	ld	(hl), #0x03
+   2BB6 21rBEr08           4510 	ld	hl, #(_maps + 0x08be)
+   2BB9 36 03              4511 	ld	(hl), #0x03
+   2BBB 21rBFr08           4512 	ld	hl, #(_maps + 0x08bf)
+   2BBE 36 04              4513 	ld	(hl), #0x04
+   2BC0 21rC0r08           4514 	ld	hl, #(_maps + 0x08c0)
+   2BC3 36 04              4515 	ld	(hl), #0x04
+   2BC5 21rC1r08           4516 	ld	hl, #(_maps + 0x08c1)
+   2BC8 36 00              4517 	ld	(hl), #0x00
+   2BCA 21rC2r08           4518 	ld	hl, #(_maps + 0x08c2)
+   2BCD 36 00              4519 	ld	(hl), #0x00
+   2BCF 21rC3r08           4520 	ld	hl, #(_maps + 0x08c3)
+   2BD2 36 00              4521 	ld	(hl), #0x00
+   2BD4 21rC4r08           4522 	ld	hl, #(_maps + 0x08c4)
+   2BD7 36 00              4523 	ld	(hl), #0x00
+   2BD9 21rC5r08           4524 	ld	hl, #(_maps + 0x08c5)
+   2BDC 36 00              4525 	ld	(hl), #0x00
+   2BDE 21rC6r08           4526 	ld	hl, #(_maps + 0x08c6)
+   2BE1 36 00              4527 	ld	(hl), #0x00
+   2BE3 21rC7r08           4528 	ld	hl, #(_maps + 0x08c7)
+   2BE6 36 00              4529 	ld	(hl), #0x00
+   2BE8 21rC8r08           4530 	ld	hl, #(_maps + 0x08c8)
+   2BEB 36 00              4531 	ld	(hl), #0x00
+   2BED 21rC9r08           4532 	ld	hl, #(_maps + 0x08c9)
+   2BF0 36 00              4533 	ld	(hl), #0x00
+   2BF2 21rCAr08           4534 	ld	hl, #(_maps + 0x08ca)
+   2BF5 36 00              4535 	ld	(hl), #0x00
+   2BF7 21rCBr08           4536 	ld	hl, #(_maps + 0x08cb)
+   2BFA 36 00              4537 	ld	(hl), #0x00
+   2BFC 21rCCr08           4538 	ld	hl, #(_maps + 0x08cc)
+   2BFF 36 00              4539 	ld	(hl), #0x00
+   2C01 21rCDr08           4540 	ld	hl, #(_maps + 0x08cd)
+   2C04 36 00              4541 	ld	(hl), #0x00
+   2C06 21rCEr08           4542 	ld	hl, #(_maps + 0x08ce)
+   2C09 36 00              4543 	ld	(hl), #0x00
+   2C0B 21rCFr08           4544 	ld	hl, #(_maps + 0x08cf)
+   2C0E 36 00              4545 	ld	(hl), #0x00
+   2C10 21rD0r08           4546 	ld	hl, #(_maps + 0x08d0)
+   2C13 36 00              4547 	ld	(hl), #0x00
+   2C15 21rD1r08           4548 	ld	hl, #(_maps + 0x08d1)
+   2C18 36 00              4549 	ld	(hl), #0x00
+   2C1A 21rD2r08           4550 	ld	hl, #(_maps + 0x08d2)
+   2C1D 36 00              4551 	ld	(hl), #0x00
+   2C1F 21rD3r08           4552 	ld	hl, #(_maps + 0x08d3)
+   2C22 36 04              4553 	ld	(hl), #0x04
+   2C24 21rD4r08           4554 	ld	hl, #(_maps + 0x08d4)
+   2C27 36 04              4555 	ld	(hl), #0x04
+   2C29 21rD5r08           4556 	ld	hl, #(_maps + 0x08d5)
+   2C2C 36 00              4557 	ld	(hl), #0x00
+   2C2E 21rD6r08           4558 	ld	hl, #(_maps + 0x08d6)
+   2C31 36 00              4559 	ld	(hl), #0x00
+   2C33 21rD7r08           4560 	ld	hl, #(_maps + 0x08d7)
+   2C36 36 00              4561 	ld	(hl), #0x00
+   2C38 21rD8r08           4562 	ld	hl, #(_maps + 0x08d8)
+   2C3B 36 00              4563 	ld	(hl), #0x00
+   2C3D 21rD9r08           4564 	ld	hl, #(_maps + 0x08d9)
+   2C40 36 00              4565 	ld	(hl), #0x00
+   2C42 21rDAr08           4566 	ld	hl, #(_maps + 0x08da)
+   2C45 36 00              4567 	ld	(hl), #0x00
+   2C47 21rDBr08           4568 	ld	hl, #(_maps + 0x08db)
+   2C4A 36 00              4569 	ld	(hl), #0x00
+   2C4C 21rDCr08           4570 	ld	hl, #(_maps + 0x08dc)
+   2C4F 36 00              4571 	ld	(hl), #0x00
+   2C51 21rDDr08           4572 	ld	hl, #(_maps + 0x08dd)
+   2C54 36 00              4573 	ld	(hl), #0x00
+   2C56 21rDEr08           4574 	ld	hl, #(_maps + 0x08de)
+   2C59 36 00              4575 	ld	(hl), #0x00
+   2C5B 21rDFr08           4576 	ld	hl, #(_maps + 0x08df)
+   2C5E 36 00              4577 	ld	(hl), #0x00
+   2C60 21rE0r08           4578 	ld	hl, #(_maps + 0x08e0)
+   2C63 36 00              4579 	ld	(hl), #0x00
+   2C65 21rE1r08           4580 	ld	hl, #(_maps + 0x08e1)
+   2C68 36 00              4581 	ld	(hl), #0x00
+   2C6A 21rE2r08           4582 	ld	hl, #(_maps + 0x08e2)
+   2C6D 36 00              4583 	ld	(hl), #0x00
+   2C6F 21rE3r08           4584 	ld	hl, #(_maps + 0x08e3)
+   2C72 36 00              4585 	ld	(hl), #0x00
+   2C74 21rE4r08           4586 	ld	hl, #(_maps + 0x08e4)
+   2C77 36 00              4587 	ld	(hl), #0x00
+   2C79 21rE5r08           4588 	ld	hl, #(_maps + 0x08e5)
+   2C7C 36 00              4589 	ld	(hl), #0x00
+   2C7E 21rE6r08           4590 	ld	hl, #(_maps + 0x08e6)
+   2C81 36 00              4591 	ld	(hl), #0x00
+   2C83 21rE7r08           4592 	ld	hl, #(_maps + 0x08e7)
+   2C86 36 04              4593 	ld	(hl), #0x04
+   2C88 21rE8r08           4594 	ld	hl, #(_maps + 0x08e8)
+   2C8B 36 04              4595 	ld	(hl), #0x04
+   2C8D 21rE9r08           4596 	ld	hl, #(_maps + 0x08e9)
+   2C90 36 00              4597 	ld	(hl), #0x00
+   2C92 21rEAr08           4598 	ld	hl, #(_maps + 0x08ea)
+   2C95 36 00              4599 	ld	(hl), #0x00
+   2C97 21rEBr08           4600 	ld	hl, #(_maps + 0x08eb)
+   2C9A 36 00              4601 	ld	(hl), #0x00
+   2C9C 21rECr08           4602 	ld	hl, #(_maps + 0x08ec)
+   2C9F 36 00              4603 	ld	(hl), #0x00
+   2CA1 21rEDr08           4604 	ld	hl, #(_maps + 0x08ed)
+   2CA4 36 00              4605 	ld	(hl), #0x00
+   2CA6 21rEEr08           4606 	ld	hl, #(_maps + 0x08ee)
+   2CA9 36 00              4607 	ld	(hl), #0x00
+   2CAB 21rEFr08           4608 	ld	hl, #(_maps + 0x08ef)
+   2CAE 36 00              4609 	ld	(hl), #0x00
+   2CB0 21rF0r08           4610 	ld	hl, #(_maps + 0x08f0)
+   2CB3 36 00              4611 	ld	(hl), #0x00
+   2CB5 21rF1r08           4612 	ld	hl, #(_maps + 0x08f1)
+   2CB8 36 00              4613 	ld	(hl), #0x00
+   2CBA 21rF2r08           4614 	ld	hl, #(_maps + 0x08f2)
+   2CBD 36 00              4615 	ld	(hl), #0x00
+   2CBF 21rF3r08           4616 	ld	hl, #(_maps + 0x08f3)
+   2CC2 36 05              4617 	ld	(hl), #0x05
+   2CC4 21rF4r08           4618 	ld	hl, #(_maps + 0x08f4)
+   2CC7 36 05              4619 	ld	(hl), #0x05
+   2CC9 21rF5r08           4620 	ld	hl, #(_maps + 0x08f5)
+   2CCC 36 00              4621 	ld	(hl), #0x00
+   2CCE 21rF6r08           4622 	ld	hl, #(_maps + 0x08f6)
+   2CD1 36 00              4623 	ld	(hl), #0x00
+   2CD3 21rF7r08           4624 	ld	hl, #(_maps + 0x08f7)
+   2CD6 36 00              4625 	ld	(hl), #0x00
+   2CD8 21rF8r08           4626 	ld	hl, #(_maps + 0x08f8)
+   2CDB 36 00              4627 	ld	(hl), #0x00
+   2CDD 21rF9r08           4628 	ld	hl, #(_maps + 0x08f9)
+   2CE0 36 00              4629 	ld	(hl), #0x00
+   2CE2 21rFAr08           4630 	ld	hl, #(_maps + 0x08fa)
+   2CE5 36 00              4631 	ld	(hl), #0x00
+   2CE7 21rFBr08           4632 	ld	hl, #(_maps + 0x08fb)
+   2CEA 36 04              4633 	ld	(hl), #0x04
+   2CEC 21rFCr08           4634 	ld	hl, #(_maps + 0x08fc)
+   2CEF 36 04              4635 	ld	(hl), #0x04
+   2CF1 21rFDr08           4636 	ld	hl, #(_maps + 0x08fd)
+   2CF4 36 00              4637 	ld	(hl), #0x00
+   2CF6 21rFEr08           4638 	ld	hl, #(_maps + 0x08fe)
+   2CF9 36 00              4639 	ld	(hl), #0x00
+   2CFB 21rFFr08           4640 	ld	hl, #(_maps + 0x08ff)
+   2CFE 36 00              4641 	ld	(hl), #0x00
+   2D00 21r00r09           4642 	ld	hl, #(_maps + 0x0900)
+   2D03 36 00              4643 	ld	(hl), #0x00
+   2D05 21r01r09           4644 	ld	hl, #(_maps + 0x0901)
+   2D08 36 00              4645 	ld	(hl), #0x00
+   2D0A 21r02r09           4646 	ld	hl, #(_maps + 0x0902)
+   2D0D 36 00              4647 	ld	(hl), #0x00
+   2D0F 21r03r09           4648 	ld	hl, #(_maps + 0x0903)
+   2D12 36 00              4649 	ld	(hl), #0x00
+   2D14 21r04r09           4650 	ld	hl, #(_maps + 0x0904)
+   2D17 36 00              4651 	ld	(hl), #0x00
+   2D19 21r05r09           4652 	ld	hl, #(_maps + 0x0905)
+   2D1C 36 00              4653 	ld	(hl), #0x00
+   2D1E 21r06r09           4654 	ld	hl, #(_maps + 0x0906)
+   2D21 36 03              4655 	ld	(hl), #0x03
+   2D23 21r07r09           4656 	ld	hl, #(_maps + 0x0907)
+   2D26 36 03              4657 	ld	(hl), #0x03
+   2D28 21r08r09           4658 	ld	hl, #(_maps + 0x0908)
+   2D2B 36 03              4659 	ld	(hl), #0x03
+   2D2D 21r09r09           4660 	ld	hl, #(_maps + 0x0909)
+   2D30 36 03              4661 	ld	(hl), #0x03
+   2D32 21r0Ar09           4662 	ld	hl, #(_maps + 0x090a)
+   2D35 36 00              4663 	ld	(hl), #0x00
+   2D37 21r0Br09           4664 	ld	hl, #(_maps + 0x090b)
+   2D3A 36 00              4665 	ld	(hl), #0x00
+   2D3C 21r0Cr09           4666 	ld	hl, #(_maps + 0x090c)
+   2D3F 36 00              4667 	ld	(hl), #0x00
+   2D41 21r0Dr09           4668 	ld	hl, #(_maps + 0x090d)
+   2D44 36 00              4669 	ld	(hl), #0x00
+   2D46 21r0Er09           4670 	ld	hl, #(_maps + 0x090e)
+   2D49 36 00              4671 	ld	(hl), #0x00
+   2D4B 21r0Fr09           4672 	ld	hl, #(_maps + 0x090f)
+   2D4E 36 04              4673 	ld	(hl), #0x04
+   2D50 21r10r09           4674 	ld	hl, #(_maps + 0x0910)
+   2D53 36 04              4675 	ld	(hl), #0x04
+   2D55 21r11r09           4676 	ld	hl, #(_maps + 0x0911)
+   2D58 36 00              4677 	ld	(hl), #0x00
+   2D5A 21r12r09           4678 	ld	hl, #(_maps + 0x0912)
+   2D5D 36 00              4679 	ld	(hl), #0x00
+   2D5F 21r13r09           4680 	ld	hl, #(_maps + 0x0913)
+   2D62 36 00              4681 	ld	(hl), #0x00
+   2D64 21r14r09           4682 	ld	hl, #(_maps + 0x0914)
+   2D67 36 00              4683 	ld	(hl), #0x00
+   2D69 21r15r09           4684 	ld	hl, #(_maps + 0x0915)
+   2D6C 36 00              4685 	ld	(hl), #0x00
+   2D6E 21r16r09           4686 	ld	hl, #(_maps + 0x0916)
+   2D71 36 00              4687 	ld	(hl), #0x00
+   2D73 21r17r09           4688 	ld	hl, #(_maps + 0x0917)
+   2D76 36 00              4689 	ld	(hl), #0x00
+   2D78 21r18r09           4690 	ld	hl, #(_maps + 0x0918)
+   2D7B 36 00              4691 	ld	(hl), #0x00
+   2D7D 21r19r09           4692 	ld	hl, #(_maps + 0x0919)
+   2D80 36 00              4693 	ld	(hl), #0x00
+   2D82 21r1Ar09           4694 	ld	hl, #(_maps + 0x091a)
+   2D85 36 00              4695 	ld	(hl), #0x00
+   2D87 21r1Br09           4696 	ld	hl, #(_maps + 0x091b)
+   2D8A 36 00              4697 	ld	(hl), #0x00
+   2D8C 21r1Cr09           4698 	ld	hl, #(_maps + 0x091c)
+   2D8F 36 00              4699 	ld	(hl), #0x00
+   2D91 21r1Dr09           4700 	ld	hl, #(_maps + 0x091d)
+   2D94 36 00              4701 	ld	(hl), #0x00
+   2D96 21r1Er09           4702 	ld	hl, #(_maps + 0x091e)
+   2D99 36 00              4703 	ld	(hl), #0x00
+   2D9B 21r1Fr09           4704 	ld	hl, #(_maps + 0x091f)
+   2D9E 36 00              4705 	ld	(hl), #0x00
+   2DA0 21r20r09           4706 	ld	hl, #(_maps + 0x0920)
+   2DA3 36 00              4707 	ld	(hl), #0x00
+   2DA5 21r21r09           4708 	ld	hl, #(_maps + 0x0921)
+   2DA8 36 00              4709 	ld	(hl), #0x00
+   2DAA 21r22r09           4710 	ld	hl, #(_maps + 0x0922)
+   2DAD 36 00              4711 	ld	(hl), #0x00
+   2DAF 21r23r09           4712 	ld	hl, #(_maps + 0x0923)
+   2DB2 36 04              4713 	ld	(hl), #0x04
+   2DB4 21r24r09           4714 	ld	hl, #(_maps + 0x0924)
+   2DB7 36 04              4715 	ld	(hl), #0x04
+   2DB9 21r25r09           4716 	ld	hl, #(_maps + 0x0925)
+   2DBC 36 00              4717 	ld	(hl), #0x00
+   2DBE 21r26r09           4718 	ld	hl, #(_maps + 0x0926)
+   2DC1 36 00              4719 	ld	(hl), #0x00
+   2DC3 21r27r09           4720 	ld	hl, #(_maps + 0x0927)
+   2DC6 36 00              4721 	ld	(hl), #0x00
+   2DC8 21r28r09           4722 	ld	hl, #(_maps + 0x0928)
+   2DCB 36 00              4723 	ld	(hl), #0x00
+   2DCD 21r29r09           4724 	ld	hl, #(_maps + 0x0929)
+   2DD0 36 00              4725 	ld	(hl), #0x00
+   2DD2 21r2Ar09           4726 	ld	hl, #(_maps + 0x092a)
+   2DD5 36 00              4727 	ld	(hl), #0x00
+   2DD7 21r2Br09           4728 	ld	hl, #(_maps + 0x092b)
+   2DDA 36 00              4729 	ld	(hl), #0x00
+   2DDC 21r2Cr09           4730 	ld	hl, #(_maps + 0x092c)
+   2DDF 36 00              4731 	ld	(hl), #0x00
+   2DE1 21r2Dr09           4732 	ld	hl, #(_maps + 0x092d)
+   2DE4 36 00              4733 	ld	(hl), #0x00
+   2DE6 21r2Er09           4734 	ld	hl, #(_maps + 0x092e)
+   2DE9 36 00              4735 	ld	(hl), #0x00
+   2DEB 21r2Fr09           4736 	ld	hl, #(_maps + 0x092f)
+   2DEE 36 00              4737 	ld	(hl), #0x00
+   2DF0 21r30r09           4738 	ld	hl, #(_maps + 0x0930)
+   2DF3 36 00              4739 	ld	(hl), #0x00
+   2DF5 21r31r09           4740 	ld	hl, #(_maps + 0x0931)
+   2DF8 36 00              4741 	ld	(hl), #0x00
+   2DFA 21r32r09           4742 	ld	hl, #(_maps + 0x0932)
+   2DFD 36 00              4743 	ld	(hl), #0x00
+   2DFF 21r33r09           4744 	ld	hl, #(_maps + 0x0933)
+   2E02 36 00              4745 	ld	(hl), #0x00
+   2E04 21r34r09           4746 	ld	hl, #(_maps + 0x0934)
+   2E07 36 00              4747 	ld	(hl), #0x00
+   2E09 21r35r09           4748 	ld	hl, #(_maps + 0x0935)
+   2E0C 36 00              4749 	ld	(hl), #0x00
+   2E0E 21r36r09           4750 	ld	hl, #(_maps + 0x0936)
+   2E11 36 00              4751 	ld	(hl), #0x00
+   2E13 21r37r09           4752 	ld	hl, #(_maps + 0x0937)
+   2E16 36 04              4753 	ld	(hl), #0x04
+   2E18 21r38r09           4754 	ld	hl, #(_maps + 0x0938)
+   2E1B 36 04              4755 	ld	(hl), #0x04
+   2E1D 21r39r09           4756 	ld	hl, #(_maps + 0x0939)
+   2E20 36 00              4757 	ld	(hl), #0x00
+   2E22 21r3Ar09           4758 	ld	hl, #(_maps + 0x093a)
+   2E25 36 00              4759 	ld	(hl), #0x00
+   2E27 21r3Br09           4760 	ld	hl, #(_maps + 0x093b)
+   2E2A 36 03              4761 	ld	(hl), #0x03
+   2E2C 21r3Cr09           4762 	ld	hl, #(_maps + 0x093c)
+   2E2F 36 03              4763 	ld	(hl), #0x03
+   2E31 21r3Dr09           4764 	ld	hl, #(_maps + 0x093d)
+   2E34 36 03              4765 	ld	(hl), #0x03
+   2E36 21r3Er09           4766 	ld	hl, #(_maps + 0x093e)
+   2E39 36 03              4767 	ld	(hl), #0x03
+   2E3B 21r3Fr09           4768 	ld	hl, #(_maps + 0x093f)
+   2E3E 36 03              4769 	ld	(hl), #0x03
+   2E40 21r40r09           4770 	ld	hl, #(_maps + 0x0940)
+   2E43 36 00              4771 	ld	(hl), #0x00
+   2E45 21r41r09           4772 	ld	hl, #(_maps + 0x0941)
+   2E48 36 00              4773 	ld	(hl), #0x00
+   2E4A 21r42r09           4774 	ld	hl, #(_maps + 0x0942)
+   2E4D 36 00              4775 	ld	(hl), #0x00
+   2E4F 21r43r09           4776 	ld	hl, #(_maps + 0x0943)
+   2E52 36 00              4777 	ld	(hl), #0x00
+   2E54 21r44r09           4778 	ld	hl, #(_maps + 0x0944)
+   2E57 36 00              4779 	ld	(hl), #0x00
+   2E59 21r45r09           4780 	ld	hl, #(_maps + 0x0945)
+   2E5C 36 00              4781 	ld	(hl), #0x00
+   2E5E 21r46r09           4782 	ld	hl, #(_maps + 0x0946)
+   2E61 36 00              4783 	ld	(hl), #0x00
+   2E63 21r47r09           4784 	ld	hl, #(_maps + 0x0947)
+   2E66 36 00              4785 	ld	(hl), #0x00
+   2E68 21r48r09           4786 	ld	hl, #(_maps + 0x0948)
+   2E6B 36 00              4787 	ld	(hl), #0x00
+   2E6D 21r49r09           4788 	ld	hl, #(_maps + 0x0949)
+   2E70 36 00              4789 	ld	(hl), #0x00
+   2E72 21r4Ar09           4790 	ld	hl, #(_maps + 0x094a)
+   2E75 36 00              4791 	ld	(hl), #0x00
+   2E77 21r4Br09           4792 	ld	hl, #(_maps + 0x094b)
+   2E7A 36 04              4793 	ld	(hl), #0x04
+   2E7C 21r4Cr09           4794 	ld	hl, #(_maps + 0x094c)
+   2E7F 36 04              4795 	ld	(hl), #0x04
+   2E81 21r4Dr09           4796 	ld	hl, #(_maps + 0x094d)
+   2E84 36 00              4797 	ld	(hl), #0x00
+   2E86 21r4Er09           4798 	ld	hl, #(_maps + 0x094e)
+   2E89 36 00              4799 	ld	(hl), #0x00
+   2E8B 21r4Fr09           4800 	ld	hl, #(_maps + 0x094f)
+   2E8E 36 00              4801 	ld	(hl), #0x00
+   2E90 21r50r09           4802 	ld	hl, #(_maps + 0x0950)
+   2E93 36 00              4803 	ld	(hl), #0x00
+   2E95 21r51r09           4804 	ld	hl, #(_maps + 0x0951)
+   2E98 36 00              4805 	ld	(hl), #0x00
+   2E9A 21r52r09           4806 	ld	hl, #(_maps + 0x0952)
+   2E9D 36 00              4807 	ld	(hl), #0x00
+   2E9F 21r53r09           4808 	ld	hl, #(_maps + 0x0953)
+   2EA2 36 00              4809 	ld	(hl), #0x00
+   2EA4 21r54r09           4810 	ld	hl, #(_maps + 0x0954)
+   2EA7 36 00              4811 	ld	(hl), #0x00
+   2EA9 21r55r09           4812 	ld	hl, #(_maps + 0x0955)
+   2EAC 36 00              4813 	ld	(hl), #0x00
+   2EAE 21r56r09           4814 	ld	hl, #(_maps + 0x0956)
+   2EB1 36 00              4815 	ld	(hl), #0x00
+   2EB3 21r57r09           4816 	ld	hl, #(_maps + 0x0957)
+   2EB6 36 00              4817 	ld	(hl), #0x00
+   2EB8 21r58r09           4818 	ld	hl, #(_maps + 0x0958)
+   2EBB 36 00              4819 	ld	(hl), #0x00
+   2EBD 21r59r09           4820 	ld	hl, #(_maps + 0x0959)
+   2EC0 36 00              4821 	ld	(hl), #0x00
+   2EC2 21r5Ar09           4822 	ld	hl, #(_maps + 0x095a)
+   2EC5 36 00              4823 	ld	(hl), #0x00
+   2EC7 21r5Br09           4824 	ld	hl, #(_maps + 0x095b)
+   2ECA 36 00              4825 	ld	(hl), #0x00
+   2ECC 21r5Cr09           4826 	ld	hl, #(_maps + 0x095c)
+   2ECF 36 00              4827 	ld	(hl), #0x00
+   2ED1 21r5Dr09           4828 	ld	hl, #(_maps + 0x095d)
+   2ED4 36 00              4829 	ld	(hl), #0x00
+   2ED6 21r5Er09           4830 	ld	hl, #(_maps + 0x095e)
+   2ED9 36 00              4831 	ld	(hl), #0x00
+   2EDB 21r5Fr09           4832 	ld	hl, #(_maps + 0x095f)
+   2EDE 36 04              4833 	ld	(hl), #0x04
+   2EE0 21r60r09           4834 	ld	hl, #(_maps + 0x0960)
+   2EE3 36 04              4835 	ld	(hl), #0x04
+   2EE5 21r61r09           4836 	ld	hl, #(_maps + 0x0961)
+   2EE8 36 00              4837 	ld	(hl), #0x00
+   2EEA 21r62r09           4838 	ld	hl, #(_maps + 0x0962)
+   2EED 36 00              4839 	ld	(hl), #0x00
+   2EEF 21r63r09           4840 	ld	hl, #(_maps + 0x0963)
+   2EF2 36 00              4841 	ld	(hl), #0x00
+   2EF4 21r64r09           4842 	ld	hl, #(_maps + 0x0964)
+   2EF7 36 00              4843 	ld	(hl), #0x00
+   2EF9 21r65r09           4844 	ld	hl, #(_maps + 0x0965)
+   2EFC 36 00              4845 	ld	(hl), #0x00
+   2EFE 21r66r09           4846 	ld	hl, #(_maps + 0x0966)
+   2F01 36 00              4847 	ld	(hl), #0x00
+   2F03 21r67r09           4848 	ld	hl, #(_maps + 0x0967)
+   2F06 36 00              4849 	ld	(hl), #0x00
+   2F08 21r68r09           4850 	ld	hl, #(_maps + 0x0968)
+   2F0B 36 00              4851 	ld	(hl), #0x00
+   2F0D 21r69r09           4852 	ld	hl, #(_maps + 0x0969)
+   2F10 36 00              4853 	ld	(hl), #0x00
+   2F12 21r6Ar09           4854 	ld	hl, #(_maps + 0x096a)
+   2F15 36 00              4855 	ld	(hl), #0x00
+   2F17 21r6Br09           4856 	ld	hl, #(_maps + 0x096b)
+   2F1A 36 00              4857 	ld	(hl), #0x00
+   2F1C 21r6Cr09           4858 	ld	hl, #(_maps + 0x096c)
+   2F1F 36 00              4859 	ld	(hl), #0x00
+   2F21 21r6Dr09           4860 	ld	hl, #(_maps + 0x096d)
+   2F24 36 00              4861 	ld	(hl), #0x00
+   2F26 21r6Er09           4862 	ld	hl, #(_maps + 0x096e)
+   2F29 36 00              4863 	ld	(hl), #0x00
+   2F2B 21r6Fr09           4864 	ld	hl, #(_maps + 0x096f)
+   2F2E 36 00              4865 	ld	(hl), #0x00
+   2F30 21r70r09           4866 	ld	hl, #(_maps + 0x0970)
+   2F33 36 00              4867 	ld	(hl), #0x00
+   2F35 21r71r09           4868 	ld	hl, #(_maps + 0x0971)
+   2F38 36 00              4869 	ld	(hl), #0x00
+   2F3A 21r72r09           4870 	ld	hl, #(_maps + 0x0972)
+   2F3D 36 00              4871 	ld	(hl), #0x00
+   2F3F 21r73r09           4872 	ld	hl, #(_maps + 0x0973)
+   2F42 36 04              4873 	ld	(hl), #0x04
+   2F44 21r74r09           4874 	ld	hl, #(_maps + 0x0974)
+   2F47 36 04              4875 	ld	(hl), #0x04
+   2F49 21r75r09           4876 	ld	hl, #(_maps + 0x0975)
+   2F4C 36 00              4877 	ld	(hl), #0x00
+   2F4E 21r76r09           4878 	ld	hl, #(_maps + 0x0976)
+   2F51 36 00              4879 	ld	(hl), #0x00
+   2F53 21r77r09           4880 	ld	hl, #(_maps + 0x0977)
+   2F56 36 00              4881 	ld	(hl), #0x00
+   2F58 21r78r09           4882 	ld	hl, #(_maps + 0x0978)
+   2F5B 36 00              4883 	ld	(hl), #0x00
+   2F5D 21r79r09           4884 	ld	hl, #(_maps + 0x0979)
+   2F60 36 00              4885 	ld	(hl), #0x00
+   2F62 21r7Ar09           4886 	ld	hl, #(_maps + 0x097a)
+   2F65 36 00              4887 	ld	(hl), #0x00
+   2F67 21r7Br09           4888 	ld	hl, #(_maps + 0x097b)
+   2F6A 36 00              4889 	ld	(hl), #0x00
+   2F6C 21r7Cr09           4890 	ld	hl, #(_maps + 0x097c)
+   2F6F 36 00              4891 	ld	(hl), #0x00
+   2F71 21r7Dr09           4892 	ld	hl, #(_maps + 0x097d)
+   2F74 36 00              4893 	ld	(hl), #0x00
+   2F76 21r7Er09           4894 	ld	hl, #(_maps + 0x097e)
+   2F79 36 00              4895 	ld	(hl), #0x00
+   2F7B 21r7Fr09           4896 	ld	hl, #(_maps + 0x097f)
+   2F7E 36 00              4897 	ld	(hl), #0x00
+   2F80 21r80r09           4898 	ld	hl, #(_maps + 0x0980)
+   2F83 36 00              4899 	ld	(hl), #0x00
+   2F85 21r81r09           4900 	ld	hl, #(_maps + 0x0981)
+   2F88 36 00              4901 	ld	(hl), #0x00
+   2F8A 21r82r09           4902 	ld	hl, #(_maps + 0x0982)
+   2F8D 36 00              4903 	ld	(hl), #0x00
+   2F8F 21r83r09           4904 	ld	hl, #(_maps + 0x0983)
+   2F92 36 00              4905 	ld	(hl), #0x00
+   2F94 21r84r09           4906 	ld	hl, #(_maps + 0x0984)
+   2F97 36 00              4907 	ld	(hl), #0x00
+   2F99 21r85r09           4908 	ld	hl, #(_maps + 0x0985)
+   2F9C 36 00              4909 	ld	(hl), #0x00
+   2F9E 21r86r09           4910 	ld	hl, #(_maps + 0x0986)
+   2FA1 36 00              4911 	ld	(hl), #0x00
+   2FA3 21r87r09           4912 	ld	hl, #(_maps + 0x0987)
+   2FA6 36 04              4913 	ld	(hl), #0x04
+   2FA8 21r88r09           4914 	ld	hl, #(_maps + 0x0988)
+   2FAB 36 04              4915 	ld	(hl), #0x04
+   2FAD 21r89r09           4916 	ld	hl, #(_maps + 0x0989)
+   2FB0 36 00              4917 	ld	(hl), #0x00
+   2FB2 21r8Ar09           4918 	ld	hl, #(_maps + 0x098a)
+   2FB5 36 00              4919 	ld	(hl), #0x00
+   2FB7 21r8Br09           4920 	ld	hl, #(_maps + 0x098b)
+   2FBA 36 00              4921 	ld	(hl), #0x00
+   2FBC 21r8Cr09           4922 	ld	hl, #(_maps + 0x098c)
+   2FBF 36 00              4923 	ld	(hl), #0x00
+   2FC1 21r8Dr09           4924 	ld	hl, #(_maps + 0x098d)
+   2FC4 36 00              4925 	ld	(hl), #0x00
+   2FC6 21r8Er09           4926 	ld	hl, #(_maps + 0x098e)
+   2FC9 36 00              4927 	ld	(hl), #0x00
+   2FCB 21r8Fr09           4928 	ld	hl, #(_maps + 0x098f)
+   2FCE 36 00              4929 	ld	(hl), #0x00
+   2FD0 21r90r09           4930 	ld	hl, #(_maps + 0x0990)
+   2FD3 36 00              4931 	ld	(hl), #0x00
+   2FD5 21r91r09           4932 	ld	hl, #(_maps + 0x0991)
+   2FD8 36 00              4933 	ld	(hl), #0x00
+   2FDA 21r92r09           4934 	ld	hl, #(_maps + 0x0992)
+   2FDD 36 00              4935 	ld	(hl), #0x00
+   2FDF 21r93r09           4936 	ld	hl, #(_maps + 0x0993)
+   2FE2 36 00              4937 	ld	(hl), #0x00
+   2FE4 21r94r09           4938 	ld	hl, #(_maps + 0x0994)
+   2FE7 36 00              4939 	ld	(hl), #0x00
+   2FE9 21r95r09           4940 	ld	hl, #(_maps + 0x0995)
+   2FEC 36 00              4941 	ld	(hl), #0x00
+   2FEE 21r96r09           4942 	ld	hl, #(_maps + 0x0996)
+   2FF1 36 00              4943 	ld	(hl), #0x00
+   2FF3 21r97r09           4944 	ld	hl, #(_maps + 0x0997)
+   2FF6 36 00              4945 	ld	(hl), #0x00
+   2FF8 21r98r09           4946 	ld	hl, #(_maps + 0x0998)
+   2FFB 36 00              4947 	ld	(hl), #0x00
+   2FFD 21r99r09           4948 	ld	hl, #(_maps + 0x0999)
+   3000 36 00              4949 	ld	(hl), #0x00
+   3002 21r9Ar09           4950 	ld	hl, #(_maps + 0x099a)
+   3005 36 00              4951 	ld	(hl), #0x00
+   3007 21r9Br09           4952 	ld	hl, #(_maps + 0x099b)
+   300A 36 04              4953 	ld	(hl), #0x04
+   300C 21r9Cr09           4954 	ld	hl, #(_maps + 0x099c)
+   300F 36 04              4955 	ld	(hl), #0x04
+   3011 21r9Dr09           4956 	ld	hl, #(_maps + 0x099d)
+   3014 36 00              4957 	ld	(hl), #0x00
+   3016 21r9Er09           4958 	ld	hl, #(_maps + 0x099e)
+   3019 36 00              4959 	ld	(hl), #0x00
+   301B 21r9Fr09           4960 	ld	hl, #(_maps + 0x099f)
+   301E 36 00              4961 	ld	(hl), #0x00
+   3020 21rA0r09           4962 	ld	hl, #(_maps + 0x09a0)
+   3023 36 00              4963 	ld	(hl), #0x00
+   3025 21rA1r09           4964 	ld	hl, #(_maps + 0x09a1)
+   3028 36 00              4965 	ld	(hl), #0x00
+   302A 21rA2r09           4966 	ld	hl, #(_maps + 0x09a2)
+   302D 36 00              4967 	ld	(hl), #0x00
+   302F 21rA3r09           4968 	ld	hl, #(_maps + 0x09a3)
+   3032 36 00              4969 	ld	(hl), #0x00
+   3034 21rA4r09           4970 	ld	hl, #(_maps + 0x09a4)
+   3037 36 00              4971 	ld	(hl), #0x00
+   3039 21rA5r09           4972 	ld	hl, #(_maps + 0x09a5)
+   303C 36 00              4973 	ld	(hl), #0x00
+   303E 21rA6r09           4974 	ld	hl, #(_maps + 0x09a6)
+   3041 36 00              4975 	ld	(hl), #0x00
+   3043 21rA7r09           4976 	ld	hl, #(_maps + 0x09a7)
+   3046 36 00              4977 	ld	(hl), #0x00
+   3048 21rA8r09           4978 	ld	hl, #(_maps + 0x09a8)
+   304B 36 00              4979 	ld	(hl), #0x00
+   304D 21rA9r09           4980 	ld	hl, #(_maps + 0x09a9)
+   3050 36 00              4981 	ld	(hl), #0x00
+   3052 21rAAr09           4982 	ld	hl, #(_maps + 0x09aa)
+   3055 36 00              4983 	ld	(hl), #0x00
+   3057 21rABr09           4984 	ld	hl, #(_maps + 0x09ab)
+   305A 36 00              4985 	ld	(hl), #0x00
+   305C 21rACr09           4986 	ld	hl, #(_maps + 0x09ac)
+   305F 36 00              4987 	ld	(hl), #0x00
+   3061 21rADr09           4988 	ld	hl, #(_maps + 0x09ad)
+   3064 36 00              4989 	ld	(hl), #0x00
+   3066 21rAEr09           4990 	ld	hl, #(_maps + 0x09ae)
+   3069 36 00              4991 	ld	(hl), #0x00
+   306B 21rAFr09           4992 	ld	hl, #(_maps + 0x09af)
+   306E 36 04              4993 	ld	(hl), #0x04
+   3070 21rB0r09           4994 	ld	hl, #(_maps + 0x09b0)
+   3073 36 04              4995 	ld	(hl), #0x04
+   3075 21rB1r09           4996 	ld	hl, #(_maps + 0x09b1)
+   3078 36 02              4997 	ld	(hl), #0x02
+   307A 21rB2r09           4998 	ld	hl, #(_maps + 0x09b2)
+   307D 36 00              4999 	ld	(hl), #0x00
+   307F 21rB3r09           5000 	ld	hl, #(_maps + 0x09b3)
+   3082 36 00              5001 	ld	(hl), #0x00
+   3084 21rB4r09           5002 	ld	hl, #(_maps + 0x09b4)
+   3087 36 00              5003 	ld	(hl), #0x00
+   3089 21rB5r09           5004 	ld	hl, #(_maps + 0x09b5)
+   308C 36 00              5005 	ld	(hl), #0x00
+   308E 21rB6r09           5006 	ld	hl, #(_maps + 0x09b6)
+   3091 36 00              5007 	ld	(hl), #0x00
+   3093 21rB7r09           5008 	ld	hl, #(_maps + 0x09b7)
+   3096 36 00              5009 	ld	(hl), #0x00
+   3098 21rB8r09           5010 	ld	hl, #(_maps + 0x09b8)
+   309B 36 00              5011 	ld	(hl), #0x00
+   309D 21rB9r09           5012 	ld	hl, #(_maps + 0x09b9)
+   30A0 36 00              5013 	ld	(hl), #0x00
+   30A2 21rBAr09           5014 	ld	hl, #(_maps + 0x09ba)
+   30A5 36 00              5015 	ld	(hl), #0x00
+   30A7 21rBBr09           5016 	ld	hl, #(_maps + 0x09bb)
+   30AA 36 00              5017 	ld	(hl), #0x00
+   30AC 21rBCr09           5018 	ld	hl, #(_maps + 0x09bc)
+   30AF 36 00              5019 	ld	(hl), #0x00
+   30B1 21rBDr09           5020 	ld	hl, #(_maps + 0x09bd)
+   30B4 36 00              5021 	ld	(hl), #0x00
+   30B6 21rBEr09           5022 	ld	hl, #(_maps + 0x09be)
+   30B9 36 00              5023 	ld	(hl), #0x00
+   30BB 21rBFr09           5024 	ld	hl, #(_maps + 0x09bf)
+   30BE 36 00              5025 	ld	(hl), #0x00
+   30C0 21rC0r09           5026 	ld	hl, #(_maps + 0x09c0)
+   30C3 36 00              5027 	ld	(hl), #0x00
+   30C5 21rC1r09           5028 	ld	hl, #(_maps + 0x09c1)
+   30C8 36 00              5029 	ld	(hl), #0x00
+   30CA 21rC2r09           5030 	ld	hl, #(_maps + 0x09c2)
+   30CD 36 00              5031 	ld	(hl), #0x00
+   30CF 21rC3r09           5032 	ld	hl, #(_maps + 0x09c3)
+   30D2 36 04              5033 	ld	(hl), #0x04
+   30D4 21rC4r09           5034 	ld	hl, #(_maps + 0x09c4)
+   30D7 36 04              5035 	ld	(hl), #0x04
+   30D9 21rC5r09           5036 	ld	hl, #(_maps + 0x09c5)
+   30DC 36 04              5037 	ld	(hl), #0x04
+   30DE 21rC6r09           5038 	ld	hl, #(_maps + 0x09c6)
+   30E1 36 04              5039 	ld	(hl), #0x04
+   30E3 21rC7r09           5040 	ld	hl, #(_maps + 0x09c7)
+   30E6 36 04              5041 	ld	(hl), #0x04
+   30E8 21rC8r09           5042 	ld	hl, #(_maps + 0x09c8)
+   30EB 36 04              5043 	ld	(hl), #0x04
+   30ED 21rC9r09           5044 	ld	hl, #(_maps + 0x09c9)
+   30F0 36 04              5045 	ld	(hl), #0x04
+   30F2 21rCAr09           5046 	ld	hl, #(_maps + 0x09ca)
+   30F5 36 04              5047 	ld	(hl), #0x04
+   30F7 21rCBr09           5048 	ld	hl, #(_maps + 0x09cb)
+   30FA 36 04              5049 	ld	(hl), #0x04
+   30FC 21rCCr09           5050 	ld	hl, #(_maps + 0x09cc)
+   30FF 36 04              5051 	ld	(hl), #0x04
+   3101 21rCDr09           5052 	ld	hl, #(_maps + 0x09cd)
+   3104 36 04              5053 	ld	(hl), #0x04
+   3106 21rCEr09           5054 	ld	hl, #(_maps + 0x09ce)
+   3109 36 04              5055 	ld	(hl), #0x04
+   310B 21rCFr09           5056 	ld	hl, #(_maps + 0x09cf)
+   310E 36 04              5057 	ld	(hl), #0x04
+   3110 21rD0r09           5058 	ld	hl, #(_maps + 0x09d0)
+   3113 36 04              5059 	ld	(hl), #0x04
+   3115 21rD1r09           5060 	ld	hl, #(_maps + 0x09d1)
+   3118 36 04              5061 	ld	(hl), #0x04
+   311A 21rD2r09           5062 	ld	hl, #(_maps + 0x09d2)
+   311D 36 04              5063 	ld	(hl), #0x04
+   311F 21rD3r09           5064 	ld	hl, #(_maps + 0x09d3)
+   3122 36 04              5065 	ld	(hl), #0x04
+   3124 21rD4r09           5066 	ld	hl, #(_maps + 0x09d4)
+   3127 36 04              5067 	ld	(hl), #0x04
+   3129 21rD5r09           5068 	ld	hl, #(_maps + 0x09d5)
+   312C 36 04              5069 	ld	(hl), #0x04
+   312E 21rD6r09           5070 	ld	hl, #(_maps + 0x09d6)
+   3131 36 04              5071 	ld	(hl), #0x04
+   3133 21rD7r09           5072 	ld	hl, #(_maps + 0x09d7)
+   3136 36 04              5073 	ld	(hl), #0x04
+   3138 21rD8r09           5074 	ld	hl, #(_maps + 0x09d8)
+   313B 36 04              5075 	ld	(hl), #0x04
+   313D 21rD9r09           5076 	ld	hl, #(_maps + 0x09d9)
+   3140 36 04              5077 	ld	(hl), #0x04
+   3142 21rDAr09           5078 	ld	hl, #(_maps + 0x09da)
+   3145 36 04              5079 	ld	(hl), #0x04
+   3147 21rDBr09           5080 	ld	hl, #(_maps + 0x09db)
+   314A 36 04              5081 	ld	(hl), #0x04
+   314C 21rDCr09           5082 	ld	hl, #(_maps + 0x09dc)
+   314F 36 04              5083 	ld	(hl), #0x04
+   3151 21rDDr09           5084 	ld	hl, #(_maps + 0x09dd)
+   3154 36 04              5085 	ld	(hl), #0x04
+   3156 21rDEr09           5086 	ld	hl, #(_maps + 0x09de)
+   3159 36 04              5087 	ld	(hl), #0x04
+   315B 21rDFr09           5088 	ld	hl, #(_maps + 0x09df)
+   315E 36 04              5089 	ld	(hl), #0x04
+   3160 21rE0r09           5090 	ld	hl, #(_maps + 0x09e0)
+   3163 36 04              5091 	ld	(hl), #0x04
+   3165 21rE1r09           5092 	ld	hl, #(_maps + 0x09e1)
+   3168 36 04              5093 	ld	(hl), #0x04
+   316A 21rE2r09           5094 	ld	hl, #(_maps + 0x09e2)
+   316D 36 04              5095 	ld	(hl), #0x04
+   316F 21rE3r09           5096 	ld	hl, #(_maps + 0x09e3)
+   3172 36 04              5097 	ld	(hl), #0x04
+   3174 21rE4r09           5098 	ld	hl, #(_maps + 0x09e4)
+   3177 36 04              5099 	ld	(hl), #0x04
+   3179 21rE5r09           5100 	ld	hl, #(_maps + 0x09e5)
+   317C 36 04              5101 	ld	(hl), #0x04
+   317E 21rE6r09           5102 	ld	hl, #(_maps + 0x09e6)
+   3181 36 04              5103 	ld	(hl), #0x04
+   3183 21rE7r09           5104 	ld	hl, #(_maps + 0x09e7)
+   3186 36 04              5105 	ld	(hl), #0x04
+   3188 21rE8r09           5106 	ld	hl, #(_maps + 0x09e8)
+   318B 36 04              5107 	ld	(hl), #0x04
+   318D 21rE9r09           5108 	ld	hl, #(_maps + 0x09e9)
+   3190 36 04              5109 	ld	(hl), #0x04
+   3192 21rEAr09           5110 	ld	hl, #(_maps + 0x09ea)
+   3195 36 04              5111 	ld	(hl), #0x04
+   3197 21rEBr09           5112 	ld	hl, #(_maps + 0x09eb)
+   319A 36 04              5113 	ld	(hl), #0x04
+   319C 21rECr09           5114 	ld	hl, #(_maps + 0x09ec)
+   319F 36 04              5115 	ld	(hl), #0x04
+   31A1 21rEDr09           5116 	ld	hl, #(_maps + 0x09ed)
+   31A4 36 00              5117 	ld	(hl), #0x00
+   31A6 21rEEr09           5118 	ld	hl, #(_maps + 0x09ee)
+   31A9 36 00              5119 	ld	(hl), #0x00
+   31AB 21rEFr09           5120 	ld	hl, #(_maps + 0x09ef)
+   31AE 36 00              5121 	ld	(hl), #0x00
+   31B0 21rF0r09           5122 	ld	hl, #(_maps + 0x09f0)
+   31B3 36 00              5123 	ld	(hl), #0x00
+   31B5 21rF1r09           5124 	ld	hl, #(_maps + 0x09f1)
+   31B8 36 00              5125 	ld	(hl), #0x00
+   31BA 21rF2r09           5126 	ld	hl, #(_maps + 0x09f2)
+   31BD 36 00              5127 	ld	(hl), #0x00
+   31BF 21rF3r09           5128 	ld	hl, #(_maps + 0x09f3)
+   31C2 36 00              5129 	ld	(hl), #0x00
+   31C4 21rF4r09           5130 	ld	hl, #(_maps + 0x09f4)
+   31C7 36 00              5131 	ld	(hl), #0x00
+   31C9 21rF5r09           5132 	ld	hl, #(_maps + 0x09f5)
+   31CC 36 00              5133 	ld	(hl), #0x00
+   31CE 21rF6r09           5134 	ld	hl, #(_maps + 0x09f6)
+   31D1 36 00              5135 	ld	(hl), #0x00
+   31D3 21rF7r09           5136 	ld	hl, #(_maps + 0x09f7)
+   31D6 36 00              5137 	ld	(hl), #0x00
+   31D8 21rF8r09           5138 	ld	hl, #(_maps + 0x09f8)
+   31DB 36 03              5139 	ld	(hl), #0x03
+   31DD 21rF9r09           5140 	ld	hl, #(_maps + 0x09f9)
+   31E0 36 00              5141 	ld	(hl), #0x00
+   31E2 21rFAr09           5142 	ld	hl, #(_maps + 0x09fa)
+   31E5 36 00              5143 	ld	(hl), #0x00
+   31E7 21rFBr09           5144 	ld	hl, #(_maps + 0x09fb)
+   31EA 36 00              5145 	ld	(hl), #0x00
+   31EC 21rFCr09           5146 	ld	hl, #(_maps + 0x09fc)
+   31EF 36 00              5147 	ld	(hl), #0x00
+   31F1 21rFDr09           5148 	ld	hl, #(_maps + 0x09fd)
+   31F4 36 00              5149 	ld	(hl), #0x00
+   31F6 21rFEr09           5150 	ld	hl, #(_maps + 0x09fe)
+   31F9 36 00              5151 	ld	(hl), #0x00
+   31FB 21rFFr09           5152 	ld	hl, #(_maps + 0x09ff)
+   31FE 36 04              5153 	ld	(hl), #0x04
+   3200 21r00r0A           5154 	ld	hl, #(_maps + 0x0a00)
+   3203 36 04              5155 	ld	(hl), #0x04
+   3205 21r01r0A           5156 	ld	hl, #(_maps + 0x0a01)
+   3208 36 00              5157 	ld	(hl), #0x00
+   320A 21r02r0A           5158 	ld	hl, #(_maps + 0x0a02)
+   320D 36 00              5159 	ld	(hl), #0x00
+   320F 21r03r0A           5160 	ld	hl, #(_maps + 0x0a03)
+   3212 36 00              5161 	ld	(hl), #0x00
+   3214 21r04r0A           5162 	ld	hl, #(_maps + 0x0a04)
+   3217 36 00              5163 	ld	(hl), #0x00
+   3219 21r05r0A           5164 	ld	hl, #(_maps + 0x0a05)
+   321C 36 00              5165 	ld	(hl), #0x00
+   321E 21r06r0A           5166 	ld	hl, #(_maps + 0x0a06)
+   3221 36 00              5167 	ld	(hl), #0x00
+   3223 21r07r0A           5168 	ld	hl, #(_maps + 0x0a07)
+   3226 36 00              5169 	ld	(hl), #0x00
+   3228 21r08r0A           5170 	ld	hl, #(_maps + 0x0a08)
+   322B 36 00              5171 	ld	(hl), #0x00
+   322D 21r09r0A           5172 	ld	hl, #(_maps + 0x0a09)
+   3230 36 00              5173 	ld	(hl), #0x00
+   3232 21r0Ar0A           5174 	ld	hl, #(_maps + 0x0a0a)
+   3235 36 00              5175 	ld	(hl), #0x00
+   3237 21r0Br0A           5176 	ld	hl, #(_maps + 0x0a0b)
+   323A 36 00              5177 	ld	(hl), #0x00
+   323C 21r0Cr0A           5178 	ld	hl, #(_maps + 0x0a0c)
+   323F 36 03              5179 	ld	(hl), #0x03
+   3241 21r0Dr0A           5180 	ld	hl, #(_maps + 0x0a0d)
+   3244 36 00              5181 	ld	(hl), #0x00
+   3246 21r0Er0A           5182 	ld	hl, #(_maps + 0x0a0e)
+   3249 36 00              5183 	ld	(hl), #0x00
+   324B 21r0Fr0A           5184 	ld	hl, #(_maps + 0x0a0f)
+   324E 36 09              5185 	ld	(hl), #0x09
+   3250 21r10r0A           5186 	ld	hl, #(_maps + 0x0a10)
+   3253 36 00              5187 	ld	(hl), #0x00
+   3255 21r11r0A           5188 	ld	hl, #(_maps + 0x0a11)
+   3258 36 00              5189 	ld	(hl), #0x00
+   325A 21r12r0A           5190 	ld	hl, #(_maps + 0x0a12)
+   325D 36 01              5191 	ld	(hl), #0x01
+   325F 21r13r0A           5192 	ld	hl, #(_maps + 0x0a13)
+   3262 36 04              5193 	ld	(hl), #0x04
+   3264 21r14r0A           5194 	ld	hl, #(_maps + 0x0a14)
+   3267 36 04              5195 	ld	(hl), #0x04
+   3269 21r15r0A           5196 	ld	hl, #(_maps + 0x0a15)
+   326C 36 00              5197 	ld	(hl), #0x00
+   326E 21r16r0A           5198 	ld	hl, #(_maps + 0x0a16)
+   3271 36 00              5199 	ld	(hl), #0x00
+   3273 21r17r0A           5200 	ld	hl, #(_maps + 0x0a17)
+   3276 36 00              5201 	ld	(hl), #0x00
+   3278 21r18r0A           5202 	ld	hl, #(_maps + 0x0a18)
+   327B 36 00              5203 	ld	(hl), #0x00
+   327D 21r19r0A           5204 	ld	hl, #(_maps + 0x0a19)
+   3280 36 00              5205 	ld	(hl), #0x00
+   3282 21r1Ar0A           5206 	ld	hl, #(_maps + 0x0a1a)
+   3285 36 00              5207 	ld	(hl), #0x00
+   3287 21r1Br0A           5208 	ld	hl, #(_maps + 0x0a1b)
+   328A 36 00              5209 	ld	(hl), #0x00
+   328C 21r1Cr0A           5210 	ld	hl, #(_maps + 0x0a1c)
+   328F 36 00              5211 	ld	(hl), #0x00
+   3291 21r1Dr0A           5212 	ld	hl, #(_maps + 0x0a1d)
+   3294 36 00              5213 	ld	(hl), #0x00
+   3296 21r1Er0A           5214 	ld	hl, #(_maps + 0x0a1e)
+   3299 36 00              5215 	ld	(hl), #0x00
+   329B 21r1Fr0A           5216 	ld	hl, #(_maps + 0x0a1f)
+   329E 36 00              5217 	ld	(hl), #0x00
+   32A0 21r20r0A           5218 	ld	hl, #(_maps + 0x0a20)
+   32A3 36 03              5219 	ld	(hl), #0x03
+   32A5 21r21r0A           5220 	ld	hl, #(_maps + 0x0a21)
+   32A8 36 03              5221 	ld	(hl), #0x03
+   32AA 21r22r0A           5222 	ld	hl, #(_maps + 0x0a22)
+   32AD 36 03              5223 	ld	(hl), #0x03
+   32AF 21r23r0A           5224 	ld	hl, #(_maps + 0x0a23)
+   32B2 36 03              5225 	ld	(hl), #0x03
+   32B4 21r24r0A           5226 	ld	hl, #(_maps + 0x0a24)
+   32B7 36 03              5227 	ld	(hl), #0x03
+   32B9 21r25r0A           5228 	ld	hl, #(_maps + 0x0a25)
+   32BC 36 03              5229 	ld	(hl), #0x03
+   32BE 21r26r0A           5230 	ld	hl, #(_maps + 0x0a26)
+   32C1 36 03              5231 	ld	(hl), #0x03
+   32C3 21r27r0A           5232 	ld	hl, #(_maps + 0x0a27)
+   32C6 36 04              5233 	ld	(hl), #0x04
+   32C8 21r28r0A           5234 	ld	hl, #(_maps + 0x0a28)
+   32CB 36 04              5235 	ld	(hl), #0x04
+   32CD 21r29r0A           5236 	ld	hl, #(_maps + 0x0a29)
+   32D0 36 00              5237 	ld	(hl), #0x00
+   32D2 21r2Ar0A           5238 	ld	hl, #(_maps + 0x0a2a)
+   32D5 36 00              5239 	ld	(hl), #0x00
+   32D7 21r2Br0A           5240 	ld	hl, #(_maps + 0x0a2b)
+   32DA 36 00              5241 	ld	(hl), #0x00
+   32DC 21r2Cr0A           5242 	ld	hl, #(_maps + 0x0a2c)
+   32DF 36 00              5243 	ld	(hl), #0x00
+   32E1 21r2Dr0A           5244 	ld	hl, #(_maps + 0x0a2d)
+   32E4 36 00              5245 	ld	(hl), #0x00
+   32E6 21r2Er0A           5246 	ld	hl, #(_maps + 0x0a2e)
+   32E9 36 00              5247 	ld	(hl), #0x00
+   32EB 21r2Fr0A           5248 	ld	hl, #(_maps + 0x0a2f)
+   32EE 36 00              5249 	ld	(hl), #0x00
+   32F0 21r30r0A           5250 	ld	hl, #(_maps + 0x0a30)
+   32F3 36 00              5251 	ld	(hl), #0x00
+   32F5 21r31r0A           5252 	ld	hl, #(_maps + 0x0a31)
+   32F8 36 00              5253 	ld	(hl), #0x00
+   32FA 21r32r0A           5254 	ld	hl, #(_maps + 0x0a32)
+   32FD 36 00              5255 	ld	(hl), #0x00
+   32FF 21r33r0A           5256 	ld	hl, #(_maps + 0x0a33)
+   3302 36 00              5257 	ld	(hl), #0x00
+   3304 21r34r0A           5258 	ld	hl, #(_maps + 0x0a34)
+   3307 36 00              5259 	ld	(hl), #0x00
+   3309 21r35r0A           5260 	ld	hl, #(_maps + 0x0a35)
+   330C 36 00              5261 	ld	(hl), #0x00
+   330E 21r36r0A           5262 	ld	hl, #(_maps + 0x0a36)
+   3311 36 00              5263 	ld	(hl), #0x00
+   3313 21r37r0A           5264 	ld	hl, #(_maps + 0x0a37)
+   3316 36 00              5265 	ld	(hl), #0x00
+   3318 21r38r0A           5266 	ld	hl, #(_maps + 0x0a38)
+   331B 36 00              5267 	ld	(hl), #0x00
+   331D 21r39r0A           5268 	ld	hl, #(_maps + 0x0a39)
+   3320 36 00              5269 	ld	(hl), #0x00
+   3322 21r3Ar0A           5270 	ld	hl, #(_maps + 0x0a3a)
+   3325 36 00              5271 	ld	(hl), #0x00
+   3327 21r3Br0A           5272 	ld	hl, #(_maps + 0x0a3b)
+   332A 36 04              5273 	ld	(hl), #0x04
+   332C 21r3Cr0A           5274 	ld	hl, #(_maps + 0x0a3c)
+   332F 36 04              5275 	ld	(hl), #0x04
+   3331 21r3Dr0A           5276 	ld	hl, #(_maps + 0x0a3d)
+   3334 36 00              5277 	ld	(hl), #0x00
+   3336 21r3Er0A           5278 	ld	hl, #(_maps + 0x0a3e)
+   3339 36 00              5279 	ld	(hl), #0x00
+   333B 21r3Fr0A           5280 	ld	hl, #(_maps + 0x0a3f)
+   333E 36 00              5281 	ld	(hl), #0x00
+   3340 21r40r0A           5282 	ld	hl, #(_maps + 0x0a40)
+   3343 36 00              5283 	ld	(hl), #0x00
+   3345 21r41r0A           5284 	ld	hl, #(_maps + 0x0a41)
+   3348 36 00              5285 	ld	(hl), #0x00
+   334A 21r42r0A           5286 	ld	hl, #(_maps + 0x0a42)
+   334D 36 00              5287 	ld	(hl), #0x00
+   334F 21r43r0A           5288 	ld	hl, #(_maps + 0x0a43)
+   3352 36 00              5289 	ld	(hl), #0x00
+   3354 21r44r0A           5290 	ld	hl, #(_maps + 0x0a44)
+   3357 36 00              5291 	ld	(hl), #0x00
+   3359 21r45r0A           5292 	ld	hl, #(_maps + 0x0a45)
+   335C 36 00              5293 	ld	(hl), #0x00
+   335E 21r46r0A           5294 	ld	hl, #(_maps + 0x0a46)
+   3361 36 00              5295 	ld	(hl), #0x00
+   3363 21r47r0A           5296 	ld	hl, #(_maps + 0x0a47)
+   3366 36 00              5297 	ld	(hl), #0x00
+   3368 21r48r0A           5298 	ld	hl, #(_maps + 0x0a48)
+   336B 36 00              5299 	ld	(hl), #0x00
+   336D 21r49r0A           5300 	ld	hl, #(_maps + 0x0a49)
+   3370 36 00              5301 	ld	(hl), #0x00
+   3372 21r4Ar0A           5302 	ld	hl, #(_maps + 0x0a4a)
+   3375 36 00              5303 	ld	(hl), #0x00
+   3377 21r4Br0A           5304 	ld	hl, #(_maps + 0x0a4b)
+   337A 36 00              5305 	ld	(hl), #0x00
+   337C 21r4Cr0A           5306 	ld	hl, #(_maps + 0x0a4c)
+   337F 36 00              5307 	ld	(hl), #0x00
+   3381 21r4Dr0A           5308 	ld	hl, #(_maps + 0x0a4d)
+   3384 36 00              5309 	ld	(hl), #0x00
+   3386 21r4Er0A           5310 	ld	hl, #(_maps + 0x0a4e)
+   3389 36 00              5311 	ld	(hl), #0x00
+   338B 21r4Fr0A           5312 	ld	hl, #(_maps + 0x0a4f)
+   338E 36 04              5313 	ld	(hl), #0x04
+   3390 21r50r0A           5314 	ld	hl, #(_maps + 0x0a50)
+   3393 36 04              5315 	ld	(hl), #0x04
+   3395 21r51r0A           5316 	ld	hl, #(_maps + 0x0a51)
+   3398 36 00              5317 	ld	(hl), #0x00
+   339A 21r52r0A           5318 	ld	hl, #(_maps + 0x0a52)
+   339D 36 00              5319 	ld	(hl), #0x00
+   339F 21r53r0A           5320 	ld	hl, #(_maps + 0x0a53)
+   33A2 36 00              5321 	ld	(hl), #0x00
+   33A4 21r54r0A           5322 	ld	hl, #(_maps + 0x0a54)
+   33A7 36 00              5323 	ld	(hl), #0x00
+   33A9 21r55r0A           5324 	ld	hl, #(_maps + 0x0a55)
+   33AC 36 00              5325 	ld	(hl), #0x00
+   33AE 21r56r0A           5326 	ld	hl, #(_maps + 0x0a56)
+   33B1 36 00              5327 	ld	(hl), #0x00
+   33B3 21r57r0A           5328 	ld	hl, #(_maps + 0x0a57)
+   33B6 36 00              5329 	ld	(hl), #0x00
+   33B8 21r58r0A           5330 	ld	hl, #(_maps + 0x0a58)
+   33BB 36 00              5331 	ld	(hl), #0x00
+   33BD 21r59r0A           5332 	ld	hl, #(_maps + 0x0a59)
+   33C0 36 00              5333 	ld	(hl), #0x00
+   33C2 21r5Ar0A           5334 	ld	hl, #(_maps + 0x0a5a)
+   33C5 36 00              5335 	ld	(hl), #0x00
+   33C7 21r5Br0A           5336 	ld	hl, #(_maps + 0x0a5b)
+   33CA 36 00              5337 	ld	(hl), #0x00
+   33CC 21r5Cr0A           5338 	ld	hl, #(_maps + 0x0a5c)
+   33CF 36 00              5339 	ld	(hl), #0x00
+   33D1 21r5Dr0A           5340 	ld	hl, #(_maps + 0x0a5d)
+   33D4 36 00              5341 	ld	(hl), #0x00
+   33D6 21r5Er0A           5342 	ld	hl, #(_maps + 0x0a5e)
+   33D9 36 00              5343 	ld	(hl), #0x00
+   33DB 21r5Fr0A           5344 	ld	hl, #(_maps + 0x0a5f)
+   33DE 36 00              5345 	ld	(hl), #0x00
+   33E0 21r60r0A           5346 	ld	hl, #(_maps + 0x0a60)
+   33E3 36 00              5347 	ld	(hl), #0x00
+   33E5 21r61r0A           5348 	ld	hl, #(_maps + 0x0a61)
+   33E8 36 00              5349 	ld	(hl), #0x00
+   33EA 21r62r0A           5350 	ld	hl, #(_maps + 0x0a62)
+   33ED 36 00              5351 	ld	(hl), #0x00
+   33EF 21r63r0A           5352 	ld	hl, #(_maps + 0x0a63)
+   33F2 36 04              5353 	ld	(hl), #0x04
+   33F4 21r64r0A           5354 	ld	hl, #(_maps + 0x0a64)
+   33F7 36 04              5355 	ld	(hl), #0x04
+   33F9 21r65r0A           5356 	ld	hl, #(_maps + 0x0a65)
+   33FC 36 00              5357 	ld	(hl), #0x00
+   33FE 21r66r0A           5358 	ld	hl, #(_maps + 0x0a66)
+   3401 36 00              5359 	ld	(hl), #0x00
+   3403 21r67r0A           5360 	ld	hl, #(_maps + 0x0a67)
+   3406 36 00              5361 	ld	(hl), #0x00
+   3408 21r68r0A           5362 	ld	hl, #(_maps + 0x0a68)
+   340B 36 00              5363 	ld	(hl), #0x00
+   340D 21r69r0A           5364 	ld	hl, #(_maps + 0x0a69)
+   3410 36 00              5365 	ld	(hl), #0x00
+   3412 21r6Ar0A           5366 	ld	hl, #(_maps + 0x0a6a)
+   3415 36 00              5367 	ld	(hl), #0x00
+   3417 21r6Br0A           5368 	ld	hl, #(_maps + 0x0a6b)
+   341A 36 00              5369 	ld	(hl), #0x00
+   341C 21r6Cr0A           5370 	ld	hl, #(_maps + 0x0a6c)
+   341F 36 00              5371 	ld	(hl), #0x00
+   3421 21r6Dr0A           5372 	ld	hl, #(_maps + 0x0a6d)
+   3424 36 00              5373 	ld	(hl), #0x00
+   3426 21r6Er0A           5374 	ld	hl, #(_maps + 0x0a6e)
+   3429 36 00              5375 	ld	(hl), #0x00
+   342B 21r6Fr0A           5376 	ld	hl, #(_maps + 0x0a6f)
+   342E 36 00              5377 	ld	(hl), #0x00
+   3430 21r70r0A           5378 	ld	hl, #(_maps + 0x0a70)
+   3433 36 00              5379 	ld	(hl), #0x00
+   3435 21r71r0A           5380 	ld	hl, #(_maps + 0x0a71)
+   3438 36 00              5381 	ld	(hl), #0x00
+   343A 21r72r0A           5382 	ld	hl, #(_maps + 0x0a72)
+   343D 36 00              5383 	ld	(hl), #0x00
+   343F 21r73r0A           5384 	ld	hl, #(_maps + 0x0a73)
+   3442 36 00              5385 	ld	(hl), #0x00
+   3444 21r74r0A           5386 	ld	hl, #(_maps + 0x0a74)
+   3447 36 00              5387 	ld	(hl), #0x00
+   3449 21r75r0A           5388 	ld	hl, #(_maps + 0x0a75)
+   344C 36 00              5389 	ld	(hl), #0x00
+   344E 21r76r0A           5390 	ld	hl, #(_maps + 0x0a76)
+   3451 36 00              5391 	ld	(hl), #0x00
+   3453 21r77r0A           5392 	ld	hl, #(_maps + 0x0a77)
+   3456 36 04              5393 	ld	(hl), #0x04
+   3458 21r78r0A           5394 	ld	hl, #(_maps + 0x0a78)
+   345B 36 04              5395 	ld	(hl), #0x04
+   345D 21r79r0A           5396 	ld	hl, #(_maps + 0x0a79)
+   3460 36 00              5397 	ld	(hl), #0x00
+   3462 21r7Ar0A           5398 	ld	hl, #(_maps + 0x0a7a)
+   3465 36 00              5399 	ld	(hl), #0x00
+   3467 21r7Br0A           5400 	ld	hl, #(_maps + 0x0a7b)
+   346A 36 00              5401 	ld	(hl), #0x00
+   346C 21r7Cr0A           5402 	ld	hl, #(_maps + 0x0a7c)
+   346F 36 00              5403 	ld	(hl), #0x00
+   3471 21r7Dr0A           5404 	ld	hl, #(_maps + 0x0a7d)
+   3474 36 00              5405 	ld	(hl), #0x00
+   3476 21r7Er0A           5406 	ld	hl, #(_maps + 0x0a7e)
+   3479 36 00              5407 	ld	(hl), #0x00
+   347B 21r7Fr0A           5408 	ld	hl, #(_maps + 0x0a7f)
+   347E 36 00              5409 	ld	(hl), #0x00
+   3480 21r80r0A           5410 	ld	hl, #(_maps + 0x0a80)
+   3483 36 00              5411 	ld	(hl), #0x00
+   3485 21r81r0A           5412 	ld	hl, #(_maps + 0x0a81)
+   3488 36 00              5413 	ld	(hl), #0x00
+   348A 21r82r0A           5414 	ld	hl, #(_maps + 0x0a82)
+   348D 36 00              5415 	ld	(hl), #0x00
+   348F 21r83r0A           5416 	ld	hl, #(_maps + 0x0a83)
+   3492 36 00              5417 	ld	(hl), #0x00
+   3494 21r84r0A           5418 	ld	hl, #(_maps + 0x0a84)
+   3497 36 00              5419 	ld	(hl), #0x00
+   3499 21r85r0A           5420 	ld	hl, #(_maps + 0x0a85)
+   349C 36 00              5421 	ld	(hl), #0x00
+   349E 21r86r0A           5422 	ld	hl, #(_maps + 0x0a86)
+   34A1 36 00              5423 	ld	(hl), #0x00
+   34A3 21r87r0A           5424 	ld	hl, #(_maps + 0x0a87)
+   34A6 36 00              5425 	ld	(hl), #0x00
+   34A8 21r88r0A           5426 	ld	hl, #(_maps + 0x0a88)
+   34AB 36 00              5427 	ld	(hl), #0x00
+   34AD 21r89r0A           5428 	ld	hl, #(_maps + 0x0a89)
+   34B0 36 00              5429 	ld	(hl), #0x00
+   34B2 21r8Ar0A           5430 	ld	hl, #(_maps + 0x0a8a)
+   34B5 36 00              5431 	ld	(hl), #0x00
+   34B7 21r8Br0A           5432 	ld	hl, #(_maps + 0x0a8b)
+   34BA 36 04              5433 	ld	(hl), #0x04
+   34BC 21r8Cr0A           5434 	ld	hl, #(_maps + 0x0a8c)
+   34BF 36 04              5435 	ld	(hl), #0x04
+   34C1 21r8Dr0A           5436 	ld	hl, #(_maps + 0x0a8d)
+   34C4 36 00              5437 	ld	(hl), #0x00
+   34C6 21r8Er0A           5438 	ld	hl, #(_maps + 0x0a8e)
+   34C9 36 00              5439 	ld	(hl), #0x00
+   34CB 21r8Fr0A           5440 	ld	hl, #(_maps + 0x0a8f)
+   34CE 36 00              5441 	ld	(hl), #0x00
+   34D0 21r90r0A           5442 	ld	hl, #(_maps + 0x0a90)
+   34D3 36 00              5443 	ld	(hl), #0x00
+   34D5 21r91r0A           5444 	ld	hl, #(_maps + 0x0a91)
+   34D8 36 00              5445 	ld	(hl), #0x00
+   34DA 21r92r0A           5446 	ld	hl, #(_maps + 0x0a92)
+   34DD 36 00              5447 	ld	(hl), #0x00
+   34DF 21r93r0A           5448 	ld	hl, #(_maps + 0x0a93)
+   34E2 36 00              5449 	ld	(hl), #0x00
+   34E4 21r94r0A           5450 	ld	hl, #(_maps + 0x0a94)
+   34E7 36 00              5451 	ld	(hl), #0x00
+   34E9 21r95r0A           5452 	ld	hl, #(_maps + 0x0a95)
+   34EC 36 00              5453 	ld	(hl), #0x00
+   34EE 21r96r0A           5454 	ld	hl, #(_maps + 0x0a96)
+   34F1 36 00              5455 	ld	(hl), #0x00
+   34F3 21r97r0A           5456 	ld	hl, #(_maps + 0x0a97)
+   34F6 36 00              5457 	ld	(hl), #0x00
+   34F8 21r98r0A           5458 	ld	hl, #(_maps + 0x0a98)
+   34FB 36 00              5459 	ld	(hl), #0x00
+   34FD 21r99r0A           5460 	ld	hl, #(_maps + 0x0a99)
+   3500 36 00              5461 	ld	(hl), #0x00
+   3502 21r9Ar0A           5462 	ld	hl, #(_maps + 0x0a9a)
+   3505 36 00              5463 	ld	(hl), #0x00
+   3507 21r9Br0A           5464 	ld	hl, #(_maps + 0x0a9b)
+   350A 36 00              5465 	ld	(hl), #0x00
+   350C 21r9Cr0A           5466 	ld	hl, #(_maps + 0x0a9c)
+   350F 36 00              5467 	ld	(hl), #0x00
+   3511 21r9Dr0A           5468 	ld	hl, #(_maps + 0x0a9d)
+   3514 36 00              5469 	ld	(hl), #0x00
+   3516 21r9Er0A           5470 	ld	hl, #(_maps + 0x0a9e)
+   3519 36 00              5471 	ld	(hl), #0x00
+   351B 21r9Fr0A           5472 	ld	hl, #(_maps + 0x0a9f)
+   351E 36 04              5473 	ld	(hl), #0x04
+   3520 21rA0r0A           5474 	ld	hl, #(_maps + 0x0aa0)
+   3523 36 04              5475 	ld	(hl), #0x04
+   3525 21rA1r0A           5476 	ld	hl, #(_maps + 0x0aa1)
+   3528 36 00              5477 	ld	(hl), #0x00
+   352A 21rA2r0A           5478 	ld	hl, #(_maps + 0x0aa2)
+   352D 36 00              5479 	ld	(hl), #0x00
+   352F 21rA3r0A           5480 	ld	hl, #(_maps + 0x0aa3)
+   3532 36 00              5481 	ld	(hl), #0x00
+   3534 21rA4r0A           5482 	ld	hl, #(_maps + 0x0aa4)
+   3537 36 00              5483 	ld	(hl), #0x00
+   3539 21rA5r0A           5484 	ld	hl, #(_maps + 0x0aa5)
+   353C 36 00              5485 	ld	(hl), #0x00
+   353E 21rA6r0A           5486 	ld	hl, #(_maps + 0x0aa6)
+   3541 36 00              5487 	ld	(hl), #0x00
+   3543 21rA7r0A           5488 	ld	hl, #(_maps + 0x0aa7)
+   3546 36 00              5489 	ld	(hl), #0x00
+   3548 21rA8r0A           5490 	ld	hl, #(_maps + 0x0aa8)
+   354B 36 00              5491 	ld	(hl), #0x00
+   354D 21rA9r0A           5492 	ld	hl, #(_maps + 0x0aa9)
+   3550 36 00              5493 	ld	(hl), #0x00
+   3552 21rAAr0A           5494 	ld	hl, #(_maps + 0x0aaa)
+   3555 36 00              5495 	ld	(hl), #0x00
+   3557 21rABr0A           5496 	ld	hl, #(_maps + 0x0aab)
+   355A 36 00              5497 	ld	(hl), #0x00
+   355C 21rACr0A           5498 	ld	hl, #(_maps + 0x0aac)
+   355F 36 00              5499 	ld	(hl), #0x00
+   3561 21rADr0A           5500 	ld	hl, #(_maps + 0x0aad)
+   3564 36 00              5501 	ld	(hl), #0x00
+   3566 21rAEr0A           5502 	ld	hl, #(_maps + 0x0aae)
+   3569 36 00              5503 	ld	(hl), #0x00
+   356B 21rAFr0A           5504 	ld	hl, #(_maps + 0x0aaf)
+   356E 36 00              5505 	ld	(hl), #0x00
+   3570 21rB0r0A           5506 	ld	hl, #(_maps + 0x0ab0)
+   3573 36 00              5507 	ld	(hl), #0x00
+   3575 21rB1r0A           5508 	ld	hl, #(_maps + 0x0ab1)
+   3578 36 00              5509 	ld	(hl), #0x00
+   357A 21rB2r0A           5510 	ld	hl, #(_maps + 0x0ab2)
+   357D 36 00              5511 	ld	(hl), #0x00
+   357F 21rB3r0A           5512 	ld	hl, #(_maps + 0x0ab3)
+   3582 36 04              5513 	ld	(hl), #0x04
+   3584 21rB4r0A           5514 	ld	hl, #(_maps + 0x0ab4)
+   3587 36 04              5515 	ld	(hl), #0x04
+   3589 21rB5r0A           5516 	ld	hl, #(_maps + 0x0ab5)
+   358C 36 00              5517 	ld	(hl), #0x00
+   358E 21rB6r0A           5518 	ld	hl, #(_maps + 0x0ab6)
+   3591 36 00              5519 	ld	(hl), #0x00
+   3593 21rB7r0A           5520 	ld	hl, #(_maps + 0x0ab7)
+   3596 36 00              5521 	ld	(hl), #0x00
+   3598 21rB8r0A           5522 	ld	hl, #(_maps + 0x0ab8)
+   359B 36 00              5523 	ld	(hl), #0x00
+   359D 21rB9r0A           5524 	ld	hl, #(_maps + 0x0ab9)
+   35A0 36 00              5525 	ld	(hl), #0x00
+   35A2 21rBAr0A           5526 	ld	hl, #(_maps + 0x0aba)
+   35A5 36 00              5527 	ld	(hl), #0x00
+   35A7 21rBBr0A           5528 	ld	hl, #(_maps + 0x0abb)
+   35AA 36 00              5529 	ld	(hl), #0x00
+   35AC 21rBCr0A           5530 	ld	hl, #(_maps + 0x0abc)
+   35AF 36 00              5531 	ld	(hl), #0x00
+   35B1 21rBDr0A           5532 	ld	hl, #(_maps + 0x0abd)
+   35B4 36 00              5533 	ld	(hl), #0x00
+   35B6 21rBEr0A           5534 	ld	hl, #(_maps + 0x0abe)
+   35B9 36 00              5535 	ld	(hl), #0x00
+   35BB 21rBFr0A           5536 	ld	hl, #(_maps + 0x0abf)
+   35BE 36 00              5537 	ld	(hl), #0x00
+   35C0 21rC0r0A           5538 	ld	hl, #(_maps + 0x0ac0)
+   35C3 36 00              5539 	ld	(hl), #0x00
+   35C5 21rC1r0A           5540 	ld	hl, #(_maps + 0x0ac1)
+   35C8 36 00              5541 	ld	(hl), #0x00
+   35CA 21rC2r0A           5542 	ld	hl, #(_maps + 0x0ac2)
+   35CD 36 00              5543 	ld	(hl), #0x00
+   35CF 21rC3r0A           5544 	ld	hl, #(_maps + 0x0ac3)
+   35D2 36 00              5545 	ld	(hl), #0x00
+   35D4 21rC4r0A           5546 	ld	hl, #(_maps + 0x0ac4)
+   35D7 36 00              5547 	ld	(hl), #0x00
+   35D9 21rC5r0A           5548 	ld	hl, #(_maps + 0x0ac5)
+   35DC 36 00              5549 	ld	(hl), #0x00
+   35DE 21rC6r0A           5550 	ld	hl, #(_maps + 0x0ac6)
+   35E1 36 00              5551 	ld	(hl), #0x00
+   35E3 21rC7r0A           5552 	ld	hl, #(_maps + 0x0ac7)
+   35E6 36 04              5553 	ld	(hl), #0x04
+   35E8 21rC8r0A           5554 	ld	hl, #(_maps + 0x0ac8)
+   35EB 36 04              5555 	ld	(hl), #0x04
+   35ED 21rC9r0A           5556 	ld	hl, #(_maps + 0x0ac9)
+   35F0 36 00              5557 	ld	(hl), #0x00
+   35F2 21rCAr0A           5558 	ld	hl, #(_maps + 0x0aca)
+   35F5 36 00              5559 	ld	(hl), #0x00
+   35F7 21rCBr0A           5560 	ld	hl, #(_maps + 0x0acb)
+   35FA 36 00              5561 	ld	(hl), #0x00
+   35FC 21rCCr0A           5562 	ld	hl, #(_maps + 0x0acc)
+   35FF 36 00              5563 	ld	(hl), #0x00
+   3601 21rCDr0A           5564 	ld	hl, #(_maps + 0x0acd)
+   3604 36 00              5565 	ld	(hl), #0x00
+   3606 21rCEr0A           5566 	ld	hl, #(_maps + 0x0ace)
+   3609 36 00              5567 	ld	(hl), #0x00
+   360B 21rCFr0A           5568 	ld	hl, #(_maps + 0x0acf)
+   360E 36 00              5569 	ld	(hl), #0x00
+   3610 21rD0r0A           5570 	ld	hl, #(_maps + 0x0ad0)
+   3613 36 00              5571 	ld	(hl), #0x00
+   3615 21rD1r0A           5572 	ld	hl, #(_maps + 0x0ad1)
+   3618 36 00              5573 	ld	(hl), #0x00
+   361A 21rD2r0A           5574 	ld	hl, #(_maps + 0x0ad2)
+   361D 36 00              5575 	ld	(hl), #0x00
+   361F 21rD3r0A           5576 	ld	hl, #(_maps + 0x0ad3)
+   3622 36 00              5577 	ld	(hl), #0x00
+   3624 21rD4r0A           5578 	ld	hl, #(_maps + 0x0ad4)
+   3627 36 00              5579 	ld	(hl), #0x00
+   3629 21rD5r0A           5580 	ld	hl, #(_maps + 0x0ad5)
+   362C 36 00              5581 	ld	(hl), #0x00
+   362E 21rD6r0A           5582 	ld	hl, #(_maps + 0x0ad6)
+   3631 36 00              5583 	ld	(hl), #0x00
+   3633 21rD7r0A           5584 	ld	hl, #(_maps + 0x0ad7)
+   3636 36 00              5585 	ld	(hl), #0x00
+   3638 21rD8r0A           5586 	ld	hl, #(_maps + 0x0ad8)
+   363B 36 00              5587 	ld	(hl), #0x00
+   363D 21rD9r0A           5588 	ld	hl, #(_maps + 0x0ad9)
+   3640 36 00              5589 	ld	(hl), #0x00
+   3642 21rDAr0A           5590 	ld	hl, #(_maps + 0x0ada)
+   3645 36 00              5591 	ld	(hl), #0x00
+   3647 21rDBr0A           5592 	ld	hl, #(_maps + 0x0adb)
+   364A 36 04              5593 	ld	(hl), #0x04
+   364C 21rDCr0A           5594 	ld	hl, #(_maps + 0x0adc)
+   364F 36 04              5595 	ld	(hl), #0x04
+   3651 21rDDr0A           5596 	ld	hl, #(_maps + 0x0add)
+   3654 36 00              5597 	ld	(hl), #0x00
+   3656 21rDEr0A           5598 	ld	hl, #(_maps + 0x0ade)
+   3659 36 00              5599 	ld	(hl), #0x00
+   365B 21rDFr0A           5600 	ld	hl, #(_maps + 0x0adf)
+   365E 36 00              5601 	ld	(hl), #0x00
+   3660 21rE0r0A           5602 	ld	hl, #(_maps + 0x0ae0)
+   3663 36 00              5603 	ld	(hl), #0x00
+   3665 21rE1r0A           5604 	ld	hl, #(_maps + 0x0ae1)
+   3668 36 00              5605 	ld	(hl), #0x00
+   366A 21rE2r0A           5606 	ld	hl, #(_maps + 0x0ae2)
+   366D 36 00              5607 	ld	(hl), #0x00
+   366F 21rE3r0A           5608 	ld	hl, #(_maps + 0x0ae3)
+   3672 36 00              5609 	ld	(hl), #0x00
+   3674 21rE4r0A           5610 	ld	hl, #(_maps + 0x0ae4)
+   3677 36 00              5611 	ld	(hl), #0x00
+   3679 21rE5r0A           5612 	ld	hl, #(_maps + 0x0ae5)
+   367C 36 00              5613 	ld	(hl), #0x00
+   367E 21rE6r0A           5614 	ld	hl, #(_maps + 0x0ae6)
+   3681 36 00              5615 	ld	(hl), #0x00
+   3683 21rE7r0A           5616 	ld	hl, #(_maps + 0x0ae7)
+   3686 36 00              5617 	ld	(hl), #0x00
+   3688 21rE8r0A           5618 	ld	hl, #(_maps + 0x0ae8)
+   368B 36 00              5619 	ld	(hl), #0x00
+   368D 21rE9r0A           5620 	ld	hl, #(_maps + 0x0ae9)
+   3690 36 00              5621 	ld	(hl), #0x00
+   3692 21rEAr0A           5622 	ld	hl, #(_maps + 0x0aea)
+   3695 36 00              5623 	ld	(hl), #0x00
+   3697 21rEBr0A           5624 	ld	hl, #(_maps + 0x0aeb)
+   369A 36 00              5625 	ld	(hl), #0x00
+   369C 21rECr0A           5626 	ld	hl, #(_maps + 0x0aec)
+   369F 36 00              5627 	ld	(hl), #0x00
+   36A1 21rEDr0A           5628 	ld	hl, #(_maps + 0x0aed)
+   36A4 36 00              5629 	ld	(hl), #0x00
+   36A6 21rEEr0A           5630 	ld	hl, #(_maps + 0x0aee)
+   36A9 36 00              5631 	ld	(hl), #0x00
+   36AB 21rEFr0A           5632 	ld	hl, #(_maps + 0x0aef)
+   36AE 36 04              5633 	ld	(hl), #0x04
+   36B0 21rF0r0A           5634 	ld	hl, #(_maps + 0x0af0)
+   36B3 36 04              5635 	ld	(hl), #0x04
+   36B5 21rF1r0A           5636 	ld	hl, #(_maps + 0x0af1)
+   36B8 36 00              5637 	ld	(hl), #0x00
+   36BA 21rF2r0A           5638 	ld	hl, #(_maps + 0x0af2)
+   36BD 36 00              5639 	ld	(hl), #0x00
+   36BF 21rF3r0A           5640 	ld	hl, #(_maps + 0x0af3)
+   36C2 36 00              5641 	ld	(hl), #0x00
+   36C4 21rF4r0A           5642 	ld	hl, #(_maps + 0x0af4)
+   36C7 36 00              5643 	ld	(hl), #0x00
+   36C9 21rF5r0A           5644 	ld	hl, #(_maps + 0x0af5)
+   36CC 36 00              5645 	ld	(hl), #0x00
+   36CE 21rF6r0A           5646 	ld	hl, #(_maps + 0x0af6)
+   36D1 36 00              5647 	ld	(hl), #0x00
+   36D3 21rF7r0A           5648 	ld	hl, #(_maps + 0x0af7)
+   36D6 36 00              5649 	ld	(hl), #0x00
+   36D8 21rF8r0A           5650 	ld	hl, #(_maps + 0x0af8)
+   36DB 36 00              5651 	ld	(hl), #0x00
+   36DD 21rF9r0A           5652 	ld	hl, #(_maps + 0x0af9)
+   36E0 36 00              5653 	ld	(hl), #0x00
+   36E2 21rFAr0A           5654 	ld	hl, #(_maps + 0x0afa)
+   36E5 36 00              5655 	ld	(hl), #0x00
+   36E7 21rFBr0A           5656 	ld	hl, #(_maps + 0x0afb)
+   36EA 36 00              5657 	ld	(hl), #0x00
+   36EC 21rFCr0A           5658 	ld	hl, #(_maps + 0x0afc)
+   36EF 36 00              5659 	ld	(hl), #0x00
+   36F1 21rFDr0A           5660 	ld	hl, #(_maps + 0x0afd)
+   36F4 36 00              5661 	ld	(hl), #0x00
+   36F6 21rFEr0A           5662 	ld	hl, #(_maps + 0x0afe)
+   36F9 36 00              5663 	ld	(hl), #0x00
+   36FB 21rFFr0A           5664 	ld	hl, #(_maps + 0x0aff)
+   36FE 36 00              5665 	ld	(hl), #0x00
+   3700 21r00r0B           5666 	ld	hl, #(_maps + 0x0b00)
+   3703 36 00              5667 	ld	(hl), #0x00
+   3705 21r01r0B           5668 	ld	hl, #(_maps + 0x0b01)
+   3708 36 00              5669 	ld	(hl), #0x00
+   370A 21r02r0B           5670 	ld	hl, #(_maps + 0x0b02)
+   370D 36 00              5671 	ld	(hl), #0x00
+   370F 21r03r0B           5672 	ld	hl, #(_maps + 0x0b03)
+   3712 36 04              5673 	ld	(hl), #0x04
+   3714 21r04r0B           5674 	ld	hl, #(_maps + 0x0b04)
+   3717 36 04              5675 	ld	(hl), #0x04
+   3719 21r05r0B           5676 	ld	hl, #(_maps + 0x0b05)
+   371C 36 00              5677 	ld	(hl), #0x00
+   371E 21r06r0B           5678 	ld	hl, #(_maps + 0x0b06)
+   3721 36 00              5679 	ld	(hl), #0x00
+   3723 21r07r0B           5680 	ld	hl, #(_maps + 0x0b07)
+   3726 36 00              5681 	ld	(hl), #0x00
+   3728 21r08r0B           5682 	ld	hl, #(_maps + 0x0b08)
+   372B 36 00              5683 	ld	(hl), #0x00
+   372D 21r09r0B           5684 	ld	hl, #(_maps + 0x0b09)
+   3730 36 00              5685 	ld	(hl), #0x00
+   3732 21r0Ar0B           5686 	ld	hl, #(_maps + 0x0b0a)
+   3735 36 00              5687 	ld	(hl), #0x00
+   3737 21r0Br0B           5688 	ld	hl, #(_maps + 0x0b0b)
+   373A 36 00              5689 	ld	(hl), #0x00
+   373C 21r0Cr0B           5690 	ld	hl, #(_maps + 0x0b0c)
+   373F 36 00              5691 	ld	(hl), #0x00
+   3741 21r0Dr0B           5692 	ld	hl, #(_maps + 0x0b0d)
+   3744 36 00              5693 	ld	(hl), #0x00
+   3746 21r0Er0B           5694 	ld	hl, #(_maps + 0x0b0e)
+   3749 36 00              5695 	ld	(hl), #0x00
+   374B 21r0Fr0B           5696 	ld	hl, #(_maps + 0x0b0f)
+   374E 36 00              5697 	ld	(hl), #0x00
+   3750 21r10r0B           5698 	ld	hl, #(_maps + 0x0b10)
+   3753 36 00              5699 	ld	(hl), #0x00
+   3755 21r11r0B           5700 	ld	hl, #(_maps + 0x0b11)
+   3758 36 00              5701 	ld	(hl), #0x00
+   375A 21r12r0B           5702 	ld	hl, #(_maps + 0x0b12)
+   375D 36 00              5703 	ld	(hl), #0x00
+   375F 21r13r0B           5704 	ld	hl, #(_maps + 0x0b13)
+   3762 36 00              5705 	ld	(hl), #0x00
+   3764 21r14r0B           5706 	ld	hl, #(_maps + 0x0b14)
+   3767 36 00              5707 	ld	(hl), #0x00
+   3769 21r15r0B           5708 	ld	hl, #(_maps + 0x0b15)
+   376C 36 00              5709 	ld	(hl), #0x00
+   376E 21r16r0B           5710 	ld	hl, #(_maps + 0x0b16)
+   3771 36 00              5711 	ld	(hl), #0x00
+   3773 21r17r0B           5712 	ld	hl, #(_maps + 0x0b17)
+   3776 36 04              5713 	ld	(hl), #0x04
+   3778 21r18r0B           5714 	ld	hl, #(_maps + 0x0b18)
+   377B 36 04              5715 	ld	(hl), #0x04
+   377D 21r19r0B           5716 	ld	hl, #(_maps + 0x0b19)
+   3780 36 02              5717 	ld	(hl), #0x02
+   3782 21r1Ar0B           5718 	ld	hl, #(_maps + 0x0b1a)
+   3785 36 00              5719 	ld	(hl), #0x00
+   3787 21r1Br0B           5720 	ld	hl, #(_maps + 0x0b1b)
+   378A 36 00              5721 	ld	(hl), #0x00
+   378C 21r1Cr0B           5722 	ld	hl, #(_maps + 0x0b1c)
+   378F 36 00              5723 	ld	(hl), #0x00
+   3791 21r1Dr0B           5724 	ld	hl, #(_maps + 0x0b1d)
+   3794 36 00              5725 	ld	(hl), #0x00
+   3796 21r1Er0B           5726 	ld	hl, #(_maps + 0x0b1e)
+   3799 36 00              5727 	ld	(hl), #0x00
+   379B 21r1Fr0B           5728 	ld	hl, #(_maps + 0x0b1f)
+   379E 36 00              5729 	ld	(hl), #0x00
+   37A0 21r20r0B           5730 	ld	hl, #(_maps + 0x0b20)
+   37A3 36 00              5731 	ld	(hl), #0x00
+   37A5 21r21r0B           5732 	ld	hl, #(_maps + 0x0b21)
+   37A8 36 00              5733 	ld	(hl), #0x00
+   37AA 21r22r0B           5734 	ld	hl, #(_maps + 0x0b22)
+   37AD 36 09              5735 	ld	(hl), #0x09
+   37AF 21r23r0B           5736 	ld	hl, #(_maps + 0x0b23)
+   37B2 36 00              5737 	ld	(hl), #0x00
+   37B4 21r24r0B           5738 	ld	hl, #(_maps + 0x0b24)
+   37B7 36 00              5739 	ld	(hl), #0x00
+   37B9 21r25r0B           5740 	ld	hl, #(_maps + 0x0b25)
+   37BC 36 00              5741 	ld	(hl), #0x00
+   37BE 21r26r0B           5742 	ld	hl, #(_maps + 0x0b26)
+   37C1 36 00              5743 	ld	(hl), #0x00
+   37C3 21r27r0B           5744 	ld	hl, #(_maps + 0x0b27)
+   37C6 36 00              5745 	ld	(hl), #0x00
+   37C8 21r28r0B           5746 	ld	hl, #(_maps + 0x0b28)
+   37CB 36 00              5747 	ld	(hl), #0x00
+   37CD 21r29r0B           5748 	ld	hl, #(_maps + 0x0b29)
+   37D0 36 00              5749 	ld	(hl), #0x00
+   37D2 21r2Ar0B           5750 	ld	hl, #(_maps + 0x0b2a)
+   37D5 36 00              5751 	ld	(hl), #0x00
+   37D7 21r2Br0B           5752 	ld	hl, #(_maps + 0x0b2b)
+   37DA 36 04              5753 	ld	(hl), #0x04
+   37DC 21r2Cr0B           5754 	ld	hl, #(_maps + 0x0b2c)
+   37DF 36 04              5755 	ld	(hl), #0x04
+   37E1 21r2Dr0B           5756 	ld	hl, #(_maps + 0x0b2d)
+   37E4 36 04              5757 	ld	(hl), #0x04
+   37E6 21r2Er0B           5758 	ld	hl, #(_maps + 0x0b2e)
+   37E9 36 04              5759 	ld	(hl), #0x04
+   37EB 21r2Fr0B           5760 	ld	hl, #(_maps + 0x0b2f)
+   37EE 36 04              5761 	ld	(hl), #0x04
+   37F0 21r30r0B           5762 	ld	hl, #(_maps + 0x0b30)
+   37F3 36 04              5763 	ld	(hl), #0x04
+   37F5 21r31r0B           5764 	ld	hl, #(_maps + 0x0b31)
+   37F8 36 04              5765 	ld	(hl), #0x04
+   37FA 21r32r0B           5766 	ld	hl, #(_maps + 0x0b32)
+   37FD 36 04              5767 	ld	(hl), #0x04
+   37FF 21r33r0B           5768 	ld	hl, #(_maps + 0x0b33)
+   3802 36 04              5769 	ld	(hl), #0x04
+   3804 21r34r0B           5770 	ld	hl, #(_maps + 0x0b34)
+   3807 36 04              5771 	ld	(hl), #0x04
+   3809 21r35r0B           5772 	ld	hl, #(_maps + 0x0b35)
+   380C 36 04              5773 	ld	(hl), #0x04
+   380E 21r36r0B           5774 	ld	hl, #(_maps + 0x0b36)
+   3811 36 04              5775 	ld	(hl), #0x04
+   3813 21r37r0B           5776 	ld	hl, #(_maps + 0x0b37)
+   3816 36 04              5777 	ld	(hl), #0x04
+   3818 21r38r0B           5778 	ld	hl, #(_maps + 0x0b38)
+   381B 36 04              5779 	ld	(hl), #0x04
+   381D 21r39r0B           5780 	ld	hl, #(_maps + 0x0b39)
+   3820 36 04              5781 	ld	(hl), #0x04
+   3822 21r3Ar0B           5782 	ld	hl, #(_maps + 0x0b3a)
+   3825 36 04              5783 	ld	(hl), #0x04
+   3827 21r3Br0B           5784 	ld	hl, #(_maps + 0x0b3b)
+   382A 36 04              5785 	ld	(hl), #0x04
+   382C 21r3Cr0B           5786 	ld	hl, #(_maps + 0x0b3c)
+   382F 36 04              5787 	ld	(hl), #0x04
+   3831 21r3Dr0B           5788 	ld	hl, #(_maps + 0x0b3d)
+   3834 36 04              5789 	ld	(hl), #0x04
+   3836 21r3Er0B           5790 	ld	hl, #(_maps + 0x0b3e)
+   3839 36 04              5791 	ld	(hl), #0x04
+   383B 21r3Fr0B           5792 	ld	hl, #(_maps + 0x0b3f)
+   383E 36 04              5793 	ld	(hl), #0x04
+                           5794 ;--------------------------------------------------------
+                           5795 ; Home
+                           5796 ;--------------------------------------------------------
+                           5797 	.area _HOME
+                           5798 	.area _HOME
+                           5799 ;--------------------------------------------------------
+                           5800 ; code
+                           5801 ;--------------------------------------------------------
+                           5802 	.area _CODE_1
+                           5803 	.area _CODE_1
+                           5804 	.area _CABS (ABS)
